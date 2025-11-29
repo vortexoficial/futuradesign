@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FUTURA DESIGN</title>
+
+    <meta property="og:title" content="Futura Design: Marketing Digital, Criação e Resultados para o seu Negócio">
+    <meta property="og:description" content="Sua agência completa em marketing digital, design, desenvolvimento web, SEO, tráfego pago e mídias sociais. Inovação para o seu futuro.">
+    <meta property="og:image" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg"> <meta property="og:url" content="https://agenciafuturadesign.com/"> <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Futura Design">
+    <meta name="description" content="Futura Design é uma agência de marketing digital completa, oferecendo serviços de criação de sites, SEO, tráfego pago, gestão de redes sociais e design gráfico.">
+    <meta name="keywords" content="Futura Design, agência de marketing, marketing digital, design, desenvolvimento web, seo, trafego pago, redes sociais, branding, criação de sites, publicidade online">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+  <style>
+    /* ===================== PALETA P&B ===================== */
+    :root{
+      --bg:#000;              /* fundo preto */
+      --text:#fff;            /* texto branco */
+      --muted:#bdbdbd;        /* cinza para subtítulos */
+      --stroke:#1f1f1f;        /* linhas sutis */
+      --accent:#fff;           /* ações e destaques em branco */
+      --maxw:1280px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:"Montserrat",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 600px at 20% 20%, rgba(255,255,255,0.06), transparent 55%),
+        radial-gradient(900px 500px at 80% 10%, rgba(255,255,255,0.04), transparent 60%),
+        var(--bg);
+      min-height:100svh;
+      display:grid;
+      grid-template-rows:auto 1fr auto;
+    }
+
+    /* ====== GRID SUTIL (preto & branco) ====== */
+    body::before{ /* grade discreta */
+      content:""; position:fixed; inset:0; pointer-events:none; opacity:.13;
+      background:
+        linear-gradient(to right, transparent 99px, var(--stroke) 100px),
+        linear-gradient(to bottom, transparent 99px, var(--stroke) 100px);
+      background-size:100px 100px;
+    }
+
+    /* ===================== LOADER (seu modelo) ===================== */
+    :root{
+      --logo-size:140px;
+      --bar-extra:40px;
+      --bar-height:6px;
+      --bar-color:#fff; /* barra branca */
+    }
+    .loader-wrap{ position:fixed; inset:0; z-index:9999; display:grid; place-items:center; background:#000; }
+    .loader-inner{ text-align:center; width:fit-content }
+    .loader-logo img{ width:var(--logo-size); height:var(--logo-size); object-fit:contain; animation:fadeIn .8s ease-out forwards; filter: drop-shadow(0 8px 24px rgba(255,255,255,.08)); }
+    .loader-bar{ position:relative; width:calc(var(--logo-size)+var(--bar-extra)); height:var(--bar-height); margin:18px auto 0; border-radius:999px; background:rgba(255,255,255,.18); overflow:hidden; }
+    .loader-fill{ position:absolute; inset:0; background:var(--bar-color); transform-origin:left; transform:scaleX(0); animation:fillLtoR 2.5s ease-in-out forwards; }
+    .loader-text{ margin-top:10px; color:rgba(255,255,255,.85); animation:fadeIn .8s ease-out forwards; }
+    body.loading > *:not(#loader){ display:none }
+    @keyframes fillLtoR{ to{ transform:scaleX(1) } }
+    @keyframes fadeIn{ from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+    .loader-wrap.fade-out{ opacity:0; transition:opacity .4s ease; pointer-events:none; }
+
+    /* ===================== CABEÇALHO ===================== */
+    header{ position:relative; z-index:2; max-width:var(--maxw); margin:0 auto; padding:90px 20px 12px; display:grid; place-items:center; gap:14px; }
+    .logo{ width:clamp(140px,18vw,220px); height:auto; filter:drop-shadow(0 6px 20px rgba(255,255,255,.06)); user-select:none; }
+
+    .social{ display:flex; align-items:center; gap:14px; opacity:.95; }
+    .social a{ display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:999px; background:rgba(255,255,255,.08); outline:1px solid rgba(255,255,255,.18); transition:transform .2s ease, outline-color .2s ease, background .2s ease; }
+    .social a:hover{ transform:translateY(-2px); outline-color:#fff; background:rgba(255,255,255,.16); }
+    .social svg{ width:18px; height:18px; fill:#fff; }
+
+    /* ===================== CONTEÚDO ===================== */
+    main{ display:grid; place-items:center; padding:24px 20px 40px; }
+    .card{ max-width:820px; width:100%; padding:clamp(26px,5vw,44px); border-radius:22px; background:rgba(255,255,255,.03); outline:1px solid rgba(255,255,255,.12); box-shadow:0 20px 80px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.02); text-align:center; backdrop-filter:blur(2px); }
+
+    .typewrap{ display:inline-flex; align-items:center; justify-content:center; position:relative; }
+   .typing{ 
+  font-weight:700; 
+  font-size:clamp(24px,6vw,54px); 
+  line-height:1.15; 
+  white-space:nowrap;
+  min-height: 1em; /* << ADICIONE ESTA LINHA */
+}
+    .ghost{ visibility:hidden; white-space:nowrap; font-weight:700; font-size:clamp(24px,6vw,54px); line-height:1.15; position:absolute; }
+    .cursor{ display:inline-block; width:.08em; height:.9em; background:var(--accent); margin-left:.18em; transform:translateY(.12em); animation:blink .9s steps(1,end) infinite; border-radius:1px; box-shadow:0 0 12px rgba(255,255,255,.8); }
+    @keyframes blink{50%{opacity:.2}}
+    .sub{ margin-top:16px; color:var(--muted); font-size:clamp(.95rem,2.6vw,1.05rem); }
+
+    /* NOVO: Container para agrupar os botões */
+    .cta-container {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column; /* Faz os botões empilharem verticalmente */
+      align-items: center;     /* Centraliza os botões */
+      gap: 16px;               /* Espaço entre os botões */
+    }
+
+    /* ESTILO BASE COMUM PARA OS BOTÕES */
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .3px;
+      width: 100%;
+      max-width: 280px; /* Largura máxima uniforme */
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+    }
+    .cta-button svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* MODIFICADO: Botão Instagram (Preto com contorno branco) */
+    .cta-ig {
+      color: #fff; /* Texto branco */
+      background: #000; /* Fundo preto */
+      border: 1px solid #fff; /* Contorno branco */
+      box-shadow: 0 10px 34px rgba(0,0,0,.4); 
+    }
+    .cta-ig:hover { 
+      transform: translateY(-2px); 
+      background: #1f1f1f; /* Efeito hover para cinza escuro */
+      box-shadow: 0 16px 54px rgba(255,255,255,.2); 
+    }
+    .cta-ig svg {
+      fill: #fff; /* Ícone branco */
+    }
+
+    /* MODIFICADO: Botão Orçamento (Branco com texto preto) */
+    .cta-budget {
+      color: #000; /* Texto preto */
+      background: #fff; /* Fundo branco */
+      border: 1px solid #fff; /* Borda branca (para manter estrutura) */
+      box-shadow: 0 10px 34px rgba(255,255,255,.12);
+    }
+    .cta-budget:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 54px rgba(255,255,255,.2);
+      filter: brightness(0.95); /* Leve escurecida no hover */
+    }
+    .cta-budget svg {
+      fill: #000; /* Ícone preto */
+    }
+
+
+    footer{ text-align:center; padding:20px; color:var(--muted); font-size:.9rem; }
+
+    /* ===== Faixa inferior ===== */
+    .credit-bar{ width:100%; text-align:center; background:#000; padding:10px 0 14px; font-size:0.9rem; color:#ffffff; letter-spacing:0.3px; border-top:1px solid rgba(255,255,255,0.08); }
+    .credit-bar a{ color:#fff; font-weight:700; text-decoration:none; margin-left:4px; transition:opacity .2s ease; }
+    .credit-bar a:hover{ opacity:0.8; }
+
+    /* ===== Acessibilidade: reduzir movimento ===== */
+    @media (prefers-reduced-motion: reduce){
+      .loader-logo img, .loader-fill, .cursor{ animation:none!important }
+    }
+  </style>
+</head>
+
+<body class="loading">
+  <div id="loader" class="loader-wrap">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <img src="img/logo.png" alt="Logo FUTURA DESIGN" />
+      </div>
+      <div class="loader-bar">
+        <span class="loader-fill"></span>
+      </div>
+      <p class="loader-text">Carregando…</p>
+    </div>
+  </div>
+
+  <header>
+    <img src="img/logo.png" alt="FUTURA DESIGN" class="logo" loading="eager" />
+    <nav class="social" aria-label="Redes sociais">
+      <a href="https://instagram.com/futuradesign.ofc" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill="#fff" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 .001 6.001A3 3 0 0 0 12 9Zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card" aria-live="polite">
+      <div class="typewrap">
+        <span id="typing" class="typing"></span>
+        <span class="cursor" aria-hidden="true"></span>
+        <span id="ghost" class="ghost" aria-hidden="true"></span>
+      </div>
+      <p class="sub">Estamos preparando algo especial para você.</p>
+      
+      <div class="cta-container">
+        <a class="cta-button cta-ig" href="https://instagram.com/futuradesign.ofc" target="_blank" rel="noopener" aria-label="Abrir Instagram FUTURA DESIGN">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 .001 6.001A3 3 0 0 0 12 9Zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+          </svg>
+          <span>Visite nosso Instagram</span>
+        </a>
+
+        <a class="cta-button cta-budget" href="https://wa.me/5575981973628" target="_blank" rel="noopener" aria-label="Fazer um orçamento no WhatsApp"> <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+             <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.43 16.88L2.06 21.94L7.3 20.61C8.77 21.39 10.37 21.8 12.04 21.8C17.5 21.8 21.95 17.35 21.95 11.89C21.95 6.43 17.5 2 12.04 2ZM12.04 20.13C10.53 20.13 9.07 19.79 7.79 19.14L7.43 18.94L4.31 19.78L5.17 16.74L4.96 16.37C4.24 15.03 3.82 13.51 3.82 11.91C3.82 7.39 7.51 3.7 12.04 3.7C16.57 3.7 20.26 7.39 20.26 11.89C20.26 16.39 16.57 20.13 12.04 20.13ZM17.37 14.34C17.13 14.67 16.05 15.24 15.75 15.39C15.45 15.54 15.03 15.62 14.7 15.44C14.37 15.26 13.54 14.96 12.55 14.08C11.31 13.01 10.51 11.7 10.33 11.37C10.15 11.04 10.31 10.89 10.46 10.74C10.6 10.6 10.77 10.37 10.92 10.19C11.07 10.01 11.15 9.86 11.28 9.63C11.41 9.4 11.33 9.2 11.23 9.02C11.13 8.84 10.59 7.53 10.36 6.97C10.13 6.41 9.89 6.49 9.7 6.48C9.51 6.47 9.28 6.47 9.05 6.47C8.82 6.47 8.51 6.55 8.26 6.88C8.01 7.21 7.36 7.82 7.36 9.02C7.36 10.22 8.29 11.36 8.44 11.54C8.59 11.72 10.51 14.82 13.44 16.2C16.37 17.58 16.37 17.06 16.7 17.01C17.03 16.96 17.89 16.45 18.09 15.8C18.29 15.15 18.29 14.62 18.21 14.5C18.13 14.38 17.61 14.01 17.37 14.34Z"/>
+          </svg>
+          <span>Fazer um orçamento</span>
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> FUTURA DESIGN. Todos os direitos reservados.
+  </footer>
+
+  <div class="credit-bar">Desenvolvido por <a href="https://instagram.com/futuradesign.ofc" target="_blank" rel="noopener">FUTURA DESIGN</a></div>
+
+  <script>
+    /* LOADER */
+    const LOADER_TIMEOUT = 2500;
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+          loader.remove();
+          document.body.classList.remove('loading');
+        }, 450);
+      }, LOADER_TIMEOUT);
+    });
+
+    /* DIGITAÇÃO */
+    const el = document.getElementById('typing');
+    const ghost = document.getElementById('ghost');
+    const messages = ['Site em construção', 'Em breve novidades!'];
+    const typeSpeed = 70;
+    const eraseSpeed = 40;
+    const holdAfterType = 1100;
+
+    ghost.textContent = messages.reduce((a,b)=>a.length>=b.length?a:b);
+
+    let msgIndex = 0, i = 0, typing = true;
+    (function loop(){
+      const text = messages[msgIndex];
+      if (typing){
+        if (i < text.length){ el.textContent = text.slice(0, ++i); setTimeout(loop, typeSpeed); }
+        else { typing = false; setTimeout(loop, holdAfterType); }
+      } else {
+        if (i > 0){ el.textContent = text.slice(0, --i); setTimeout(loop, eraseSpeed); }
+        else { msgIndex = (msgIndex + 1) % messages.length; typing = true; setTimeout(loop, typeSpeed); }
+      }
+    })();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
