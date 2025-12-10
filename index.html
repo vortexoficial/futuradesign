@@ -1,265 +1,401 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FUTURA DESIGN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTURA DESIGN | Agência de Performance</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Michroma&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Futura Design: Marketing Digital, Criação e Resultados para o seu Negócio">
-    <meta property="og:description" content="Sua agência completa em marketing digital, design, desenvolvimento web, SEO, tráfego pago e mídias sociais. Inovação para o seu futuro.">
-    <meta property="og:image" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg"> <meta property="og:url" content="https://agenciafuturadesign.com/"> <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Futura Design">
-    <meta name="description" content="Futura Design é uma agência de marketing digital completa, oferecendo serviços de criação de sites, SEO, tráfego pago, gestão de redes sociais e design gráfico.">
-    <meta name="keywords" content="Futura Design, agência de marketing, marketing digital, design, desenvolvimento web, seo, trafego pago, redes sociais, branding, criação de sites, publicidade online">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/favicon.png" type="image/png">
-  <style>
-    /* ===================== PALETA P&B ===================== */
-    :root{
-      --bg:#000;              /* fundo preto */
-      --text:#fff;            /* texto branco */
-      --muted:#bdbdbd;        /* cinza para subtítulos */
-      --stroke:#1f1f1f;        /* linhas sutis */
-      --accent:#fff;           /* ações e destaques em branco */
-      --maxw:1280px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family:"Montserrat",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial;
-      color:var(--text);
-      background:
-        radial-gradient(1000px 600px at 20% 20%, rgba(255,255,255,0.06), transparent 55%),
-        radial-gradient(900px 500px at 80% 10%, rgba(255,255,255,0.04), transparent 60%),
-        var(--bg);
-      min-height:100svh;
-      display:grid;
-      grid-template-rows:auto 1fr auto;
-    }
-
-    /* ====== GRID SUTIL (preto & branco) ====== */
-    body::before{ /* grade discreta */
-      content:""; position:fixed; inset:0; pointer-events:none; opacity:.13;
-      background:
-        linear-gradient(to right, transparent 99px, var(--stroke) 100px),
-        linear-gradient(to bottom, transparent 99px, var(--stroke) 100px);
-      background-size:100px 100px;
-    }
-
-    /* ===================== LOADER (seu modelo) ===================== */
-    :root{
-      --logo-size:140px;
-      --bar-extra:40px;
-      --bar-height:6px;
-      --bar-color:#fff; /* barra branca */
-    }
-    .loader-wrap{ position:fixed; inset:0; z-index:9999; display:grid; place-items:center; background:#000; }
-    .loader-inner{ text-align:center; width:fit-content }
-    .loader-logo img{ width:var(--logo-size); height:var(--logo-size); object-fit:contain; animation:fadeIn .8s ease-out forwards; filter: drop-shadow(0 8px 24px rgba(255,255,255,.08)); }
-    .loader-bar{ position:relative; width:calc(var(--logo-size)+var(--bar-extra)); height:var(--bar-height); margin:18px auto 0; border-radius:999px; background:rgba(255,255,255,.18); overflow:hidden; }
-    .loader-fill{ position:absolute; inset:0; background:var(--bar-color); transform-origin:left; transform:scaleX(0); animation:fillLtoR 2.5s ease-in-out forwards; }
-    .loader-text{ margin-top:10px; color:rgba(255,255,255,.85); animation:fadeIn .8s ease-out forwards; }
-    body.loading > *:not(#loader){ display:none }
-    @keyframes fillLtoR{ to{ transform:scaleX(1) } }
-    @keyframes fadeIn{ from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
-    .loader-wrap.fade-out{ opacity:0; transition:opacity .4s ease; pointer-events:none; }
-
-    /* ===================== CABEÇALHO ===================== */
-    header{ position:relative; z-index:2; max-width:var(--maxw); margin:0 auto; padding:90px 20px 12px; display:grid; place-items:center; gap:14px; }
-    .logo{ width:clamp(140px,18vw,220px); height:auto; filter:drop-shadow(0 6px 20px rgba(255,255,255,.06)); user-select:none; }
-
-    .social{ display:flex; align-items:center; gap:14px; opacity:.95; }
-    .social a{ display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:999px; background:rgba(255,255,255,.08); outline:1px solid rgba(255,255,255,.18); transition:transform .2s ease, outline-color .2s ease, background .2s ease; }
-    .social a:hover{ transform:translateY(-2px); outline-color:#fff; background:rgba(255,255,255,.16); }
-    .social svg{ width:18px; height:18px; fill:#fff; }
-
-    /* ===================== CONTEÚDO ===================== */
-    main{ display:grid; place-items:center; padding:24px 20px 40px; }
-    .card{ max-width:820px; width:100%; padding:clamp(26px,5vw,44px); border-radius:22px; background:rgba(255,255,255,.03); outline:1px solid rgba(255,255,255,.12); box-shadow:0 20px 80px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.02); text-align:center; backdrop-filter:blur(2px); }
-
-    .typewrap{ display:inline-flex; align-items:center; justify-content:center; position:relative; }
-   .typing{ 
-  font-weight:700; 
-  font-size:clamp(24px,6vw,54px); 
-  line-height:1.15; 
-  white-space:nowrap;
-  min-height: 1em; /* << ADICIONE ESTA LINHA */
-}
-    .ghost{ visibility:hidden; white-space:nowrap; font-weight:700; font-size:clamp(24px,6vw,54px); line-height:1.15; position:absolute; }
-    .cursor{ display:inline-block; width:.08em; height:.9em; background:var(--accent); margin-left:.18em; transform:translateY(.12em); animation:blink .9s steps(1,end) infinite; border-radius:1px; box-shadow:0 0 12px rgba(255,255,255,.8); }
-    @keyframes blink{50%{opacity:.2}}
-    .sub{ margin-top:16px; color:var(--muted); font-size:clamp(.95rem,2.6vw,1.05rem); }
-
-    /* NOVO: Container para agrupar os botões */
-    .cta-container {
-      margin-top: 24px;
-      display: flex;
-      flex-direction: column; /* Faz os botões empilharem verticalmente */
-      align-items: center;     /* Centraliza os botões */
-      gap: 16px;               /* Espaço entre os botões */
-    }
-
-    /* ESTILO BASE COMUM PARA OS BOTÕES */
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 18px;
-      border-radius: 16px;
-      text-decoration: none;
-      font-weight: 700;
-      letter-spacing: .3px;
-      width: 100%;
-      max-width: 280px; /* Largura máxima uniforme */
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
-    }
-    .cta-button svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    /* MODIFICADO: Botão Instagram (Preto com contorno branco) */
-    .cta-ig {
-      color: #fff; /* Texto branco */
-      background: #000; /* Fundo preto */
-      border: 1px solid #fff; /* Contorno branco */
-      box-shadow: 0 10px 34px rgba(0,0,0,.4); 
-    }
-    .cta-ig:hover { 
-      transform: translateY(-2px); 
-      background: #1f1f1f; /* Efeito hover para cinza escuro */
-      box-shadow: 0 16px 54px rgba(255,255,255,.2); 
-    }
-    .cta-ig svg {
-      fill: #fff; /* Ícone branco */
-    }
-
-    /* MODIFICADO: Botão Orçamento (Branco com texto preto) */
-    .cta-budget {
-      color: #000; /* Texto preto */
-      background: #fff; /* Fundo branco */
-      border: 1px solid #fff; /* Borda branca (para manter estrutura) */
-      box-shadow: 0 10px 34px rgba(255,255,255,.12);
-    }
-    .cta-budget:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 54px rgba(255,255,255,.2);
-      filter: brightness(0.95); /* Leve escurecida no hover */
-    }
-    .cta-budget svg {
-      fill: #000; /* Ícone preto */
-    }
-
-
-    footer{ text-align:center; padding:20px; color:var(--muted); font-size:.9rem; }
-
-    /* ===== Faixa inferior ===== */
-    .credit-bar{ width:100%; text-align:center; background:#000; padding:10px 0 14px; font-size:0.9rem; color:#ffffff; letter-spacing:0.3px; border-top:1px solid rgba(255,255,255,0.08); }
-    .credit-bar a{ color:#fff; font-weight:700; text-decoration:none; margin-left:4px; transition:opacity .2s ease; }
-    .credit-bar a:hover{ opacity:0.8; }
-
-    /* ===== Acessibilidade: reduzir movimento ===== */
-    @media (prefers-reduced-motion: reduce){
-      .loader-logo img, .loader-fill, .cursor{ animation:none!important }
-    }
-  </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Michroma', 'sans-serif'], // Fonte Michroma para títulos
+                    },
+                    colors: {
+                        futura: {
+                            primary: '#D300C5', 
+                            secondary: '#240090', 
+                            accent: '#00E5FF', 
+                            dark: '#050515',   
+                            card: '#0F0F25',   
+                            light: '#F8F9FA',  
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 60px -10px rgba(0, 0, 0, 0.2), 0 5px 30px -5px rgba(0, 0, 0, 0.1)',
+                        'glow': '0 0 30px rgba(211, 0, 197, 0.3), 0 0 10px rgba(36, 0, 144, 0.2)', 
+                        'neon': '0 0 20px rgba(211, 0, 197, 0.5)',
+                    },
+                    backgroundImage: {
+                        'universe-dark': "linear-gradient(to bottom, rgba(5, 5, 21, 0.9), rgba(5, 5, 21, 0.98)), url('img/bg-universe.jpg')",
+                        'clean-light': "linear-gradient(to bottom, #F8F9FA, #FFFFFF)",
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="loading">
-  <div id="loader" class="loader-wrap">
-    <div class="loader-inner">
-      <div class="loader-logo">
-        <img src="img/logo.png" alt="Logo FUTURA DESIGN" />
-      </div>
-      <div class="loader-bar">
-        <span class="loader-fill"></span>
-      </div>
-      <p class="loader-text">Carregando…</p>
+<body class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <div id="loader" class="fixed inset-0 bg-futura-light dark:bg-futura-dark flex flex-col items-center justify-center z-[9999]">
+        <div class="flex flex-col items-center">
+            <img src="img/logop.png" alt="FUTURA Logo" class="theme-logo w-40 h-auto mb-8 object-contain" />
+            <div class="w-48 h-1 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                <div class="h-full w-full animate-loader-bar origin-left"></div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <header>
-    <img src="img/logo.png" alt="FUTURA DESIGN" class="logo" loading="eager" />
-    <nav class="social" aria-label="Redes sociais">
-      <a href="https://instagram.com/futuradesign.ofc" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path fill="#fff" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 .001 6.001A3 3 0 0 0 12 9Zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-        </svg>
-      </a>
-    </nav>
-  </header>
+    <header class="fixed top-4 left-0 right-0 z-50 w-full px-4 transition-all duration-300">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex h-24 items-center justify-between bg-white/80 dark:bg-black/60 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl px-8 shadow-soft">
+                <a href="#hero" class="block hover:opacity-80 transition-opacity">
+                    <img src="img/logop.png" alt="FUTURA DESIGN Logo" class="theme-logo h-8 w-auto object-contain">
+                </a>
+                <nav class="hidden lg:block">
+                    <ul class="flex items-center gap-10">
+                        <li><a href="#quem-somos" class="text-xs font-bold uppercase tracking-widest hover:text-futura-primary transition-colors font-display">Squad</a></li>
+                        <li><a href="#servicos" class="text-xs font-bold uppercase tracking-widest hover:text-futura-primary transition-colors font-display">Expertise</a></li>
+                        <li><a href="#portfolio" class="text-xs font-bold uppercase tracking-widest hover:text-futura-primary transition-colors font-display">Portfolio</a></li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO" target="_blank"
+                                class="btn-sheen text-white font-display text-xs font-bold py-3 px-8 rounded-none skew-x-[-10deg] flex items-center shadow-glow transition-all tracking-widest border border-white/20">
+                                <span class="skew-x-[10deg]">INICIAR PROJETO</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4 lg:hidden">
+                    <button class="text-2xl text-futura-primary" id="hamburger-menu"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <section class="card" aria-live="polite">
-      <div class="typewrap">
-        <span id="typing" class="typing"></span>
-        <span class="cursor" aria-hidden="true"></span>
-        <span id="ghost" class="ghost" aria-hidden="true"></span>
-      </div>
-      <p class="sub">Estamos preparando algo especial para você.</p>
-      
-      <div class="cta-container">
-        <a class="cta-button cta-ig" href="https://instagram.com/futuradesign.ofc" target="_blank" rel="noopener" aria-label="Abrir Instagram FUTURA DESIGN">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 .001 6.001A3 3 0 0 0 12 9Zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-          </svg>
-          <span>Visite nosso Instagram</span>
+    <div class="mobile-menu-overlay fixed inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-md z-[999] flex flex-col p-6 transition-transform duration-300 ease-in-out lg:hidden translate-x-full" id="mobile-menu-overlay">
+        <div class="flex justify-between items-center mb-12">
+            <img src="img/logop.png" alt="FUTURA DESIGN Logo" class="theme-logo h-8 w-auto">
+            <button class="text-3xl text-futura-primary" id="close-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="flex-grow flex flex-col gap-8 text-center">
+            <a href="#quem-somos" class="text-2xl font-display font-bold hover:text-futura-primary uppercase">O Squad</a>
+            <a href="#servicos" class="text-2xl font-display font-bold hover:text-futura-primary uppercase">Serviços</a>
+            <a href="#contato" class="text-2xl font-display font-bold hover:text-futura-primary uppercase">Contato</a>
+        </nav>
+        <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO"
+            class="btn-sheen w-full text-white py-5 rounded-none font-display font-bold text-center text-sm uppercase tracking-widest shadow-neon mt-auto">
+            Falar no WhatsApp
         </a>
+    </div>
 
-        <a class="cta-button cta-budget" href="https://wa.me/5575981973628" target="_blank" rel="noopener" aria-label="Fazer um orçamento no WhatsApp"> <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-             <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.43 16.88L2.06 21.94L7.3 20.61C8.77 21.39 10.37 21.8 12.04 21.8C17.5 21.8 21.95 17.35 21.95 11.89C21.95 6.43 17.5 2 12.04 2ZM12.04 20.13C10.53 20.13 9.07 19.79 7.79 19.14L7.43 18.94L4.31 19.78L5.17 16.74L4.96 16.37C4.24 15.03 3.82 13.51 3.82 11.91C3.82 7.39 7.51 3.7 12.04 3.7C16.57 3.7 20.26 7.39 20.26 11.89C20.26 16.39 16.57 20.13 12.04 20.13ZM17.37 14.34C17.13 14.67 16.05 15.24 15.75 15.39C15.45 15.54 15.03 15.62 14.7 15.44C14.37 15.26 13.54 14.96 12.55 14.08C11.31 13.01 10.51 11.7 10.33 11.37C10.15 11.04 10.31 10.89 10.46 10.74C10.6 10.6 10.77 10.37 10.92 10.19C11.07 10.01 11.15 9.86 11.28 9.63C11.41 9.4 11.33 9.2 11.23 9.02C11.13 8.84 10.59 7.53 10.36 6.97C10.13 6.41 9.89 6.49 9.7 6.48C9.51 6.47 9.28 6.47 9.05 6.47C8.82 6.47 8.51 6.55 8.26 6.88C8.01 7.21 7.36 7.82 7.36 9.02C7.36 10.22 8.29 11.36 8.44 11.54C8.59 11.72 10.51 14.82 13.44 16.2C16.37 17.58 16.37 17.06 16.7 17.01C17.03 16.96 17.89 16.45 18.09 15.8C18.29 15.15 18.29 14.62 18.21 14.5C18.13 14.38 17.61 14.01 17.37 14.34Z"/>
-          </svg>
-          <span>Fazer um orçamento</span>
-        </a>
-      </div>
+    <main>
 
-    </section>
-  </main>
+        <section id="hero" class="relative overflow-hidden min-h-screen flex items-center bg-clean-light dark:bg-universe-dark bg-cover bg-center bg-no-repeat z-10 pb-20">
+            <div class="absolute inset-0 bg-pattern-dots opacity-30 pointer-events-none dark:opacity-50 mix-blend-overlay"></div>
 
-  <footer>
-    © <span id="year"></span> FUTURA DESIGN. Todos os direitos reservados.
-  </footer>
+            <div class="container mx-auto max-w-7xl px-6 relative z-10 w-full pt-28">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
+                    <div class="w-full lg:w-3/5 2xl:w-2/3 z-10 fade-in-section text-center lg:text-left">
+                        
+                        <h1 class="font-display text-gray-900 dark:text-white mb-6
+                                   text-3xl leading-snug
+                                   lg:text-5xl 2xl:text-6xl lg:leading-tight uppercase tracking-wider">
+                            Não apenas Digital. 
+                            <br>
+                            <span class="text-gradient-futura">Nós Criamos o Futuro</span> 
+                            da sua Marca.
+                        </h1>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 font-light max-w-lg mx-auto lg:mx-0
+                                  text-base mb-8 leading-snug
+                                  lg:text-lg lg:mb-10 lg:leading-relaxed font-sans">
+                            Design de elite, engenharia de software e estratégias que convertem. A <strong class="text-futura-secondary dark:text-white font-bold">FUTURA DESIGN</strong> une criatividade e código para escalar seu negócio.
+                        </p>
+                        
+                        <div class="flex flex-col items-center lg:items-start justify-center lg:justify-start">
+                            <div class="flex justify-center lg:justify-start w-full md:w-auto">
+                                <a href="#servicos"
+                                    class="btn-sheen w-full md:w-auto text-white font-display text-xs font-bold rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-4
+                                           py-4 px-10 hover:scale-105 transition-transform duration-300 border border-white/20">
+                                    <span class="skew-x-[10deg] tracking-widest">CONHECER SOLUÇÕES</span> <i class="fas fa-arrow-down skew-x-[10deg]"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block lg:w-2/5 h-full"></div>
+                </div>
+            </div>
+        </section>
 
-  <div class="credit-bar">Desenvolvido por <a href="https://instagram.com/futuradesign.ofc" target="_blank" rel="noopener">FUTURA DESIGN</a></div>
+        <div class="w-full bg-white dark:bg-[#08081A] border-y border-gray-100 dark:border-white/5 py-6 overflow-hidden relative z-20">
+            <div class="marquee-wrapper">
+                <div class="marquee-content-horizontal text-gray-400 dark:text-white/50 font-sans font-thin text-sm uppercase tracking-[0.4em] flex items-center whitespace-nowrap">
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Full Stack</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-accent"></i> Design</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Motion</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-secondary"></i> Ads</span>
+                    
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Full Stack</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-accent"></i> Design</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Motion</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-secondary"></i> Ads</span>
+                </div>
+            </div>
+        </div>
 
-  <script>
-    /* LOADER */
-    const LOADER_TIMEOUT = 2500;
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      setTimeout(() => {
-        loader.classList.add('fade-out');
-        setTimeout(() => {
-          loader.remove();
-          document.body.classList.remove('loading');
-        }, 450);
-      }, LOADER_TIMEOUT);
-    });
+        <section id="quem-somos" class="py-32 bg-gray-50 dark:bg-futura-dark relative overflow-hidden font-sans">
+             
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20 fade-in-section">
+                    <h2 class="font-display text-3xl md:text-4xl mt-6 text-gray-900 dark:text-white leading-tight uppercase tracking-wider">
+                        Ecossistema de <br>
+                        <span class="text-gradient-futura">Especialistas Digitais</span>
+                    </h2>
+                </div>
 
-    /* DIGITAÇÃO */
-    const el = document.getElementById('typing');
-    const ghost = document.getElementById('ghost');
-    const messages = ['Site em construção', 'Em breve novidades!'];
-    const typeSpeed = 70;
-    const eraseSpeed = 40;
-    const holdAfterType = 1100;
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 auto-rows-[minmax(250px,auto)] fade-in-section">
+                    
+                    <div class="lg:col-span-5 row-span-2 relative overflow-hidden rounded-[2rem] border border-gray-200 dark:border-white/10 group shadow-lg">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/40"></div>
+                        
+                        <div class="relative z-10 h-full p-10 flex flex-col justify-end items-start">
+                            <div class="icon-shine-wrapper w-16 h-16 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center text-3xl text-futura-accent mb-6 border border-white/10 overflow-hidden relative">
+                                <i class="fas fa-terminal relative z-10"></i>
+                                <div class="shimmer-effect"></div>
+                            </div>
 
-    ghost.textContent = messages.reduce((a,b)=>a.length>=b.length?a:b);
+                            <h3 class="font-display text-2xl text-white mb-2 uppercase">Full Stack Dev</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed font-light">Engenharia de software robusta. Backend complexo, automações e sistemas escaláveis.</p>
+                        </div>
+                    </div>
 
-    let msgIndex = 0, i = 0, typing = true;
-    (function loop(){
-      const text = messages[msgIndex];
-      if (typing){
-        if (i < text.length){ el.textContent = text.slice(0, ++i); setTimeout(loop, typeSpeed); }
-        else { typing = false; setTimeout(loop, holdAfterType); }
-      } else {
-        if (i > 0){ el.textContent = text.slice(0, --i); setTimeout(loop, eraseSpeed); }
-        else { msgIndex = (msgIndex + 1) % messages.length; typing = true; setTimeout(loop, typeSpeed); }
-      }
-    })();
+                    <div class="lg:col-span-7 row-span-1 relative overflow-hidden rounded-[2rem] border border-gray-200 dark:border-white/10 group shadow-lg min-h-[280px]">
+                         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110"></div>
+                         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+                        
+                        <div class="relative z-10 h-full p-10 flex flex-col justify-center items-start">
+                             <div class="icon-shine-wrapper w-14 h-14 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center text-2xl text-futura-primary mb-4 border border-white/10 overflow-hidden relative">
+                                <i class="fas fa-pen-nib relative z-10"></i>
+                                <div class="shimmer-effect"></div>
+                            </div>
+                            <h3 class="font-display text-2xl text-white mb-2 uppercase">UI/UX & Branding</h3>
+                            <p class="text-gray-300 text-sm font-light max-w-md">Design que não é apenas bonito, mas funcional. Interfaces que convertem.</p>
+                        </div>
+                    </div>
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+                    <div class="lg:col-span-4 row-span-1 relative overflow-hidden rounded-[2rem] border border-gray-200 dark:border-white/10 group shadow-lg">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1535016120720-40c6874c3b13?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110"></div>
+                        <div class="absolute inset-0 bg-black/70"></div>
+                        
+                        <div class="relative z-10 h-full p-8 flex flex-col justify-center">
+                            <div class="icon-shine-wrapper w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center text-xl text-orange-400 mb-4 border border-white/10 overflow-hidden relative">
+                                <i class="fas fa-film relative z-10"></i>
+                                <div class="shimmer-effect"></div>
+                            </div>
+                            <h3 class="font-display text-lg text-white mb-1 uppercase">Filmmaker</h3>
+                            <p class="text-gray-400 text-xs font-light">Produção cinematográfica e motion.</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3 row-span-1 relative overflow-hidden rounded-[2rem] border border-gray-200 dark:border-white/10 group shadow-lg">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110"></div>
+                        <div class="absolute inset-0 bg-black/80"></div>
+
+                        <div class="relative z-10 h-full p-8 flex flex-col justify-center">
+                             <div class="icon-shine-wrapper w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center text-xl text-blue-400 mb-4 border border-white/10 overflow-hidden relative">
+                                <i class="fas fa-globe relative z-10"></i>
+                                <div class="shimmer-effect"></div>
+                            </div>
+                            <h3 class="font-display text-lg text-white leading-tight uppercase">Web Dev</h3>
+                        </div>
+                    </div>
+
+                     <div class="lg:col-span-5 lg:col-start-8 row-span-1 relative overflow-hidden rounded-[2rem] border border-gray-200 dark:border-white/10 group shadow-lg">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/90 to-black/50"></div>
+
+                        <div class="relative z-10 h-full p-8 flex flex-row items-center gap-6">
+                             <div class="icon-shine-wrapper w-14 h-14 bg-white/10 backdrop-blur-md rounded-xl flex flex-shrink-0 items-center justify-center text-2xl text-pink-500 border border-white/10 overflow-hidden relative">
+                                <i class="fas fa-hashtag relative z-10"></i>
+                                <div class="shimmer-effect"></div>
+                            </div>
+                            <div>
+                                <h3 class="font-display text-xl text-white uppercase">Social Strategy</h3>
+                                <p class="text-gray-400 text-xs font-light mt-1">Growth, Ads e Gestão.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-24 bg-futura-light dark:bg-futura-dark relative">
+             <div class="absolute top-0 right-0 w-96 h-96 bg-futura-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-in-section">
+                    <div>
+                        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 dark:text-white uppercase tracking-wider">Expertise Técnica</h2>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO" class="hidden md:flex btn-sheen text-white px-8 py-4 rounded-none skew-x-[-10deg] font-display text-xs font-bold border border-white/10 items-center gap-3 tracking-widest">
+                        <span class="skew-x-[10deg]">FALAR COM CONSULTOR</span> <i class="fas fa-chevron-right text-xs skew-x-[10deg]"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group bg-white dark:bg-white/5 backdrop-blur-md border border-gray-100 dark:border-white/10 p-8 rounded-2xl hover:border-futura-primary/50 transition-all duration-300 fade-in-section">
+                        <i class="fas fa-pen-nib text-3xl text-futura-primary mb-6"></i>
+                        <h3 class="font-display text-lg font-bold dark:text-white mb-4 uppercase">Design & Branding</h3>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-400 text-sm font-light">
+                            <li><i class="fas fa-check text-futura-primary mr-2"></i> Identidade Visual</li>
+                            <li><i class="fas fa-check text-futura-primary mr-2"></i> UI/UX Design</li>
+                            <li><i class="fas fa-check text-futura-primary mr-2"></i> 3D Motion</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="group bg-white dark:bg-white/5 backdrop-blur-md border border-gray-100 dark:border-white/10 p-8 rounded-2xl hover:border-futura-accent/50 transition-all duration-300 fade-in-section">
+                        <i class="fas fa-code text-3xl text-futura-accent mb-6"></i>
+                        <h3 class="font-display text-lg font-bold dark:text-white mb-4 uppercase">Desenvolvimento</h3>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-400 text-sm font-light">
+                            <li><i class="fas fa-check text-futura-accent mr-2"></i> Sites Institucionais</li>
+                            <li><i class="fas fa-check text-futura-accent mr-2"></i> E-commerce</li>
+                            <li><i class="fas fa-check text-futura-accent mr-2"></i> Web Apps (SAAS)</li>
+                        </ul>
+                    </div>
+
+                    <div class="group bg-white dark:bg-white/5 backdrop-blur-md border border-gray-100 dark:border-white/10 p-8 rounded-2xl hover:border-futura-secondary/50 transition-all duration-300 fade-in-section">
+                        <i class="fas fa-bullhorn text-3xl text-futura-secondary mb-6"></i>
+                        <h3 class="font-display text-lg font-bold dark:text-white mb-4 uppercase">Marketing</h3>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-400 text-sm font-light">
+                            <li><i class="fas fa-check text-futura-secondary mr-2"></i> Tráfego Pago</li>
+                            <li><i class="fas fa-check text-futura-secondary mr-2"></i> Social Media</li>
+                            <li><i class="fas fa-check text-futura-secondary mr-2"></i> Estratégia de Lançamento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-24 bg-white dark:bg-black relative overflow-hidden border-t border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4 mb-12 text-center relative z-10">
+                 <h2 class="font-display text-3xl font-bold dark:text-white uppercase tracking-wider">
+                    <span class="text-gradient-futura">Portfolio</span> Destaque
+                </h2>
+            </div>
+
+            <div class="marquee-wrapper pointer-events-none">
+                <div class="marquee-content-horizontal flex gap-6">
+                    <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/111/FFF?text=Project+01" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/222/FFF?text=Project+02" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/333/FFF?text=Project+03" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/444/FFF?text=Project+04" class="w-full h-full object-cover">
+                    </div>
+                     <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/555/FFF?text=Project+05" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/111/FFF?text=Project+01" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/222/FFF?text=Project+02" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/333/FFF?text=Project+03" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/444/FFF?text=Project+04" class="w-full h-full object-cover">
+                    </div>
+                     <div class="w-[280px] aspect-[4/5] bg-gray-800 rounded-xl overflow-hidden relative">
+                        <img src="https://placehold.co/400x500/555/FFF?text=Project+05" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto max-w-7xl px-4 mt-12 text-center relative z-10">
+                <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" class="inline-flex items-center gap-3 bg-white text-black hover:bg-gray-200 font-display text-sm font-bold py-4 px-10 rounded-none uppercase tracking-widest transition-all">
+                    <i class="fab fa-instagram text-xl"></i> Siga no Instagram
+                </a>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-[#050505] text-white pt-20 pb-10 border-t border-white/5">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="img/logob.png" alt="Futura Logo" class="h-6 w-auto mb-6 opacity-90">
+                    <p class="text-gray-500 text-xs leading-relaxed font-light">
+                        Elevando marcas através da fusão entre design de alta performance e tecnologia avançada.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-display text-sm font-bold mb-6 text-gray-200 uppercase tracking-widest">Sitemap</h4>
+                    <ul class="space-y-3 text-xs text-gray-500 font-light">
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Squad</a></li>
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Serviços</a></li>
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-sm font-bold mb-6 text-gray-200 uppercase tracking-widest">Legal</h4>
+                    <ul class="space-y-3 text-xs text-gray-500 font-light">
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Privacidade</a></li>
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-sm font-bold mb-6 text-gray-200 uppercase tracking-widest">Newsletter</h4>
+                    <form class="flex flex-col gap-4">
+                        <input type="email" placeholder="Seu e-mail corporativo" class="bg-white/5 border border-white/10 p-3 text-xs text-white focus:outline-none focus:border-futura-primary transition-colors">
+                        <button class="bg-white text-black font-display text-xs font-bold py-3 hover:bg-gray-200 transition-colors uppercase tracking-widest">Inscrever-se</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-[10px] text-gray-600 uppercase tracking-widest">&copy; 2025 Futura Design. All rights reserved.</p>
+                <h2 class="font-display text-4xl md:text-6xl text-white/5 font-bold mt-6 md:mt-0 select-none">FUTURA</h2>
+            </div>
+        </div>
+    </footer>
+
+    <button id="theme-toggle-btn"
+        class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:scale-110 transition-transform">
+        <i id="theme-toggle-sun" class="fas fa-sun"></i>
+        <i id="theme-toggle-moon" class="fas fa-moon hidden text-futura-accent"></i>
+    </button>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
