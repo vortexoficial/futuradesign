@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
+    <script>
+        (function () {
+            try {
+                const theme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>FUTURA DESIGN | Marca, Sites e Anúncios com Clareza</title>
+    <meta name="description" content="Branding, sites, e-commerce e criativos para anúncios com linguagem simples e execução premium. Ajudamos seu cliente a entender, confiar e entrar em contato, com medição de resultados.">
+    <link rel="canonical" href="https://agenciafuturadesign.com/">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FUTURA DESIGN | Marca, Sites e Anúncios com Clareza">
+    <meta property="og:description" content="Branding, sites, e-commerce e criativos para anúncios. Clareza, credibilidade e um próximo passo simples para o cliente, com medição de resultados.">
+    <meta property="og:url" content="https://agenciafuturadesign.com/">
+    <meta property="og:image" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FUTURA DESIGN | Marca, Sites e Anúncios com Clareza">
+    <meta name="twitter:description" content="Branding, sites, e-commerce e criativos para anúncios. Clareza, credibilidade e medição de resultados.">
+    <meta name="twitter:image" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Michroma&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Michroma', 'sans-serif'], // Fonte Michroma para títulos
+                    },
+                    colors: {
+                        futura: {
+                            primary: '#D300C5', 
+                            secondary: '#240090', 
+                            accent: '#00E5FF', 
+                            dark: '#050515',   
+                            card: '#0F0F25',   
+                            light: '#F8F9FA',  
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 5px 20px -5px rgba(0, 0, 0, 0.3)',
+                        'glow': '0 0 40px rgba(211, 0, 197, 0.2), 0 0 15px rgba(36, 0, 144, 0.1)', 
+                        'neon': '0 0 15px rgba(211, 0, 197, 0.4), 0 0 30px rgba(211, 0, 197, 0.1)',
+                    },
+                    backgroundImage: {
+                        'universe-dark': "linear-gradient(to bottom, rgba(2, 2, 8, 0.85), rgba(2, 2, 8, 0.98))",
+                        'clean-light': "linear-gradient(to bottom, #F8F9FA, #FFFFFF)",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <div id="loader" class="fixed inset-0 bg-futura-light dark:bg-futura-dark flex flex-col items-center justify-center z-[9999]">
+        <div class="flex flex-col items-center">
+            <img src="img/logop.png" alt="FUTURA Logo" class="theme-logo w-40 h-auto mb-8 object-contain" />
+            <div class="w-48 h-1 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                <div class="h-full w-full animate-loader-bar origin-left"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 pointer-events-none">
+        <div class="container mx-auto max-w-7xl pt-4 lg:pt-6 px-4">
+            <div class="flex h-20 items-center justify-between bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-black/10 dark:border-white/5 rounded-2xl px-8 shadow-sm pointer-events-auto">
+                <a href="#hero" class="block hover:opacity-80 transition-opacity">
+                    <img src="img/logop.png" alt="FUTURA DESIGN Logo" class="theme-logo h-6 w-auto object-contain">
+                </a>
+                <nav class="hidden lg:block">
+                    <ul class="flex items-center gap-8">
+                        <li><a href="#hero" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Início</a></li>
+                        <li><a href="#quem-somos" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Equipe</a></li>
+                        <li><a href="#servicos" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Serviços</a></li>
+                        <li><a href="#metodo" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Como Funciona</a></li>
+                        <li><a href="#portfolio" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Portfólio</a></li>
+                        <li><a href="#faq" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Dúvidas</a></li>
+                        <li><a href="#contato" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Contato</a></li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO" target="_blank" rel="noopener"
+                                class="hidden lg:inline-flex btn-sheen text-white font-display text-[10px] font-bold py-3 px-6 rounded-none skew-x-[-10deg] shadow-neon items-center gap-2 tracking-wider border border-white/10 transition-all">
+                                <span class="skew-x-[10deg]">Solicitar diagnóstico</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4 lg:hidden">
+                    <button class="text-xl text-futura-primary" id="hamburger-menu" aria-label="Abrir menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay fixed inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-md z-[999] flex flex-col p-6 transition-transform duration-300 ease-in-out lg:hidden translate-x-full" id="mobile-menu-overlay">
+        <div class="flex justify-between items-center mb-12">
+            <img src="img/logop.png" alt="FUTURA DESIGN Logo" class="theme-logo h-8 w-auto">
+            <button class="text-3xl text-futura-primary" id="close-menu" aria-label="Fechar menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <nav class="flex-grow flex flex-col gap-6 text-center">
+            <a href="#hero" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Início</a>
+            <a href="#quem-somos" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Equipe</a>
+            <a href="#servicos" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Serviços</a>
+            <a href="#metodo" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Como funciona</a>
+            <a href="#portfolio" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Portfólio</a>
+            <a href="#faq" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Dúvidas</a>
+            <a href="#contato" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Contato</a>
+        </nav>
+        <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO"
+            class="btn-sheen w-full text-white py-5 rounded-none font-display font-bold text-center text-sm uppercase tracking-widest shadow-neon mt-auto">
+            Falar com a equipe
+        </a>
+    </div>
+
+    <main>
+
+        <section id="hero" class="relative overflow-hidden min-h-screen flex items-center bg-clean-light dark:bg-universe-dark bg-cover bg-center bg-no-repeat z-10 pb-20">
+            <div class="absolute inset-0 bg-pattern-dots opacity-30 pointer-events-none dark:opacity-50 mix-blend-overlay"></div>
+
+            <div class="container mx-auto max-w-7xl px-6 relative z-10 w-full pt-28">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
+                    <div class="w-full lg:w-3/5 2xl:w-2/3 z-10 text-center lg:text-left" data-stagger-parent>
+                        
+<h1 class="fade-in-section font-display text-gray-900 dark:text-white mb-8
+                                   text-4xl leading-[1.1]
+                                   lg:text-6xl lg:leading-[1.1] tracking-tight" data-reveal="scale">
+                            Design e estratégia
+                            <br>
+                            <span class="bg-gradient-to-r from-futura-primary to-futura-accent bg-clip-text text-transparent">para transformar<wbr> <span class="sm:whitespace-nowrap">visitas em clientes</span></span>.
+                        </h1>
+
+                        <p class="fade-in-section text-gray-600 dark:text-gray-400 font-light max-w-lg mx-auto lg:mx-0
+                                  text-lg mb-10 leading-relaxed font-sans">
+                            Branding, sites, lojas virtuais, social media e criativos para anúncios, estratégias para criar autoridade, passar segurança e conquistar <strong class="text-gray-900 dark:text-white font-medium">novos clientes</strong>.
+                        </p>
+
+                        <div class="fade-in-section flex flex-col items-center lg:items-start justify-center lg:justify-start">
+                            <div class="flex flex-col md:flex-row gap-4 justify-center lg:justify-start w-full md:w-auto">
+                                <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO&text=Ol%C3%A1%2C%20FUTURA!%20Quero%20um%20diagn%C3%B3stico.%20Preciso%20de%20landing%2Fsite%2Fe-commerce%2Fcriativos%20para%20gerar%20leads%20qualificados%20e%20vendas.%20Podemos%20alinhar%20escopo%20e%20prazo%3F" target="_blank" rel="noopener"
+                                    class="btn-sheen w-full md:w-auto text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-widest border border-white/15">
+                                    <span class="skew-x-[10deg]">FALAR NO WHATSAPP</span> <i class="fab fa-whatsapp skew-x-[10deg]"></i>
+                                </a>
+                                <a href="#metodo"
+                                    class="w-full md:w-auto bg-white/80 dark:bg-white/10 text-gray-900 dark:text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] flex items-center justify-center gap-3 tracking-widest border border-gray-200 dark:border-white/15 hover:bg-white/90 dark:hover:bg-white/15 transition-colors">
+                                    <span class="skew-x-[10deg]">VER COMO FUNCIONA</span> <i class="fas fa-arrow-down skew-x-[10deg]"></i>
+                                </a>
+                            </div>
+
+                            <div class="mt-10 lg:hidden w-full flex justify-center">
+                                <img src="img/hero.png" alt="Imagem de apoio do hero" decoding="async" class="w-full max-w-sm h-auto select-none" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex lg:w-2/5 h-full items-center justify-end">
+                        <div class="w-full max-w-md xl:max-w-lg 2xl:max-w-xl">
+                            <img src="img/hero.png" alt="Imagem de apoio do hero" decoding="async" class="w-full h-auto select-none" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="w-full bg-white dark:bg-[#08081A] border-y border-gray-100 dark:border-white/5 py-6 overflow-hidden relative z-20">
+            <div class="marquee-wrapper">
+                <div class="marquee-content-horizontal text-gray-400 dark:text-white/50 font-sans font-thin text-sm uppercase tracking-[0.4em] flex items-center whitespace-nowrap">
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Desenvolvimento</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-accent"></i> Design</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Vídeo & Motion</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-secondary"></i> Anúncios</span>
+                    
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Desenvolvimento</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-accent"></i> Design</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Vídeo & Motion</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-secondary"></i> Anúncios</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="prova" class="py-24 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    <div class="lg:col-span-5 fade-in-section">
+                        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">
+                            Crescer com tranquilidade pede <span class="text-gradient-futura">método</span>.
+                        </h2>
+                        <p class="mt-6 text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                            A FUTURA DESIGN ajuda você a organizar a base: mensagem clara, visual profissional, site bem construído e medição de resultados.
+                            Assim, fica mais fácil atrair o público certo e transformar interesse em <strong class="font-semibold">mensagens, pedidos e vendas</strong>.
+                        </p>
+                        <div class="mt-8 grid grid-cols-2 gap-4" data-stagger-parent>
+                            <div class="fade-in-section premium-card p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Projetos entregues</p>
+                                <p class="mt-2 font-display text-2xl text-gray-900 dark:text-white"><span data-count="190" data-prefix="+" data-duration="1200">+190</span></p>
+                            </div>
+                            <div class="fade-in-section premium-card p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Satisfação</p>
+                                <p class="mt-2 font-display text-2xl text-gray-900 dark:text-white"><span data-count="92" data-suffix="%" data-duration="1200">92%</span></p>
+                            </div>
+                            <div class="fade-in-section premium-card p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Experiência</p>
+                                <p class="mt-2 font-display text-2xl text-gray-900 dark:text-white"><span data-count="7" data-prefix="+" data-suffix=" anos" data-duration="1200">+7 anos</span></p>
+                            </div>
+                            <div class="fade-in-section premium-card p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Segmentos</p>
+                                <p class="mt-2 font-display text-2xl text-gray-900 dark:text-white"><span data-count="10" data-suffix="+" data-duration="1200">10+</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-7 fade-in-section">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-stagger-parent>
+                            <div class="fade-in-section premium-card p-8 lg:py-[34.5px] rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">
+                                <i class="fa-solid fa-pen-ruler text-xl text-futura-primary mb-4" aria-hidden="true"></i>
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Mensagem clara</p>
+                                <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Seu cliente entende rápido o que você faz, para quem é e como entrar em contato.</p>
+                            </div>
+                            <div class="fade-in-section premium-card p-8 lg:py-[34.5px] rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">
+                                <i class="fa-solid fa-mobile-screen-button text-xl text-futura-accent mb-4" aria-hidden="true"></i>
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Site leve e organizado</p>
+                                <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Carrega rápido, layout responsivo (computador e celular) e guia a pessoa até a ação (mensagem, orçamento ou compra).</p>
+                            </div>
+                            <div class="fade-in-section premium-card p-8 lg:py-[34.5px] rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">
+                                <i class="fa-solid fa-chart-simple text-xl text-futura-secondary mb-4" aria-hidden="true"></i>
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Medição de resultados</p>
+                                <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Você acompanha o que acontece: visitas, cliques, mensagens e pedidos, sem mistério.</p>
+                            </div>
+                            <div class="fade-in-section premium-card p-8 lg:py-[34.5px] rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">
+                                <i class="fa-solid fa-route text-xl text-futura-primary/90 mb-4" aria-hidden="true"></i>
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Processo direto</p>
+                                <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Etapas claras, prazos combinados e comunicação objetiva para você não ficar no escuro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="problemas" class="pt-20 pb-12 md:pt-24 md:pb-16 bg-gray-50 dark:bg-futura-dark">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">
+                        Onde muita gente se perde, a gente <span class="text-gradient-futura">organiza</span>.
+                    </h2>
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Quando a mensagem não está clara e o site não ajuda, o cliente até visita, mas não entende, não confia e não entra em contato.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-stagger-parent>
+                    <div class="fade-in-section premium-card relative p-8 pl-20 sm:pl-20 lg:pl-24 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                        <span class="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-11 h-11 rounded-full bg-gray-100 border border-gray-200 dark:bg-white/10 dark:border-white/10 text-futura-primary" aria-hidden="true">
+                            <svg class="w-5 h-5 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h12" />
+                                <path d="M14 7l5 5-5 5" />
+                            </svg>
+                        </span>
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Muita visita, pouca mensagem</p>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">A pessoa entra, mas não entende o que fazer. Ajustamos texto, páginas e chamadas para ação.</p>
+                    </div>
+                    <div class="fade-in-section premium-card relative p-8 pl-20 sm:pl-20 lg:pl-24 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                        <span class="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-11 h-11 rounded-full bg-gray-100 border border-gray-200 dark:bg-white/10 dark:border-white/10 text-futura-accent" aria-hidden="true">
+                            <svg class="w-5 h-5 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h12" />
+                                <path d="M14 7l5 5-5 5" />
+                            </svg>
+                        </span>
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Site bonito, mas confuso</p>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Deixamos a navegação simples, com prova, informações essenciais e um caminho claro para contato.</p>
+                    </div>
+                    <div class="fade-in-section premium-card relative p-8 pl-20 sm:pl-20 lg:pl-24 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                        <span class="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-11 h-11 rounded-full bg-gray-100 border border-gray-200 dark:bg-white/10 dark:border-white/10 text-futura-secondary" aria-hidden="true">
+                            <svg class="w-5 h-5 opacity-90 dark:opacity-100 dark:brightness-150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h12" />
+                                <path d="M14 7l5 5-5 5" />
+                            </svg>
+                        </span>
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Falta credibilidade</p>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Organizamos a identidade e a comunicação para transmitir segurança e profissionalismo.</p>
+                    </div>
+                    <div class="fade-in-section premium-card relative p-8 pl-20 sm:pl-20 lg:pl-24 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                        <span class="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-11 h-11 rounded-full bg-gray-100 border border-gray-200 dark:bg-white/10 dark:border-white/10 text-futura-primary/80" aria-hidden="true">
+                            <svg class="w-5 h-5 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h12" />
+                                <path d="M14 7l5 5-5 5" />
+                            </svg>
+                        </span>
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Sem clareza de resultado</p>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Configuramos a medição para você enxergar o que gera contatos e vendas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quem-somos" class="pt-16 pb-16 md:pt-20 md:pb-[108px] bg-gray-50 dark:bg-futura-dark relative overflow-hidden font-sans">
+             
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    <div class="fade-in-section lg:col-span-5 lg:row-start-2 w-full mx-auto lg:mx-0" data-reveal="from-left">
+                        <div class="w-full -mx-4 sm:mx-0">
+                            <img src="img/equipe.png" alt="Equipe da Futura Design" class="astronaut-float w-full max-w-none h-auto object-contain" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+
+                    <div class="text-center max-w-3xl mx-auto lg:col-span-12 lg:row-start-1 fade-in-section">
+                        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mt-6 md:mt-0 text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-[1.15] break-words">
+                            <span class="block md:hidden">Uma equipe completa</span>
+                            <span class="hidden md:block md:whitespace-nowrap">Uma equipe completa para</span>
+                            <span class="block">
+                                <span class="md:hidden">para </span><span class="text-gradient-futura">planejar e entregar</span>
+                            </span>
+                        </h2>
+                        <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Design, desenvolvimento e estratégia juntos, com foco no que o seu cliente precisa entender para confiar e tomar uma decisão.</p>
+                    </div>
+
+                    <div class="lg:col-span-7 lg:row-start-2" data-stagger-parent>
+                        <div class="flex flex-col gap-6">
+                            <div class="fade-in-section premium-card p-6 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-start gap-5">
+                                <div class="icon-shine-wrapper w-12 h-12 bg-futura-accent dark:bg-white/10 rounded-xl flex items-center justify-center text-xl border border-black/10 dark:border-white/10 overflow-hidden relative flex-shrink-0">
+                                    <i class="fas fa-terminal text-white dark:text-futura-accent relative z-10"></i>
+                                    <div class="shimmer-effect"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-sm sm:text-base text-gray-900 dark:text-white uppercase tracking-widest">Desenvolvimento completo</h3>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light">Sites e sistemas bem feitos, com atenção a velocidade, segurança e estabilidade.</p>
+                                </div>
+                            </div>
+
+                            <div class="fade-in-section premium-card p-6 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-start gap-5">
+                                <div class="icon-shine-wrapper w-12 h-12 bg-futura-primary dark:bg-white/10 rounded-xl flex items-center justify-center text-xl border border-black/10 dark:border-white/10 overflow-hidden relative flex-shrink-0">
+                                    <i class="fas fa-pen-nib text-white dark:text-futura-primary relative z-10"></i>
+                                    <div class="shimmer-effect"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-sm sm:text-base text-gray-900 dark:text-white uppercase tracking-widest">Marca e experiência</h3>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light">Visual profissional e organização de informação para deixar tudo simples de entender.</p>
+                                </div>
+                            </div>
+
+                            <div class="fade-in-section premium-card p-6 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-start gap-5">
+                                <div class="icon-shine-wrapper w-12 h-12 bg-futura-accent dark:bg-white/10 rounded-xl flex items-center justify-center text-xl border border-black/10 dark:border-white/10 overflow-hidden relative flex-shrink-0">
+                                    <i class="fas fa-globe text-white dark:text-futura-accent relative z-10"></i>
+                                    <div class="shimmer-effect"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-sm sm:text-base text-gray-900 dark:text-white uppercase tracking-widest">Sites e lojas</h3>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light">Experiências rápidas, organizadas e responsivas para transformar visitas em mensagens e pedidos.</p>
+                                </div>
+                            </div>
+
+                            <div class="fade-in-section premium-card p-6 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-start gap-5">
+                                <div class="icon-shine-wrapper w-12 h-12 bg-futura-primary dark:bg-white/10 rounded-xl flex items-center justify-center text-xl border border-black/10 dark:border-white/10 overflow-hidden relative flex-shrink-0">
+                                    <i class="fas fa-hashtag text-white dark:text-futura-primary relative z-10"></i>
+                                    <div class="shimmer-effect"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-sm sm:text-base text-gray-900 dark:text-white uppercase tracking-widest">Conteúdo e anúncios</h3>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light">Peças e campanhas com objetivo claro e acompanhamento de resultado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="pt-16 pb-24 md:py-24 bg-futura-light dark:bg-futura-dark relative">
+             <div class="absolute top-0 right-0 w-96 h-96 bg-futura-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-in-section">
+                    <div>
+                        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">Serviços com foco em<br class="hidden md:block"><span class="text-gradient-futura">clareza e resultado</span></h2>
+                        <p class="text-gray-600 dark:text-gray-300 font-light max-w-2xl">A escolha que faz sentido agora: melhorar a marca, arrumar o site/loja e organizar a divulgação para gerar contatos e vendas.</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO" class="hidden md:flex btn-sheen text-white px-8 py-4 rounded-none skew-x-[-10deg] font-display text-xs font-bold border border-white/10 items-center gap-3 tracking-widest">
+                        <span class="skew-x-[10deg]">FALAR COM A EQUIPE</span> <i class="fas fa-chevron-right text-xs skew-x-[10deg]"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-stagger-parent>
+                    <div class="group premium-card bg-white dark:bg-white/5 backdrop-blur-md border border-gray-100 dark:border-white/10 p-8 rounded-2xl hover:border-futura-primary/50 transition-all duration-300 fade-in-section">
+                        <i class="fas fa-pen-nib text-3xl text-futura-primary mb-6"></i>
+                        <h3 class="font-display text-lg font-bold dark:text-white mb-3 uppercase">Marca e identidade</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm font-light leading-relaxed">Visual profissional e mensagem clara para aumentar confiança e facilitar a decisão do cliente.</p>
+                        <div class="mt-6 space-y-4 text-sm">
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-900 dark:text-gray-300">Quando faz sentido</p>
+                                <p class="mt-2 text-gray-600 dark:text-gray-300 font-light">Quando a marca parece “genérica”, a comunicação confunde e o cliente não entende o valor.</p>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-900 dark:text-gray-300">O que entregamos</p>
+                                <ul class="mt-2 space-y-2 text-gray-600 dark:text-gray-300 font-light">
+                                    <li class="flex gap-2"><i class="fas fa-check text-futura-primary mt-1"></i><span>Mensagem e diferenciais (o que te separa do comum)</span></li>
+                                    <li class="flex gap-2"><i class="fas fa-check text-futura-primary mt-1"></i><span>Identidade visual e guia simples de uso</span></li>
+                                    <li class="flex gap-2"><i class="fas fa-check text-futura-primary mt-1"></i><span>Modelos para redes sociais e anúncios</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-900 dark:text-gray-300">O que você ganha</p>
+                                <p class="mt-2 text-gray-600 dark:text-gray-300 font-light">Mais confiança, menos dúvida do cliente e uma apresentação coerente em todos os canais.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group premium-card bg-white dark:bg-white/5 backdrop-blur-md border border-gray-100 dark:border-white/10 p-8 rounded-2xl hover:border-futura-accent/50 transition-all duration-300 fade-in-section">
+                        <i class="fas fa-code text-3xl text-futura-accent mb-6"></i>
+                        <h3 class="font-display text-lg font-bold dark:text-white mb-3 uppercase">Sites e lojas virtuais</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm font-light leading-relaxed">Um site simples de navegar, que explica bem e leva a pessoa até a ação (mensagem, orçamento, compra, agendamento).</p>
+                        <div class="mt-6 space-y-4 text-sm">
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-900 dark:text-gray-300">Quando faz sentido</p>
+                                <p class="mt-2 text-gray-600 dark:text-gray-300 font-light">Quando o site é lento, confuso ou não traz contatos e pedidos.</p>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-900 dark:text-gray-300">O que entregamos</p>
+                                <ul class="mt-2 space-y-2 text-gray-600 dark:text-gray-300 font-light">
+                                    <li class="flex gap-2"><i class="fas fa-check text-futura-accent mt-1"></i><span>Landing pages e sites institucionais</span></li>
+                                    <li class="flex gap-2"><i class="fas fa-check text-futura-accent mt-1"></i><span>Layout pensado para celular e computador</span></li>
+                                    <li class="flex gap-2"><i class="fas fa-check text-futura-accent mt-1"></i><span>SEO básico e medição de resultados</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-900 dark:text-gray-300">O que você ganha</p>
+                                <p class="mt-2 text-gray-600 dark:text-gray-300 font-light">Mais pedidos e mensagens, com uma base pronta para divulgação sem desperdício.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group premium-card bg-white dark:bg-white/5 backdrop-blur-md border border-gray-100 dark:border-white/10 p-8 rounded-2xl hover:border-futura-secondary/50 transition-all duration-300 fade-in-section">
+                        <i class="fas fa-bullhorn text-3xl text-futura-secondary mb-6"></i>
+                        <h3 class="font-display text-lg font-bold dark:text-white mb-3 uppercase">Anúncios e criativos</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm font-light leading-relaxed">Peças para anúncios e redes sociais, com objetivo claro e medição para saber o que funciona.</p>
+                        <div class="mt-6 space-y-4 text-sm">
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-900 dark:text-gray-300">Quando faz sentido</p>
+                                <p class="mt-2 text-gray-600 dark:text-gray-300 font-light">Quando você anuncia, mas recebe contatos fracos, ou não sabe o que trouxe resultado.</p>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-900 dark:text-gray-300">O que entregamos</p>
+                                <ul class="mt-2 space-y-2 text-gray-600 dark:text-gray-300 font-light">
+                                    <li class="flex gap-2"><i class="fas fa-check text-futura-secondary mt-1"></i><span>Pacotes de criativos para anúncios e redes sociais</span></li>
+                                    <li class="flex gap-2"><i class="fas fa-check text-futura-secondary mt-1"></i><span>Organização da oferta e da mensagem</span></li>
+                                    <li class="flex gap-2"><i class="fas fa-check text-futura-secondary mt-1"></i><span>Ajustes com base em mensagens, pedidos e vendas</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-900 dark:text-gray-300">O que você ganha</p>
+                                <p class="mt-2 text-gray-600 dark:text-gray-300 font-light">Mais previsibilidade e decisões mais seguras, sem depender de achismo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodo" class="py-24 bg-white dark:bg-black border-t border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    <div class="fade-in-section w-full max-w-2xl mx-auto lg:hidden" data-reveal="from-right">
+                        <img src="img/megafone.png" alt="Megafone" class="w-full h-auto object-contain" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section lg:col-span-12 lg:row-start-1">
+                        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">
+                            Como trabalhamos: clareza, base e <span class="text-gradient-futura">melhorias contínuas</span>
+                        </h2>
+                        <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Um processo simples, sem complicação, para sair do improviso e ganhar consistência.</p>
+                    </div>
+
+                    <div class="lg:col-span-8 lg:row-start-2" data-stagger-parent>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <span class="absolute bottom-6 sm:bottom-8 right-4 font-display text-8xl sm:text-9xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">1</span>
+                                <div class="relative z-10">
+                                    <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Diagnóstico</h3>
+                                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Entendemos seu objetivo, seu público e o que seria um bom resultado para você.</p>
+                                </div>
+                            </div>
+                            <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <span class="absolute bottom-6 sm:bottom-8 right-4 font-display text-8xl sm:text-9xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">2</span>
+                                <div class="relative z-10">
+                                    <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Estratégia</h3>
+                                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Organizamos a mensagem, as provas e o caminho do cliente até o contato ou compra.</p>
+                                </div>
+                            </div>
+                            <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <span class="absolute bottom-6 sm:bottom-8 right-4 font-display text-8xl sm:text-9xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">3</span>
+                                <div class="relative z-10">
+                                    <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Construção</h3>
+                                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Construímos a página, o site ou a loja, com texto claro e medição de resultado.</p>
+                                </div>
+                            </div>
+                            <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <span class="absolute bottom-6 sm:bottom-8 right-4 font-display text-8xl sm:text-9xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">4</span>
+                                <div class="relative z-10">
+                                    <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Aquisição</h3>
+                                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Criamos peças e organizamos a divulgação para atrair pessoas com interesse real.</p>
+                                </div>
+                            </div>
+                            <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 md:col-span-2">
+                                <span class="absolute bottom-6 sm:bottom-8 right-4 font-display text-8xl sm:text-9xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">5</span>
+                                <div class="relative z-10">
+                                    <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Otimização</h3>
+                                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Melhoramos o que for necessário para aumentar pedidos e reduzir desperdício.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden lg:block lg:col-span-4 lg:col-start-9 lg:row-start-2 fade-in-section" data-reveal="from-right">
+                        <img src="img/megafone.png" alt="Megafone" class="w-full h-auto object-contain" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sites" class="py-24 bg-gray-50 dark:bg-futura-dark border-t border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">
+                        <span class="text-gradient-futura">Sites, lojas</span> e landing pages que desenvolvemos
+                    </h2>
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Clique em um projeto para visitar o site.</p>
+                </div>
+
+                <div class="fade-in-section">
+                    <div id="sites-track-source">
+                        <a href="https://reformassantos.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-hammer" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Reformas Santos</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Engenharia e reformas</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://lancamento.todehack.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">HACK (Lançamento)</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Landing de lançamento (suplemento)</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://www.todehack.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-cart-shopping" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Tô de Hack</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Loja de suplementos</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/mydev/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-code" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">My Dev</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Plataforma de cursos de programação</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/micheldecorbrasil/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-champagne-glasses" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Michel Brasil Decor</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Decoração e produção de eventos</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/maistuagencia/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-bullhorn" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Agência +TU</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Agência de marketing e performance</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://www.calcadoscastroeesportiva.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-bag-shopping" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Calçados Castro e Esportiva</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Loja online de calçados e esportes</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/casadaalma/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Casa da Alma</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Psicoterapia e mentoria</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/lipoplus/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-fire" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Lipo Plus</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Landing de suplemento</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://kaptemidia.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Kapte Mídia</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Marketing estratégico e conteúdo</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/viva-hven/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-building" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Viva Haven</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Sistema de gestão condominial</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://1000prints.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-print" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">1000 Prints</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Gráfica e soluções criativas</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://www.grandhaus.com.br/sobrenos.html" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-helmet-safety" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Grand Haus Engenharia</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Reformas e obras de alto padrão</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://viverteen.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-people-group" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">+Conexões (ViverTeen)</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Evento para adolescentes</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://energy.guaranamaues.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Maués Energy</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Landing de energético natural</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://pontodatecnologia.com/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Ponto.Tech</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Ofertas de hardware e tecnologia</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://anjosdoleite.com/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-baby" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Anjos do Leite</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Consultoria de amamentação</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/institutoanjosdoleite/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Instituto Anjos do Leite</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Instituto e projetos sociais</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://bebadionisio.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-martini-glass" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Dionísio Gin &amp; Vodka</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Bebidas premium</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://delegadaraquel.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-shield" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Delegada Raquel</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Guia de proteção e informação</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://serralheriaafrica.com.br/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-gear" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Serralheria África</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Soluções metálicas e automação</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/qcv/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-handshake" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Quem Conecta Vende</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Comunidade e eventos de networking</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/veno/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-umbrella" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Veno Corretora</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Seguro DIT (proteção de renda)</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/treinao-do-bem/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-person-running" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Treinão do Bem</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Evento beneficente (yoga e zumba)</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/emporiodomorador/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-store" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Empório do Morador</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Mercado autônomo para condomínios</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/celmafeliciano/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-receipt" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Celma Feliciano</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Consultoria tributária</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/flaviana/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-seedling" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Jornada Rica</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Mentoria de desenvolvimento pessoal</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/academiadv/site.html" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-dumbbell" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Academia DV</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Academia e aulas fitness</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/frd/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-mobile-screen-button" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Método 30 Minutos</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Mini curso de renda extra</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/sindican/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-scale-balanced" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">SINDCAN</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Gestão condominial e jurídico</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/amamentacaoeficaz/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-circle-check" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">Amamentação Eficaz</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Curso online para amamentação</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/FEMAC/pagina.html" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-file-lines" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">FEMAC Engenharia</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Regularização e laudos técnicos</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                        <a href="https://vortexoficial.github.io/MLD-TOUR/" target="_blank" rel="noopener" class="site-card group w-[230px] sm:w-[250px] min-h-[300px] premium-card flex flex-col rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-futura-primary/40 dark:hover:border-white/20">
+                            <div class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary"><i class="fas fa-bus" aria-hidden="true"></i></div>
+                            <p class="mt-5 font-display text-base font-bold text-gray-900 dark:text-white leading-snug">MLD Tour</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-snug">Agência de turismo e excursões</p>
+                            <span class="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/10 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-900 dark:text-white transition-colors group-hover:bg-gray-100 dark:group-hover:bg-white/15">Ver site <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="marquee-wrapper marquee-cards" aria-label="Carrossel de sites (linha 1)">
+                        <div class="marquee-content-horizontal flex gap-4 py-0" data-marquee-track="sites-top" data-marquee-speed="35"></div>
+                    </div>
+
+                    <div class="marquee-wrapper marquee-cards mt-8" aria-label="Carrossel de sites (linha 2)">
+                        <div class="marquee-content-horizontal marquee-reverse flex gap-4 py-0" data-marquee-track="sites-bottom" data-marquee-speed="35"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-24 bg-white dark:bg-black relative overflow-hidden border-t border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4 mb-12 text-center relative z-10">
+                 <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">
+                    <span class="text-gradient-futura">Portfólio</span> e projetos
+                </h2>
+                <p class="mt-6 text-gray-600 dark:text-gray-300 font-light max-w-3xl mx-auto">Quando mostramos um trabalho, mostramos o que importou: objetivo, o que foi feito e como isso ajudou o negócio.</p>
+            </div>
+
+            <div class="marquee-wrapper pointer-events-none">
+                <div class="marquee-content-horizontal flex gap-6">
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/01.jpg" alt="Trabalho 01" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/02.jpg" alt="Trabalho 02" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/03.jpg" alt="Trabalho 03" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/04.png" alt="Trabalho 04" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/05.png" alt="Trabalho 05" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/06.png" alt="Trabalho 06" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/07.png" alt="Trabalho 07" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/08.png" alt="Trabalho 08" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/09.png" alt="Trabalho 09" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/10.png" alt="Trabalho 10" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/11.png" alt="Trabalho 11" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/12.png" alt="Trabalho 12" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/13.jpg" alt="Trabalho 13" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/14.jpg" alt="Trabalho 14" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/15.jpg" alt="Trabalho 15" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/01.jpg" alt="Trabalho 01" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/02.jpg" alt="Trabalho 02" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/03.jpg" alt="Trabalho 03" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/04.png" alt="Trabalho 04" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/05.png" alt="Trabalho 05" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/06.png" alt="Trabalho 06" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/07.png" alt="Trabalho 07" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/08.png" alt="Trabalho 08" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/09.png" alt="Trabalho 09" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/10.png" alt="Trabalho 10" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/11.png" alt="Trabalho 11" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/12.png" alt="Trabalho 12" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/13.jpg" alt="Trabalho 13" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/14.jpg" alt="Trabalho 14" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
+                        <img src="img/15.jpg" alt="Trabalho 15" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto max-w-7xl px-4 mt-12 text-center relative z-10">
+                <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-gray-900 text-white hover:bg-gray-800 dark:bg-white/10 dark:text-white dark:hover:bg-white/15 font-display text-sm font-bold py-4 px-10 rounded-none uppercase tracking-widest transition-all border border-transparent dark:border-white/15">
+                    <i class="fab fa-instagram text-xl"></i> Ver trabalhos no Instagram
+                </a>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="py-24 bg-gray-50 dark:bg-futura-dark border-t border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-section">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">
+                        O que você pode esperar do <span class="text-gradient-futura">processo</span>
+                    </h2>
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Sem promessas milagrosas. O foco é clareza, entrega bem feita e acompanhamento do que importa.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-stagger-parent>
+                    <div class="fade-in-section premium-card p-8 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-xl bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-primary flex-shrink-0">
+                            <i class="fas fa-list-check" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <p class="font-display text-sm tracking-widest text-gray-900 dark:text-white">Clareza de prioridade</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Você passa a ter um plano simples: o que será feito primeiro, o que fica para depois e por quê.</p>
+                        </div>
+                    </div>
+
+                    <div class="fade-in-section premium-card p-8 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-xl bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-accent flex-shrink-0">
+                            <i class="fas fa-location-arrow" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <p class="font-display text-sm tracking-widest text-gray-900 dark:text-white">Caminho claro para contato</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Seu site e sua comunicação deixam de ser “enfeite” e passam a orientar a pessoa até a ação.</p>
+                        </div>
+                    </div>
+
+                    <div class="fade-in-section premium-card p-8 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-xl bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-futura-secondary dark:text-futura-accent flex-shrink-0">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <p class="font-display text-sm tracking-widest text-gray-900 dark:text-white">Medição sem complicação</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Você acompanha os números do básico bem feito: visitas, cliques e mensagens, e ajusta com segurança.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-14 p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 fade-in-section">
+                    <h3 class="font-display text-sm tracking-widest text-gray-900 dark:text-white">Como funciona na prática</h3>
+                    <ol class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600 dark:text-gray-300 font-light" role="list">
+                        <li class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-full bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white flex items-center justify-center text-xs font-semibold flex-shrink-0">1</span>
+                            <span class="leading-snug">Você explica o objetivo e o que precisa melhorar.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-full bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white flex items-center justify-center text-xs font-semibold flex-shrink-0">2</span>
+                            <span class="leading-snug">A gente define o que será entregue e o prazo.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-full bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white flex items-center justify-center text-xs font-semibold flex-shrink-0">3</span>
+                            <span class="leading-snug">Você aprova o texto e o visual antes de ir para o ar.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-full bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white flex items-center justify-center text-xs font-semibold flex-shrink-0">4</span>
+                            <span class="leading-snug">Colocamos no ar com medição de resultado.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-full bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white flex items-center justify-center text-xs font-semibold flex-shrink-0">5</span>
+                            <span class="leading-snug">Ajustamos com base no que as pessoas fazem no site.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-full bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white flex items-center justify-center text-xs font-semibold flex-shrink-0">6</span>
+                            <span class="leading-snug">Você tem um próximo passo claro, sem confusão.</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-24 bg-white dark:bg-black border-t border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-5xl px-4">
+                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">
+                        Dúvidas <span class="text-gradient-futura">frequentes</span>
+                    </h2>
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Respostas diretas, com transparência e método.</p>
+                </div>
+
+                <div class="space-y-4 fade-in-section">
+                    <details class="faq-item group p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <summary class="faq-summary list-none cursor-pointer select-none flex items-center justify-between gap-4">
+                            <span class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Dá para começar com um orçamento menor?</span>
+                            <i class="fas fa-chevron-down faq-icon text-gray-400 dark:text-gray-500 transition-transform" aria-hidden="true"></i>
+                        </summary>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Sim. O segredo é priorizar. A gente define um escopo enxuto (site, landing, loja ou criativos) e entrega o que destrava resultado agora, com base sólida para evoluir.</p>
+                    </details>
+
+                    <details class="faq-item group p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <summary class="faq-summary list-none cursor-pointer select-none flex items-center justify-between gap-4">
+                            <span class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Vocês garantem número de vendas ou de contatos?</span>
+                            <i class="fas fa-chevron-down faq-icon text-gray-400 dark:text-gray-500 transition-transform" aria-hidden="true"></i>
+                        </summary>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Não prometemos números. Cada negócio tem mercado, oferta e ticket diferentes. O que garantimos é processo e qualidade: mensagem clara, páginas bem estruturadas e medição para otimizar com segurança.</p>
+                    </details>
+
+                    <details class="faq-item group p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <summary class="faq-summary list-none cursor-pointer select-none flex items-center justify-between gap-4">
+                            <span class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Já tenho site/identidade. Dá para melhorar o que existe?</span>
+                            <i class="fas fa-chevron-down faq-icon text-gray-400 dark:text-gray-500 transition-transform" aria-hidden="true"></i>
+                        </summary>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Dá, e muitas vezes é o caminho mais inteligente. A gente ajusta posicionamento, organização, copy e visual para deixar mais claro, mais confiável e mais fácil de converter.</p>
+                    </details>
+
+                    <details class="faq-item group p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <summary class="faq-summary list-none cursor-pointer select-none flex items-center justify-between gap-4">
+                            <span class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Como funciona o diagnóstico?</span>
+                            <i class="fas fa-chevron-down faq-icon text-gray-400 dark:text-gray-500 transition-transform" aria-hidden="true"></i>
+                        </summary>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Você explica seu objetivo e seu momento, a gente analisa o cenário e devolve um plano prático: o que fazer primeiro, por quê, e qual próximo passo faz sentido.</p>
+                    </details>
+
+                    <details class="faq-item group p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <summary class="faq-summary list-none cursor-pointer select-none flex items-center justify-between gap-4">
+                            <span class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Em quanto tempo entrega?</span>
+                            <i class="fas fa-chevron-down faq-icon text-gray-400 dark:text-gray-500 transition-transform" aria-hidden="true"></i>
+                        </summary>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Depende do escopo e do material disponível. No diagnóstico, você recebe prazo, etapas e o que precisamos da sua parte. Sem surpresas.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-24 bg-futura-light dark:bg-futura-dark border-t border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 fade-in-section">
+                        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">
+                            Se você quer melhorar sua presença digital, comece pelo <span class="text-gradient-futura">básico bem feito</span>.
+                        </h2>
+                        <p class="mt-6 text-gray-600 dark:text-gray-300 font-light leading-relaxed">Fale com a gente e descreva seu objetivo. Você sai com um caminho claro: o que ajustar primeiro e o que pode esperar.</p>
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                            <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO&text=Ol%C3%A1%2C%20FUTURA!%20Quero%20um%20diagn%C3%B3stico.%20Meu%20neg%C3%B3cio%20%C3%A9%20%7Bf%C3%ADsico%2Fdigital%2Fpessoa%20p%C3%BAblica%2Fag%C3%AAncia%7D%20e%20preciso%20de%20%7Blanding%2Fsite%2Fe-commerce%2Fcriativos%7D.%20Objetivo%3A%20%7Bleads%2Fvendas%2Fagendamentos%7D.%20Podemos%20alinhar%20escopo%20e%20prazo%3F" target="_blank" rel="noopener"
+                                class="btn-sheen w-full sm:w-auto text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-widest border border-white/15">
+                                <span class="skew-x-[10deg]">FALAR NO WHATSAPP</span> <i class="fab fa-whatsapp skew-x-[10deg]"></i>
+                            </a>
+                            <a href="#servicos" class="w-full sm:w-auto bg-white/80 dark:bg-white/10 text-gray-900 dark:text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] flex items-center justify-center gap-3 tracking-widest border border-gray-200 dark:border-white/15">
+                                <span class="skew-x-[10deg]">VER O QUE ENTREGAMOS</span> <i class="fas fa-list-check skew-x-[10deg]"></i>
+                            </a>
+                        </div>
+                        <p class="mt-6 text-xs text-gray-500 dark:text-gray-400 font-light tracking-wider uppercase">Sem compromisso • Retorno em horário comercial • Conversa direta ao ponto</p>
+                    </div>
+
+                    <div class="lg:col-span-5 fade-in-section">
+                        <div class="p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">
+                            <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">O que você recebe no diagnóstico</p>
+                            <ul class="mt-6 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light">
+                                <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1"></i><span>Entendimento do seu objetivo e do seu público</span></li>
+                                <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1"></i><span>Recomendação do que fazer primeiro (e o que pode esperar)</span></li>
+                                <li class="flex gap-3"><i class="fas fa-check text-futura-secondary mt-1"></i><span>Proposta de escopo com prazo e prioridade</span></li>
+                                <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1"></i><span>Orientação de conteúdo: o que precisa de você</span></li>
+                                <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1"></i><span>Próximo passo claro, sem pressão</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-white dark:bg-black text-gray-900 dark:text-white pt-20 pb-10 border-t border-gray-100 dark:border-white/5">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="img/logop.png" alt="Futura Logo" class="theme-logo h-6 w-auto mb-6 opacity-90">
+                    <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed font-light">
+                        Branding, sites, lojas virtuais e criativos para anúncios, com <strong class="text-gray-900 dark:text-gray-200 font-semibold">clareza</strong> e execução premium.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Sitemap</h4>
+                    <ul class="space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li><a href="#hero" class="hover:text-futura-primary transition-colors">Home</a></li>
+                        <li><a href="#quem-somos" class="hover:text-futura-primary transition-colors">Equipe</a></li>
+                        <li><a href="#servicos" class="hover:text-futura-primary transition-colors">Serviços</a></li>
+                        <li><a href="#contato" class="hover:text-futura-primary transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Legal</h4>
+                    <ul class="space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Privacidade</a></li>
+                        <li><a href="#" class="hover:text-futura-primary transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Newsletter</h4>
+                    <form class="flex flex-col gap-4">
+                        <input type="email" placeholder="Seu e-mail" class="bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-3 text-xs text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:border-futura-primary transition-colors" aria-label="Seu e-mail">
+                        <button class="bg-gray-900 text-white dark:bg-white dark:text-black font-display text-xs font-bold py-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors uppercase tracking-widest">Receber insights</button>
+                        <p class="text-[10px] text-gray-500 dark:text-gray-500 font-light">Sem spam. Conteúdo direto ao ponto.</p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-100 dark:border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-[10px] text-gray-600 dark:text-gray-400 uppercase tracking-widest">&copy; 2026 FUTURA DESIGN. Clareza, entrega e acompanhamento. Sem promessas irreais.</p>
+                <h2 class="font-display text-4xl md:text-6xl text-black/5 dark:text-white/5 font-bold mt-6 md:mt-0 select-none">FUTURA</h2>
+            </div>
+        </div>
+    </footer>
+
+    <button id="theme-toggle-btn" aria-label="Alternar tema claro/escuro"
+        class="fixed bottom-3 right-3 z-50 w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:scale-110 transition-transform">
+        <i id="theme-toggle-sun" class="fas fa-sun"></i>
+        <i id="theme-toggle-moon" class="fas fa-moon hidden text-futura-accent"></i>
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

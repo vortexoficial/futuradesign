@@ -1,0 +1,321 @@
+/* style.css */
+
+/* 1. Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Michroma&display=swap');
+
+:root {
+    --futura-primary: #D300C5;
+    --futura-secondary: #240090;
+    --futura-accent: #00E5FF;
+    --futura-dark-bg: #050515;
+
+    /* Motion system (premium + consistente) */
+    --motion-120: 120ms;
+    --motion-240: 240ms;
+    --motion-480: 480ms;
+    --motion-720: 720ms;
+
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    color-scheme: light dark;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus ring (acessível + premium) */
+:where(a, button, input, textarea, select):focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.25);
+}
+
+/* 2. Loader */
+#loader {
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+@keyframes loader-bar-grow {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+.animate-loader-bar {
+    animation: loader-bar-grow 1.5s ease-out forwards;
+    background: linear-gradient(90deg, var(--futura-secondary), var(--futura-primary));
+}
+
+/* 3. Efeitos Especiais */
+
+/* Fade In */
+.fade-in-section {
+    opacity: 1;
+    transform: none;
+}
+
+/* Só anima quando JS está ativo (evita conteúdo escondido sem JS) */
+html.js .fade-in-section {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity var(--motion-480) var(--ease-out),
+        transform var(--motion-480) var(--ease-out);
+    will-change: transform, opacity;
+}
+
+html.js .fade-in-section[data-reveal="scale"] {
+    transform: translateY(14px) scale(0.985);
+}
+
+/* Variante: entra da esquerda */
+html.js .fade-in-section[data-reveal="from-left"] {
+    transform: translateX(-28px);
+}
+
+html.js .fade-in-section[data-reveal="from-right"] {
+    transform: translateX(28px);
+}
+
+/* Delay controlado por JS (stagger) */
+html.js .fade-in-section {
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* Quando o JS marca como visível, precisa vencer a especificidade de `html.js .fade-in-section` */
+html.js .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html.js .fade-in-section.is-visible[data-reveal="scale"] {
+    transform: translateY(0) scale(1);
+}
+
+html.js .fade-in-section.is-visible[data-reveal="from-left"] {
+    transform: translateX(0);
+}
+
+html.js .fade-in-section.is-visible[data-reveal="from-right"] {
+    transform: translateX(0);
+}
+
+/* Header scroll behavior (classes aplicadas via JS) */
+header.is-hidden {
+    transform: translateY(-120%);
+}
+
+html:not(.dark) header.is-scrolled .container > div {
+    background-color: rgba(255, 255, 255, 0.78);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+html.dark header.is-scrolled .container > div {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+/* Premium card hover (leve e performático) */
+.premium-card {
+    transition: transform var(--motion-240) var(--ease-out), border-color var(--motion-240) var(--ease-out);
+    transform: translateZ(0);
+}
+
+.premium-card:hover {
+    transform: translateY(-2px);
+}
+
+.premium-card:active {
+    transform: translateY(-1px);
+}
+
+/* SHIMMER EFFECT (Feixe de Luz nos Ícones) */
+@keyframes shimmer-move {
+    0% { transform: translateX(-220%) skewX(-20deg); }
+    35% { transform: translateX(220%) skewX(-20deg); }
+    100% { transform: translateX(220%) skewX(-20deg); }
+}
+
+.shimmer-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.75), transparent);
+    transform: translateX(-220%) skewX(-20deg);
+    filter: blur(6px);
+    z-index: 30;
+    /* Loop a cada 4 segundos */
+    animation: shimmer-move 4s infinite ease-in-out; 
+    pointer-events: none;
+}
+    .js #sites-track-source {
+        display: none;
+    }
+
+/* Icon Wrapper para conter o brilho */
+.icon-shine-wrapper {
+    position: relative;
+    overflow: hidden; /* Importante para cortar o brilho */
+}
+
+/* 4. Marquee Infinito */
+.marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* Marquee específico para cards: evita cortar o hover "lift" */
+.marquee-wrapper.marquee-cards {
+    padding-block: 10px;
+}
+
+/* FAQ (accordion) */
+.faq-summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+}
+
+.marquee-content-horizontal {
+    display: flex;
+    gap: 0;
+    width: max-content;
+    animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
+}
+
+.marquee-content-horizontal.marquee-reverse {
+    animation-direction: reverse;
+}
+
+.marquee-wrapper:hover .marquee-content-horizontal,
+.marquee-wrapper:focus-within .marquee-content-horizontal {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* 5. Botões Sheen */
+@keyframes sheen-btn {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+.btn-sheen {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--futura-secondary), var(--futura-primary)) !important;
+    transition: all 0.3s ease;
+}
+
+.btn-sheen:hover {
+     filter: brightness(1.1);
+}
+
+.btn-sheen::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform: skewX(-25deg);
+    animation: sheen-btn 4s infinite;
+    pointer-events: none;
+}
+
+/* 6. Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+
+html:not(.dark) ::-webkit-scrollbar-track { background: #E5E7EB; }
+html:not(.dark) ::-webkit-scrollbar-thumb { background: #A3A3A3; border-radius: 3px; }
+html:not(.dark) ::-webkit-scrollbar-thumb:hover { background: #737373; }
+
+html.dark ::-webkit-scrollbar-track { background: var(--futura-dark-bg); }
+html.dark ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: var(--futura-primary); }
+
+/* Utilitários */
+.text-gradient-futura {
+    background: linear-gradient(90deg, var(--futura-primary), var(--futura-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.bg-pattern-dots {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Astronaut float (sessão #quem-somos) */
+@keyframes astronaut-float {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(-0.4deg);
+    }
+    50% {
+        transform: translate3d(0, -12px, 0) rotate(0.4deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotate(-0.4deg);
+    }
+}
+
+.astronaut-float {
+    animation: astronaut-float 4.8s var(--ease-in-out) infinite;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Reduced motion (acessível, sem “motion sickness”) */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    html.js .fade-in-section {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .marquee-content-horizontal,
+    .shimmer-effect,
+    .btn-sheen::after,
+    .animate-loader-bar,
+    .astronaut-float {
+        animation: none !important;
+    }
+
+    header {
+        transition: none !important;
+    }
+}
