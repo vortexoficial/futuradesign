@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade | FUTURA DESIGN</title>
+  <meta name="description" content="Política de privacidade do site da FUTURA DESIGN." />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Michroma&display=swap" rel="stylesheet" />
+
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      try {
+        const theme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (theme === 'dark' || (!theme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+  <header class="w-full">
+    <div class="container mx-auto max-w-7xl pt-6 px-4">
+      <div class="flex h-16 items-center justify-between bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-black/10 dark:border-white/5 rounded-2xl px-6 shadow-sm">
+        <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src="img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-6 w-auto object-contain" />
+          <span class="font-display text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300">FUTURA DESIGN</span>
+        </a>
+        <a href="/" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Voltar ao site</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto max-w-3xl px-4 py-16">
+    <h1 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Política de Privacidade</h1>
+    <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light">Última atualização: 23/02/2026</p>
+
+    <div class="mt-10 space-y-6 text-sm text-gray-700 dark:text-gray-300 font-light leading-relaxed">
+      <p>Esta Política explica como tratamos dados quando você navega no site e quando envia seu e-mail pela Newsletter.</p>
+
+      <h2 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Quais dados coletamos</h2>
+      <p>Quando você se cadastra na Newsletter, coletamos o e-mail informado e dados técnicos básicos enviados pelo navegador (por exemplo, página e idioma) para registrar o contexto do envio.</p>
+
+      <h2 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Para que usamos</h2>
+      <p>Usamos o e-mail para enviar comunicações relacionadas à Newsletter e, quando aplicável, responder solicitações. Não vendemos seus dados.</p>
+
+      <h2 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Armazenamento e segurança</h2>
+      <p>Adotamos medidas razoáveis para proteger as informações. Ainda assim, nenhum sistema é 100% livre de riscos.</p>
+
+      <h2 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Serviços de terceiros</h2>
+      <p>O cadastro da Newsletter é processado via Google Apps Script (Google). O uso desses serviços pode envolver tratamento de dados conforme as políticas do provedor.</p>
+
+      <h2 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Seus direitos</h2>
+      <p>Você pode solicitar atualização ou remoção do seu e-mail da lista entrando em contato pelos canais do site.</p>
+
+      <p class="text-[11px] text-gray-500 dark:text-gray-400">Observação: este texto é um modelo geral e não substitui orientação jurídica.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
