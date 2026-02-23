@@ -47,8 +47,10 @@ const PT_TO_EN = {
 
     // Hero
     'Design e estratégia': 'Design and strategy',
-    'para transformar': 'to turn',
-    'visitas em clientes': 'visits into customers',
+    // O HTML do hero tem um <wbr> entre essas partes; aqui deixamos a 1ª parte mais longa
+    // para evitar quebrar linha deixando "to turn" sozinho.
+    'para transformar': 'to turn visits into',
+    'visitas em clientes': 'customers',
     'Branding, sites, lojas virtuais, social media e criativos para anúncios, estratégias para criar autoridade, passar segurança e conquistar':
         'Branding, websites, online stores, social media, and ad creatives. Strategies to build authority, inspire confidence, and attract',
     'novos clientes': 'new customers',
