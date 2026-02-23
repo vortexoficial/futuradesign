@@ -62,6 +62,27 @@ function initSitesMarquee() {
     fillTrack(bottomTrack, bottomItems.length ? bottomItems : cards);
 }
 
+// FAQ (Acordeão): ao abrir um item, fecha os outros
+function initFaqAccordion() {
+    const faqSection = document.getElementById('faq');
+    if (!faqSection) return;
+
+    const items = Array.from(faqSection.querySelectorAll('details.faq-item'));
+    if (items.length < 2) return;
+
+    items.forEach((item) => {
+        item.addEventListener('toggle', () => {
+            if (!item.open) return;
+
+            items.forEach((other) => {
+                if (other !== item && other.open) {
+                    other.open = false;
+                }
+            });
+        });
+    });
+}
+
 // 2. INICIALIZAÇÃO
 (function() {
     try {
@@ -93,6 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2.5. CARROSSEL DE SITES
     initSitesMarquee();
+
+    // 2.6. FAQ (abrir um, fechar o outro)
+    initFaqAccordion();
 
     // 3. MENU MOBILE
     const hamburgerBtn = document.getElementById('hamburger-menu');
