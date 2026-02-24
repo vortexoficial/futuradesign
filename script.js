@@ -77,6 +77,8 @@ const PT_TO_EN = {
     'Projetos entregues': 'Projects delivered',
     'Satisfação': 'Satisfaction',
     'Experiência': 'Experience',
+    '+7 anos': '+7 years',
+    'anos': ' years',
     'Segmentos': 'Industries',
     'Mensagem clara': 'Clear message',
     'Site leve e organizado': 'Fast, well-structured site',
@@ -414,8 +416,8 @@ function applyLanguage(lang) {
         textNode.nodeValue = `${left}${translated}${right}`;
     }
 
-    // 2) Element attributes (aria/placeholder/alt/title)
-    const attrNames = ['aria-label', 'placeholder', 'alt', 'title'];
+    // 2) Element attributes (aria/placeholder/alt/title + alguns data-attrs usados em UI)
+    const attrNames = ['aria-label', 'placeholder', 'alt', 'title', 'data-suffix'];
     const selector = attrNames.map((a) => `[${a}]`).join(',');
     root.querySelectorAll(selector).forEach((el) => {
         const cache = ensureOriginalAttrCache(el);
