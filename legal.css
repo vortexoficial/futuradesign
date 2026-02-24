@@ -29,12 +29,6 @@ body {
 	color: var(--legal-text) !important;
 }
 
-.legal-headerbar {
-	background: var(--legal-surface) !important;
-	border-color: var(--legal-border) !important;
-	color: var(--legal-text) !important;
-}
-
 .legal-hero {
 	background: var(--legal-hero-bg) !important;
 	color: var(--legal-text) !important;
