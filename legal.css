@@ -1,0 +1,136 @@
+/* legal.css */
+/* CSS exclusivo para as páginas legais (termos/privacidade/cookies). */
+
+:root {
+	--legal-bg: #F8F9FA;
+	--legal-surface: #FFFFFF;
+	--legal-surface-2: #F3F4F6;
+	--legal-text: #0F172A;
+	--legal-muted: #334155;
+	--legal-border: rgba(15, 23, 42, 0.12);
+	--legal-hero-bg: linear-gradient(to bottom, #FFFFFF, #F8F9FA);
+}
+
+html.dark,
+:root.dark,
+body.dark,
+.dark {
+	--legal-bg: #050515;
+	--legal-surface: #0F0F25;
+	--legal-surface-2: rgba(255, 255, 255, 0.06);
+	--legal-text: #F8FAFC;
+	--legal-muted: #CBD5E1;
+	--legal-border: rgba(255, 255, 255, 0.10);
+	--legal-hero-bg: linear-gradient(to bottom, rgba(2, 2, 8, 0.85), rgba(2, 2, 8, 0.98));
+}
+
+body {
+	background: var(--legal-bg) !important;
+	color: var(--legal-text) !important;
+}
+
+.legal-headerbar {
+	background: var(--legal-surface) !important;
+	border-color: var(--legal-border) !important;
+	color: var(--legal-text) !important;
+}
+
+.legal-hero {
+	background: var(--legal-hero-bg) !important;
+	color: var(--legal-text) !important;
+}
+
+.legal-section {
+	background: var(--legal-bg) !important;
+	color: var(--legal-text) !important;
+}
+
+.legal-card {
+	background: var(--legal-surface) !important;
+	border-color: var(--legal-border) !important;
+	color: var(--legal-text) !important;
+}
+
+.legal-card-secondary {
+	background: var(--legal-surface-2) !important;
+	border-color: var(--legal-border) !important;
+	color: var(--legal-text) !important;
+}
+
+.legal-muted {
+	color: var(--legal-muted);
+}
+
+.legal-link {
+	color: var(--legal-muted);
+}
+
+.legal-link:hover {
+	color: #D300C5;
+}
+
+.legal-kicker {
+	color: var(--legal-muted);
+	border-color: var(--legal-border);
+	background: rgba(255, 255, 255, 0.65);
+}
+
+html.dark .legal-kicker {
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient-futura {
+	background: linear-gradient(90deg, #D300C5, #240090, #00E5FF);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.premium-card {
+	transform: translateZ(0);
+	transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.premium-card:hover {
+	transform: translateY(-2px);
+}
+
+.legal-pill,
+.legal-pill-active {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	border-radius: 9999px;
+	border: 1px solid rgba(0, 0, 0, 0.14);
+	background: #ffffff;
+	font-family: Michroma, sans-serif;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: #111827;
+	text-decoration: none;
+	transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.dark .legal-pill,
+.dark .legal-pill-active {
+	border-color: rgba(255, 255, 255, 0.10);
+	background: rgba(15, 15, 37, 0.85);
+	color: #ffffff;
+}
+
+.legal-pill:hover {
+	border-color: rgba(211, 0, 197, 0.40);
+}
+
+.legal-pill-active {
+	background: #111827;
+	color: #ffffff;
+}
+
+.dark .legal-pill-active {
+	background: rgba(211, 0, 197, 0.18);
+	color: #ffffff;
+}

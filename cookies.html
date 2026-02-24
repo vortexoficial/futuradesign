@@ -8,62 +8,113 @@
   <meta name="description" content="Política de cookies do site da FUTURA DESIGN." />
   <link rel="icon" type="image/png" href="img/favicon.png" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="legal.css?v=20260223" />
+  <script src="legal-tailwind.js?v=20260223"></script>
+  <script src="legal.js?v=20260223"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Michroma&display=swap" rel="stylesheet" />
 
-  <script>
-    document.documentElement.classList.add('js');
-    (function () {
-      try {
-        const theme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (theme === 'dark' || (!theme && prefersDark)) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      } catch (e) {}
-    })();
-  </script>
 </head>
 
-<body class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+<body class="font-sans transition-colors duration-300 antialiased overflow-x-hidden">
   <header class="w-full">
-    <div class="container mx-auto max-w-7xl pt-6 px-4">
-      <div class="flex h-16 items-center justify-between bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-black/10 dark:border-white/5 rounded-2xl px-6 shadow-sm">
-        <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <img src="img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-6 w-auto object-contain" />
-          <span class="font-display text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300">FUTURA DESIGN</span>
+    <div class="container mx-auto max-w-6xl pt-6 px-4">
+      <div class="legal-headerbar flex h-16 items-center justify-between border rounded-2xl px-6 shadow-sm">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src="img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-7 w-auto object-contain" />
         </a>
-        <a href="/" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Voltar ao site</a>
+        <a href="index.html" class="legal-link text-[10px] font-semibold uppercase tracking-widest transition-colors font-display">Voltar ao site</a>
       </div>
     </div>
   </header>
 
-  <main class="container mx-auto max-w-3xl px-4 py-16">
-    <h1 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Política de Cookies</h1>
-    <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light">Última atualização: 23/02/2026</p>
+  <main>
+    <section class="legal-hero relative overflow-hidden py-14 border-b border-gray-100">
+      <div class="container mx-auto max-w-6xl px-4">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+          <div>
+            <div class="legal-kicker inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[10px] uppercase tracking-[0.35em]">
+              <i class="fa-solid fa-cookie-bite text-futura-primary" aria-hidden="true"></i>
+              Legal
+            </div>
 
-    <div class="mt-10 space-y-6 text-sm text-gray-700 dark:text-gray-300 font-light leading-relaxed">
-      <p>Cookies são pequenos arquivos armazenados no navegador para lembrar preferências e, em alguns casos, medir uso do site.</p>
+            <h1 class="mt-6 font-display text-3xl md:text-4xl font-bold leading-tight">
+              <span class="text-gradient-futura">Política de Cookies</span>
+            </h1>
 
-      <h2 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">O que usamos neste site</h2>
-      <p>No momento, o site usa principalmente <strong>armazenamento local do navegador (localStorage)</strong> para salvar preferências como tema (claro/escuro) e idioma. Isso não é o mesmo que cookie.</p>
+            <p class="legal-muted mt-3 text-sm font-light">Última atualização: <span>23/02/2026</span></p>
+            <p class="legal-muted mt-5 max-w-2xl text-sm font-light leading-relaxed">
+              Uma visão objetiva: o que são cookies, o que usamos hoje e como você gerencia isso no navegador.
+            </p>
+          </div>
 
-      <h2 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Terceiros</h2>
-      <p>O site carrega recursos de terceiros (por exemplo, CDNs e fontes). Esses provedores podem coletar dados técnicos (como endereço IP) conforme as políticas deles. Se futuramente adicionarmos ferramentas de analytics ou anúncios, esta página será atualizada.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="termos.html" class="legal-pill">Termos</a>
+            <a href="privacidade.html" class="legal-pill">Privacidade</a>
+            <a href="cookies.html" class="legal-pill-active">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h2 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Como gerenciar</h2>
-      <p>Você pode gerenciar cookies nas configurações do seu navegador. Para preferências armazenadas em localStorage, você pode limpar os dados do site no navegador.</p>
+    <section class="legal-section py-14">
+      <div class="container mx-auto max-w-6xl px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <aside class="lg:col-span-4">
+            <div class="premium-card legal-card rounded-2xl border p-8">
+              <p class="font-display text-sm uppercase tracking-widest">Resumo</p>
+              <p class="legal-muted mt-4 text-sm font-light leading-relaxed">
+                Cookies ajudam a lembrar preferências e, em alguns casos, medir uso. Aqui você vê como isso se aplica ao nosso site.
+              </p>
+              <div class="mt-6 h-px" style="background: var(--legal-border);"></div>
+              <p class="legal-muted mt-6 text-[11px] font-light">
+                Observação: este texto é um modelo geral e não substitui orientação jurídica.
+              </p>
+            </div>
+          </aside>
 
-      <p class="text-[11px] text-gray-500 dark:text-gray-400">Observação: este texto é um modelo geral e não substitui orientação jurídica.</p>
-    </div>
+          <div class="lg:col-span-8 space-y-4">
+            <div class="premium-card legal-card rounded-2xl border p-8">
+              <h2 class="font-display text-sm uppercase tracking-widest">O que são cookies</h2>
+              <p class="legal-muted mt-4 text-sm font-light leading-relaxed">
+                Cookies são pequenos arquivos armazenados no navegador para lembrar preferências e, em alguns casos, medir uso do site.
+              </p>
+            </div>
+
+            <div class="premium-card legal-card rounded-2xl border p-8">
+              <h2 class="font-display text-sm uppercase tracking-widest">O que usamos neste site</h2>
+              <p class="legal-muted mt-4 text-sm font-light leading-relaxed">
+                No momento, o site usa principalmente <strong>armazenamento local do navegador (localStorage)</strong> para salvar preferências como tema (claro/escuro) e idioma. Isso não é o mesmo que cookie.
+              </p>
+            </div>
+
+            <div class="premium-card legal-card rounded-2xl border p-8">
+              <h2 class="font-display text-sm uppercase tracking-widest">Terceiros</h2>
+              <p class="legal-muted mt-4 text-sm font-light leading-relaxed">
+                O site carrega recursos de terceiros (por exemplo, CDNs e fontes). Esses provedores podem coletar dados técnicos (como endereço IP) conforme as políticas deles. Se futuramente adicionarmos ferramentas de analytics ou anúncios, esta página será atualizada.
+              </p>
+            </div>
+
+            <div class="premium-card legal-card rounded-2xl border p-8">
+              <h2 class="font-display text-sm uppercase tracking-widest">Como gerenciar</h2>
+              <p class="legal-muted mt-4 text-sm font-light leading-relaxed">
+                Você pode gerenciar cookies nas configurações do seu navegador. Para preferências armazenadas em localStorage, você pode limpar os dados do site no navegador.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="script.js"></script>
+  <button id="theme-toggle-btn" aria-label="Alternar tema claro/escuro"
+    class="fixed bottom-3 right-3 z-50 w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:scale-110 transition-transform">
+    <i id="theme-toggle-sun" class="fas fa-sun"></i>
+    <i id="theme-toggle-moon" class="fas fa-moon hidden text-futura-accent"></i>
+  </button>
+
 </body>
 </html>
