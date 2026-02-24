@@ -9,6 +9,9 @@
 	--legal-muted: #334155;
 	--legal-border: rgba(15, 23, 42, 0.12);
 	--legal-hero-bg: linear-gradient(to bottom, #FFFFFF, #F8F9FA);
+	--legal-header-bg: #FFFFFF;
+	--legal-header-border: #E5E7EB;
+	--legal-hero-border: rgba(15, 23, 42, 0.08);
 }
 
 html.dark,
@@ -22,6 +25,9 @@ body.dark,
 	--legal-muted: #CBD5E1;
 	--legal-border: rgba(255, 255, 255, 0.10);
 	--legal-hero-bg: linear-gradient(to bottom, rgba(2, 2, 8, 0.85), rgba(2, 2, 8, 0.98));
+	--legal-header-bg: #000000;
+	--legal-header-border: #1F2937;
+	--legal-hero-border: transparent;
 }
 
 body {
@@ -29,9 +35,15 @@ body {
 	color: var(--legal-text) !important;
 }
 
+.legal-topbar {
+	background: var(--legal-header-bg) !important;
+	border-color: var(--legal-header-border) !important;
+}
+
 .legal-hero {
 	background: var(--legal-hero-bg) !important;
 	color: var(--legal-text) !important;
+	border-bottom-color: var(--legal-hero-border) !important;
 }
 
 .legal-section {
