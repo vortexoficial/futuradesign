@@ -33,6 +33,8 @@ const PT_TO_EN = {
     'Termos de Uso': 'Terms of Use',
     'Newsletter': 'Newsletter',
     'Sitemap': 'Sitemap',
+    'Contato Direto': 'Direct Contact',
+    'Suporte via WhatsApp': 'WhatsApp Support',
 
     // Botões / CTAs
     'Solicitar diagnóstico': 'Request a diagnostic',
@@ -113,6 +115,138 @@ const PT_TO_EN = {
     'Sem clareza de resultado': 'No clarity on results',
     'Configuramos a medição para você enxergar o que gera contatos e vendas.':
         'We set up tracking so you can see what generates contacts and sales.',
+
+    // Redes sociais (orgânico)
+    'Gerenciamento de redes sociais': 'Social media management',
+    'Conteúdo orgânico com estratégia': 'Organic content with strategy',
+    'para gerar confiança e virar contato': 'to build trust and turn it into contact',
+    '— no local e no digital.': '— for local and digital businesses.',
+    'A gente organiza a sua presença: mensagem clara, constância e conteúdo que educa com prova real do que você faz. Sem dancinha forçada e sem promessa milagrosa, com um plano simples que gera resultados.':
+        'We organize your presence: clear messaging, consistency, and content that teaches with real proof of what you do. No forced trends and no miracle promises, with a simple plan that generates results.',
+    'Para quem faz sentido': 'Who this is for',
+    'Negócio local': 'Local business',
+    'Negócio digital': 'Digital business',
+    'Operação sem padrão': 'Operation without consistency',
+    'Estratégias orgânicas que funcionam': 'Organic strategies that work',
+    'O que entregamos': 'What we deliver',
+    'O foco é o básico bem feito': 'Focus on the basics done right',
+    'Negócios locais que precisam transformar visualização em WhatsApp, agendamento e visita.':
+        'Local businesses that need to turn views into WhatsApp messages, bookings, and visits.',
+    'Negócios digitais que querem autoridade e demanda sem depender só de anúncios.':
+        'Digital businesses that want authority and demand without relying only on ads.',
+    'Quem posta “quando dá” e sente que o perfil não explica direito o que faz e como contratar.':
+        'People who post “when they can” and feel the profile doesn’t clearly explain what they do and how to hire them.',
+    'Conteúdo de prova: bastidores, processo, antes/depois e dúvidas reais.':
+        'Proof content: behind the scenes, process, before/after, and real questions.',
+    'Conteúdo de clareza: o que você faz, para quem é e o próximo passo.':
+        'Clarity content: what you do, who it is for, and the next step.',
+    'Conteúdo de comunidade (local): rotina, localização, parcerias e stories com CTA leve.':
+        'Community content (local): routine, location, partnerships, and stories with a light CTA.',
+    'Conteúdo de conversão: posts com CTA direto + perfil organizado.':
+        'Conversion content: posts with direct CTAs + an organized profile.',
+    'Calendário mensal + roteiro de conteúdo': 'Monthly calendar + content plan',
+    'Direção criativa + copy pronta para publicar': 'Creative direction + copy ready to publish',
+    'Otimização do perfil (bio, destaques e links)': 'Profile optimization (bio, highlights, and links)',
+    'Ajustes semanais com base no que o público responde': 'Weekly adjustments based on how the audience responds',
+    'clareza + constância + prova + CTA': 'clarity + consistency + proof + CTA',
+    'Tela de celular com planejamento de conteúdo orgânico e perfil organizado':
+        'Phone screen with an organic content plan and an organized profile',
+
+    // Faixa (CTA) na home
+    'Estratégia orgânica que transforma conteúdo em': 'An organic strategy that turns content into',
+    'mensagens e pedidos': 'messages and requests',
+    'Um plano simples e consistente para negócios locais e digitais: clareza, constância, prova e CTA.':
+        'A simple, consistent plan for local and digital businesses: clarity, consistency, proof, and CTA.',
+    'VER DETALHES': 'VIEW DETAILS',
+
+    // Página dedicada (texto extra)
+    'Clareza • constância • prova • CTA': 'Clarity • consistency • proof • CTA',
+    'Sem contrato engessado': 'No rigid contract',
+    'Começamos pelo diagnóstico e definimos um plano realista para o seu momento (local ou digital), com prioridades e um próximo passo claro.':
+        'We start with a diagnostic and define a realistic plan for your moment (local or digital), with priorities and a clear next step.',
+    'Prioridades': 'Priorities',
+    'Próximo passo claro': 'Clear next step',
+
+    // Planos (redes-sociais.html)
+    'Planos': 'Plans',
+    'Escolha o plano ideal para o seu momento': 'Choose the right plan for your current stage',
+    'Três níveis de gestão para manter o Instagram organizado, crescer com engajamento e profissionalizar de ponta a ponta.':
+        'Three management levels to keep Instagram organized, grow engagement, and professionalize end-to-end.',
+    'Plano Básico': 'Basic Plan',
+    'Gestão essencial do Instagram': 'Essential Instagram management',
+    'Gestão Essencial do Instagram': 'Essential Instagram management',
+    'Inclui': 'Includes',
+    'Ideal para': 'Ideal for',
+    'Negócios pequenos que só precisam manter o Instagram organizado e ativo.':
+        'Small businesses that just need to keep Instagram organized and active.',
+    'Plano Plus': 'Plus Plan',
+    'Gestão com engajamento': 'Management with engagement',
+    'Gestão com Engajamento': 'Management with engagement',
+    'Empresas que querem crescer e melhorar o relacionamento com os seguidores.':
+        'Companies that want to grow and improve relationships with followers.',
+    'Plano Pró': 'Pro Plan',
+    'Gestão total do Instagram': 'Full Instagram management',
+    'Gestão Total do Instagram': 'Full Instagram management',
+    'Empresas que querem profissionalização total e crescimento consistente.':
+        'Companies that want full professionalization and consistent growth.',
+    'Empresas que querem profissionalização total, posicionamento forte e crescimento consistente.':
+        'Companies that want full professionalization, strong positioning, and consistent growth.',
+
+    '8 posts mensais (feed + carrossel simples)': '8 monthly posts (feed + simple carousel)',
+    '7 stories semanais': '7 stories per week',
+    '7 Stories semanais': '7 stories per week',
+    'Legendas otimizadas': 'Optimized captions',
+    'Hashtags estratégicas': 'Strategic hashtags',
+    'Calendário de conteúdo mensal': 'Monthly content calendar',
+    'Edição simples das artes': 'Simple design edits',
+    'Relatório mensal básico': 'Basic monthly report',
+
+    '12 posts mensais': '12 monthly posts',
+    '14 stories semanais': '14 stories per week',
+    '14 Stories semanais': '14 stories per week',
+    '4 Reels mensais (com vídeos enviados pelo cliente)': '4 monthly Reels (with client-provided videos)',
+    'Interação básica com seguidores (comentários e directs simples)':
+        'Basic interaction with followers (comments and simple DMs)',
+    'Estratégia de hashtags + SEO Instagram': 'Hashtag strategy + Instagram SEO',
+    'Calendário editorial estratégico': 'Strategic editorial calendar',
+    'Ajustes de identidade visual': 'Visual identity adjustments',
+    'Relatório mensal completo': 'Full monthly report',
+
+    '20 posts mensais': '20 monthly posts',
+    '24 stories semanais': '24 stories per week',
+    '24 Stories semanais': '24 stories per week',
+    '8 Reels mensais (com vídeos enviados pelo cliente ou criado por IA)':
+        '8 monthly Reels (with client-provided videos or AI-created)',
+    '8 reels mensais (vídeos enviados pelo cliente ou criados por IA)':
+        '8 monthly reels (videos sent by the client or created by AI)',
+    'Gestão completa de comentários e directs': 'Full management of comments and DMs',
+    'Monitoramento diário do perfil': 'Daily profile monitoring',
+    'Estratégia mensal + análise de concorrentes': 'Monthly strategy + competitor analysis',
+    'Estratégia mensal aprofundada + análise de concorrentes': 'In-depth monthly strategy + competitor analysis',
+    'Estratégia avançada de hashtags + SEO Instagram': 'Advanced hashtag strategy + Instagram SEO',
+    'Identidade visual personalizada': 'Custom visual identity',
+    'Identidade visual personalizada + ajustes contínuos': 'Custom visual identity + continuous adjustments',
+    'Relatório quinzenal': 'Biweekly report',
+    'Relatório quinzenal detalhado': 'Detailed biweekly report',
+
+    'ESCOLHER PLANO': 'CHOOSE PLAN',
+
+    'VER PLANOS': 'SEE PLANS',
+    'VER ESTRATÉGIA': 'SEE STRATEGY',
+    'Quando o orgânico precisa virar conversa de verdade': 'When organic content needs to become real conversations',
+    'Se o perfil não explica o que você faz e não conduz para uma ação, a gente organiza com método.':
+        'If the profile does not clearly explain what you do and does not lead to action, we organize it with a method.',
+    'Estratégias orgânicas': 'Organic strategies',
+    'O foco é clareza, prova e consistência — com CTAs que a pessoa entende.':
+        'The focus is clarity, proof, and consistency — with CTAs people actually understand.',
+    'Entrega': 'Delivery',
+    'Organização, direção e execução para o seu conteúdo virar clareza e resultado.':
+        'Organization, direction, and execution so your content becomes clarity and results.',
+    'Pilar': 'Pillar',
+    'Pilar 01': 'Pillar 01',
+    'Pilar 02': 'Pillar 02',
+    'Pilar 03': 'Pillar 03',
+    'Pilar 04': 'Pillar 04',
 
     // Quem somos
     'Design, desenvolvimento e estratégia juntos, com foco no que o seu cliente precisa entender para confiar e tomar uma decisão.':
@@ -528,6 +662,87 @@ function initSitesMarquee() {
     fillTrack(bottomTrack, bottomItems.length ? bottomItems : cards);
 }
 
+function initSocialProofMarquee() {
+    const source = document.getElementById('social-proof-track-source');
+    if (!source) return;
+
+    const cards = Array.from(source.querySelectorAll('.social-proof-card'));
+    if (cards.length === 0) return;
+
+    const track = document.querySelector('[data-marquee-track="social-proof-main"]');
+    if (!track) return;
+
+    track.innerHTML = '';
+
+    const speed = Number(track.dataset.marqueeSpeed);
+    if (!Number.isNaN(speed) && speed > 0) {
+        track.style.setProperty('--marquee-duration', `${speed}s`);
+    }
+
+    const appendClones = () => {
+        cards.forEach((item) => {
+            const clone = item.cloneNode(true);
+            clone.classList.add('shrink-0');
+            track.appendChild(clone);
+        });
+    };
+
+    appendClones();
+    appendClones();
+}
+
+function initImageZoomLightbox() {
+    const modal = document.getElementById('image-zoom-modal');
+    const modalImage = document.getElementById('image-zoom-target');
+    const modalCaption = document.getElementById('image-zoom-caption');
+    const closeBtn = document.getElementById('image-zoom-close');
+
+    if (!modal || !modalImage || !modalCaption || !closeBtn) return;
+
+    const openModal = (src, caption) => {
+        modalImage.src = src;
+        modalImage.alt = caption || 'Imagem ampliada';
+        modalCaption.textContent = caption || '';
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.setAttribute('aria-hidden', 'true');
+        modalImage.removeAttribute('src');
+        modalImage.alt = '';
+        modalCaption.textContent = '';
+        document.body.style.overflow = '';
+    };
+
+    document.addEventListener('click', (event) => {
+        const trigger = event.target.closest('[data-zoom-src]');
+        if (trigger) {
+            event.preventDefault();
+            const src = trigger.getAttribute('data-zoom-src');
+            const caption = trigger.getAttribute('data-zoom-alt') || trigger.getAttribute('aria-label') || '';
+            if (src) openModal(src, caption);
+            return;
+        }
+
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+}
+
 // FAQ (Acordeão): ao abrir um item, fecha os outros
 function initFaqAccordion() {
     const faqSection = document.getElementById('faq');
@@ -677,11 +892,25 @@ window.addEventListener('load', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    const syncHeroHeaderOffset = () => {
+        const siteHeader = document.querySelector('header');
+        if (!siteHeader) return;
+
+        const headerBottom = siteHeader.getBoundingClientRect().bottom;
+        const safeOffset = Math.max(88, Math.ceil(headerBottom + 8));
+        document.documentElement.style.setProperty('--hero-header-offset', `${safeOffset}px`);
+    };
+
+    syncHeroHeaderOffset();
+    window.addEventListener('resize', syncHeroHeaderOffset, { passive: true });
+    window.addEventListener('orientationchange', syncHeroHeaderOffset, { passive: true });
     
     updateLogos();
 
     // 2.5. CARROSSEL DE SITES
     initSitesMarquee();
+    initSocialProofMarquee();
+    initImageZoomLightbox();
 
     // 2.6. FAQ (abrir um, fechar o outro)
     initFaqAccordion();

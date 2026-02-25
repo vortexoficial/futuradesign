@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
+    <script>
+        (function () {
+            try {
+                const theme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <title>Gerenciamento de Redes Sociais | FUTURA DESIGN</title>
+    <meta name="description" content="Gerenciamento de redes sociais com estratégias orgânicas para negócios locais e digitais: clareza, constância, prova e CTA.">
+    <link rel="canonical" href="https://agenciafuturadesign.com/redes-sociais.html">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Michroma&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Michroma', 'sans-serif'],
+                    },
+                    colors: {
+                        futura: {
+                            primary: '#D300C5',
+                            secondary: '#240090',
+                            accent: '#00E5FF',
+                            dark: '#050515',
+                            card: '#0F0F25',
+                            light: '#F8F9FA',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 5px 20px -5px rgba(0, 0, 0, 0.3)',
+                        'glow': '0 0 40px rgba(211, 0, 197, 0.2), 0 0 15px rgba(36, 0, 144, 0.1)',
+                        'neon': '0 0 15px rgba(211, 0, 197, 0.4), 0 0 30px rgba(211, 0, 197, 0.1)',
+                    },
+                    backgroundImage: {
+                        'universe-dark': "linear-gradient(to bottom, rgba(2, 2, 8, 0.85), rgba(2, 2, 8, 0.98))",
+                        'clean-light': "linear-gradient(to bottom, #F8F9FA, #FFFFFF)",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <div id="loader" class="fixed inset-0 bg-futura-light dark:bg-futura-dark flex flex-col items-center justify-center z-[9999]">
+        <div class="flex flex-col items-center">
+            <img src="img/logop.webp" alt="FUTURA Logo" class="theme-logo w-40 h-auto mb-8 object-contain" />
+            <div class="w-48 h-1 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                <div class="h-full w-full animate-loader-bar origin-left"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 pointer-events-none">
+        <div class="container mx-auto max-w-7xl pt-4 lg:pt-6 px-4">
+            <div class="flex h-20 items-center justify-between bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-black/10 dark:border-white/5 rounded-2xl px-8 shadow-sm pointer-events-auto">
+                <a href="index.html#hero" class="block hover:opacity-80 transition-opacity">
+                    <img src="img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-6 w-auto object-contain">
+                </a>
+                <nav class="hidden lg:block">
+                    <ul class="flex items-center gap-8">
+                        <li><a href="index.html#hero" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Início</a></li>
+                        <li><a href="index.html#quem-somos" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Equipe</a></li>
+                        <li><a href="index.html#servicos" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Serviços</a></li>
+                        <li><a href="index.html#metodo" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Como Funciona</a></li>
+                        <li><a href="index.html#portfolio" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Portfólio</a></li>
+                        <li><a href="index.html#faq" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Dúvidas</a></li>
+                        <li><a href="index.html#contato" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Contato</a></li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO" target="_blank" rel="noopener"
+                                class="hidden lg:inline-flex btn-sheen text-white font-display text-[10px] font-bold py-3 px-6 rounded-none skew-x-[-10deg] shadow-neon items-center gap-2 tracking-wider border border-white/10 transition-all">
+                                <span class="skew-x-[10deg]">Solicitar diagnóstico</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4 lg:hidden">
+                    <button class="text-xl text-futura-primary" id="hamburger-menu" aria-label="Abrir menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay fixed inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-md z-[999] flex flex-col p-6 transition-transform duration-300 ease-in-out lg:hidden translate-x-full" id="mobile-menu-overlay">
+        <div class="flex justify-between items-center mb-12">
+            <img src="img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-8 w-auto">
+            <button class="text-3xl text-futura-primary" id="close-menu" aria-label="Fechar menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <nav class="flex-grow flex flex-col gap-6 text-center">
+            <a href="index.html#hero" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Início</a>
+            <a href="index.html#quem-somos" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Equipe</a>
+            <a href="index.html#servicos" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Serviços</a>
+            <a href="index.html#metodo" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Como funciona</a>
+            <a href="index.html#portfolio" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Portfólio</a>
+            <a href="index.html#faq" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Dúvidas</a>
+            <a href="index.html#contato" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Contato</a>
+        </nav>
+        <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO" class="btn-sheen w-full text-white py-5 rounded-none font-display font-bold text-center text-sm uppercase tracking-widest shadow-neon mt-auto">
+            Falar com a equipe
+        </a>
+    </div>
+
+    <main>
+        <section class="social-hero relative min-h-screen overflow-hidden flex items-center pt-28 pb-10 lg:pb-0 bg-clean-light dark:bg-universe-dark">
+            <div class="absolute inset-0 bg-pattern-dots opacity-30 pointer-events-none dark:opacity-50 mix-blend-overlay"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="social-hero-content container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 fade-in-section text-center lg:text-left" data-reveal="from-left">
+                        <div class="inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.35em] text-gray-700 dark:text-gray-300 font-display">
+                            <i class="fa-solid fa-hashtag text-futura-primary text-xl sm:text-sm" aria-hidden="true"></i>
+                            <span class="leading-tight text-left sm:text-center">
+                                <span class="block sm:inline">Gerenciamento</span>
+                                <span class="block sm:inline sm:ml-1">de redes sociais</span>
+                            </span>
+                        </div>
+
+                        <h1 class="mt-6 font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-[1.1] break-words">
+                            Conteúdo orgânico com estratégia
+                            <span class="bg-gradient-to-r from-futura-primary to-futura-accent bg-clip-text text-transparent">para gerar confiança e virar contato</span>.
+                        </h1>
+
+                        <p class="mt-6 text-gray-600 dark:text-gray-300 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            A gente organiza a sua presença: mensagem clara, constância e conteúdo que educa com prova real do que você faz.
+                            Sem dancinha forçada e sem promessa milagrosa, com um plano simples que gera resultados.
+                        </p>
+
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#planos" class="btn-sheen w-full sm:w-auto text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-[0.18em] sm:tracking-widest border border-white/15 whitespace-nowrap">
+                                <span class="skew-x-[10deg] whitespace-nowrap">VER PLANOS</span> <i class="fas fa-arrow-down skew-x-[10deg]" aria-hidden="true"></i>
+                            </a>
+                            <a href="#para-quem" class="w-full sm:w-auto bg-white/80 dark:bg-white/10 text-gray-900 dark:text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] flex items-center justify-center gap-3 tracking-[0.18em] sm:tracking-widest border border-gray-200 dark:border-white/15 hover:bg-white/90 dark:hover:bg-white/15 transition-colors whitespace-nowrap">
+                                <span class="skew-x-[10deg] whitespace-nowrap">VER ESTRATÉGIA</span> <i class="fas fa-arrow-right skew-x-[10deg]" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-5 fade-in-section" data-reveal="from-right">
+                        <div class="px-0 sm:px-2">
+                            <img src="img/socialmedia.webp" alt="Imagem de gerenciamento de redes sociais" loading="lazy" decoding="async" class="social-float w-[112%] max-w-none -ml-[6%] sm:w-full sm:max-w-full sm:ml-0 h-auto object-contain select-none" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="para-quem" class="py-16 lg:min-h-[68vh] lg:flex lg:items-center bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start lg:items-center w-full">
+                    <div class="lg:col-span-4 fade-in-section" data-reveal="from-left">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Para quem faz sentido</p>
+                        <h2 class="mt-3 font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white leading-[1.05]">Quando o <span class="text-gradient-futura">orgânico</span> precisa virar conversa de verdade</h2>
+                        <p class="mt-5 text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Se o perfil não explica o que você faz e não conduz para uma ação, a gente organiza com método.</p>
+                    </div>
+
+                    <div class="lg:col-span-8 fade-in-section" data-reveal="from-right" data-stagger-parent>
+                        <ol class="relative space-y-6 sm:space-y-8">
+                            <li class="fade-in-section relative pl-16 sm:pl-20 after:absolute after:left-6 after:top-12 after:bottom-[-1.5rem] sm:after:bottom-[-2rem] after:w-px after:bg-gray-200 dark:after:bg-white/10">
+                                <span class="absolute left-0 top-0 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-primary shadow-sm">
+                                    <span class="font-display text-sm">01</span>
+                                </span>
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Negócio local</p>
+                                <p class="mt-3 text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Negócios locais que precisam transformar visualização em WhatsApp, agendamento e visita.</p>
+                            </li>
+
+                            <li class="fade-in-section relative pl-16 sm:pl-20 after:absolute after:left-6 after:top-12 after:bottom-[-1.5rem] sm:after:bottom-[-2rem] after:w-px after:bg-gray-200 dark:after:bg-white/10">
+                                <span class="absolute left-0 top-0 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-accent shadow-sm">
+                                    <span class="font-display text-sm">02</span>
+                                </span>
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Negócio digital</p>
+                                <p class="mt-3 text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Negócios digitais que querem autoridade e demanda sem depender só de anúncios.</p>
+                            </li>
+
+                            <li class="fade-in-section relative pl-16 sm:pl-20">
+                                <span class="absolute left-0 top-0 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-secondary shadow-sm">
+                                    <span class="font-display text-sm">03</span>
+                                </span>
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Operação sem padrão</p>
+                                <p class="mt-3 text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Quem posta “quando dá” e sente que o perfil não explica direito o que faz e como contratar.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="estrategias" class="py-16 sm:py-20 bg-gray-50 dark:bg-futura-dark border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="max-w-3xl mx-auto text-center fade-in-section">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Estratégias orgânicas</p>
+                    <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-[1.08]">
+                        Estruturas simples para o seu <span class="text-gradient-futura">orgânico</span> funcionar
+                    </h2>
+                    <p class="mt-5 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                        O foco é clareza, prova e consistência, com CTAs que a pessoa entende.
+                    </p>
+                </div>
+
+                <div class="mt-10 grid grid-cols-1 xl:grid-cols-12 gap-5 lg:gap-6 items-stretch">
+                    <aside class="xl:col-span-4 fade-in-section" data-reveal="from-left">
+                        <div class="h-full premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 sm:p-8">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Mapa rápido</p>
+                            <p class="mt-3 font-display text-lg sm:text-xl text-gray-900 dark:text-white">4 pilares que organizam o conteúdo com método</p>
+
+                            <ul class="mt-6 space-y-3">
+                                <li class="rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 px-4 py-3 flex items-center justify-between gap-3">
+                                    <span class="font-display text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Pilar 01</span>
+                                    <span class="font-display text-sm text-gray-900 dark:text-white">Prova</span>
+                                </li>
+                                <li class="rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 px-4 py-3 flex items-center justify-between gap-3">
+                                    <span class="font-display text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Pilar 02</span>
+                                    <span class="font-display text-sm text-gray-900 dark:text-white">Clareza</span>
+                                </li>
+                                <li class="rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 px-4 py-3 flex items-center justify-between gap-3">
+                                    <span class="font-display text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Pilar 03</span>
+                                    <span class="font-display text-sm text-gray-900 dark:text-white">Comunidade</span>
+                                </li>
+                                <li class="rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 px-4 py-3 flex items-center justify-between gap-3">
+                                    <span class="font-display text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Pilar 04</span>
+                                    <span class="font-display text-sm text-gray-900 dark:text-white">Conversão</span>
+                                </li>
+                            </ul>
+
+                            <div class="mt-6 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-4">
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 dark:text-gray-400">Resultado esperado</p>
+                                <p class="mt-2 font-display text-sm text-gray-900 dark:text-white">Conteúdo mais consistente, objetivo e fácil de vender.</p>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="xl:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5" data-stagger-parent>
+                        <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                            <div class="flex items-center justify-between gap-4">
+                                <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Pilar 01</p>
+                                <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-primary" aria-hidden="true"><i class="fas fa-bolt"></i></span>
+                            </div>
+                            <h3 class="mt-4 font-display text-lg text-gray-900 dark:text-white">Conteúdo de prova</h3>
+                            <p class="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Conteúdo de prova: bastidores, processo, antes/depois e dúvidas reais.</p>
+                        </article>
+
+                        <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                            <div class="flex items-center justify-between gap-4">
+                                <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Pilar 02</p>
+                                <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-accent" aria-hidden="true"><i class="fas fa-pen-ruler"></i></span>
+                            </div>
+                            <h3 class="mt-4 font-display text-lg text-gray-900 dark:text-white">Conteúdo de clareza</h3>
+                            <p class="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Conteúdo de clareza: o que você faz, para quem é e o próximo passo.</p>
+                        </article>
+
+                        <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                            <div class="flex items-center justify-between gap-4">
+                                <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Pilar 03</p>
+                                <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-secondary" aria-hidden="true"><i class="fas fa-users"></i></span>
+                            </div>
+                            <h3 class="mt-4 font-display text-lg text-gray-900 dark:text-white">Conteúdo de comunidade</h3>
+                            <p class="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Conteúdo de comunidade (local): rotina, localização, parcerias e stories com CTA leve.</p>
+                        </article>
+
+                        <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                            <div class="flex items-center justify-between gap-4">
+                                <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Pilar 04</p>
+                                <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-primary" aria-hidden="true"><i class="fas fa-arrow-up-right-dots"></i></span>
+                            </div>
+                            <h3 class="mt-4 font-display text-lg text-gray-900 dark:text-white">Conteúdo de conversão</h3>
+                            <p class="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Conteúdo de conversão: posts com CTA direto + perfil organizado.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="provas-sociais" class="py-20 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-12 fade-in-section">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Provas sociais</p>
+                    <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
+                            <span class="text-gradient-futura">Resultados reais</span> em formato visual
+                    </h2>
+                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Mesmo padrão da home com carrossel contínuo. Clique em qualquer imagem para ampliar.</p>
+                </div>
+
+                <div class="fade-in-section">
+                    <div id="social-proof-track-source" class="hidden">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="img/p1.webp" data-zoom-alt="Prova social 01">
+                            <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                                <img src="img/p1.webp" alt="Prova social 01" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="img/p2.webp" data-zoom-alt="Prova social 02">
+                            <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                                <img src="img/p2.webp" alt="Prova social 02" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="img/p3.webp" data-zoom-alt="Prova social 03">
+                            <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                                <img src="img/p3.webp" alt="Prova social 03" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="img/p4.webp" data-zoom-alt="Prova social 04">
+                            <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                                <img src="img/p4.webp" alt="Prova social 04" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="img/p5.webp" data-zoom-alt="Prova social 05">
+                            <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                                <img src="img/p5.webp" alt="Prova social 05" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="img/p6.webp" data-zoom-alt="Prova social 06">
+                            <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                                <img src="img/p6.webp" alt="Prova social 06" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="img/p7.webp" data-zoom-alt="Prova social 07">
+                            <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                                <img src="img/p7.webp" alt="Prova social 07" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="img/p8.webp" data-zoom-alt="Prova social 08">
+                            <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                                <img src="img/p8.webp" alt="Prova social 08" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="img/p9.webp" data-zoom-alt="Prova social 09">
+                            <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
+                                <img src="img/p9.webp" alt="Prova social 09" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="marquee-wrapper marquee-cards" aria-label="Carrossel de provas sociais">
+                        <div class="marquee-content-horizontal flex gap-4 py-0" data-marquee-track="social-proof-main" data-marquee-speed="34"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="image-zoom-modal" class="fixed inset-0 z-[1200] hidden items-center justify-center bg-black/80 p-4 sm:p-8" aria-hidden="true">
+                <button id="image-zoom-close" type="button" class="absolute top-4 right-4 sm:top-6 sm:right-6 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-colors" aria-label="Fechar imagem ampliada">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+
+                <figure class="w-full max-w-[740px] max-h-[90vh] flex flex-col items-center">
+                    <img id="image-zoom-target" src="" alt="" class="w-auto h-auto max-w-full max-h-[84vh] object-contain rounded-xl border border-white/15 shadow-soft">
+                    <figcaption id="image-zoom-caption" class="mt-3 text-center text-xs sm:text-sm text-white/85 font-light"></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="entregas" class="py-20 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-10 fade-in-section">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Entrega</p>
+                    <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">O que entregamos na prática</h2>
+                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Organização, direção e execução para o seu conteúdo virar clareza e resultado.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+                    <aside class="lg:col-span-4 fade-in-section" data-reveal="from-left">
+                        <div class="h-full premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-6 sm:p-8">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Método de entrega</p>
+                            <p class="mt-4 font-display text-xl sm:text-2xl text-gray-900 dark:text-white leading-tight">Do plano à publicação, com decisão baseada em dados.</p>
+
+                            <ul class="mt-6 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light">
+                                <li class="flex items-center gap-3"><span class="inline-flex w-2 h-2 rounded-full bg-futura-primary"></span><span>Prioridade no que gera resultado</span></li>
+                                <li class="flex items-center gap-3"><span class="inline-flex w-2 h-2 rounded-full bg-futura-accent"></span><span>Execução com consistência semanal</span></li>
+                                <li class="flex items-center gap-3"><span class="inline-flex w-2 h-2 rounded-full bg-futura-secondary"></span><span>Ajustes contínuos sem achismo</span></li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <div class="lg:col-span-8" data-stagger-parent>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                                <div class="flex items-start gap-4">
+                                    <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-primary flex-shrink-0" aria-hidden="true"><i class="fas fa-calendar-check"></i></span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Calendário mensal + roteiro de conteúdo (Reels, carrossel e stories)</p>
+                                </div>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                                <div class="flex items-start gap-4">
+                                    <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-accent flex-shrink-0" aria-hidden="true"><i class="fas fa-pen-ruler"></i></span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Direção criativa (visual consistente) + copy pronta para publicar</p>
+                                </div>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                                <div class="flex items-start gap-4">
+                                    <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-secondary flex-shrink-0" aria-hidden="true"><i class="fas fa-id-card"></i></span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Otimização do perfil: bio, destaques, links e “caminho do cliente”</p>
+                                </div>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                                <div class="flex items-start gap-4">
+                                    <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-primary flex-shrink-0" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Acompanhamento do que importa: alcance, salvamentos, cliques e mensagens</p>
+                                </div>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6 sm:col-span-2" data-reveal="from-right">
+                                <div class="flex items-start gap-4">
+                                    <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-accent flex-shrink-0" aria-hidden="true"><i class="fas fa-sliders"></i></span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Ajustes semanais com base no que o público responde (sem achismo)</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 fade-in-section">
+                    <div class="rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-6 sm:p-7 text-center">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">O foco é o básico bem feito</p>
+                        <p class="mt-3 font-display text-xl sm:text-2xl text-gray-900 dark:text-white">Clareza + Constância + Prova + CTA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="planos" class="plans-section py-16 md:py-20 bg-gray-50 dark:bg-futura-dark border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="mb-8 text-center fade-in-section relative z-10">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Planos</p>
+                    <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words">Escolha o <span class="text-gradient-futura">plano ideal</span> para o seu momento</h2>
+                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light max-w-3xl mx-auto">Três níveis de gestão para manter o Instagram organizado, crescer com engajamento e profissionalizar de ponta a ponta.</p>
+                </div>
+
+                <div class="plans-grid grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 items-stretch relative z-10" data-stagger-parent>
+                    <div class="plan-card fade-in-section premium-card p-6 lg:p-7 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 flex flex-col h-full">
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Plano Básico</p>
+                        <p class="mt-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Gestão Essencial do Instagram</p>
+                        <p class="plan-price mt-6 font-display text-3xl text-gray-900 dark:text-white">R$ 600,00<span class="text-sm font-sans font-light text-gray-600 dark:text-gray-300">/ mês</span></p>
+
+                        <p class="mt-4 font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Inclui</p>
+                        <ul class="plan-features mt-4 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light">
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>8 posts mensais (feed + carrossel simples)</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>7 Stories semanais</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-secondary mt-1" aria-hidden="true"></i><span>Legendas otimizadas</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>Hashtags estratégicas</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Calendário de conteúdo mensal</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-secondary mt-1" aria-hidden="true"></i><span>Edição simples das artes</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>Relatório mensal básico</span></li>
+                        </ul>
+
+                        <div class="plan-target mt-4 pt-4 border-t border-gray-100 dark:border-white/10">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Ideal para</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Negócios pequenos que só precisam manter o Instagram organizado e ativo.</p>
+                        </div>
+
+                        <div class="plan-cta mt-auto pt-5">
+                            <a href="https://api.whatsapp.com/send?phone=557581973628&text=Ol%C3%A1%2C%20FUTURA!%20Quero%20contratar%20o%20Plano%20B%C3%A1sico%20(R%24%20600%2Fm%C3%AAs)%20para%20gerenciamento%20do%20Instagram.%20Podemos%20alinhar%20in%C3%ADcio%2C%20prazo%20e%20o%20que%20voc%C3%AAs%20precisam%20de%20mim%3F" target="_blank" rel="noopener"
+                                class="btn-sheen w-full text-white font-display text-xs font-bold py-4 px-8 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-[0.18em] sm:tracking-widest border border-white/15 whitespace-nowrap">
+                                <span class="skew-x-[10deg] whitespace-nowrap">ESCOLHER PLANO</span> <i class="fab fa-whatsapp skew-x-[10deg]" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card plan-card-featured fade-in-section premium-card relative p-6 lg:p-7 rounded-2xl border border-futura-primary/30 dark:border-futura-primary/50 bg-white dark:bg-white/5 shadow-glow flex flex-col h-full md:-translate-y-2">
+                        <span class="absolute top-3 right-3 inline-flex items-center gap-2 rounded-full border border-futura-primary/40 dark:border-futura-primary/60 bg-futura-primary/15 dark:bg-futura-primary/25 text-futura-primary dark:text-fuchsia-200 px-3 py-1 text-[10px] uppercase tracking-widest font-display shadow-sm">
+                            <i class="fas fa-star text-[9px]" aria-hidden="true"></i> Recomendado
+                        </span>
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Plano Plus</p>
+                        <p class="mt-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Gestão com Engajamento</p>
+                        <p class="plan-price mt-6 font-display text-3xl text-gray-900 dark:text-white">R$ 900,00<span class="text-sm font-sans font-light text-gray-600 dark:text-gray-300">/ mês</span></p>
+
+                        <p class="mt-4 font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Inclui</p>
+                        <ul class="plan-features mt-4 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light">
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>12 posts mensais</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>14 Stories semanais</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-secondary mt-1" aria-hidden="true"></i><span>4 Reels mensais (com vídeos enviados pelo cliente)</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>Interação básica com seguidores (comentários e directs simples)</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Estratégia de hashtags + SEO Instagram</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-secondary mt-1" aria-hidden="true"></i><span>Calendário editorial estratégico</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>Ajustes de identidade visual</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Relatório mensal completo</span></li>
+                        </ul>
+
+                        <div class="plan-target mt-4 pt-4 border-t border-gray-100 dark:border-white/10">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Ideal para</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Empresas que querem crescer e melhorar o relacionamento com os seguidores.</p>
+                        </div>
+
+                        <div class="plan-cta mt-auto pt-5">
+                            <a href="https://api.whatsapp.com/send?phone=557581973628&text=Ol%C3%A1%2C%20FUTURA!%20Quero%20contratar%20o%20Plano%20Plus%20(R%24%20900%2Fm%C3%AAs)%20para%20gerenciamento%20do%20Instagram.%20Podemos%20alinhar%20in%C3%ADcio%2C%20prazo%20e%20o%20que%20voc%C3%AAs%20precisam%20de%20mim%3F" target="_blank" rel="noopener"
+                                class="btn-sheen w-full text-white font-display text-xs font-bold py-4 px-8 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-[0.18em] sm:tracking-widest border border-white/15 whitespace-nowrap">
+                                <span class="skew-x-[10deg] whitespace-nowrap">ESCOLHER PLANO</span> <i class="fab fa-whatsapp skew-x-[10deg]" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card fade-in-section premium-card p-6 lg:p-7 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 flex flex-col h-full">
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">Plano Pró</p>
+                        <p class="mt-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Gestão Total do Instagram</p>
+                        <p class="plan-price mt-6 font-display text-3xl text-gray-900 dark:text-white">R$ 1.300,00<span class="text-sm font-sans font-light text-gray-600 dark:text-gray-300">/ mês</span></p>
+
+                        <p class="mt-4 font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Inclui</p>
+                        <ul class="plan-features mt-4 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light">
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>20 posts mensais</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>24 Stories semanais</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-secondary mt-1" aria-hidden="true"></i><span>8 reels mensais (vídeos enviados pelo cliente ou criados por IA)</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>Gestão completa de comentários e directs</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Monitoramento diário do perfil</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-secondary mt-1" aria-hidden="true"></i><span>Estratégia mensal aprofundada + análise de concorrentes</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>Estratégia avançada de hashtags + SEO Instagram</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Identidade visual personalizada + ajustes contínuos</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-secondary mt-1" aria-hidden="true"></i><span>Relatório quinzenal detalhado</span></li>
+                        </ul>
+
+                        <div class="plan-target mt-4 pt-4 border-t border-gray-100 dark:border-white/10">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Ideal para</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Empresas que querem profissionalização total, posicionamento forte e crescimento consistente.</p>
+                        </div>
+
+                        <div class="plan-cta mt-auto pt-5">
+                            <a href="https://api.whatsapp.com/send?phone=557581973628&text=Ol%C3%A1%2C%20FUTURA!%20Quero%20contratar%20o%20Plano%20Pr%C3%B3%20(R%24%201.300%2Fm%C3%AAs)%20para%20gerenciamento%20do%20Instagram.%20Podemos%20alinhar%20in%C3%ADcio%2C%20prazo%20e%20o%20que%20voc%C3%AAs%20precisam%20de%20mim%3F" target="_blank" rel="noopener"
+                                class="btn-sheen w-full text-white font-display text-xs font-bold py-4 px-8 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-[0.18em] sm:tracking-widest border border-white/15 whitespace-nowrap">
+                                <span class="skew-x-[10deg] whitespace-nowrap">ESCOLHER PLANO</span> <i class="fab fa-whatsapp skew-x-[10deg]" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="no-contract-section py-20 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="fade-in-section">
+                    <div class="no-contract-card p-8 sm:p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                            <div class="md:col-span-8">
+                                <p class="inline-flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 font-light tracking-wider uppercase">
+                                    <i class="fas fa-lock-open text-futura-accent" aria-hidden="true"></i>
+                                    <span>Sem contrato engessado</span>
+                                </p>
+                                <p class="mt-4 text-base sm:text-lg text-gray-700 dark:text-gray-200 font-light leading-relaxed">Começamos pelo diagnóstico e definimos um plano realista para o seu momento (local ou digital), com prioridades e um próximo passo claro.</p>
+                                <div class="mt-6 flex flex-wrap gap-2">
+                                    <span class="inline-flex items-center rounded-full border border-gray-200 dark:border-white/15 bg-white/80 dark:bg-white/10 px-3 py-1.5 text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300">Diagnóstico</span>
+                                    <span class="inline-flex items-center rounded-full border border-gray-200 dark:border-white/15 bg-white/80 dark:bg-white/10 px-3 py-1.5 text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300">Prioridades</span>
+                                    <span class="inline-flex items-center rounded-full border border-gray-200 dark:border-white/15 bg-white/80 dark:bg-white/10 px-3 py-1.5 text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300">Próximo passo claro</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4 md:justify-self-end w-full md:w-auto">
+                                <a href="https://api.whatsapp.com/send?phone=557581973628&text=Ol%C3%A1%2C%20FUTURA!%20Quero%20solicitar%20um%20diagn%C3%B3stico%20para%20gerenciamento%20de%20redes%20sociais.%20Podemos%20alinhar%20o%20pr%C3%B3ximo%20passo%3F" target="_blank" rel="noopener"
+                                    class="btn-sheen w-full md:w-auto text-white font-display text-xs font-bold py-4 px-8 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-[0.18em] sm:tracking-widest border border-white/15 whitespace-nowrap">
+                                    <span class="skew-x-[10deg] whitespace-nowrap">Solicitar diagnóstico</span>
+                                    <i class="fab fa-whatsapp skew-x-[10deg]" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer bg-white dark:bg-black text-gray-900 dark:text-white pt-20 pb-10 border-t border-gray-100 dark:border-white/5 relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+        <div class="container mx-auto max-w-7xl px-4 relative z-10">
+            <div class="footer-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-4">
+                <div class="footer-brand col-span-1 md:col-span-1">
+                    <img src="img/logop.webp" alt="Futura Logo" class="theme-logo h-6 w-auto mb-6 opacity-90">
+                    <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed font-light max-w-[22ch]">
+                        Branding, sites, lojas virtuais e criativos para anúncios, com <strong class="text-gray-900 dark:text-gray-200 font-semibold">clareza</strong> e execução premium.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Sitemap</h4>
+                    <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li><a href="index.html#hero" class="footer-link hover:text-futura-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#quem-somos" class="footer-link hover:text-futura-primary transition-colors">Equipe</a></li>
+                        <li><a href="index.html#servicos" class="footer-link hover:text-futura-primary transition-colors">Serviços</a></li>
+                        <li><a href="index.html#contato" class="footer-link hover:text-futura-primary transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Legal</h4>
+                    <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li><a href="termos.html" class="footer-link hover:text-futura-primary transition-colors">Termos de Uso</a></li>
+                        <li><a href="privacidade.html" class="footer-link hover:text-futura-primary transition-colors">Privacidade</a></li>
+                        <li><a href="cookies.html" class="footer-link hover:text-futura-primary transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Contato Direto</h4>
+                    <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li>
+                            <a href="https://instagram.com/futuradesign.br" target="_blank" rel="noopener" class="footer-contact-link inline-flex items-center gap-2 hover:text-futura-primary transition-colors">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>@futuradesign.br</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/5511964956563" target="_blank" rel="noopener" class="footer-contact-link inline-flex items-center gap-2 hover:text-futura-primary transition-colors">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                <span>Suporte via WhatsApp</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-newsletter">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Newsletter</h4>
+                    <form id="newsletter-form" class="footer-news-form flex flex-col gap-3" data-endpoint="https://script.google.com/macros/s/AKfycbyBsKmthWCcUR9qR2P_40WSAGjtDv2i2-h7tPewFZeP1F-EVsCgUSUtHlhLY5s-qGgW/exec" novalidate>
+                        <input id="newsletter-email" name="email" type="email" placeholder="Seu e-mail" autocomplete="email" inputmode="email" required class="footer-input bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-3 text-xs text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:border-futura-primary transition-colors" aria-label="Seu e-mail">
+                        <button type="submit" class="footer-news-btn bg-gray-900 text-white dark:bg-white dark:text-black font-display text-xs font-bold py-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors uppercase tracking-widest">Receber insights</button>
+                        <p id="newsletter-status" class="text-[10px] text-gray-500 dark:text-gray-500 font-light" aria-live="polite"></p>
+                        <p class="footer-note text-[10px] text-gray-500 dark:text-gray-500 font-light">Sem spam. Conteúdo direto ao ponto.</p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom pt-2 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[10px] text-gray-600 dark:text-gray-400 uppercase tracking-widest">&copy; 2026 FUTURA DESIGN. Clareza, entrega e acompanhamento. Sem promessas irreais.</p>
+                <h2 class="font-display text-4xl md:text-6xl text-black/5 dark:text-white/5 font-bold mt-6 md:mt-0 select-none">FUTURA</h2>
+            </div>
+        </div>
+    </footer>
+
+    <button id="theme-toggle-btn" aria-label="Alternar tema claro/escuro"
+        class="fixed bottom-3 right-3 z-50 w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:scale-110 transition-transform">
+        <i id="theme-toggle-sun" class="fas fa-sun"></i>
+        <i id="theme-toggle-moon" class="fas fa-moon hidden text-futura-accent"></i>
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
