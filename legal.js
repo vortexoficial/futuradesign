@@ -216,8 +216,8 @@ function applyLanguage(lang) {
 
 function updateLogos() {
   const isDark = document.documentElement.classList.contains('dark');
-  const logoLight = 'img/logop.webp';
-  const logoDark = 'img/logob.webp';
+  const logoLight = '/img/logop.webp';
+  const logoDark = '/img/logob.webp';
   const target = isDark ? logoDark : logoLight;
   document.querySelectorAll('.theme-logo').forEach((img) => {
     try {

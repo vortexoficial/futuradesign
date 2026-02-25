@@ -233,10 +233,76 @@ const PT_TO_EN = {
 
     'VER PLANOS': 'SEE PLANS',
     'VER ESTRATÉGIA': 'SEE STRATEGY',
+    'Gerenciamento de Redes Sociais | FUTURA DESIGN': 'Social Media Management | FUTURA DESIGN',
+    'Gerenciamento': 'Management',
+    'de redes sociais': 'of social media',
+    'Imagem de gerenciamento de redes sociais': 'Social media management image',
     'Quando o orgânico precisa virar conversa de verdade': 'When organic content needs to become real conversations',
+    'Quando o': 'When',
+    'orgânico': 'organic',
+    'precisa virar conversa de verdade': 'needs to become real conversations',
+    'Estruturas simples para o seu': 'Simple structures for your',
+    'funcionar': 'to work',
     'Se o perfil não explica o que você faz e não conduz para uma ação, a gente organiza com método.':
         'If the profile does not clearly explain what you do and does not lead to action, we organize it with a method.',
     'Estratégias orgânicas': 'Organic strategies',
+    'O foco é clareza, prova e consistência, com CTAs que a pessoa entende.':
+        'The focus is clarity, proof, and consistency, with CTAs people understand.',
+    'Mapa rápido': 'Quick map',
+    '4 pilares que organizam o conteúdo com método': '4 pillars that organize content with method',
+    'Prova': 'Proof',
+    'Clareza': 'Clarity',
+    'Comunidade': 'Community',
+    'Conversão': 'Conversion',
+    'Resultado esperado': 'Expected outcome',
+    'Conteúdo mais consistente, objetivo e fácil de vender.': 'More consistent, objective content that is easier to sell.',
+    'Conteúdo de prova': 'Proof content',
+    'Conteúdo de clareza': 'Clarity content',
+    'Conteúdo de comunidade': 'Community content',
+    'Conteúdo de conversão': 'Conversion content',
+    'Provas sociais': 'Social proof',
+    'Resultados reais': 'Real results',
+    'em formato visual': 'in visual format',
+    'Mesmo padrão da home com carrossel contínuo. Clique em qualquer imagem para ampliar.':
+        'Same home pattern with a continuous carousel. Click any image to enlarge.',
+    'Prova social 01': 'Social proof 01',
+    'Prova social 02': 'Social proof 02',
+    'Prova social 03': 'Social proof 03',
+    'Prova social 04': 'Social proof 04',
+    'Prova social 05': 'Social proof 05',
+    'Prova social 06': 'Social proof 06',
+    'Prova social 07': 'Social proof 07',
+    'Prova social 08': 'Social proof 08',
+    'Prova social 09': 'Social proof 09',
+    'Carrossel de provas sociais': 'Social proof carousel',
+    'Fechar imagem ampliada': 'Close enlarged image',
+    'O que entregamos na prática': 'What we deliver in practice',
+    'Método de entrega': 'Delivery method',
+    'Do plano à publicação, com decisão baseada em dados.':
+        'From planning to publishing, with data-driven decisions.',
+    'Prioridade no que gera resultado': 'Priority on what generates results',
+    'Execução com consistência semanal': 'Execution with weekly consistency',
+    'Ajustes contínuos sem achismo': 'Continuous adjustments without guesswork',
+    'Calendário mensal + roteiro de conteúdo (Reels, carrossel e stories)':
+        'Monthly calendar + content roadmap (Reels, carousel, and stories)',
+    'Direção criativa (visual consistente) + copy pronta para publicar':
+        'Creative direction (consistent visuals) + copy ready to publish',
+    'Otimização do perfil: bio, destaques, links e “caminho do cliente”':
+        'Profile optimization: bio, highlights, links, and “customer journey”',
+    'Acompanhamento do que importa: alcance, salvamentos, cliques e mensagens':
+        'Tracking what matters: reach, saves, clicks, and messages',
+    'Ajustes semanais com base no que o público responde (sem achismo)':
+        'Weekly adjustments based on audience response (no guesswork)',
+    'Clareza + Constância + Prova + CTA': 'Clarity + Consistency + Proof + CTA',
+    'Escolha o': 'Choose the',
+    'plano ideal': 'ideal plan',
+    'para o seu momento': 'for your moment',
+    'R$ 600,00': 'R$ 600,00',
+    '/ mês': '/ month',
+    'Recomendado': 'Recommended',
+    'R$ 900,00': 'R$ 900,00',
+    'R$ 1.300,00': 'R$ 1.300,00',
+    'Futura Logo': 'Futura Logo',
     'O foco é clareza, prova e consistência — com CTAs que a pessoa entende.':
         'The focus is clarity, proof, and consistency — with CTAs people actually understand.',
     'Entrega': 'Delivery',
@@ -606,8 +672,8 @@ function updateLogos() {
     
     // Caminhos das logos da Futura Design
     // Certifique-se de ter uma versão preta (logop.png) e uma branca (logob.png) na pasta img/
-    const logoLight = "img/logop.webp"; // Logo PRETA (Para fundo claro)
-    const logoDark  = "img/logob.webp"; // Logo BRANCA (Para fundo escuro)
+    const logoLight = "/img/logop.webp"; // Logo PRETA (Para fundo claro)
+    const logoDark  = "/img/logob.webp"; // Logo BRANCA (Para fundo escuro)
     
     const targetLogo = isDark ? logoDark : logoLight;
     
