@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proposta Comercial - Site + Redes Sociais + Anúncios para frente corporativa e infantil." />
+  <title>Proposta Comercial - Site + Redes Sociais + Anúncios</title>
+
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+  <script>
+    (function () {
+      try {
+        const theme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (theme === 'dark' || (!theme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" type="image/png" href="../img/favicon.png" />
+  <link rel="preload" as="image" href="../img/logop.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="../img/logob.webp" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Michroma&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/proposal.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-outer">
+      <div class="header-shell">
+        <a class="brand" href="#topo" aria-label="Voltar ao topo da proposta">
+          <img src="../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo brand-logo" onerror="this.onerror=null;this.src='/img/logop.webp';" />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navegação principal">
+          <a href="#objetivos">Objetivos</a>
+          <a href="#escopo">Escopo</a>
+          <a href="#metodologia">Metodologia</a>
+          <a href="#investimento">Investimento</a>
+          <a href="#faq">FAQ</a>
+          <a href="#aprovacao">Aprovação</a>
+        </nav>
+
+        <button class="menu-toggle" id="menu-toggle" aria-controls="mobile-menu-overlay" aria-expanded="false" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true">
+    <div class="mobile-menu-head">
+      <img src="../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo mobile-logo" onerror="this.onerror=null;this.src='/img/logop.webp';" />
+      <button id="close-menu" class="close-menu" aria-label="Fechar menu">×</button>
+    </div>
+    <nav class="mobile-nav" aria-label="Navegação mobile">
+      <a href="#objetivos">Objetivos</a>
+      <a href="#escopo">Escopo</a>
+      <a href="#metodologia">Metodologia</a>
+      <a href="#investimento">Investimento</a>
+      <a href="#faq">FAQ</a>
+      <a href="#aprovacao">Aprovação</a>
+    </nav>
+  </div>
+
+  <main id="conteudo">
+    <section class="hero-section section reveal-on-scroll">
+      <div class="container hero-grid">
+        <div class="hero-main-content">
+          <p class="kicker">Proposta comercial</p>
+          <h1>Site + Redes Sociais + Anúncios com estratégia integrada</h1>
+          <p class="lead">Plano profissional para duas frentes de negócio com posicionamento, aquisição e crescimento previsível.</p>
+
+          <ul class="hero-points">
+            <li>Estratégia separada para frente corporativa e infantil</li>
+            <li>Execução completa: estrutura, conteúdo, mídia e otimização</li>
+            <li>Modelo de investimento claro para decisão rápida</li>
+          </ul>
+
+          <div class="hero-meta">
+            <div class="meta-chip"><strong>Cliente:</strong> {CLIENT_NAME}</div>
+            <div class="meta-chip"><strong>Data:</strong> {DATE}</div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn-sheen" href="#investimento"><span>Ver investimento</span></a>
+            <button id="download-pdf-btn" class="btn-outline" type="button"><span>Baixar PDF</span></button>
+          </div>
+
+          <div class="hero-trust-row">
+            <span class="trust-chip">Escopo definido</span>
+            <span class="trust-chip">Métricas rastreáveis</span>
+            <span class="trust-chip">Execução orientada a resultado</span>
+          </div>
+        </div>
+
+        <aside class="hero-phone-wrap" aria-label="Resumo executivo em destaque">
+          <div class="hero-phone">
+            <div class="hero-phone-notch" aria-hidden="true"></div>
+            <div class="hero-phone-screen">
+              <p class="hero-phone-kicker">Resumo executivo</p>
+              <h2>Plano em foco</h2>
+              <ul>
+                <li>Duas frentes de negócio com estratégia dedicada.</li>
+                <li>Escopo completo de site, social e anúncios.</li>
+                <li>Métricas, rastreamento e otimização contínua.</li>
+                <li>Modelo claro de custos pontuais e mensais.</li>
+              </ul>
+
+              <div class="hero-side-note">
+                <p><strong>Entrega estratégica:</strong> presença digital com narrativa consistente, canais conectados e foco em conversão.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section reveal-on-scroll" id="objetivos">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Resumo dos objetivos</p>
+          <h2>Resumo de objetivos</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="premium-card card-soft">
+            <span class="icon-placeholder" aria-hidden="true">[ÍCONE]</span>
+            <h3>Corporativo (Cabine/360)</h3>
+            <ul>
+              <li>Posicionar no Google.</li>
+              <li>Atrair leads corporativos.</li>
+              <li>Construir credibilidade para marcas e empresas.</li>
+            </ul>
+          </article>
+
+          <article class="premium-card card-soft">
+            <span class="icon-placeholder" aria-hidden="true">[ÍCONE]</span>
+            <h3>Infantil (Baby Kids)</h3>
+            <ul>
+              <li>Atrair famílias e reservas para festas/eventos.</li>
+              <li>Fortalecer awareness local.</li>
+              <li>Transmitir confiança e segurança.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal-on-scroll" id="escopo">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Escopo e entregáveis</p>
+          <h2>Escopo e entregáveis por negócio</h2>
+        </div>
+
+        <article class="premium-card card-soft business-block">
+          <h3>1) Negócio 1 - Corporativo: Cabine de Fotos & Câmera 360</h3>
+          <p><strong>Opção de site:</strong> Landing page OU Institucional (cliente escolhe).</p>
+
+          <div class="grid grid-2">
+            <div>
+              <h4>Páginas/seções recomendadas</h4>
+              <ul>
+                <li>Início</li>
+                <li>Serviços</li>
+                <li>Pacotes corporativos</li>
+                <li>Galeria/Portfólio</li>
+                <li>Cases</li>
+                <li>Depoimentos</li>
+                <li>FAQ</li>
+                <li>Contato/Orçamento</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Tracking + SEO + mídia</h4>
+              <ul>
+                <li>GA4 + eventos de conversão + rastreio de clique no WhatsApp</li>
+                <li>SEO básico incluído (títulos, meta, performance, estrutura)</li>
+                <li>Estratégia de anúncios: principalmente Google Ads, opcionalmente LinkedIn</li>
+                <li>Social: conteúdo de posicionamento corporativo (cases, bastidores, provas, estrutura)</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="premium-card card-soft business-block">
+          <h3>2) Negócio 2 - Infantil: Espaço Baby Kids Montessori</h3>
+          <p><strong>Opção de site:</strong> Landing page OU Institucional (cliente escolhe).</p>
+
+          <div class="grid grid-2">
+            <div>
+              <h4>Páginas/seções recomendadas</h4>
+              <ul>
+                <li>Início</li>
+                <li>Atividades/Serviços</li>
+                <li>Pacotes</li>
+                <li>Galeria</li>
+                <li>Depoimentos (pais)</li>
+                <li>Segurança/Estrutura</li>
+                <li>FAQ</li>
+                <li>Contato/Reserva</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Tracking + SEO + mídia</h4>
+              <ul>
+                <li>Clique no WhatsApp, formulários, GA4</li>
+                <li>SEO básico incluído (fundamentos de SEO local)</li>
+                <li>Estratégia de anúncios: principalmente Meta Ads (Instagram/Facebook), opcionalmente Google local</li>
+                <li>Social: conteúdo familiar, rotina, eventos, depoimentos e agenda</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal-on-scroll" id="metodologia">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Metodologia de trabalho</p>
+          <h2>Metodologia de trabalho</h2>
+        </div>
+
+        <ol class="timeline-steps">
+          <li class="premium-card card-soft"><strong>1.</strong> Kickoff e briefing (objetivos, público, oferta, região)</li>
+          <li class="premium-card card-soft"><strong>2.</strong> Estrutura e copy (seções do site + CTA)</li>
+          <li class="premium-card card-soft"><strong>3.</strong> Layout de design (alinhado à marca)</li>
+          <li class="premium-card card-soft"><strong>4.</strong> Desenvolvimento + responsividade</li>
+          <li class="premium-card card-soft"><strong>5.</strong> SEO básico + performance</li>
+          <li class="premium-card card-soft"><strong>6.</strong> Rastreamento e analytics</li>
+          <li class="premium-card card-soft"><strong>7.</strong> Lançamento</li>
+          <li class="premium-card card-soft"><strong>8.</strong> Configuração de anúncios (estrutura, palavras-chave/públicos, criativos, conversões)</li>
+          <li class="premium-card card-soft"><strong>9.</strong> Ciclo de otimização (ajustes semanais)</li>
+          <li class="premium-card card-soft"><strong>10.</strong> Relatório mensal</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-contrast reveal-on-scroll" id="investimento">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Investimento</p>
+          <h2>Precificação clara e calculadora de investimento</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="premium-card card-soft">
+            <h3>Custos únicos de implementação (sites)</h3>
+            <p>Escolha o tipo de site para cada negócio:</p>
+
+            <div class="pricing-selector">
+              <h4>Negócio 1 - Corporativo</h4>
+              <label><input type="radio" name="site-corporate" value="900" checked /> Landing (R$ 900)</label>
+              <label><input type="radio" name="site-corporate" value="2000" /> Institutional (R$ 2.000)</label>
+            </div>
+
+            <div class="pricing-selector">
+              <h4>Negócio 2 - Infantil</h4>
+              <label><input type="radio" name="site-kids" value="900" checked /> Landing (R$ 900)</label>
+              <label><input type="radio" name="site-kids" value="2000" /> Institutional (R$ 2.000)</label>
+            </div>
+          </article>
+
+          <article class="premium-card card-soft">
+            <h3>Custos mensais de gestão</h3>
+            <p>Taxa de gestão de anúncios por plataforma: <strong>R$ 700/mês</strong> cada.</p>
+
+            <div class="pricing-selector">
+              <h4>Plataformas de anúncios</h4>
+              <label><input type="checkbox" class="ads-platform" value="700" /> Google Ads</label>
+              <label><input type="checkbox" class="ads-platform" value="700" /> Meta Ads</label>
+              <label><input type="checkbox" class="ads-platform" value="700" /> TikTok Ads</label>
+              <label><input type="checkbox" class="ads-platform" value="700" /> LinkedIn Ads</label>
+            </div>
+
+            <div class="pricing-selector">
+              <h4>Redes sociais (mensal)</h4>
+              <p>Baseado na tabela de criativos: <a href="[LINK_PLACEHOLDER]" target="_blank" rel="noopener">[LINK_PLACEHOLDER]</a></p>
+              <p>Detalhes do serviço: <a href="[SOCIAL_MEDIA_LINK_PLACEHOLDER]" target="_blank" rel="noopener">[SOCIAL_MEDIA_LINK_PLACEHOLDER]</a></p>
+            </div>
+          </article>
+        </div>
+
+        <article class="premium-card cta-card summary-card" aria-live="polite">
+          <h3>Resumo de investimento</h3>
+          <p id="summary-onetime">Investimento - Único: R$ 0</p>
+          <p id="summary-monthly">Gestão mensal: R$ 0 + Redes sociais (conforme tabela de criativos)</p>
+          <p class="note"><strong>Observação:</strong> investimento em mídia é pago separadamente pelo cliente, direto nas plataformas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal-on-scroll" id="prazos">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Cronograma e prazos</p>
+          <h2>Prazos</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="premium-card card-soft">
+            <ul>
+              <li>Landing: 7-10 dias úteis</li>
+              <li>Institucional: 15-20 dias úteis</li>
+              <li>Configuração de anúncios: 3-5 dias úteis após site/rastreamento prontos</li>
+              <li>Otimização: contínua e mensal</li>
+            </ul>
+          </article>
+
+          <article class="premium-card card-soft">
+            <h3>O que precisamos do cliente</h3>
+            <ul>
+              <li>Logo/ativos</li>
+              <li>Fotos/vídeos</li>
+              <li>Lista de serviços</li>
+              <li>Preços/pacotes</li>
+              <li>Região de atuação</li>
+              <li>Acesso às contas de anúncios</li>
+              <li>Número de WhatsApp</li>
+              <li>Perfil do Google Business (se houver)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal-on-scroll" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Perguntas frequentes</p>
+          <h2>Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list" id="faq-list">
+          <details class="premium-card card-soft" open>
+            <summary>O que está incluído no SEO?</summary>
+            <p>Inclui SEO básico on-page: títulos, meta descrições, estrutura semântica e performance inicial.</p>
+          </details>
+
+          <details class="premium-card card-soft">
+            <summary>A taxa inclui verba de anúncios?</summary>
+            <p>Não. O cliente paga o ad budget separadamente direto nas plataformas.</p>
+          </details>
+
+          <details class="premium-card card-soft">
+            <summary>Podemos começar por apenas um negócio primeiro?</summary>
+            <p>Sim. É possível iniciar por uma frente e expandir para a segunda na sequência.</p>
+          </details>
+
+          <details class="premium-card card-soft">
+            <summary>Como funcionam os relatórios?</summary>
+            <p>Relatório mensal com visão de performance, aprendizados e plano de otimização.</p>
+          </details>
+
+          <details class="premium-card card-soft">
+            <summary>Condições de contrato e pagamento</summary>
+            <p>Contrato: {CONTRACT_TERMS_PLACEHOLDER}</p>
+            <p>Pagamento: {PAYMENT_TERMS_PLACEHOLDER}</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal-on-scroll" id="aprovacao">
+      <div class="container">
+        <article class="premium-card cta-card">
+          <p class="kicker">Próximo passo</p>
+          <h2>Aprovar proposta e iniciar</h2>
+          <p>“Olá! Quero aprovar a proposta (Site + Redes + Anúncios) e iniciar o projeto.”</p>
+
+          <div class="signature-box">
+            <p><strong>{AGENCY_NAME}</strong></p>
+            <p>Site: <a href="{WEBSITE_LINK}" target="_blank" rel="noopener">{WEBSITE_LINK}</a></p>
+            <p>WhatsApp: <a href="{WHATSAPP_LINK}" target="_blank" rel="noopener">{WHATSAPP_LINK}</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo brand-logo footer-logo" onerror="this.onerror=null;this.src='/img/logop.webp';" />
+        <p>Proposta comercial estruturada para clareza de escopo, previsibilidade de investimento e execução orientada a resultados.</p>
+      </div>
+      <div>
+        <p class="footer-title">Navegação</p>
+        <ul>
+          <li><a href="#objetivos">Objetivos</a></li>
+          <li><a href="#escopo">Escopo</a></li>
+          <li><a href="#investimento">Investimento</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Documento</p>
+        <ul>
+          <li>Proposta comercial digital</li>
+          <li>Versão web responsiva</li>
+          <li>Atualizável por blocos</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Proposta Comercial. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a id="sticky-accept-cta" class="sticky-accept-cta" href="{WHATSAPP_LINK}?text=Ol%C3%A1!%20Quero%20aprovar%20a%20proposta%20(Site%20%2B%20Redes%20%2B%20An%C3%BAncios)%20e%20iniciar%20o%20projeto." target="_blank" rel="noopener">
+    Aprovar proposta / Vamos começar
+  </a>
+
+  <script src="./js/proposal.js"></script>
+</body>
+</html>

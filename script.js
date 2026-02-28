@@ -120,7 +120,7 @@ const PT_TO_EN = {
     'Gerenciamento de redes sociais': 'Social media management',
     'Conteúdo orgânico com estratégia': 'Organic content with strategy',
     'para gerar confiança e virar contato': 'to build trust and turn it into contact',
-    '— no local e no digital.': '— for local and digital businesses.',
+    '- no local e no digital.': '- for local and digital businesses.',
     'A gente organiza a sua presença: mensagem clara, constância e conteúdo que educa com prova real do que você faz. Sem dancinha forçada e sem promessa milagrosa, com um plano simples que gera resultados.':
         'We organize your presence: clear messaging, consistency, and content that teaches with real proof of what you do. No forced trends and no miracle promises, with a simple plan that generates results.',
     'Para quem faz sentido': 'Who this is for',
@@ -303,8 +303,8 @@ const PT_TO_EN = {
     'R$ 900,00': 'R$ 900,00',
     'R$ 1.300,00': 'R$ 1.300,00',
     'Futura Logo': 'Futura Logo',
-    'O foco é clareza, prova e consistência — com CTAs que a pessoa entende.':
-        'The focus is clarity, proof, and consistency — with CTAs people actually understand.',
+    'O foco é clareza, prova e consistência - com CTAs que a pessoa entende.':
+        'The focus is clarity, proof, and consistency - with CTAs people actually understand.',
     'Entrega': 'Delivery',
     'Organização, direção e execução para o seu conteúdo virar clareza e resultado.':
         'Organization, direction, and execution so your content becomes clarity and results.',

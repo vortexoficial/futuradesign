@@ -290,32 +290,8 @@ function updateLanguageButtonUI(btn, lang) {
 applyThemeFromStorage();
 
 document.addEventListener('DOMContentLoaded', () => {
-  const themeBtn = ensureThemeButton();
-  const languageBtn = ensureLanguageButton(themeBtn);
-
-  updateThemeIcon();
+  applyThemeFromStorage();
   updateLogos();
-
-  if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      document.body.classList.toggle('dark', document.documentElement.classList.contains('dark'));
-      storeTheme(document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-      updateThemeIcon();
-      updateLogos();
-    });
-  }
-
-  let currentLang = getStoredLang();
-  applyLanguage(currentLang);
-  updateLanguageButtonUI(languageBtn, currentLang);
-
-  if (languageBtn) {
-    languageBtn.addEventListener('click', () => {
-      currentLang = currentLang === LANG_EN_US ? LANG_PT_BR : LANG_EN_US;
-      storeLang(currentLang);
-      applyLanguage(currentLang);
-      updateLanguageButtonUI(languageBtn, currentLang);
-    });
-  }
+  storeLang(LANG_PT_BR);
+  applyLanguage(LANG_PT_BR);
 });
