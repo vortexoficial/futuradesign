@@ -669,11 +669,12 @@ function applyLanguage(lang) {
 // 0. FUNÇÃO PARA TROCAR LOGOS (LIGHT/DARK)
 function updateLogos() {
     const isDark = document.documentElement.classList.contains('dark');
+    const assetBase = document.body?.dataset?.assetBase || '';
     
     // Caminhos das logos da Futura Design
     // Certifique-se de ter uma versão preta (logop.png) e uma branca (logob.png) na pasta img/
-    const logoLight = "/img/logop.webp"; // Logo PRETA (Para fundo claro)
-    const logoDark  = "/img/logob.webp"; // Logo BRANCA (Para fundo escuro)
+    const logoLight = `${assetBase}img/logop.webp`; // Logo PRETA (Para fundo claro)
+    const logoDark  = `${assetBase}img/logob.webp`; // Logo BRANCA (Para fundo escuro)
     
     const targetLogo = isDark ? logoDark : logoLight;
     
@@ -935,6 +936,15 @@ function initNewsletterForm() {
 // 2. INICIALIZAÇÃO
 (function() {
     try {
+        const forcedTheme = document.body?.dataset?.forceTheme;
+        if (forcedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+            return;
+        }
+        if (forcedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+            return;
+        }
         const theme = localStorage.getItem('theme');
         if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');

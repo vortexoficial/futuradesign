@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
+    <script>
+        (function () {
+            try {
+                const forceTheme = 'dark';
+                if (forceTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    return;
+                }
+                const theme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <title>Relatório Social Media | My Dev Academy | Março 2026</title>
+    <meta name="description" content="Relatório social media da My Dev Academy referente ao período de 08/02 a 09/03, com análise de crescimento, alcance, interação, formatos e plano de ação.">
+    <link rel="canonical" href="https://agenciafuturadesign.com/relatorio-social-media/">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Relatório Social Media | My Dev Academy | Março 2026">
+    <meta property="og:description" content="Análise de crescimento, alcance, interação, formatos e próximos passos da My Dev Academy no Instagram.">
+    <meta property="og:url" content="https://agenciafuturadesign.com/relatorio-social-media/">
+    <meta property="og:site_name" content="FUTURA DESIGN">
+    <meta property="og:image" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg">
+    <meta property="og:image:secure_url" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FUTURA DESIGN - Relatório Social Media">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Relatório Social Media | My Dev Academy | Março 2026">
+    <meta name="twitter:description" content="Análise de crescimento, alcance, interação, formatos e próximos passos da My Dev Academy no Instagram.">
+    <meta name="twitter:image" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg">
+    <meta name="twitter:image:alt" content="FUTURA DESIGN - Relatório Social Media">
+
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="preload" as="image" href="../img/logop.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="../img/logob.webp" fetchpriority="high">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Michroma&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Michroma', 'sans-serif'],
+                    },
+                    colors: {
+                        futura: {
+                            primary: '#D300C5',
+                            secondary: '#240090',
+                            accent: '#00E5FF',
+                            dark: '#050515',
+                            card: '#0F0F25',
+                            light: '#F8F9FA',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 5px 20px -5px rgba(0, 0, 0, 0.3)',
+                        'glow': '0 0 40px rgba(211, 0, 197, 0.2), 0 0 15px rgba(36, 0, 144, 0.1)',
+                        'neon': '0 0 15px rgba(211, 0, 197, 0.4), 0 0 30px rgba(211, 0, 197, 0.1)',
+                    },
+                    backgroundImage: {
+                        'universe-dark': "linear-gradient(to bottom, rgba(2, 2, 8, 0.85), rgba(2, 2, 8, 0.98))",
+                        'clean-light': "linear-gradient(to bottom, #F8F9FA, #FFFFFF)",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .report-aurora-card {
+            position: relative;
+            min-height: 360px;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 18% 22%, rgba(232, 121, 249, 0.34), transparent 26%),
+                radial-gradient(circle at 82% 20%, rgba(99, 102, 241, 0.38), transparent 24%),
+                radial-gradient(circle at 50% 82%, rgba(0, 229, 255, 0.18), transparent 28%),
+                linear-gradient(135deg, #14031f 0%, #24053b 35%, #2d0a63 62%, #090512 100%);
+        }
+
+        .report-aurora-card::before,
+        .report-aurora-card::after {
+            content: "";
+            position: absolute;
+            inset: auto;
+            border-radius: 999px;
+            filter: blur(18px);
+            pointer-events: none;
+        }
+
+        .report-aurora-card::before {
+            width: 11rem;
+            height: 11rem;
+            top: -2.5rem;
+            right: -1.5rem;
+            background: rgba(217, 70, 239, 0.28);
+            animation: report-float-one 9s ease-in-out infinite;
+        }
+
+        .report-aurora-card::after {
+            width: 9rem;
+            height: 9rem;
+            bottom: -1.75rem;
+            left: -1rem;
+            background: rgba(34, 211, 238, 0.18);
+            animation: report-float-two 11s ease-in-out infinite;
+        }
+
+        .report-grid-lines {
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 34px 34px;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 85%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 85%);
+        }
+
+        .report-orbit-ring {
+            animation: report-spin 16s linear infinite;
+        }
+
+        .report-logo-pulse {
+            animation: report-pulse 4.8s ease-in-out infinite;
+        }
+
+        @keyframes report-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes report-pulse {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-4px) scale(1.025); }
+        }
+
+        @keyframes report-float-one {
+            0%, 100% { transform: translate3d(0, 0, 0); }
+            50% { transform: translate3d(-16px, 14px, 0); }
+        }
+
+        @keyframes report-float-two {
+            0%, 100% { transform: translate3d(0, 0, 0); }
+            50% { transform: translate3d(18px, -12px, 0); }
+        }
+    </style>
+</head>
+
+<body id="top" data-asset-base="../" data-force-theme="dark" class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <div id="loader" class="fixed inset-0 bg-futura-light dark:bg-futura-dark flex flex-col items-center justify-center z-[9999]">
+        <div class="flex flex-col items-center">
+            <img src="../img/logop.webp" alt="FUTURA Logo" fetchpriority="high" decoding="sync" class="theme-logo w-40 h-auto mb-8 object-contain" />
+            <div class="w-48 h-1 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                <div class="h-full w-full animate-loader-bar origin-left"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 pointer-events-none">
+        <div class="container mx-auto max-w-7xl pt-4 lg:pt-6 px-4">
+            <div class="flex h-20 items-center justify-between bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-black/10 dark:border-white/5 rounded-2xl px-8 shadow-sm pointer-events-auto">
+                <a href="#top" class="block hover:opacity-80 transition-opacity">
+                    <img src="../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-6 w-auto object-contain">
+                </a>
+                <nav class="hidden lg:block">
+                    <ul class="flex items-center gap-5 xl:gap-6">
+                        <li><a href="#top" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Início</a></li>
+                        <li><a href="#visao-geral" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Visão Geral</a></li>
+                        <li><a href="#alcance" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Alcance</a></li>
+                        <li><a href="#interacao" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Interação</a></li>
+                        <li><a href="#formatos" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Formatos</a></li>
+                        <li><a href="#crescimento" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Crescimento</a></li>
+                        <li><a href="#analise" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Análise</a></li>
+                        <li><a href="#plano-de-acao" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Plano</a></li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=557581973628" target="_blank" rel="noopener"
+                                class="hidden lg:inline-flex btn-sheen text-white font-display text-[10px] font-bold py-3 px-6 rounded-none skew-x-[-10deg] shadow-neon items-center gap-2 tracking-wider border border-white/10 transition-all">
+                                <span class="skew-x-[10deg]">Solicitar diagnóstico</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4 lg:hidden">
+                    <button class="text-xl text-futura-primary" id="hamburger-menu" aria-label="Abrir menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay fixed inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-md z-[999] flex flex-col p-6 transition-transform duration-300 ease-in-out lg:hidden translate-x-full" id="mobile-menu-overlay">
+        <div class="flex justify-between items-center mb-12">
+            <img src="../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-8 w-auto">
+            <button class="text-3xl text-futura-primary" id="close-menu" aria-label="Fechar menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <nav class="flex-grow flex flex-col gap-6 text-center">
+            <a href="#top" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Início</a>
+            <a href="#visao-geral" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Visão geral</a>
+            <a href="#alcance" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Alcance</a>
+            <a href="#interacao" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Interação</a>
+            <a href="#formatos" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Formatos</a>
+            <a href="#crescimento" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Crescimento</a>
+            <a href="#provas-sociais" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Destaques</a>
+            <a href="#analise" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Análise</a>
+            <a href="#plano-de-acao" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Plano de ação</a>
+            <a href="#conclusao" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Conclusão</a>
+        </nav>
+        <a href="https://api.whatsapp.com/send?phone=557581973628" class="btn-sheen w-full text-white py-5 rounded-none font-display font-bold text-center text-sm uppercase tracking-widest shadow-neon mt-auto">
+            Falar com a equipe
+        </a>
+    </div>
+
+    <main>
+        <section class="social-hero relative min-h-screen overflow-hidden flex items-center pt-28 pb-12 lg:pb-0 bg-clean-light dark:bg-universe-dark">
+            <div class="absolute inset-0 bg-pattern-dots opacity-30 pointer-events-none dark:opacity-50 mix-blend-overlay"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -top-16 right-0 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="social-hero-content container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 fade-in-section text-center lg:text-left" data-reveal="from-left">
+                        <div class="inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.35em] text-gray-700 dark:text-gray-300 font-display">
+                            <i class="fa-solid fa-chart-column text-futura-primary text-xl sm:text-sm" aria-hidden="true"></i>
+                            <span class="leading-tight text-left sm:text-center">
+                                <span class="block sm:inline">My Dev Academy</span>
+                                <span class="block sm:inline sm:ml-1">março 2026</span>
+                            </span>
+                        </div>
+
+                        <h1 class="mt-6 font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-[1.08] break-words">
+                            Relatório social media com leitura clara sobre
+                            <span class="bg-gradient-to-r from-futura-primary to-futura-accent bg-clip-text text-transparent">crescimento, alcance, engajamento e direção estratégica</span>.
+                        </h1>
+
+                        <p class="mt-6 text-gray-600 dark:text-gray-300 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Período analisado: 08/02 a 09/03. Encerramos o ciclo com crescimento orgânico relevante, forte volume de visualizações e uma base de seguidores mais robusta para a My Dev Academy continuar escalando sua presença no nicho de tecnologia.
+                        </p>
+
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#visao-geral" class="btn-sheen w-full sm:w-auto text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-[0.18em] sm:tracking-widest border border-white/15 whitespace-nowrap">
+                                <span class="skew-x-[10deg] whitespace-nowrap">VER RELATÓRIO</span> <i class="fas fa-arrow-down skew-x-[10deg]" aria-hidden="true"></i>
+                            </a>
+                            <a href="#plano-de-acao" class="w-full sm:w-auto bg-white/80 dark:bg-white/10 text-gray-900 dark:text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] flex items-center justify-center gap-3 tracking-[0.18em] sm:tracking-widest border border-gray-200 dark:border-white/15 hover:bg-white/90 dark:hover:bg-white/15 transition-colors whitespace-nowrap">
+                                <span class="skew-x-[10deg] whitespace-nowrap">VER PLANO DE AÇÃO</span> <i class="fas fa-arrow-right skew-x-[10deg]" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <div class="mt-10 grid grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4" data-stagger-parent>
+                            <div class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white/85 dark:bg-white/5 p-4 sm:p-5 text-left">
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 dark:text-gray-400">Visualizações</p>
+                                <p class="mt-3 font-display text-2xl text-gray-900 dark:text-white">18.146</p>
+                            </div>
+                            <div class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white/85 dark:bg-white/5 p-4 sm:p-5 text-left">
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 dark:text-gray-400">Novos seguidores</p>
+                                <p class="mt-3 font-display text-2xl text-gray-900 dark:text-white">660</p>
+                            </div>
+                            <div class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white/85 dark:bg-white/5 p-4 sm:p-5 text-left">
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 dark:text-gray-400">Contas alcançadas</p>
+                                <p class="mt-3 font-display text-2xl text-gray-900 dark:text-white">3.795</p>
+                            </div>
+                            <div class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white/85 dark:bg-white/5 p-4 sm:p-5 text-left">
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 dark:text-gray-400">Interações</p>
+                                <p class="mt-3 font-display text-2xl text-gray-900 dark:text-white">729</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 fade-in-section" data-reveal="from-right">
+                        <div class="relative px-0 sm:px-2">
+                            <div class="absolute -top-6 right-2 hidden sm:block w-32 rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-soft bg-white dark:bg-white/5 rotate-[6deg]">
+                                <img src="../img/preview-futuradesign.jpg" alt="Composição visual do relatório" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="absolute -bottom-6 left-0 hidden sm:block w-28 rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-soft bg-white dark:bg-white/5 -rotate-[8deg]">
+                                <img src="../img/megafone.webp" alt="Elemento visual decorativo" loading="lazy" decoding="async" class="w-full h-full object-contain p-2" />
+                            </div>
+                            <img src="../img/socialmedia.webp" alt="Ilustração de apoio para o relatório social media" loading="lazy" decoding="async" class="social-float w-[112%] max-w-none -ml-[6%] sm:w-full sm:max-w-full sm:ml-0 h-auto object-contain select-none" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="visao-geral" class="py-16 lg:py-20 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                    <div class="lg:col-span-5 fade-in-section" data-reveal="from-left">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Visão geral do mês</p>
+                        <h2 class="mt-3 font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white leading-[1.05]">Crescimento orgânico com <span class="text-gradient-futura">presença digital mais forte</span></h2>
+                        <p class="mt-5 text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Durante o período analisado, o perfil da My Dev Academy manteve um crescimento orgânico relevante, com aumento significativo de seguidores e forte volume de visualizações, reforçando a presença digital da marca no Instagram.</p>
+                        <p class="mt-5 text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Encerramos o ciclo com um perfil mais robusto, maior recorrência de consumo de conteúdo e sinais consistentes de retenção da audiência atual.</p>
+
+                        <div class="mt-8 grid grid-cols-2 gap-4" data-stagger-parent>
+                            <div class="fade-in-section premium-card p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Seguidores atuais</p>
+                                <p class="mt-2 font-display text-2xl text-gray-900 dark:text-white">1.787</p>
+                            </div>
+                            <div class="fade-in-section premium-card p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Publicações no feed</p>
+                                <p class="mt-2 font-display text-2xl text-gray-900 dark:text-white">54</p>
+                            </div>
+                            <div class="fade-in-section premium-card p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Contas seguidas</p>
+                                <p class="mt-2 font-display text-2xl text-gray-900 dark:text-white">98</p>
+                            </div>
+                            <div class="fade-in-section premium-card p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Conteúdos publicados</p>
+                                <p class="mt-2 font-display text-2xl text-gray-900 dark:text-white">76</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 fade-in-section" data-reveal="from-right">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch">
+                            <div class="md:col-span-7 premium-card rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                                <img src="../img/equipe.webp" alt="Equipe visual da FUTURA DESIGN compondo a apresentação do relatório" loading="lazy" decoding="async" class="astronaut-float w-full h-full object-contain p-6 sm:p-8" />
+                            </div>
+                            <div class="md:col-span-5 flex flex-col gap-5">
+                                <div class="premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6">
+                                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Leitura rápida</p>
+                                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Os números do período mostram uma operação com boa constância, audiência interessada no tema e potencial real para escalar alcance externo com ajustes na estratégia de distribuição.</p>
+                                </div>
+                                <div class="premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6">
+                                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Resultados principais</p>
+                                    <ul class="mt-4 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light">
+                                        <li class="flex items-start gap-3"><span class="inline-flex w-2 h-2 rounded-full bg-futura-primary mt-2"></span><span>18.146 visualizações de conteúdo</span></li>
+                                        <li class="flex items-start gap-3"><span class="inline-flex w-2 h-2 rounded-full bg-futura-accent mt-2"></span><span>660 novos seguidores</span></li>
+                                        <li class="flex items-start gap-3"><span class="inline-flex w-2 h-2 rounded-full bg-futura-secondary mt-2"></span><span>729 interações totais</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="alcance" class="py-16 sm:py-20 bg-gray-50 dark:bg-futura-dark border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+                    <aside class="xl:col-span-4 fade-in-section" data-reveal="from-left">
+                        <div class="h-full premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 sm:p-8">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Alcance e visualizações</p>
+                            <p class="mt-3 font-display text-lg sm:text-xl text-gray-900 dark:text-white">O conteúdo sustenta bem a audiência atual, mas ainda pode avançar mais fora da base.</p>
+
+                            <div class="mt-8 space-y-5">
+                                <div>
+                                    <div class="flex items-center justify-between gap-3 text-[11px] uppercase tracking-widest text-gray-500 dark:text-gray-400">
+                                        <span>Seguidores</span>
+                                        <span>70,7%</span>
+                                    </div>
+                                    <div class="mt-2 h-3 rounded-full bg-gray-200 dark:bg-white/10 overflow-hidden">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-futura-primary to-futura-accent" style="width: 70.7%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between gap-3 text-[11px] uppercase tracking-widest text-gray-500 dark:text-gray-400">
+                                        <span>Não seguidores</span>
+                                        <span>29,3%</span>
+                                    </div>
+                                    <div class="mt-2 h-3 rounded-full bg-gray-200 dark:bg-white/10 overflow-hidden">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-futura-secondary to-futura-primary" style="width: 29.3%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-4">
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 dark:text-gray-400">Análise estratégica</p>
+                                <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Mais de 70% das visualizações vieram de seguidores. Isso mostra retenção e atenção da base atual, mas também indica espaço relevante para ampliar o alcance externo com Reels mais fortes e temas com maior potencial de descoberta.</p>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="xl:col-span-8" data-stagger-parent>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6" data-reveal="from-right">
+                                <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Visualizações totais</p>
+                                <p class="mt-4 font-display text-4xl text-gray-900 dark:text-white">18.146</p>
+                                <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Volume expressivo de consumo de conteúdo ao longo do período, reforçando presença de marca e recorrência de atenção no perfil.</p>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6" data-reveal="from-right">
+                                <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Contas alcançadas</p>
+                                <p class="mt-4 font-display text-4xl text-gray-900 dark:text-white">3.795</p>
+                                <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Comparado ao período anterior, houve redução de 46,3% no alcance. Ainda assim, o crescimento de seguidores prova que o público alcançado continua qualificado.</p>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 md:col-span-2" data-reveal="scale">
+                                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                                    <div class="md:col-span-8">
+                                        <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Interpretação do alcance</p>
+                                        <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">A redução pode estar ligada a menor viralização de Reels, menor distribuição do algoritmo ou a uma linha editorial mais focada na audiência atual. O ponto positivo é que, mesmo com essa queda, o perfil seguiu crescendo em seguidores, o que reforça que a mensagem ainda está encontrando pessoas com interesse real em programação e desenvolvimento de software.</p>
+                                    </div>
+                                    <div class="md:col-span-4">
+                                        <img src="../img/megafone.webp" alt="Megafone ilustrando a ampliação de alcance" loading="lazy" decoding="async" class="w-full max-w-[220px] mx-auto h-auto object-contain" />
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interacao" class="py-20 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-12 fade-in-section">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Interação do público</p>
+                    <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
+                        O perfil segue gerando <span class="text-gradient-futura">engajamento real com a audiência</span>
+                    </h2>
+                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Foram 729 interações totais entre curtidas, comentários, compartilhamentos e salvamentos.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+                    <aside class="lg:col-span-4 fade-in-section" data-reveal="from-left">
+                        <div class="h-full premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-6 sm:p-8">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Por que isso importa</p>
+                            <p class="mt-4 font-display text-xl sm:text-2xl text-gray-900 dark:text-white leading-tight">Interação consistente fortalece autoridade e sinaliza valor para o algoritmo.</p>
+                            <ul class="mt-6 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light">
+                                <li class="flex items-center gap-3"><span class="inline-flex w-2 h-2 rounded-full bg-futura-primary"></span><span>Mais sinais de relevância</span></li>
+                                <li class="flex items-center gap-3"><span class="inline-flex w-2 h-2 rounded-full bg-futura-accent"></span><span>Mais proximidade com a audiência</span></li>
+                                <li class="flex items-center gap-3"><span class="inline-flex w-2 h-2 rounded-full bg-futura-secondary"></span><span>Base melhor preparada para conversão</span></li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <div class="lg:col-span-8" data-stagger-parent>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                                <div class="flex items-start gap-4">
+                                    <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-primary flex-shrink-0" aria-hidden="true"><i class="fas fa-heart"></i></span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Curtidas e reações ajudam a sustentar a percepção de relevância e aceitação dos temas trabalhados.</p>
+                                </div>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                                <div class="flex items-start gap-4">
+                                    <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-accent flex-shrink-0" aria-hidden="true"><i class="fas fa-comments"></i></span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Comentários aprofundam conversa e mostram conexão com os assuntos de tecnologia e programação abordados no perfil.</p>
+                                </div>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                                <div class="flex items-start gap-4">
+                                    <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-secondary flex-shrink-0" aria-hidden="true"><i class="fas fa-share-nodes"></i></span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Compartilhamentos são decisivos para expansão orgânica e devem ganhar ainda mais peso no próximo ciclo.</p>
+                                </div>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                                <div class="flex items-start gap-4">
+                                    <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-primary flex-shrink-0" aria-hidden="true"><i class="fas fa-bookmark"></i></span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Salvamentos ajudam a ampliar vida útil do conteúdo, sobretudo em posts educativos e temas com utilidade prática.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formatos" class="py-20 bg-gray-50 dark:bg-futura-dark border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="max-w-3xl mx-auto text-center fade-in-section">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Desempenho por tipo de conteúdo</p>
+                    <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-[1.08]">
+                        Stories, Reels e Feed atuam juntos na <span class="text-gradient-futura">retenção, descoberta e autoridade</span>
+                    </h2>
+                    <p class="mt-5 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                        A distribuição mostra um ecossistema equilibrado, com destaque para Stories na comunicação diária e Reels como principal via de crescimento externo.
+                    </p>
+                </div>
+
+                <div class="mt-10 grid grid-cols-1 xl:grid-cols-12 gap-5 lg:gap-6 items-stretch">
+                    <aside class="xl:col-span-4 fade-in-section" data-reveal="from-left">
+                        <div class="h-full premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 sm:p-8">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Produção de conteúdo</p>
+                            <p class="mt-3 font-display text-lg sm:text-xl text-gray-900 dark:text-white">Foram 76 conteúdos publicados no período.</p>
+                            <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">A constância ajuda a manter relevância no algoritmo, ampliar frequência de exposição e reforçar autoridade da marca no nicho de programação.</p>
+                            <div class="mt-6 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-4">
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 dark:text-gray-400">Impacto da constância</p>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600 dark:text-gray-300 font-light">
+                                    <li>Manter relevância no algoritmo</li>
+                                    <li>Aumentar frequência de exposição</li>
+                                    <li>Reforçar autoridade no nicho</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="xl:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5" data-stagger-parent>
+                        <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                            <div class="flex items-center justify-between gap-4">
+                                <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Stories</p>
+                                <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-primary" aria-hidden="true"><i class="fas fa-circle-play"></i></span>
+                            </div>
+                            <p class="mt-4 font-display text-3xl text-gray-900 dark:text-white">37,6%</p>
+                            <div class="mt-4 h-2.5 rounded-full bg-gray-200 dark:bg-white/10 overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-futura-primary to-futura-accent" style="width: 37.6%"></div></div>
+                            <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Mostram forte presença na comunicação diária, relacionamento com o público, retenção da audiência e reforço da marca.</p>
+                        </article>
+
+                        <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="scale">
+                            <div class="flex items-center justify-between gap-4">
+                                <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Reels</p>
+                                <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-accent" aria-hidden="true"><i class="fas fa-film"></i></span>
+                            </div>
+                            <p class="mt-4 font-display text-3xl text-gray-900 dark:text-white">35,9%</p>
+                            <div class="mt-4 h-2.5 rounded-full bg-gray-200 dark:bg-white/10 overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-futura-accent to-futura-secondary" style="width: 35.9%"></div></div>
+                            <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Continuam como um dos pilares de crescimento por serem o principal formato de descoberta de novos usuários.</p>
+                        </article>
+
+                        <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-6" data-reveal="from-right">
+                            <div class="flex items-center justify-between gap-4">
+                                <p class="font-display text-xs uppercase tracking-widest text-gray-900 dark:text-white">Feed</p>
+                                <span class="inline-flex w-10 h-10 rounded-xl items-center justify-center bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-white/10 text-futura-secondary" aria-hidden="true"><i class="fas fa-table-cells-large"></i></span>
+                            </div>
+                            <p class="mt-4 font-display text-3xl text-gray-900 dark:text-white">26,5%</p>
+                            <div class="mt-4 h-2.5 rounded-full bg-gray-200 dark:bg-white/10 overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-futura-secondary to-futura-primary" style="width: 26.5%"></div></div>
+                            <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Posts tradicionais seguem relevantes para posicionamento de marca, conteúdo educativo e reforço de autoridade da My Dev Academy.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="crescimento" class="py-20 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 fade-in-section" data-reveal="from-left">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Crescimento de seguidores</p>
+                        <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">660 novos seguidores mostram que o conteúdo continua <span class="text-gradient-futura">atraindo pessoas certas</span></h2>
+                        <p class="mt-5 text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed">Mesmo com queda no alcance total, o perfil conseguiu ampliar a base de seguidores. Isso indica que a operação segue relevante para pessoas interessadas em programação, carreira tech e desenvolvimento de software.</p>
+                        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4" data-stagger-parent>
+                            <div class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Ganho do ciclo</p>
+                                <p class="mt-2 font-display text-3xl text-gray-900 dark:text-white">+660</p>
+                            </div>
+                            <div class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Base atual</p>
+                                <p class="mt-2 font-display text-3xl text-gray-900 dark:text-white">1.787</p>
+                            </div>
+                            <div class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-5">
+                                <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Leitura</p>
+                                <p class="mt-2 font-display text-base text-gray-900 dark:text-white">Audiência qualificada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 fade-in-section" data-reveal="from-right">
+                        <div class="premium-card report-aurora-card rounded-2xl overflow-hidden border border-fuchsia-400/20 dark:border-fuchsia-400/20 shadow-[0_30px_80px_-40px_rgba(211,0,197,0.65)]">
+                            <div class="report-grid-lines absolute inset-0 opacity-40"></div>
+                            <div class="absolute inset-0 flex items-center justify-center p-8">
+                                <div class="report-orbit-ring absolute h-[290px] w-[290px] rounded-full border border-white/10">
+                                    <span class="absolute -top-2 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-fuchsia-400 shadow-[0_0_18px_rgba(217,70,239,0.9)]"></span>
+                                    <span class="absolute bottom-10 -left-1 h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.9)]"></span>
+                                    <span class="absolute right-8 bottom-1 h-2 w-2 rounded-full bg-violet-300 shadow-[0_0_16px_rgba(196,181,253,0.9)]"></span>
+                                </div>
+                                <div class="report-logo-pulse relative z-10 flex h-[210px] w-[210px] items-center justify-center rounded-[2rem] border border-white/10 bg-black/35 backdrop-blur-sm shadow-[0_20px_60px_-25px_rgba(0,0,0,0.85)]">
+                                    <div class="absolute inset-3 rounded-[1.6rem] border border-white/10"></div>
+                                    <img src="../logomydev.png" alt="Logo My Dev em composição animada" loading="lazy" decoding="async" class="relative z-10 w-[158px] max-w-[75%] h-auto object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.16)]" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="provas-sociais" class="py-20 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-12 fade-in-section">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Destaques visuais</p>
+                    <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
+                        Evidências visuais da <span class="text-gradient-futura">consistência da presença digital</span>
+                    </h2>
+                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">Clique em qualquer imagem para ampliar. Esta faixa usa os materiais visuais do projeto para reforçar o acabamento da apresentação.</p>
+                </div>
+
+                <div class="fade-in-section">
+                    <div id="social-proof-track-source" class="hidden">
+                        <button type="button" class="social-proof-card group w-[170px] sm:w-[190px] lg:w-[210px] shrink-0" data-zoom-src="../img/i1.jpeg" data-zoom-alt="Tela do relatório 01">
+                            <span class="block aspect-[9/16] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-black/90 dark:bg-black/90">
+                                <img src="../img/i1.jpeg" alt="Tela do relatório 01" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[170px] sm:w-[190px] lg:w-[210px] shrink-0" data-zoom-src="../img/i2.jpeg" data-zoom-alt="Tela do relatório 02">
+                            <span class="block aspect-[9/16] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-black/90 dark:bg-black/90">
+                                <img src="../img/i2.jpeg" alt="Tela do relatório 02" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[170px] sm:w-[190px] lg:w-[210px] shrink-0" data-zoom-src="../img/i3.jpeg" data-zoom-alt="Tela do relatório 03">
+                            <span class="block aspect-[9/16] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-black/90 dark:bg-black/90">
+                                <img src="../img/i3.jpeg" alt="Tela do relatório 03" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[170px] sm:w-[190px] lg:w-[210px] shrink-0" data-zoom-src="../img/i4.jpeg" data-zoom-alt="Tela do relatório 04">
+                            <span class="block aspect-[9/16] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-black/90 dark:bg-black/90">
+                                <img src="../img/i4.jpeg" alt="Tela do relatório 04" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[170px] sm:w-[190px] lg:w-[210px] shrink-0" data-zoom-src="../img/i5.jpeg" data-zoom-alt="Tela do relatório 05">
+                            <span class="block aspect-[9/16] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-black/90 dark:bg-black/90">
+                                <img src="../img/i5.jpeg" alt="Tela do relatório 05" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[170px] sm:w-[190px] lg:w-[210px] shrink-0" data-zoom-src="../img/i6.jpeg" data-zoom-alt="Tela do relatório 06">
+                            <span class="block aspect-[9/16] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-black/90 dark:bg-black/90">
+                                <img src="../img/i6.jpeg" alt="Tela do relatório 06" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                        <button type="button" class="social-proof-card group w-[170px] sm:w-[190px] lg:w-[210px] shrink-0" data-zoom-src="../img/i7.jpeg" data-zoom-alt="Tela do relatório 07">
+                            <span class="block aspect-[9/16] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-black/90 dark:bg-black/90">
+                                <img src="../img/i7.jpeg" alt="Tela do relatório 07" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]">
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="marquee-wrapper marquee-cards" aria-label="Carrossel de destaques visuais do relatório">
+                        <div class="marquee-content-horizontal flex gap-4 py-0" data-marquee-track="social-proof-main" data-marquee-speed="34"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="image-zoom-modal" class="fixed inset-0 z-[1200] hidden items-center justify-center bg-black/80 p-4 sm:p-8" aria-hidden="true">
+                <button id="image-zoom-close" type="button" class="absolute top-4 right-4 sm:top-6 sm:right-6 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-colors" aria-label="Fechar imagem ampliada">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+
+                <figure class="w-full max-w-[740px] max-h-[90vh] flex flex-col items-center">
+                    <img id="image-zoom-target" src="" alt="" class="w-auto h-auto max-w-full max-h-[84vh] object-contain rounded-xl border border-white/15 shadow-soft">
+                    <figcaption id="image-zoom-caption" class="mt-3 text-center text-xs sm:text-sm text-white/85 font-light"></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="analise" class="py-20 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-10 fade-in-section">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Análise estratégica sincera</p>
+                    <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">O que está funcionando e o que precisa <span class="text-gradient-futura">evoluir no próximo ciclo</span></h2>
+                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">A leitura abaixo prioriza clareza sobre os avanços e honestidade sobre onde existe espaço de crescimento.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+                    <aside class="lg:col-span-4 fade-in-section" data-reveal="from-left">
+                        <div class="h-full premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-6 sm:p-8">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Pontos positivos</p>
+                            <ul class="mt-6 space-y-4 text-sm text-gray-600 dark:text-gray-300 font-light">
+                                <li class="flex items-start gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>Crescimento consistente de seguidores</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Boa frequência de conteúdo</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check text-futura-secondary mt-1" aria-hidden="true"></i><span>Boa retenção de audiência</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check text-futura-primary mt-1" aria-hidden="true"></i><span>Interação ativa do público</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Identidade visual consolidada</span></li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <div class="lg:col-span-8" data-stagger-parent>
+                        <div class="grid grid-cols-1 gap-4 sm:gap-5">
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6" data-reveal="from-right">
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">1. Alcance de novos públicos</p>
+                                <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">A maior parte das visualizações ainda vem de seguidores. Isso mostra força na retenção, mas também revela que os conteúdos ainda podem alcançar mais pessoas novas fora da base atual.</p>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6" data-reveal="scale">
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">2. Reels com maior potencial viral</p>
+                                <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Para escalar o alcance externo, a estratégia pede ganchos mais fortes, temas mais virais e vídeos mais dinâmicos. Esse é hoje o principal espaço de alavancagem do perfil.</p>
+                            </article>
+
+                            <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6" data-reveal="from-right">
+                                <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white">3. Conteúdo com maior potencial de compartilhamento</p>
+                                <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">No nicho de programação, temas que geram compartilhamento tendem a puxar crescimento. Os assuntos com melhor potencial incluem curiosidades sobre programação, erros comuns de iniciantes, comparações entre linguagens, mercado de tecnologia e salários de programadores.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plano-de-acao" class="py-20 bg-gray-50 dark:bg-futura-dark border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-12 fade-in-section">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-light">Plano de ação</p>
+                    <h2 class="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">Direção recomendada para o <span class="text-gradient-futura">próximo ciclo de crescimento</span></h2>
+                    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light">A recomendação estratégica deste relatório é concentrar energia em descoberta, autoridade e conversão.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5" data-stagger-parent>
+                    <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6" data-reveal="from-left">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">01</p>
+                        <h3 class="mt-4 font-display text-lg text-gray-900 dark:text-white">Aumentar alcance de não seguidores</h3>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Criar conteúdos com maior potencial de viralização e abertura mais forte nos primeiros segundos.</p>
+                    </article>
+
+                    <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6" data-reveal="scale">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">02</p>
+                        <h3 class="mt-4 font-display text-lg text-gray-900 dark:text-white">Intensificar Reels estratégicos</h3>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                            <li>3 erros que iniciantes em programação cometem</li>
+                            <li>Quanto ganha um programador em 2026?</li>
+                            <li>Aprender programação depois dos 30 é possível?</li>
+                        </ul>
+                    </article>
+
+                    <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6" data-reveal="from-right">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">03</p>
+                        <h3 class="mt-4 font-display text-lg text-gray-900 dark:text-white">Fortalecer autoridade</h3>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Aumentar a produção de conteúdos que posicionem a My Dev Academy como referência em aprendizado de programação.</p>
+                    </article>
+
+                    <article class="fade-in-section premium-card rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6" data-reveal="from-right">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">04</p>
+                        <h3 class="mt-4 font-display text-lg text-gray-900 dark:text-white">Melhorar CTA</h3>
+                        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Inserir chamadas estratégicas para visitar o site, acessar o curso e seguir o perfil com mais frequência e clareza.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusao" class="no-contract-section py-20 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="fade-in-section">
+                    <div class="no-contract-card p-8 sm:p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                            <div class="md:col-span-8">
+                                <p class="inline-flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 font-light tracking-wider uppercase">
+                                    <i class="fas fa-flag-checkered text-futura-accent" aria-hidden="true"></i>
+                                    <span>Conclusão</span>
+                                </p>
+                                <p class="mt-4 text-base sm:text-lg text-gray-700 dark:text-gray-200 font-light leading-relaxed">Encerramos este ciclo com crescimento contínuo de seguidores, forte volume de conteúdo publicado e engajamento consistente da audiência. Mesmo com redução no alcance geral, o perfil continua evoluindo e fortalecendo sua presença digital no nicho de tecnologia.</p>
+                                <p class="mt-4 text-base sm:text-lg text-gray-700 dark:text-gray-200 font-light leading-relaxed">Cada visualização, interação e novo seguidor representa pessoas que passaram a conhecer a proposta da My Dev Academy: transformar ideias em código e abrir portas para novas oportunidades no universo da tecnologia.</p>
+                                <p class="mt-4 text-base sm:text-lg text-gray-700 dark:text-gray-200 font-light leading-relaxed">Seguimos comprometidos em evoluir as estratégias, ampliar o alcance da marca e gerar resultados cada vez mais expressivos nos próximos ciclos. Seguimos construindo o futuro com código.</p>
+                                <div class="mt-6 flex flex-wrap gap-2">
+                                    <span class="inline-flex items-center rounded-full border border-gray-200 dark:border-white/15 bg-white/80 dark:bg-white/10 px-3 py-1.5 text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300">Crescimento contínuo</span>
+                                    <span class="inline-flex items-center rounded-full border border-gray-200 dark:border-white/15 bg-white/80 dark:bg-white/10 px-3 py-1.5 text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300">Audiência qualificada</span>
+                                    <span class="inline-flex items-center rounded-full border border-gray-200 dark:border-white/15 bg-white/80 dark:bg-white/10 px-3 py-1.5 text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300">Próximo ciclo de expansão</span>
+                                </div>
+                                <p class="mt-8 font-display text-lg text-gray-900 dark:text-white">Milena Veiga</p>
+                            </div>
+                            <div class="md:col-span-4 md:justify-self-end w-full md:w-auto">
+                                <div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 shadow-soft max-w-[320px] mx-auto">
+                                    <img src="../img/preview-futuradesign.jpg" alt="Assinatura visual do relatório" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer bg-white dark:bg-black text-gray-900 dark:text-white pt-20 pb-10 border-t border-gray-100 dark:border-white/5 relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+        <div class="container mx-auto max-w-7xl px-4 relative z-10">
+            <div class="footer-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-4">
+                <div class="footer-brand col-span-1 md:col-span-1">
+                    <img src="../img/logop.webp" alt="Futura Logo" class="theme-logo h-6 w-auto mb-6 opacity-90">
+                    <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed font-light max-w-[22ch]">
+                        Branding, sites, lojas virtuais e criativos para anúncios, com <strong class="text-gray-900 dark:text-gray-200 font-semibold">clareza</strong> e execução premium.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Sitemap</h4>
+                    <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li><a href="#visao-geral" class="footer-link hover:text-futura-primary transition-colors">Visão Geral</a></li>
+                        <li><a href="#alcance" class="footer-link hover:text-futura-primary transition-colors">Alcance</a></li>
+                        <li><a href="#interacao" class="footer-link hover:text-futura-primary transition-colors">Interação</a></li>
+                        <li><a href="#formatos" class="footer-link hover:text-futura-primary transition-colors">Formatos</a></li>
+                        <li><a href="#crescimento" class="footer-link hover:text-futura-primary transition-colors">Crescimento</a></li>
+                        <li><a href="#analise" class="footer-link hover:text-futura-primary transition-colors">Análise</a></li>
+                        <li><a href="#plano-de-acao" class="footer-link hover:text-futura-primary transition-colors">Plano de Ação</a></li>
+                        <li><a href="#conclusao" class="footer-link hover:text-futura-primary transition-colors">Conclusão</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Legal</h4>
+                    <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li><a href="../termos/" class="footer-link hover:text-futura-primary transition-colors">Termos de Uso</a></li>
+                        <li><a href="../privacidade/" class="footer-link hover:text-futura-primary transition-colors">Privacidade</a></li>
+                        <li><a href="../cookies/" class="footer-link hover:text-futura-primary transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Contato Direto</h4>
+                    <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li>
+                            <a href="https://instagram.com/futuradesign.br" target="_blank" rel="noopener" class="footer-contact-link inline-flex items-center gap-2 hover:text-futura-primary transition-colors">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>@futuradesign.br</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/557581973628" target="_blank" rel="noopener" class="footer-contact-link inline-flex items-center gap-2 hover:text-futura-primary transition-colors">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                <span>Suporte via WhatsApp</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-newsletter">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Newsletter</h4>
+                    <form id="newsletter-form" class="footer-news-form flex flex-col gap-3" data-endpoint="https://script.google.com/macros/s/AKfycbyBsKmthWCcUR9qR2P_40WSAGjtDv2i2-h7tPewFZeP1F-EVsCgUSUtHlhLY5s-qGgW/exec" novalidate>
+                        <input id="newsletter-email" name="email" type="email" placeholder="Seu e-mail" autocomplete="email" inputmode="email" required class="footer-input bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-3 text-xs text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:border-futura-primary transition-colors" aria-label="Seu e-mail">
+                        <button type="submit" class="footer-news-btn bg-gray-900 text-white dark:bg-white dark:text-black font-display text-xs font-bold py-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors uppercase tracking-widest">Receber insights</button>
+                        <p id="newsletter-status" class="text-[10px] text-gray-500 dark:text-gray-500 font-light" aria-live="polite"></p>
+                        <p class="footer-note text-[10px] text-gray-500 dark:text-gray-500 font-light">Sem spam. Conteúdo direto ao ponto.</p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom pt-2 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[10px] text-gray-600 dark:text-gray-400 uppercase tracking-widest">&copy; 2026 FUTURA DESIGN. Clareza, entrega e acompanhamento. Sem promessas irreais.</p>
+                <h2 class="font-display text-4xl md:text-6xl text-black/5 dark:text-white/5 font-bold mt-6 md:mt-0 select-none">FUTURA</h2>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
