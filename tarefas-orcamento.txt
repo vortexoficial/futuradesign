@@ -1,0 +1,43 @@
+[x] Fase 1 - Análise
+[x] Revisar a home, a proposta comercial existente e os estilos globais para mapear identidade visual, cores, tipografia, espaçamentos, cards, botões, inputs e sombras.
+[x] Identificar padrões reutilizáveis de header, navegação mobile, hero, blocos premium, grids, badges e áreas de resumo.
+[x] Definir a arquitetura da nova página de orçamento dentro da estrutura atual do projeto.
+
+[x] Fase 2 - Estrutura
+[x] Criar a pasta da nova página de orçamento em estrutura coerente com o projeto.
+[x] Criar o HTML principal da página com seções semânticas e navegação por âncoras.
+[x] Estruturar cabeçalho da proposta, hero comercial, formulário de dados do cliente/projeto e área principal do orçamento.
+[x] Criar a área de lista de serviços com renderização dinâmica.
+[x] Criar o bloco de resumo financeiro com destaque para subtotal, parceria e total final.
+[x] Criar a seção de condições comerciais e observações finais.
+[x] Criar o rodapé da proposta com linguagem visual consistente.
+
+[x] Fase 3 - Estilo visual
+[x] Criar o CSS específico da página reaproveitando tokens, tipografia, botões, bordas, sombras e linguagem visual da base atual.
+[x] Estilizar cards de serviços ativos, inativos e em parceria com leitura comercial clara.
+[x] Estilizar inputs, selects, textareas e controles de ação com visual premium e boa legibilidade.
+[x] Destacar o resumo financeiro e o total final sem cair em aparência genérica de dashboard.
+[x] Refinar grid e espaçamentos para desktop.
+[x] Refinar layout e hierarquia para mobile.
+
+[x] Fase 4 - Lógica JavaScript
+[x] Criar a lista inicial de serviços com dados padrão do orçamento.
+[x] Renderizar os serviços dinamicamente na interface.
+[x] Implementar inclusão e exclusão visual de serviços no orçamento.
+[x] Implementar edição de nome, descrição, categoria, valor original e valor de parceria por serviço.
+[x] Implementar remoção de serviços adicionados manualmente.
+[x] Implementar adição de novos serviços pela interface.
+[x] Implementar parceria por item.
+[x] Implementar parceria global por percentual e por valor fixo.
+[x] Calcular automaticamente subtotal bruto, desconto/parceria, total final e quantidade de serviços ativos.
+[x] Formatar valores em BRL em toda a interface.
+[x] Implementar reset completo do orçamento.
+[x] Implementar impressão e exportação via print do navegador.
+
+[x] Fase 5 - Qualidade e revisão
+[x] Revisar estados visuais, feedback de interação e clareza comercial.
+[x] Revisar funcionamento com múltiplos serviços adicionados.
+[x] Revisar responsividade real em desktop e mobile.
+[x] Revisar versão de impressão/PDF.
+[x] Validar se a página permanece integrada visualmente ao restante do projeto.
+[x] Fazer checagem final de organização dos arquivos e consistência do código.

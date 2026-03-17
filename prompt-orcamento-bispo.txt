@@ -1,0 +1,45 @@
+PROPOSTA COMERCIAL - BISPO CONSTRUTORA
+
+Objetivo desta versao:
+- Transformar a pagina de orcamento em uma proposta pronta para envio imediato.
+- Remover a ideia de configurador generico com campos livres de cliente, projeto e servicos variaveis.
+- Manter a identidade visual premium da Futura Design ja existente no projeto.
+- Aumentar a percepcao de valor e a clareza comercial para facilitar fechamento no mesmo dia.
+
+Direcao de conteudo:
+- Cliente final: Bispo Construtora.
+- Foco comercial: vender imoveis, projetos prontos e aumentar a entrada de leads qualificados.
+- Linguagem: profissional, clara, persuasiva, premium e orientada a resultado.
+- Estrutura deve parecer proposta estrategica, nao painel administrativo.
+
+Itens obrigatorios da proposta:
+- Link da bio: R$ 400.
+- Landing page profissional: R$ 900.
+- Sistema de funil com quiz e calculadora de orcamentos de construcao: R$ 2.000 + manutencao.
+- Identidade visual, criativos de captacao, trafego pago e estrutura de marketing que a Bispo Construtora precisa.
+- Inserir no bloco do quiz/calculadora que o projeto tera imagens e videos curtos.
+
+Condicoes comerciais obrigatorias:
+- Inserir pagamento por PIX.
+- Inserir pagamento por cartao de credito.
+- Inserir desconto para pagamento adiantado a vista.
+- Inserir opcao de pagamento com 50% de sinal.
+- Inserir manutencao como item recorrente vinculado ao sistema de funil e calculadora.
+
+Direcao visual:
+- Reaproveitar header, hero, cards, tipografia, sombras, gradientes, bordas e botoes ja usados na proposta atual e nas paginas da Futura.
+- Criar leitura de escopo com blocos claros de entrega.
+- Criar destaque forte para oferta, ganho percebido e fechamento.
+- Criar area final com CTA de aprovacao e condicoes resumidas.
+
+Checklist de execucao:
+[x] Reescrever a pagina para formato de proposta pronta.
+[x] Remover campos genericos editaveis de cliente e projeto.
+[x] Trocar a lista dinamica por secoes de escopo e investimento fixo.
+[x] Inserir proposta persuasiva com valor percebido alto.
+[x] Destacar oferta e condicoes de fechamento para hoje.
+[x] Inserir pagamentos em PIX e cartao.
+[x] Inserir desconto para pagamento a vista e opcao de 50% sinal.
+[x] Inserir bloco sobre quiz/calculadora com imagens e videos curtos.
+[x] Ajustar CTA final para aprovacao.
+[x] Revisar responsividade e impressao.
