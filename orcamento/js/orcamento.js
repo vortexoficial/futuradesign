@@ -156,13 +156,13 @@
 
       const endpoint = String(form.dataset.endpoint || '').trim();
       if (!endpoint) {
-        setStatus('Configuracao pendente: informe a URL do Google Apps Script no site.', 'error');
+        setStatus('Configuração pendente: informe a URL do Google Apps Script no site.', 'error');
         return;
       }
 
       const email = String(emailInput.value || '').trim();
       if (!validateEmail(email)) {
-        setStatus('Digite um e-mail valido.', 'error');
+        setStatus('Digite um e-mail válido.', 'error');
         emailInput.focus();
         return;
       }
@@ -192,7 +192,7 @@
         setStatus('Cadastro realizado. Obrigado!', 'success');
         form.reset();
       } catch (e) {
-        setStatus('Nao foi possivel cadastrar agora. Tente novamente.', 'error');
+        setStatus('Não foi possível cadastrar agora. Tente novamente.', 'error');
       } finally {
         submitBtn.disabled = false;
         submitBtn.removeAttribute('aria-busy');
