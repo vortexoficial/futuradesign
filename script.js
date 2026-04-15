@@ -673,8 +673,8 @@ function updateLogos() {
     
     // Caminhos das logos da Futura Design
     // Certifique-se de ter uma versão preta (logop.png) e uma branca (logob.png) na pasta img/
-    const logoLight = `${assetBase}img/logop.webp`; // Logo PRETA (Para fundo claro)
-    const logoDark  = `${assetBase}img/logob.webp`; // Logo BRANCA (Para fundo escuro)
+    const logoLight = `${assetBase}/img/logop.webp`; // Logo PRETA (Para fundo claro)
+    const logoDark  = `${assetBase}/img/logob.webp`; // Logo BRANCA (Para fundo escuro)
     
     const targetLogo = isDark ? logoDark : logoLight;
     
