@@ -1,0 +1,984 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
+    <script>
+        (function () {
+            try {
+                const theme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>Criativos para Redes Sociais | Futura Design</title>
+    <meta name="description" content="Criativos profissionais para redes sociais, anúncios, stories e carrosséis. Calcule seu orçamento online e solicite direto pelo WhatsApp.">
+    <link rel="canonical" href="https://agenciafuturadesign.com/criativos/">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Criativos para Redes Sociais | Futura Design">
+    <meta property="og:description" content="Criativos profissionais para redes sociais, anúncios, stories e carrosséis. Calcule seu orçamento online e solicite direto pelo WhatsApp.">
+    <meta property="og:url" content="https://agenciafuturadesign.com/criativos/">
+    <meta property="og:site_name" content="FUTURA DESIGN">
+    <meta property="og:image" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg">
+    <meta property="og:image:secure_url" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FUTURA DESIGN - Criativos para Redes Sociais">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Criativos para Redes Sociais | Futura Design">
+    <meta name="twitter:description" content="Criativos profissionais para redes sociais, anúncios, stories e carrosséis. Calcule seu orçamento online.">
+    <meta name="twitter:image" content="https://agenciafuturadesign.com/img/preview-futuradesign.jpg">
+    <meta name="twitter:image:alt" content="FUTURA DESIGN - Criativos para Redes Sociais">
+
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="preload" as="image" href="../img/logop.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="../img/logob.webp" fetchpriority="high">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Michroma&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Michroma', 'sans-serif'],
+                    },
+                    colors: {
+                        futura: {
+                            primary: '#D300C5',
+                            secondary: '#240090',
+                            accent: '#00E5FF',
+                            dark: '#050515',
+                            card: '#0F0F25',
+                            light: '#F8F9FA',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 5px 20px -5px rgba(0, 0, 0, 0.3)',
+                        'glow': '0 0 40px rgba(211, 0, 197, 0.2), 0 0 15px rgba(36, 0, 144, 0.1)',
+                        'neon': '0 0 15px rgba(211, 0, 197, 0.4), 0 0 30px rgba(211, 0, 197, 0.1)',
+                    },
+                    backgroundImage: {
+                        'universe-dark': "linear-gradient(to bottom, rgba(2, 2, 8, 0.85), rgba(2, 2, 8, 0.98))",
+                        'clean-light': "linear-gradient(to bottom, #F8F9FA, #FFFFFF)",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body data-asset-base="../" class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <div id="loader" class="fixed inset-0 bg-futura-light dark:bg-futura-dark flex flex-col items-center justify-center z-[9999]">
+        <div class="flex flex-col items-center">
+            <img src="../img/logop.webp" alt="FUTURA Logo" fetchpriority="high" decoding="sync" class="theme-logo w-40 h-auto mb-8 object-contain" />
+            <div class="w-48 h-1 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                <div class="h-full w-full animate-loader-bar origin-left"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 pointer-events-none">
+        <div class="container mx-auto max-w-7xl pt-4 lg:pt-6 px-4">
+            <div class="flex h-20 items-center justify-between bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-black/10 dark:border-white/5 rounded-2xl px-8 shadow-sm pointer-events-auto">
+                <a href="../" class="block hover:opacity-80 transition-opacity">
+                    <img src="../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-6 w-auto object-contain">
+                </a>
+                <nav class="hidden lg:block">
+                    <ul class="flex items-center gap-8">
+                        <li><a href="../" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Início</a></li>
+                        <li><a href="../#servicos" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Serviços</a></li>
+                        <li><a href="#tipos" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Tipos</a></li>
+                        <li><a href="#portfolio" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Portfólio</a></li>
+                        <li><a href="#como-funciona" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Como Funciona</a></li>
+                        <li><a href="../#faq" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Dúvidas</a></li>
+                        <li>
+                            <a href="#calculadora" class="hidden lg:inline-flex btn-sheen text-white font-display text-[10px] font-bold py-3 px-6 rounded-none skew-x-[-10deg] shadow-neon items-center gap-2 tracking-wider border border-white/10 transition-all">
+                                <span class="skew-x-[10deg]">Calcular orçamento</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4 lg:hidden">
+                    <button class="text-xl text-futura-primary" id="hamburger-menu" aria-label="Abrir menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay fixed inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-md z-[999] flex flex-col p-6 transition-transform duration-300 ease-in-out lg:hidden translate-x-full" id="mobile-menu-overlay">
+        <div class="flex justify-between items-center mb-12">
+            <img src="../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-8 w-auto">
+            <button class="text-3xl text-futura-primary" id="close-menu" aria-label="Fechar menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <nav class="flex-grow flex flex-col gap-6 text-center">
+            <a href="../" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Início</a>
+            <a href="../#servicos" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Serviços</a>
+            <a href="#tipos" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Tipos de criativo</a>
+            <a href="#portfolio" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Portfólio</a>
+            <a href="#como-funciona" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Como funciona</a>
+            <a href="../#faq" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Dúvidas</a>
+        </nav>
+        <a href="#calculadora" class="btn-sheen w-full text-white py-5 rounded-none font-display font-bold text-center text-sm uppercase tracking-widest shadow-neon mt-auto">
+            Calcular orçamento
+        </a>
+    </div>
+
+    <main>
+
+        <!-- ===================== HERO ===================== -->
+        <section id="hero" class="hero-section relative overflow-hidden bg-clean-light dark:bg-universe-dark z-10">
+            <div class="absolute inset-0 bg-pattern-dots opacity-30 pointer-events-none dark:opacity-50 mix-blend-overlay"></div>
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-futura-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-futura-accent/8 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="hero-content-wrap container mx-auto max-w-5xl px-6 relative z-10 w-full">
+                <div class="flex flex-col items-center text-center w-full" data-stagger-parent>
+                    <h1 class="fade-in-section font-display text-gray-900 dark:text-white mb-8 text-4xl leading-[1.1] lg:text-6xl lg:leading-[1.08] tracking-tight" data-reveal="scale">
+                        Criativos profissionais para sua marca
+                        <span class="block mt-2 bg-gradient-to-r from-futura-primary to-futura-accent bg-clip-text text-transparent">vender mais nas redes sociais</span>
+                    </h1>
+                    <p class="fade-in-section text-gray-600 dark:text-gray-400 font-light max-w-2xl mx-auto text-lg mb-10 leading-relaxed font-sans">
+                        Posts, stories, carrosséis e peças para campanhas com visual estratégico, moderno e pensado para gerar mais <strong class="text-gray-900 dark:text-white font-medium">atenção, confiança e conversão</strong>.
+                    </p>
+                    <div class="fade-in-section flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+                        <a href="#calculadora"
+                            class="btn-sheen w-full sm:w-auto text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-widest border border-white/15">
+                            <span class="skew-x-[10deg]">CALCULAR MEU ORÇAMENTO</span> <i class="fas fa-calculator skew-x-[10deg]" aria-hidden="true"></i>
+                        </a>
+                        <a href="#portfolio"
+                            class="w-full sm:w-auto bg-white/80 dark:bg-white/10 text-gray-900 dark:text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] flex items-center justify-center gap-3 tracking-widest border border-gray-200 dark:border-white/15 hover:bg-white/90 dark:hover:bg-white/15 transition-colors">
+                            <span class="skew-x-[10deg]">VER EXEMPLOS DE CRIATIVOS</span> <i class="fas fa-images skew-x-[10deg]" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee strip -->
+        <div class="w-full bg-white dark:bg-[#08081A] border-y border-gray-100 dark:border-white/5 py-6 overflow-hidden relative z-20">
+            <div class="marquee-wrapper">
+                <div class="marquee-content-horizontal text-gray-400 dark:text-white/50 font-sans font-thin text-sm uppercase tracking-[0.4em] flex items-center whitespace-nowrap">
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Criativo Feed + Story</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-accent"></i> Formato duplo incluso</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Carrossel</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-secondary"></i> Edição de Vídeo</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-accent"></i> Anúncios</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Entrega pronta para publicar</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Criativo Feed + Story</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-accent"></i> Formato duplo incluso</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Carrossel</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-secondary"></i> Edição de Vídeo</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-accent"></i> Anúncios</span>
+                    <span class="mx-16 flex items-center"><i class="far fa-circle text-[8px] mr-4 text-futura-primary"></i> Entrega pronta para publicar</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== PAIN POINTS ===================== -->
+        <section id="dores" class="py-20 md:py-24 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
+                        Sua empresa não precisa de apenas posts bonitos.
+                        <br class="hidden sm:block">
+                        Precisa de criativos que <span class="text-gradient-futura">comuniquem valor</span>.
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger-parent>
+                    <div class="fade-in-section premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-futura-primary/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-triangle-exclamation text-futura-primary" aria-hidden="true"></i>
+                        </div>
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white leading-snug">Percepção prejudicada</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Artes amadoras prejudicam a percepção da marca e afastam clientes antes mesmo do primeiro contato.</p>
+                    </div>
+                    <div class="fade-in-section premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-futura-accent/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-bar text-futura-accent" aria-hidden="true"></i>
+                        </div>
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white leading-snug">Pouco interesse</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Criativos sem estratégia geram pouco interesse e não movem o público para nenhuma ação.</p>
+                    </div>
+                    <div class="fade-in-section premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-futura-secondary/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-shuffle text-futura-secondary dark:brightness-150" aria-hidden="true"></i>
+                        </div>
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white leading-snug">Perfil inconsistente</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Posts inconsistentes deixam o perfil menos profissional e reduzem a confiança no negócio.</p>
+                    </div>
+                    <div class="fade-in-section premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-futura-primary/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-money-bill-trend-up text-futura-primary" aria-hidden="true"></i>
+                        </div>
+                        <p class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white leading-snug">Verba desperdiçada</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Anúncios fracos desperdiçam verba de tráfego pago sem gerar retorno real para o negócio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SOLUTION ===================== -->
+        <section id="solucao" class="py-20 md:py-24 bg-gray-50 dark:bg-futura-dark border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-futura-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-72 h-72 bg-futura-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+                    <div class="fade-in-section" data-reveal="from-left">
+                        <p class="font-display text-[10px] uppercase tracking-[0.5em] text-futura-primary mb-4">Nossa abordagem</p>
+                        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight mb-6">
+                            A Futura Design cria peças com <span class="text-gradient-futura">estratégia, identidade e foco em resultado</span>
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                            Desenvolvemos criativos para empresas que querem se posicionar melhor, anunciar com mais qualidade e transformar atenção em oportunidade de venda.
+                        </p>
+                    </div>
+                    <div data-stagger-parent>
+                        <ul class="space-y-3">
+                            <li class="fade-in-section flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                                <div class="w-9 h-9 rounded-xl bg-futura-primary/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-futura-primary text-sm" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-800 dark:text-gray-200 font-light">Design profissional alinhado à sua marca</span>
+                            </li>
+                            <li class="fade-in-section flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                                <div class="w-9 h-9 rounded-xl bg-futura-accent/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-futura-accent text-sm" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-800 dark:text-gray-200 font-light">Criativos entregues nos formatos feed e story</span>
+                            </li>
+                            <li class="fade-in-section flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                                <div class="w-9 h-9 rounded-xl bg-futura-primary/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-futura-primary text-sm" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-800 dark:text-gray-200 font-light">Comunicação clara e persuasiva</span>
+                            </li>
+                            <li class="fade-in-section flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                                <div class="w-9 h-9 rounded-xl bg-futura-secondary/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-futura-primary text-sm" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-800 dark:text-gray-200 font-light">Formato ideal para redes sociais e anúncios</span>
+                            </li>
+                            <li class="fade-in-section flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                                <div class="w-9 h-9 rounded-xl bg-futura-accent/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-futura-accent text-sm" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-800 dark:text-gray-200 font-light">Entrega organizada e pronta para publicação</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CREATIVE TYPES ===================== -->
+        <section id="tipos" class="py-20 md:py-24 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
+                        Escolha o tipo de criativo que <span class="text-gradient-futura">sua empresa precisa</span>
+                    </h2>
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Criativos profissionais com entrega completa em feed e story, valores simples e desconto progressivo por quantidade.</p>
+                    <p class="mt-3 font-display text-xs uppercase tracking-widest text-futura-primary">Criativo Feed + Story a partir de R$ 90. A cada 5 peças, o valor unitário reduz R$ 10.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger-parent>
+                    <div class="fade-in-section group premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-futura-primary/50 transition-all duration-300 flex flex-col">
+                        <div class="flex items-start justify-between mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-futura-primary/10 flex items-center justify-center">
+                                <i class="fas fa-image text-futura-primary text-xl" aria-hidden="true"></i>
+                            </div>
+                            <span class="font-display text-sm font-bold text-futura-primary">A partir de R$ 90</span>
+                        </div>
+                        <h3 class="font-display text-base uppercase tracking-widest text-gray-900 dark:text-white mb-3">Criativo Feed + Story</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed flex-1">Arte profissional para feed, anúncio ou post único, com versão em story inclusa para publicar nos dois formatos.</p>
+                        <a href="#calculadora" class="mt-6 text-[10px] font-display font-bold uppercase tracking-widest text-futura-primary hover:underline inline-flex items-center gap-2">Calcular <i class="fas fa-arrow-right text-[8px]"></i></a>
+                    </div>
+                    <div class="fade-in-section group premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-futura-primary/50 transition-all duration-300 flex flex-col">
+                        <div class="flex items-start justify-between mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-futura-primary/10 flex items-center justify-center">
+                                <i class="fas fa-layer-group text-futura-primary text-xl" aria-hidden="true"></i>
+                            </div>
+                            <span class="font-display text-sm font-bold text-futura-primary">R$ 180 por carrossel</span>
+                        </div>
+                        <h3 class="font-display text-base uppercase tracking-widest text-gray-900 dark:text-white mb-3">Carrossel</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed flex-1">Carrossel com até 5 páginas, ideal para conteúdos educativos, ofertas e explicações.</p>
+                        <a href="#calculadora" class="mt-6 text-[10px] font-display font-bold uppercase tracking-widest text-futura-primary hover:underline inline-flex items-center gap-2">Calcular <i class="fas fa-arrow-right text-[8px]"></i></a>
+                    </div>
+                    <div class="fade-in-section group premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-futura-accent/50 transition-all duration-300 flex flex-col">
+                        <div class="flex items-start justify-between mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-futura-accent/10 flex items-center justify-center">
+                                <i class="fas fa-film text-futura-accent text-xl" aria-hidden="true"></i>
+                            </div>
+                            <span class="font-display text-sm font-bold text-gray-400 dark:text-gray-500">Sob consulta</span>
+                        </div>
+                        <h3 class="font-display text-base uppercase tracking-widest text-gray-900 dark:text-white mb-3">Edição de vídeo</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed flex-1">Edição de reels, cortes, vídeos curtos, legendas e montagem. O valor permanece sob consulta, pois depende da duração e complexidade.</p>
+                        <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Futura%20Design%20e%20quero%20um%20or%C3%A7amento%20para%20edi%C3%A7%C3%A3o%20de%20v%C3%ADdeo." target="_blank" rel="noopener" class="mt-6 text-[10px] font-display font-bold uppercase tracking-widest text-futura-accent hover:underline inline-flex items-center gap-2">Consultar via WhatsApp <i class="fab fa-whatsapp text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PORTFOLIO CAROUSEL ===================== -->
+        <section id="portfolio" class="py-24 bg-gray-50 dark:bg-futura-dark relative overflow-hidden border-t border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4 mb-12 text-center relative z-10">
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight break-words fade-in-section">
+                    Veja alguns criativos que <span class="text-gradient-futura">já desenvolvemos</span>
+                </h2>
+                <p class="mt-6 text-gray-600 dark:text-gray-300 font-light max-w-xl mx-auto fade-in-section">Trabalhos entregues para diferentes segmentos e objetivos.</p>
+            </div>
+
+            <div class="marquee-wrapper pointer-events-none">
+                <div class="marquee-content-horizontal flex gap-6">
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/01.webp" alt="Criativo 01" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/02.webp" alt="Criativo 02" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/03.webp" alt="Criativo 03" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/04.webp" alt="Criativo 04" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/05.webp" alt="Criativo 05" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/06.webp" alt="Criativo 06" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/07.webp" alt="Criativo 07" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/08.webp" alt="Criativo 08" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/09.webp" alt="Criativo 09" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/10.webp" alt="Criativo 10" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/11.webp" alt="Criativo 11" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/12.webp" alt="Criativo 12" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/13.webp" alt="Criativo 13" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/14.webp" alt="Criativo 14" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/15.webp" alt="Criativo 15" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/01.webp" alt="Criativo 01" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/02.webp" alt="Criativo 02" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/03.webp" alt="Criativo 03" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/04.webp" alt="Criativo 04" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/05.webp" alt="Criativo 05" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/06.webp" alt="Criativo 06" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/07.webp" alt="Criativo 07" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/08.webp" alt="Criativo 08" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/09.webp" alt="Criativo 09" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/10.webp" alt="Criativo 10" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/11.webp" alt="Criativo 11" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/12.webp" alt="Criativo 12" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/13.webp" alt="Criativo 13" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/14.webp" alt="Criativo 14" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-[280px] aspect-[4/5] bg-gray-100 dark:bg-white/5 rounded-xl overflow-hidden relative flex-shrink-0">
+                        <img src="../img/15.webp" alt="Criativo 15" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto max-w-7xl px-4 mt-12 text-center relative z-10">
+                <a href="https://instagram.com/futuradesign.br" target="_blank" rel="noopener"
+                    class="inline-flex items-center gap-3 bg-gray-900 text-white hover:bg-gray-800 dark:bg-white/10 dark:text-white dark:hover:bg-white/15 font-display text-sm font-bold py-4 px-10 rounded-none uppercase tracking-widest transition-all border border-transparent dark:border-white/15">
+                    <i class="fab fa-instagram text-xl" aria-hidden="true"></i> Ver trabalhos no Instagram
+                </a>
+            </div>
+        </section>
+
+        <!-- ===================== PACKAGES ===================== -->
+        <section id="pacotes" class="py-20 md:py-24 bg-white dark:bg-black border-t border-gray-100 dark:border-white/5 relative">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-futura-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
+                        Pacotes <span class="text-gradient-futura">sugeridos</span>
+                    </h2>
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Ou use a calculadora abaixo para montar exatamente o que você precisa.</p>
+                </div>
+                <div class="plans-section">
+                    <div class="plans-grid grid grid-cols-1 md:grid-cols-3 gap-6" data-stagger-parent>
+                        <!-- Starter -->
+                        <div class="fade-in-section plan-card p-8 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col">
+                            <p class="font-display text-[10px] uppercase tracking-[0.4em] text-gray-500 dark:text-gray-400 mb-3">Pacote Starter</p>
+                            <p class="plan-price font-display font-bold text-gray-900 dark:text-white">R$ 400<span class="text-base font-light text-gray-500 dark:text-gray-400 font-sans">/pacote</span></p>
+                            <p class="text-[10px] uppercase tracking-widest text-futura-accent font-display mt-2">Preço médio: R$ 80 por criativo</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light mt-3 mb-6 leading-relaxed">Ideal para demandas pontuais, campanhas pequenas ou para testar a qualidade visual do serviço.</p>
+                            <ul class="plan-features text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>5 criativos no total</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Formato feed e story incluso</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>1 rodada de ajuste por peça</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Entrega organizada e pronta</span></li>
+                            </ul>
+                            <div class="plan-cta mt-6">
+                                <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Futura%20Design%20e%20tenho%20interesse%20no%20Pacote%20Starter%20de%20criativos%20(5%20pe%C3%A7as%20por%20R%24%20400).%20Pode%20me%20passar%20os%20detalhes%3F" target="_blank" rel="noopener"
+                                    class="btn-sheen w-full text-white font-display text-xs font-bold py-3 px-6 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-2 tracking-widest border border-white/10">
+                                    <span class="skew-x-[8deg]">ESCOLHER STARTER</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Profissional (featured) -->
+                        <div class="fade-in-section plan-card plan-card-featured p-8 pt-[3.7rem] bg-white dark:bg-white/5 border border-futura-primary/40 dark:border-futura-primary/30 flex flex-col relative">
+                            <span class="absolute top-4 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap font-display text-[9px] uppercase tracking-widest bg-futura-primary text-white px-4 py-1.5 leading-none">Recomendado</span>
+                            <p class="font-display text-[10px] uppercase tracking-[0.4em] text-futura-primary mb-3">Pacote Profissional</p>
+                            <p class="plan-price font-display font-bold text-gray-900 dark:text-white">R$ 700<span class="text-base font-light text-gray-500 dark:text-gray-400 font-sans">/pacote</span></p>
+                            <p class="text-[10px] uppercase tracking-widest text-futura-accent font-display mt-2">Preço médio: R$ 70 por criativo</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light mt-3 mb-6 leading-relaxed">Ideal para manter constância nas redes com um volume equilibrado de peças profissionais.</p>
+                            <ul class="plan-features text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>10 criativos no total</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Formato feed e story incluso</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>1 rodada de ajuste por peça</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Entrega organizada e pronta</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Custo por peça reduzido</span></li>
+                            </ul>
+                            <div class="plan-cta mt-6">
+                                <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Futura%20Design%20e%20tenho%20interesse%20no%20Pacote%20Profissional%20de%20criativos%20(10%20pe%C3%A7as%20por%20R%24%20700).%20Pode%20me%20passar%20os%20detalhes%3F" target="_blank" rel="noopener"
+                                    class="btn-sheen w-full text-white font-display text-xs font-bold py-3 px-6 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-2 tracking-widest border border-white/10">
+                                    <span class="skew-x-[8deg]">ESCOLHER PROFISSIONAL</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Performance -->
+                        <div class="fade-in-section plan-card p-8 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col">
+                            <p class="font-display text-[10px] uppercase tracking-[0.4em] text-gray-500 dark:text-gray-400 mb-3">Pacote Performance</p>
+                            <p class="plan-price font-display font-bold text-gray-900 dark:text-white">R$ 900<span class="text-base font-light text-gray-500 dark:text-gray-400 font-sans">/pacote</span></p>
+                            <p class="text-[10px] uppercase tracking-widest text-futura-accent font-display mt-2">Preço médio: R$ 60 por criativo</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light mt-3 mb-6 leading-relaxed">Ideal para campanhas, lançamentos e empresas que precisam de mais volume de criativos.</p>
+                            <ul class="plan-features text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>15 criativos no total</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Formato feed e story incluso</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>1 rodada de ajuste por peça</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Entrega organizada e pronta</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Volume para anúncios e redes</span></li>
+                            </ul>
+                            <div class="plan-cta mt-6">
+                                <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Futura%20Design%20e%20tenho%20interesse%20no%20Pacote%20Performance%20de%20criativos%20(15%20pe%C3%A7as%20por%20R%24%20900).%20Pode%20me%20passar%20os%20detalhes%3F" target="_blank" rel="noopener"
+                                    class="btn-sheen w-full text-white font-display text-xs font-bold py-3 px-6 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-2 tracking-widest border border-white/10">
+                                    <span class="skew-x-[8deg]">ESCOLHER PERFORMANCE</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CALCULATOR ===================== -->
+        <section id="calculadora" class="py-20 md:py-28 bg-gray-50 dark:bg-futura-dark relative overflow-hidden border-y border-gray-100 dark:border-white/5">
+            <div class="absolute inset-0 bg-pattern-dots opacity-10 dark:opacity-20 pointer-events-none"></div>
+            <div class="absolute top-0 left-0 w-96 h-96 bg-futura-primary/10 dark:bg-futura-primary/15 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-futura-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
+                    <p class="font-display text-[10px] uppercase tracking-[0.5em] text-futura-primary mb-4">Orçamento instantâneo</p>
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
+                        Monte seu orçamento <span class="text-gradient-futura">agora</span>
+                    </h2>
+                    <p class="mt-6 text-gray-600 dark:text-gray-400 font-light">Escolha a quantidade de peças que precisa e veja uma estimativa automática do investimento. Para vídeos, o valor é sob consulta.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start w-full max-w-full">
+                    <!-- Input panel -->
+                    <div class="fade-in-section w-full min-w-0 p-5 sm:p-8 md:p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/90 dark:bg-white/5 shadow-sm dark:shadow-none backdrop-blur-sm">
+                        <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-8">Selecione as quantidades</h3>
+
+                        <!-- Feed + Story creatives -->
+                        <div class="mb-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-0.5">
+                                <label for="q-static" class="font-display text-xs uppercase tracking-widest text-gray-700 dark:text-gray-200">Criativos Feed + Story</label>
+                                <span id="q-static-price" class="text-[10px] text-futura-primary font-display font-bold">R$ 90 por criativo</span>
+                            </div>
+                            <div class="flex items-center gap-3 w-full min-w-0">
+                                <button type="button" data-target="q-static" data-delta="-1" aria-label="Diminuir"
+                                    class="calc-btn-adj w-10 h-10 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white font-bold text-lg flex items-center justify-center transition-colors flex-shrink-0">−</button>
+                                <input type="number" id="q-static" min="0" value="0"
+                                    class="calc-input flex-1 min-w-0 bg-white dark:bg-white/10 border border-gray-200 dark:border-white/15 rounded-xl px-4 py-3 text-center text-gray-900 dark:text-white font-display text-base focus:outline-none focus:border-futura-primary transition-colors appearance-none">
+                                <button type="button" data-target="q-static" data-delta="1" aria-label="Aumentar"
+                                    class="calc-btn-adj w-10 h-10 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white font-bold text-lg flex items-center justify-center transition-colors flex-shrink-0">+</button>
+                            </div>
+                            <p class="mt-2 text-[11px] text-gray-500 font-light">Inclui a peça em formato feed e a versão story do mesmo criativo. A cada 5 peças, o valor unitário reduz R$ 10.</p>
+                        </div>
+
+                        <!-- Carousels -->
+                        <div class="mb-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-0.5">
+                                <label for="q-carousel" class="font-display text-xs uppercase tracking-widest text-gray-700 dark:text-gray-200">Carrosséis</label>
+                                <span class="text-[10px] text-futura-primary font-display font-bold">R$ 180 por carrossel</span>
+                            </div>
+                            <div class="flex items-center gap-3 w-full min-w-0">
+                                <button type="button" data-target="q-carousel" data-delta="-1" aria-label="Diminuir"
+                                    class="calc-btn-adj w-10 h-10 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white font-bold text-lg flex items-center justify-center transition-colors flex-shrink-0">−</button>
+                                <input type="number" id="q-carousel" min="0" value="0"
+                                    class="calc-input flex-1 min-w-0 bg-white dark:bg-white/10 border border-gray-200 dark:border-white/15 rounded-xl px-4 py-3 text-center text-gray-900 dark:text-white font-display text-base focus:outline-none focus:border-futura-primary transition-colors appearance-none">
+                                <button type="button" data-target="q-carousel" data-delta="1" aria-label="Aumentar"
+                                    class="calc-btn-adj w-10 h-10 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white font-bold text-lg flex items-center justify-center transition-colors flex-shrink-0">+</button>
+                            </div>
+                            <p class="mt-2 text-[11px] text-gray-500 font-light">Carrossel com até 5 páginas, ideal para conteúdos educativos, ofertas e explicações.</p>
+                        </div>
+
+                        <!-- Video edits -->
+                        <div class="mb-0">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-0.5">
+                                <label for="q-video" class="font-display text-xs uppercase tracking-widest text-gray-700 dark:text-gray-200">Edições de vídeo</label>
+                                <span class="text-[10px] text-gray-400 font-display font-bold">Sob consulta</span>
+                            </div>
+                            <div class="flex items-center gap-3 w-full min-w-0">
+                                <button type="button" data-target="q-video" data-delta="-1" aria-label="Diminuir"
+                                    class="calc-btn-adj w-10 h-10 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white font-bold text-lg flex items-center justify-center transition-colors flex-shrink-0">−</button>
+                                <input type="number" id="q-video" min="0" value="0"
+                                    class="calc-input flex-1 min-w-0 bg-white dark:bg-white/10 border border-gray-200 dark:border-white/15 rounded-xl px-4 py-3 text-center text-gray-900 dark:text-white font-display text-base focus:outline-none focus:border-gray-400 transition-colors appearance-none">
+                                <button type="button" data-target="q-video" data-delta="1" aria-label="Aumentar"
+                                    class="calc-btn-adj w-10 h-10 rounded-xl border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white font-bold text-lg flex items-center justify-center transition-colors flex-shrink-0">+</button>
+                            </div>
+                            <p class="mt-2 text-[11px] text-gray-500 font-light">Vídeos são sob consulta, pois dependem da duração e complexidade.</p>
+                        </div>
+                    </div>
+
+                    <!-- Result panel -->
+                    <div class="fade-in-section flex flex-col gap-6" data-reveal="from-right">
+                        <!-- Summary card -->
+                        <div class="w-full min-w-0 p-5 sm:p-8 md:p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/90 dark:bg-white/5 shadow-sm dark:shadow-none backdrop-blur-sm">
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-6">Resumo do orçamento</h3>
+
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-600 dark:text-gray-400 font-light">Criativos Feed + Story</span>
+                                    <span class="font-display text-gray-900 dark:text-white" id="res-static">0</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-600 dark:text-gray-400 font-light">Valor por criativo</span>
+                                    <span class="font-display text-gray-900 dark:text-white" id="res-static-unit">R$ 90,00</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-600 dark:text-gray-400 font-light">Carrosséis</span>
+                                    <span class="font-display text-gray-900 dark:text-white" id="res-carousel">0</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-600 dark:text-gray-400 font-light">Edições de vídeo</span>
+                                    <span class="font-display text-gray-500 dark:text-gray-400" id="res-video">0</span>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-gray-200 dark:border-white/10 pt-6">
+                                <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+                                    <div>
+                                        <p class="text-[10px] uppercase tracking-widest text-gray-500 dark:text-gray-400 font-display mb-1">Valor estimado</p>
+                                        <p class="font-display text-3xl font-bold text-gray-900 dark:text-white" id="res-total">R$ 0,00</p>
+                                    </div>
+                                    <p class="text-[10px] text-gray-500 font-light sm:text-right max-w-full sm:max-w-[140px] leading-relaxed">Calculado automaticamente ao alterar as quantidades</p>
+                                </div>
+                            </div>
+
+                            <!-- Video warning -->
+                            <div id="video-warning" class="hidden mt-4 p-4 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-start gap-3" role="alert">
+                                <i class="fas fa-circle-info text-yellow-400 mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                                <p class="text-xs text-yellow-700 dark:text-yellow-300 font-light leading-relaxed">Edição de vídeo será calculada sob consulta após análise do material.</p>
+                            </div>
+
+                            <!-- Empty state -->
+                            <div id="calc-empty" class="mt-4 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center gap-3">
+                                <i class="fas fa-arrow-up text-gray-500 flex-shrink-0" aria-hidden="true"></i>
+                                <p class="text-xs text-gray-500 font-light">Selecione pelo menos uma opção acima para calcular o orçamento.</p>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp CTA -->
+                        <a id="wa-btn" href="https://wa.me/5511964956563" target="_blank" rel="noopener"
+                            class="btn-sheen w-full text-white font-display text-sm font-bold py-5 px-10 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-3 tracking-widest border border-white/10">
+                            <span class="skew-x-[8deg]">GERAR ORÇAMENTO</span>
+                        </a>
+                        <p class="text-center text-[10px] text-gray-500 font-light tracking-wider uppercase">Sem compromisso · Retorno em horário comercial</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== HOW IT WORKS ===================== -->
+        <section id="como-funciona" class="py-20 md:py-24 bg-white dark:bg-black border-t border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
+                        Como funciona <span class="text-gradient-futura">na prática</span>
+                    </h2>
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Processo simples, comunicação direta e entrega pronta para publicar.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6" data-stagger-parent>
+                    <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <span class="absolute bottom-4 right-4 font-display text-8xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">1</span>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-futura-primary/10 flex items-center justify-center mb-4">
+                                <i class="fas fa-sliders text-futura-primary" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Você escolhe</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Escolha a quantidade de criativos que precisa na calculadora acima.</p>
+                        </div>
+                    </div>
+                    <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <span class="absolute bottom-4 right-4 font-display text-8xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">2</span>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-futura-accent/10 flex items-center justify-center mb-4">
+                                <i class="fas fa-calculator text-futura-accent" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Estimativa automática</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">A calculadora gera uma estimativa automática do valor.</p>
+                        </div>
+                    </div>
+                    <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <span class="absolute bottom-4 right-4 font-display text-8xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">3</span>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-futura-primary/10 flex items-center justify-center mb-4">
+                                <i class="fab fa-whatsapp text-futura-primary" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Envia pelo WhatsApp</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Você envia o pedido com um clique direto para o WhatsApp.</p>
+                        </div>
+                    </div>
+                    <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <span class="absolute bottom-4 right-4 font-display text-8xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">4</span>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-futura-accent/10 flex items-center justify-center mb-4">
+                                <i class="fas fa-comments text-futura-accent" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Alinhamos os detalhes</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Nossa equipe alinha briefing, detalhes e prazo com você.</p>
+                        </div>
+                    </div>
+                    <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
+                        <span class="absolute bottom-4 right-4 font-display text-8xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">5</span>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-futura-primary/10 flex items-center justify-center mb-4">
+                                <i class="fas fa-circle-check text-futura-primary" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Recebe os criativos</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Você recebe os criativos prontos, organizados e prontos para publicar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== RULES / IMPORTANT INFO ===================== -->
+        <section id="informacoes" class="py-20 md:py-24 bg-gray-50 dark:bg-futura-dark border-t border-gray-100 dark:border-white/5">
+            <div class="container mx-auto max-w-5xl px-4">
+                <div class="fade-in-section p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5">
+                    <h2 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-8">Informações importantes</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-circle text-[6px] text-futura-primary mt-2 flex-shrink-0" aria-hidden="true"></i>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Cada criativo inclui a versão feed e a versão story do mesmo material.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-circle text-[6px] text-futura-primary mt-2 flex-shrink-0" aria-hidden="true"></i>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Cada peça inclui até 1 rodada de ajuste.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-circle text-[6px] text-futura-accent mt-2 flex-shrink-0" aria-hidden="true"></i>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Alterações após aprovação podem gerar custo adicional.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-circle text-[6px] text-futura-accent mt-2 flex-shrink-0" aria-hidden="true"></i>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Vídeos são calculados sob consulta após análise do material.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-circle text-[6px] text-futura-primary mt-2 flex-shrink-0" aria-hidden="true"></i>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Prazos são definidos após o alinhamento do briefing.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-circle text-[6px] text-futura-primary mt-2 flex-shrink-0" aria-hidden="true"></i>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Demandas urgentes podem ter taxa adicional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FINAL CTA ===================== -->
+        <section id="cta-final" class="py-20 md:py-24 bg-white dark:bg-black border-t border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+            <div class="container mx-auto max-w-3xl px-4 text-center relative z-10 fade-in-section">
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight mb-6">
+                    Pronto para melhorar o visual <span class="text-gradient-futura">da sua marca</span>?
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 font-light mb-10 leading-relaxed">
+                    Calcule seu orçamento e fale com a Futura Design para criar peças profissionais para suas redes sociais.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#calculadora"
+                        class="btn-sheen w-full sm:w-auto text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-widest border border-white/15">
+                        <span class="skew-x-[10deg]">CALCULAR ORÇAMENTO</span> <i class="fas fa-calculator skew-x-[10deg]" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=5511964956563&text=Ol%C3%A1%2C%20FUTURA!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20criativos%20para%20redes%20sociais." target="_blank" rel="noopener"
+                        class="w-full sm:w-auto bg-white/80 dark:bg-white/10 text-gray-900 dark:text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] flex items-center justify-center gap-3 tracking-widest border border-gray-200 dark:border-white/15 hover:bg-white/90 dark:hover:bg-white/15 transition-colors">
+                        <span class="skew-x-[10deg]">FALAR NO WHATSAPP</span> <i class="fab fa-whatsapp skew-x-[10deg]" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <p class="mt-6 text-xs text-gray-500 dark:text-gray-400 font-light tracking-wider uppercase">Sem compromisso · Retorno em horário comercial · Conversa direta ao ponto</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer bg-white dark:bg-black text-gray-900 dark:text-white pt-20 pb-10 border-t border-gray-100 dark:border-white/5 relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-futura-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-futura-accent/10 rounded-full blur-[90px] pointer-events-none"></div>
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+            <div class="footer-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-4">
+                <div class="footer-brand col-span-1 md:col-span-1">
+                    <img src="../img/logop.webp" alt="Futura Logo" class="theme-logo h-6 w-auto mb-6 opacity-90">
+                    <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed font-light max-w-[22ch]">
+                        Branding, sites, lojas virtuais e criativos para anúncios, com <strong class="text-gray-900 dark:text-gray-200 font-semibold">clareza</strong> e execução premium.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Sitemap</h4>
+                    <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li><a href="../" class="footer-link hover:text-futura-primary transition-colors">Home</a></li>
+                        <li><a href="../#quem-somos" class="footer-link hover:text-futura-primary transition-colors">Equipe</a></li>
+                        <li><a href="../#servicos" class="footer-link hover:text-futura-primary transition-colors">Serviços</a></li>
+                        <li><a href="../#contato" class="footer-link hover:text-futura-primary transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Legal</h4>
+                    <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li><a href="../termos/" class="footer-link hover:text-futura-primary transition-colors">Termos de Uso</a></li>
+                        <li><a href="../privacidade/" class="footer-link hover:text-futura-primary transition-colors">Privacidade</a></li>
+                        <li><a href="../cookies/" class="footer-link hover:text-futura-primary transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Contato Direto</h4>
+                    <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
+                        <li>
+                            <a href="https://instagram.com/futuradesign.br" target="_blank" rel="noopener" class="footer-contact-link inline-flex items-center gap-2 hover:text-futura-primary transition-colors">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>@futuradesign.br</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/5511964956563" target="_blank" rel="noopener" class="footer-contact-link inline-flex items-center gap-2 hover:text-futura-primary transition-colors">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                <span>Suporte via WhatsApp</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-newsletter">
+                    <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Newsletter</h4>
+                    <form id="newsletter-form" class="footer-news-form flex flex-col gap-3" data-endpoint="https://script.google.com/macros/s/AKfycbyBsKmthWCcUR9qR2P_40WSAGjtDv2i2-h7tPewFZeP1F-EVsCgUSUtHlhLY5s-qGgW/exec" novalidate>
+                        <input id="newsletter-email" name="email" type="email" placeholder="Seu e-mail" autocomplete="email" inputmode="email" required class="footer-input bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-3 text-xs text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:border-futura-primary transition-colors" aria-label="Seu e-mail">
+                        <button type="submit" class="footer-news-btn bg-gray-900 text-white dark:bg-white dark:text-black font-display text-xs font-bold py-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors uppercase tracking-widest">Receber insights</button>
+                        <p id="newsletter-status" class="text-[10px] text-gray-500 dark:text-gray-500 font-light" aria-live="polite"></p>
+                        <p class="footer-note text-[10px] text-gray-500 dark:text-gray-500 font-light">Sem spam. Conteúdo direto ao ponto.</p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom pt-2 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[10px] text-gray-600 dark:text-gray-400 uppercase tracking-widest">&copy; 2026 FUTURA DESIGN. Clareza, entrega e acompanhamento. Sem promessas irreais.</p>
+                <h2 class="font-display text-4xl md:text-6xl text-black/5 dark:text-white/5 font-bold mt-6 md:mt-0 select-none">FUTURA</h2>
+            </div>
+        </div>
+    </footer>
+
+    <button id="theme-toggle-btn" aria-label="Alternar tema claro/escuro"
+        class="fixed bottom-3 right-3 z-50 w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:scale-110 transition-transform">
+        <i id="theme-toggle-sun" class="fas fa-sun"></i>
+        <i id="theme-toggle-moon" class="fas fa-moon hidden text-futura-accent"></i>
+    </button>
+
+    <script src="../script.js"></script>
+
+    <script>
+        (function () {
+            var CREATIVE_BASE_PRICE = 90;
+            var CREATIVE_STEP_SIZE = 5;
+            var CREATIVE_DISCOUNT_STEP = 10;
+            var CREATIVE_MIN_PRICE = 50;
+            var CAROUSEL_PRICE = 180;
+
+            function getVal(id) {
+                var el = document.getElementById(id);
+                var parsed = parseInt(el.value, 10);
+                var val = Math.max(0, parsed || 0);
+                if (el.value !== '' && String(val) !== el.value) {
+                    el.value = val;
+                }
+                return val;
+            }
+
+            function formatBRL(n) {
+                return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            }
+
+            function getCreativeUnitPrice(quantity) {
+                if (quantity <= 0) return CREATIVE_BASE_PRICE;
+                var discountSteps = Math.floor(quantity / CREATIVE_STEP_SIZE);
+                return Math.max(CREATIVE_MIN_PRICE, CREATIVE_BASE_PRICE - discountSteps * CREATIVE_DISCOUNT_STEP);
+            }
+
+            function update() {
+                var s = getVal('q-static');
+                var c = getVal('q-carousel');
+                var v = getVal('q-video');
+
+                var lang = (localStorage.getItem('lang') || 'pt-BR');
+                var creativeUnit = getCreativeUnitPrice(s);
+                var total = s * creativeUnit + c * CAROUSEL_PRICE;
+                var totalFmt = formatBRL(total);
+                var videoSuffix = lang === 'en-US' ? ' + videos quoted separately' : ' + vídeos sob consulta';
+                var creativeUnitText = formatBRL(creativeUnit);
+                var creativeUnitShort = 'R$ ' + creativeUnit;
+
+                var priceLabel = document.getElementById('q-static-price');
+                if (priceLabel) {
+                    priceLabel.textContent = creativeUnitShort + (lang === 'en-US' ? ' per creative' : ' por criativo');
+                }
+
+                document.getElementById('res-static').textContent = s;
+                document.getElementById('res-static-unit').textContent = creativeUnitText;
+                document.getElementById('res-carousel').textContent = c;
+                document.getElementById('res-video').textContent = v > 0 ? v + (lang === 'en-US' ? ' (quoted separately)' : ' (sob consulta)') : '0';
+                document.getElementById('res-total').textContent = totalFmt + (v > 0 ? videoSuffix : '');
+
+                var vw = document.getElementById('video-warning');
+                vw.classList.toggle('hidden', v === 0);
+                vw.classList.toggle('flex', v > 0);
+
+                var emptyEl = document.getElementById('calc-empty');
+                var isEmpty = (s + c + v === 0);
+                emptyEl.classList.toggle('hidden', !isEmpty);
+                emptyEl.classList.toggle('flex', isEmpty);
+
+                var msg;
+
+                if (lang === 'en-US') {
+                    msg = encodeURIComponent(
+                        'Hello, I came from Futura Design\'s website and would like to request a creative budget.\n\nSummary:\n- Feed + Story creatives: ' + s +
+                        ' x ' + creativeUnitShort +
+                        '\n- Carousels: ' + c + ' x R$ 180' +
+                        '\n- Video edits: ' + v + ' unit(s) - quoted separately' +
+                        '\n\nEstimated value: ' + totalFmt +
+                        '\n\nCan you contact me so we can align the details?'
+                    );
+                } else {
+                    msg = encodeURIComponent(
+                        'Olá, vim pelo site da Futura Design e gostaria de solicitar um orçamento de criativos.\n\nResumo:\n- Criativos Feed + Story: ' + s +
+                        ' x ' + creativeUnitShort +
+                        '\n- Carrosséis: ' + c + ' x R$ 180' +
+                        '\n- Edições de vídeo: ' + v + ' unidade(s) - sob consulta' +
+                        '\n\nValor estimado: ' + totalFmt +
+                        '\n\nPode me chamar para alinharmos os detalhes?'
+                    );
+                }
+
+                document.getElementById('wa-btn').href = 'https://wa.me/5511964956563?text=' + msg;
+            }
+
+            function adjust(id, delta) {
+                var el = document.getElementById(id);
+                var val = Math.max(0, (parseInt(el.value, 10) || 0) + delta);
+                el.value = val;
+                update();
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                ['q-static', 'q-carousel', 'q-video'].forEach(function (id) {
+                    var el = document.getElementById(id);
+                    if (el) {
+                        el.addEventListener('input', update);
+                        el.addEventListener('change', update);
+                    }
+                });
+
+                document.querySelectorAll('.calc-btn-adj').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        adjust(btn.dataset.target, parseInt(btn.dataset.delta, 10));
+                    });
+                });
+
+                update();
+
+                // Sync WhatsApp message on language change (script.js fires a custom event or we poll)
+                document.addEventListener('langchange', update);
+            });
+        })();
+    </script>
+
+</body>
+</html>
