@@ -506,6 +506,210 @@ const PT_TO_EN = {
     '© 2026 FUTURA DESIGN. Clareza, entrega e acompanhamento. Sem promessas irreais.':
         '© 2026 FUTURA DESIGN. Clarity, delivery, and tracking. No unrealistic promises.',
 
+    // Página /criativos
+    'Criativos para redes sociais': 'Social media creatives',
+    'Criativos profissionais para sua marca': 'Professional creatives for your brand',
+    'vender mais nas redes sociais': 'to sell more on social media',
+    'Posts, stories, carrosséis e peças para campanhas com visual estratégico, moderno e pensado para gerar mais':
+        'Posts, stories, carousels and campaign pieces with a strategic, modern look designed to generate more',
+    'atenção, confiança e conversão': 'attention, trust and conversion',
+    'CALCULAR MEU ORÇAMENTO': 'CALCULATE MY BUDGET',
+    'VER EXEMPLOS DE CRIATIVOS': 'VIEW CREATIVE EXAMPLES',
+    'Calcular orçamento': 'Calculate budget',
+    'Calcular meu orçamento': 'Calculate my budget',
+
+    'Sua empresa não precisa de apenas posts bonitos.': 'Your business does not just need beautiful posts.',
+    'Precisa de criativos que': 'It needs creatives that',
+    'comuniquem valor': 'communicate value',
+    'Percepção prejudicada': 'Damaged perception',
+    'Artes amadoras prejudicam a percepção da marca e afastam clientes antes mesmo do primeiro contato.':
+        'Amateur designs harm brand perception and push customers away before the first contact.',
+    'Pouco interesse': 'Low engagement',
+    'Criativos sem estratégia geram pouco interesse e não movem o público para nenhuma ação.':
+        'Creatives without strategy generate little interest and do not move the audience to action.',
+    'Perfil inconsistente': 'Inconsistent profile',
+    'Posts inconsistentes deixam o perfil menos profissional e reduzem a confiança no negócio.':
+        'Inconsistent posts make the profile look less professional and reduce trust in the business.',
+    'Verba desperdiçada': 'Wasted budget',
+    'Anúncios fracos desperdiçam verba de tráfego pago sem gerar retorno real para o negócio.':
+        'Weak ads waste paid traffic budget without generating real returns for the business.',
+
+    'Nossa abordagem': 'Our approach',
+    'A Futura Design cria peças com': 'Futura Design creates pieces with',
+    'estratégia, identidade e foco em resultado': 'strategy, identity and a focus on results',
+    'Desenvolvemos criativos para empresas que querem se posicionar melhor, anunciar com mais qualidade e transformar atenção em oportunidade de venda.':
+        'We develop creatives for businesses that want better positioning, higher-quality ads, and the ability to turn attention into sales opportunities.',
+    'Design profissional alinhado à sua marca': 'Professional design aligned with your brand',
+    'Peças para feed, stories, campanhas e ofertas': 'Pieces for feed, stories, campaigns and offers',
+    'Comunicação clara e persuasiva': 'Clear and persuasive communication',
+    'Formato ideal para redes sociais e anúncios': 'Ideal format for social media and ads',
+    'Entrega organizada e pronta para publicação': 'Organized delivery ready for publishing',
+    'Criativos entregues nos formatos feed e story': 'Creatives delivered in feed and story formats',
+    'Formato duplo incluso': 'Dual format included',
+    'Entrega pronta para publicar': 'Delivery ready to publish',
+
+    'Escolha o tipo de criativo que': 'Choose the type of creative that',
+    'sua empresa precisa': 'your business needs',
+    'Criativos profissionais com valores simples, transparentes e acessíveis para sua empresa manter uma presença visual forte nas redes sociais.':
+        'Professional creatives with simple, transparent and accessible pricing so your business can maintain a strong visual presence on social media.',
+    'Criativos profissionais com entrega completa em feed e story, valores simples e desconto progressivo por quantidade.':
+        'Professional creatives with complete feed and story delivery, simple pricing and progressive volume discounts.',
+    'Criativo Feed + Story a partir de R$ 90. A cada 5 peças, o valor unitário reduz R$ 10.':
+        'Feed + Story creative starting at R$ 90. Every 5 pieces reduces the unit price by R$ 10.',
+    'A partir de R$ 90': 'Starting at R$ 90',
+    'Criativo Feed + Story': 'Feed + Story creative',
+    'Arte profissional para feed, anúncio ou post único, com versão em story inclusa para publicar nos dois formatos.':
+        'Professional design for feed, ad or single post, with a story version included so you can publish in both formats.',
+    'R$ 180 por carrossel': 'R$ 180 per carousel',
+    'Criativo estático': 'Static creative',
+    'Arte profissional para feed, anúncio ou post único. Ideal para chamadas comerciais, campanhas e ofertas.':
+        'Professional design for feed, ad or single post. Ideal for commercial messages, campaigns and offers.',
+    'Story': 'Story',
+    'Arte vertical para Instagram Stories ou WhatsApp Status. Para gerar conexão, divulgar ofertas e movimentar o perfil.':
+        'Vertical design for Instagram Stories or WhatsApp Status. To create connection, promote offers and keep the profile active.',
+    'Carrossel': 'Carousel',
+    'Carrossel com até 5 páginas. Ideal para explicações, ofertas, apresentação de serviços e conteúdos educativos.':
+        'Carousel with up to 5 slides. Ideal for explanations, offers, service presentations, and educational content.',
+    'Carrossel com até 5 páginas, ideal para conteúdos educativos, ofertas e explicações.':
+        'Carousel with up to 5 slides, ideal for educational content, offers and explanations.',
+    'Adaptação Feed + Story': 'Feed + Story adaptation',
+    'Adicional para entregar o mesmo criativo em dois formatos: feed (quadrado/paisagem) e story (vertical).':
+        'Extra fee to deliver the same creative in two formats: feed (square/landscape) and story (vertical).',
+    'Adicional para entregar o mesmo criativo em duas resoluções: feed e story.':
+        'Extra fee to deliver the same creative in two resolutions: feed and story.',
+    'Edição de vídeo': 'Video editing',
+    'Edição de reels, vídeos curtos, cortes, legendas, trilha e montagem. Valor sob consulta, pois depende da duração e complexidade do material enviado.':
+        'Reels editing, short videos, cuts, captions, soundtrack and editing. Price upon request, depending on duration and complexity.',
+    'Edição de reels, cortes, vídeos curtos, legendas e montagem. O valor permanece sob consulta, pois depende da duração e complexidade.':
+        'Reels editing, cuts, short videos, captions and assembly. Pricing remains upon request because it depends on duration and complexity.',
+    'Consultar via WhatsApp': 'Consult via WhatsApp',
+    'Sob consulta': 'Upon request',
+    'Olá, vim pelo site da Futura Design e quero um orçamento para edição de vídeo.':
+        'Hello, I came from Futura Design\'s website and would like a quote for video editing.',
+
+    'Veja alguns criativos que': 'See some creatives that',
+    'já desenvolvemos': 'we have already developed',
+    'Trabalhos entregues para diferentes segmentos e objetivos.': 'Work delivered for different industries and goals.',
+    'Ver trabalhos no Instagram': 'See work on Instagram',
+
+    'Pacotes sugeridos': 'Suggested packages',
+    'Ou use a calculadora abaixo para montar exatamente o que você precisa.':
+        'Or use the calculator below to build exactly what you need.',
+    'Pacote Starter': 'Starter Package',
+    'Ideal para demandas pontuais, campanhas pequenas ou para testar a qualidade visual do serviço.':
+        'Ideal for one-off requests, small campaigns, or testing the visual quality of the service.',
+    'Pacote Profissional': 'Professional Package',
+    'Ideal para manter constância nas redes com um volume equilibrado de peças profissionais.':
+        'Ideal for maintaining consistency on social media with a balanced volume of professional pieces.',
+    'Pacote Performance': 'Performance Package',
+    'Ideal para campanhas, lançamentos e empresas que precisam de mais volume de criativos.':
+        'Ideal for campaigns, launches, and businesses that need more creative volume.',
+    '/pacote': '/package',
+    'Preço médio: R$ 80 por criativo': 'Average price: R$ 80 per creative',
+    'Preço médio: R$ 70 por criativo': 'Average price: R$ 70 per creative',
+    'Preço médio: R$ 60 por criativo': 'Average price: R$ 60 per creative',
+    '5 criativos no total': '5 creatives total',
+    '10 criativos no total': '10 creatives total',
+    '15 criativos no total': '15 creatives total',
+    '20 criativos no total': '20 creatives total',
+    'Formatos à escolha (estático, story ou carrossel)': 'Formats of your choice (static, story or carousel)',
+    'Formato feed e story incluso': 'Feed and story format included',
+    '1 rodada de ajuste por peça': '1 revision round per piece',
+    'Entrega organizada e pronta': 'Organized and ready delivery',
+    'Custo por peça reduzido': 'Reduced cost per piece',
+    'Volume para anúncios e redes': 'Volume for ads and social media',
+    'ESCOLHER STARTER': 'CHOOSE STARTER',
+    'ESCOLHER PROFISSIONAL': 'CHOOSE PROFESSIONAL',
+    'ESCOLHER PERFORMANCE': 'CHOOSE PERFORMANCE',
+    'Recomendado': 'Recommended',
+    'Olá, vim pelo site da Futura Design e tenho interesse no Pacote Starter de criativos (5 peças por R$ 400). Pode me passar os detalhes?':
+        'Hello, I came from Futura Design\'s website and I am interested in the Starter Package of creatives (5 pieces for R$ 400). Can you send me the details?',
+    'Olá, vim pelo site da Futura Design e tenho interesse no Pacote Profissional de criativos (10 peças por R$ 700). Pode me passar os detalhes?':
+        'Hello, I came from Futura Design\'s website and I am interested in the Professional Package of creatives (10 pieces for R$ 700). Can you send me the details?',
+    'Olá, vim pelo site da Futura Design e tenho interesse no Pacote Performance de criativos (15 peças por R$ 900). Pode me passar os detalhes?':
+        'Hello, I came from Futura Design\'s website and I am interested in the Performance Package of creatives (15 pieces for R$ 900). Can you send me the details?',
+
+    'Orçamento instantâneo': 'Instant estimate',
+    'Monte seu orçamento': 'Build your budget',
+    'agora': 'now',
+    'Escolha a quantidade de criativos que sua empresa precisa e veja uma estimativa automática. Depois, envie direto pelo WhatsApp.':
+        'Choose how many creatives your business needs and get an automatic estimate. Then send it directly via WhatsApp.',
+    'Escolha a quantidade de peças que precisa e veja uma estimativa automática do investimento. Para vídeos, o valor é sob consulta.':
+        'Choose the number of pieces you need and get an automatic investment estimate. Videos are quoted separately.',
+    'Selecione as quantidades': 'Select quantities',
+    'Criativos estáticos': 'Static creatives',
+    'Criativos Feed + Story': 'Feed + Story creatives',
+    'R$ 90 por criativo': 'R$ 90 per creative',
+    'Stories': 'Stories',
+    'Carrosséis': 'Carousels',
+    'Edições de vídeo': 'Video edits',
+    'Arte profissional para feed, anúncio ou post único.': 'Professional design for feed, ad or single post.',
+    'Arte vertical para Instagram Stories ou WhatsApp Status.': 'Vertical design for Instagram Stories or WhatsApp Status.',
+    'Carrossel com até 5 páginas, ideal para explicações e ofertas.':
+        'Carousel with up to 5 slides, ideal for explanations and offers.',
+    'Use este campo caso queira receber uma mesma arte em dois formatos: feed e story.':
+        'Use this field if you want to receive the same design in two formats: feed and story.',
+    'Use este campo caso queira receber o mesmo criativo em duas resoluções: feed e story.':
+        'Use this field if you want to receive the same creative in two resolutions: feed and story.',
+    'Inclui a peça em formato feed e a versão story do mesmo criativo. A cada 5 peças, o valor unitário reduz R$ 10.':
+        'Includes the feed version and the story version of the same creative. Every 5 pieces reduces the unit price by R$ 10.',
+    'Vídeos são sob consulta, pois dependem da duração e complexidade.':
+        'Videos are quoted separately, depending on duration and complexity.',
+    'Resumo do orçamento': 'Budget summary',
+    'Valor estimado': 'Estimated value',
+    'Valor por criativo': 'Price per creative',
+    'Calculado automaticamente ao alterar as quantidades': 'Automatically calculated as you change quantities',
+    'Edição de vídeo será calculada sob consulta após análise do material. O valor final pode ser diferente.':
+        'Video editing will be quoted separately after reviewing the material. The final price may differ.',
+    'Edição de vídeo será calculada sob consulta após análise do material.':
+        'Video editing will be quoted separately after reviewing the material.',
+    'Selecione pelo menos uma opção acima para calcular o orçamento.':
+        'Select at least one option above to calculate the estimate.',
+    'ENVIAR ORÇAMENTO PELO WHATSAPP': 'SEND BUDGET VIA WHATSAPP',
+    'GERAR ORÇAMENTO': 'GENERATE ESTIMATE',
+    'Sem compromisso · Retorno em horário comercial': 'No commitment · Reply during business hours',
+
+    'Como funciona na prática': 'How it works in practice',
+    'Processo simples, comunicação direta e entrega pronta para publicar.':
+        'Simple process, direct communication and delivery ready to publish.',
+    'Você escolhe': 'You choose',
+    'Escolha a quantidade de criativos que precisa na calculadora acima.':
+        'Choose how many creatives you need using the calculator above.',
+    'Estimativa automática': 'Automatic estimate',
+    'A calculadora gera uma estimativa automática do valor.': 'The calculator generates an automatic value estimate.',
+    'Envia pelo WhatsApp': 'Send via WhatsApp',
+    'Você envia o pedido com um clique direto para o WhatsApp.': 'You send the request with one click directly to WhatsApp.',
+    'Alinhamos os detalhes': 'We align the details',
+    'Nossa equipe alinha briefing, detalhes e prazo com você.': 'Our team aligns briefing, details and deadline with you.',
+    'Recebe os criativos': 'Receive the creatives',
+    'Você recebe os criativos prontos, organizados e prontos para publicar.':
+        'You receive the creatives ready, organized and ready to publish.',
+
+    'Informações importantes': 'Important information',
+    'Cada criativo inclui 1 peça final em um formato.': 'Each creative includes 1 final piece in one format.',
+    'Cada criativo inclui a versão feed e a versão story do mesmo material.':
+        'Each creative includes the feed version and the story version of the same material.',
+    'Cada peça inclui até 1 rodada de ajuste.': 'Each piece includes up to 1 revision round.',
+    'Alterações após aprovação podem gerar custo adicional.': 'Changes after approval may generate an extra cost.',
+    'Vídeos são calculados sob consulta após análise do material.':
+        'Videos are quoted separately after reviewing the material.',
+    'Prazos são definidos após o alinhamento do briefing.': 'Deadlines are defined after briefing alignment.',
+    'Demandas urgentes podem ter taxa adicional.': 'Urgent requests may have an additional fee.',
+
+    'Pronto para melhorar o visual': 'Ready to improve the visuals',
+    'da sua marca': 'of your brand',
+    'Calcule seu orçamento e fale com a Futura Design para criar peças profissionais para suas redes sociais.':
+        'Calculate your budget and talk to Futura Design to create professional pieces for your social media.',
+    'CALCULAR ORÇAMENTO': 'CALCULATE BUDGET',
+    'Sem compromisso · Retorno em horário comercial · Conversa direta ao ponto':
+        'No commitment · Reply during business hours · Straight to the point',
+    'Olá, FUTURA! Vim pelo site e quero saber mais sobre criativos para redes sociais.':
+        'Hello, FUTURA! I came from the website and want to learn more about social media creatives.',
+
+    'Tipos': 'Types',
+    'Tipos de criativo': 'Creative types',
+    'Orçamento': 'Budget',
+
     // Atributos / acessibilidade
     'Abrir menu': 'Open menu',
     'Fechar menu': 'Close menu',
@@ -1106,6 +1310,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentLang = currentLang === LANG_EN_US ? LANG_PT_BR : LANG_EN_US;
             storeLang(currentLang);
             applyLanguage(currentLang);
+            document.dispatchEvent(new CustomEvent('langchange', { detail: { lang: currentLang } }));
             updateLanguageButtonUI(languageBtn, currentLang);
         });
     }
