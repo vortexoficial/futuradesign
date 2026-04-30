@@ -1,0 +1,218 @@
+:root {
+  --futura-audio-bottom: calc(132px + env(safe-area-inset-bottom, 0px));
+  --futura-audio-right: calc(12px + env(safe-area-inset-right, 0px));
+  --futura-audio-purple: #8d00d7;
+  --futura-audio-purple-deep: #4c008f;
+  --futura-audio-surface: rgba(255, 255, 255, 0.9);
+  --futura-audio-border: rgba(255, 255, 255, 0.94);
+  --futura-audio-shadow: 0 14px 28px rgba(76, 0, 143, 0.22), 0 0 24px rgba(141, 0, 215, 0.26);
+}
+
+html.dark {
+  --futura-audio-surface: rgba(255, 255, 255, 0.9);
+  --futura-audio-border: rgba(255, 255, 255, 0.94);
+  --futura-audio-shadow: 0 14px 28px rgba(76, 0, 143, 0.22), 0 0 24px rgba(141, 0, 215, 0.26);
+}
+
+.futura-audio-shell {
+  position: fixed;
+  right: var(--futura-audio-right);
+  bottom: var(--futura-audio-bottom);
+  z-index: 1210;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  pointer-events: none;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(12px);
+  transition: opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.futura-audio-shell.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.futura-audio-shell[data-side-floating="true"] {
+  --futura-audio-right: calc(12px + env(safe-area-inset-right, 0px));
+}
+
+.futura-audio-shell[data-bottom-bar="true"] {
+  --futura-audio-bottom: calc(132px + env(safe-area-inset-bottom, 0px));
+}
+
+.futura-audio-player {
+  pointer-events: auto;
+  position: relative;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--futura-audio-border);
+  border-radius: 999px;
+  background: var(--futura-audio-surface);
+  box-shadow: var(--futura-audio-shadow);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  backdrop-filter: blur(16px) saturate(130%);
+}
+
+.futura-audio-element {
+  display: none;
+}
+
+.futura-audio-button {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--futura-audio-purple), var(--futura-audio-purple-deep));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 8px 18px rgba(76, 0, 143, 0.24);
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+html.dark .futura-audio-button {
+  background: linear-gradient(135deg, var(--futura-audio-purple), var(--futura-audio-purple-deep));
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 8px 18px rgba(76, 0, 143, 0.24);
+}
+
+.futura-audio-button:hover,
+.futura-audio-button:focus-visible {
+  outline: none;
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34), 0 0 28px rgba(141, 0, 215, 0.34);
+}
+
+.futura-audio-button:focus-visible {
+  outline: 2px solid rgba(141, 0, 215, 0.45);
+  outline-offset: 4px;
+}
+
+.futura-audio-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.52;
+  transform: none;
+}
+
+.futura-audio-button svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.futura-audio-player.is-playing {
+  animation: futura-audio-pulse 2.8s ease-in-out infinite;
+}
+
+.futura-audio-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.futura-audio-toast {
+  position: relative;
+  pointer-events: none;
+  max-width: min(272px, calc(100vw - 32px));
+  padding: 11px 14px;
+  color: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 229, 255, 0.24);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(211, 0, 197, 0.2), rgba(0, 229, 255, 0.1)),
+    rgba(5, 5, 21, 0.82);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.28);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  backdrop-filter: blur(16px) saturate(130%);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.futura-audio-toast::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: -6px;
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid rgba(0, 229, 255, 0.18);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.18);
+  background: rgba(14, 11, 31, 0.92);
+  transform: rotate(45deg);
+}
+
+.futura-audio-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes futura-audio-pulse {
+  0%,
+  100% {
+    box-shadow: var(--futura-audio-shadow);
+  }
+
+  50% {
+    box-shadow: var(--futura-audio-shadow), 0 0 30px rgba(141, 0, 215, 0.38);
+  }
+}
+
+@media (max-width: 640px) {
+  .futura-audio-shell {
+    --futura-audio-bottom: calc(132px + env(safe-area-inset-bottom, 0px));
+    --futura-audio-right: calc(12px + env(safe-area-inset-right, 0px));
+  }
+
+  .futura-audio-shell[data-side-floating="true"] {
+    --futura-audio-right: calc(12px + env(safe-area-inset-right, 0px));
+  }
+
+  .futura-audio-shell[data-bottom-bar="true"] {
+    --futura-audio-bottom: calc(132px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .futura-audio-shell[data-side-floating="true"][data-bottom-bar="true"] {
+    --futura-audio-bottom: calc(148px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .futura-audio-toast {
+    max-width: calc(100vw - 24px);
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .futura-audio-shell,
+  .futura-audio-toast,
+  .futura-audio-button {
+    transition: none !important;
+  }
+
+  .futura-audio-player.is-playing {
+    animation: none !important;
+  }
+}

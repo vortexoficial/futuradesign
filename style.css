@@ -207,12 +207,18 @@ html.dark header.is-scrolled .container > div {
 
 .plans-section .plan-card-featured {
     box-shadow: 0 10px 35px -25px var(--futura-primary);
+    padding-top: 3.7rem;
 }
 
-.plans-section .plan-card-featured > span {
-    top: 0.85rem;
-    right: 0.85rem;
+.plans-section .plan-card-featured .plan-badge {
+    top: 1rem;
+    left: 50%;
+    right: auto;
+    z-index: 2;
+    transform: translateX(-50%);
     letter-spacing: 0.14em;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .plans-section .plan-price {
@@ -394,6 +400,17 @@ html.dark .plans-section .plan-features li span {
     transform: skewX(-25deg);
     animation: sheen-btn 4s infinite;
     pointer-events: none;
+}
+
+.calc-input::-webkit-outer-spin-button,
+.calc-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.calc-input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 /* 6. Scrollbar */

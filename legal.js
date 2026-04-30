@@ -228,13 +228,17 @@ function updateLogos() {
 
 function ensureThemeButton() {
   const existing = document.getElementById(THEME_BUTTON_ID);
-  if (existing) return existing;
+  if (existing) {
+    existing.style.zIndex = '1200';
+    return existing;
+  }
 
   const btn = document.createElement('button');
   btn.id = THEME_BUTTON_ID;
   btn.type = 'button';
   btn.setAttribute('aria-label', 'Alternar tema claro/escuro');
   btn.className = 'fixed bottom-3 right-3 z-50 w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:scale-110 transition-transform';
+  btn.style.zIndex = '1200';
   btn.innerHTML = `
     <i id="${THEME_SUN_ID}" class="fas fa-sun"></i>
     <i id="${THEME_MOON_ID}" class="fas fa-moon hidden text-futura-accent"></i>
@@ -269,6 +273,7 @@ function ensureLanguageButton(themeBtn) {
   btn.style.right = '0.75rem';
   btn.style.bottom = 'calc(0.75rem + 3rem + 0.75rem)';
   btn.style.overflow = 'hidden';
+  btn.style.zIndex = '1200';
   themeBtn.insertAdjacentElement('beforebegin', btn);
   return btn;
 }
@@ -292,6 +297,31 @@ applyThemeFromStorage();
 document.addEventListener('DOMContentLoaded', () => {
   applyThemeFromStorage();
   updateLogos();
-  storeLang(LANG_PT_BR);
-  applyLanguage(LANG_PT_BR);
+
+  const themeBtn = ensureThemeButton();
+  updateThemeIcon();
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      document.body.classList.toggle('dark', isDark);
+      storeTheme(isDark ? 'dark' : 'light');
+      updateThemeIcon();
+      updateLogos();
+    });
+  }
+
+  let currentLang = getStoredLang();
+  const languageBtn = ensureLanguageButton(themeBtn);
+  applyLanguage(currentLang);
+  updateLanguageButtonUI(languageBtn, currentLang);
+
+  if (languageBtn) {
+    languageBtn.addEventListener('click', () => {
+      currentLang = currentLang === LANG_EN_US ? LANG_PT_BR : LANG_EN_US;
+      storeLang(currentLang);
+      applyLanguage(currentLang);
+      updateLanguageButtonUI(languageBtn, currentLang);
+    });
+  }
 });
