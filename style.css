@@ -505,8 +505,7 @@ html.dark :is(i, svg, span).text-futura-secondary {
     padding-bottom: var(--hero-bottom-space);
 }
 
-.hero-dark-video,
-.hero-dark-video-shade {
+.hero-dark-video {
     display: none;
 }
 
@@ -517,13 +516,6 @@ html.dark :is(i, svg, span).text-futura-secondary {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    pointer-events: none;
-}
-
-.hero-dark-video-shade {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(5, 5, 21, 0.92), rgba(5, 5, 21, 0.72) 48%, rgba(5, 5, 21, 0.42));
     pointer-events: none;
 }
 
@@ -541,8 +533,7 @@ html.dark :is(i, svg, span).text-futura-secondary {
 }
 
 @media (min-width: 1024px) {
-    html.dark .hero-section .hero-dark-video-desktop,
-    html.dark .hero-section .hero-dark-video-shade {
+    html.dark .hero-section .hero-dark-video-desktop {
         display: block;
     }
 
@@ -555,6 +546,132 @@ html.dark :is(i, svg, span).text-futura-secondary {
         min-height: calc(100svh - var(--hero-header-offset));
         display: flex;
         align-items: center;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1799.98px) {
+    :root {
+        --hero-header-offset: 92px;
+        --hero-bottom-space: 56px;
+    }
+
+    header .container {
+        max-width: 72rem;
+        padding-top: 1rem;
+    }
+
+    header .container > div {
+        height: 4.25rem;
+        padding-inline: 1.35rem;
+        border-radius: 1.25rem;
+    }
+
+    header .theme-logo {
+        height: 1.25rem;
+    }
+
+    header nav ul {
+        gap: 1rem !important;
+    }
+
+    header nav a {
+        font-size: 0.56rem !important;
+        letter-spacing: 0 !important;
+    }
+
+    header .btn-sheen {
+        font-size: 0.56rem !important;
+        padding: 0.68rem 1.3rem !important;
+        letter-spacing: 0 !important;
+    }
+
+    #hero .hero-content-wrap {
+        max-width: 72rem;
+        padding-inline: 1.25rem;
+    }
+
+    #hero h1 {
+        font-size: 3.15rem !important;
+        line-height: 1.08 !important;
+        letter-spacing: 0 !important;
+        margin-bottom: 1.45rem !important;
+    }
+
+    #hero p {
+        max-width: 31rem !important;
+        font-size: 1rem !important;
+        line-height: 1.62 !important;
+        margin-bottom: 2rem !important;
+    }
+
+    #hero .btn-sheen,
+    #hero a[href="#metodo"] {
+        font-size: 0.68rem !important;
+        padding: 0.9rem 1.9rem !important;
+        letter-spacing: 0 !important;
+    }
+
+    #hero img[src="img/hero.webp"] {
+        max-width: 25rem;
+    }
+
+    .marquee-content-horizontal {
+        font-size: 0.78rem;
+        letter-spacing: 0;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+    :root {
+        --hero-header-offset: 84px;
+        --hero-bottom-space: 48px;
+    }
+
+    header .container {
+        max-width: 66rem;
+    }
+
+    header .container > div {
+        height: 3.95rem;
+        padding-inline: 1.1rem;
+    }
+
+    header nav ul {
+        gap: 0.72rem !important;
+    }
+
+    header nav a,
+    header .btn-sheen {
+        font-size: 0.52rem !important;
+    }
+
+    header .btn-sheen {
+        padding: 0.62rem 1.05rem !important;
+    }
+
+    #hero .hero-content-wrap {
+        max-width: 66rem;
+    }
+
+    #hero h1 {
+        font-size: 2.72rem !important;
+        line-height: 1.07 !important;
+    }
+
+    #hero p {
+        max-width: 28rem !important;
+        font-size: 0.93rem !important;
+        line-height: 1.58 !important;
+    }
+
+    #hero .btn-sheen,
+    #hero a[href="#metodo"] {
+        font-size: 0.62rem !important;
+        padding: 0.78rem 1.45rem !important;
+    }
+
+    #hero img[src="img/hero.webp"] {
+        max-width: 21.5rem;
     }
 }
 
