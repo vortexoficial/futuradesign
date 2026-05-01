@@ -4,6 +4,15 @@
   // Desativa tudo em dispositivos touch/mobile
   if (window.matchMedia('(hover: none)').matches) return;
 
+  // Light mode: gradiente CSS que segue o mouse
+  var blobLight = document.getElementById('blob-light');
+  if (blobLight) {
+    document.addEventListener('pointermove', function (e) {
+      blobLight.style.setProperty('--blob-x', e.clientX + 'px');
+      blobLight.style.setProperty('--blob-y', e.clientY + 'px');
+    });
+  }
+
   if (typeof THREE === 'undefined') return;
 
   var container, camera, scene, renderer, uniforms;

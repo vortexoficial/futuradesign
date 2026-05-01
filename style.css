@@ -14,7 +14,27 @@ html.dark #blob-bg {
 }
 
 html:not(.dark) #blob-bg {
-    opacity: 0.35;
+    display: none;
+}
+
+/* Blob light mode — CSS gradient, fundo 100% transparente */
+#blob-light {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    pointer-events: none;
+    display: none;
+    background: radial-gradient(
+        ellipse 520px 420px at var(--blob-x, -600px) var(--blob-y, -600px),
+        rgba(211, 0, 197, 0.40) 0%,
+        rgba(36, 0, 144, 0.22) 45%,
+        transparent 70%
+    );
+    filter: blur(48px);
+}
+
+html:not(.dark) #blob-light {
+    display: block;
 }
 
 /* 1. Fontes */
