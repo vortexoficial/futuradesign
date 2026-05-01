@@ -4,16 +4,6 @@
   // Desativa tudo em dispositivos touch/mobile
   if (window.matchMedia('(hover: none)').matches) return;
 
-  // Light mode: gradiente CSS que segue o mouse
-  var blobLight = document.getElementById('blob-light');
-  if (blobLight) {
-    document.addEventListener('pointermove', function (e) {
-      blobLight.style.setProperty('--blob-x', e.clientX + 'px');
-      blobLight.style.setProperty('--blob-y', e.clientY + 'px');
-    });
-  }
-
-  // Dark mode: WebGL blob
   if (typeof THREE === 'undefined') return;
 
   var container, camera, scene, renderer, uniforms;
@@ -114,6 +104,9 @@
   }
 
   function render(delta) {
+    var isDark = document.documentElement.classList.contains('dark');
+    renderer.setClearColor(isDark ? 0x000000 : 0xffffff);
+
     uniforms.u_mouse.value.x += (newmouse.x - uniforms.u_mouse.value.x) * divisor;
     uniforms.u_mouse.value.y += (newmouse.y - uniforms.u_mouse.value.y) * divisor;
     uniforms.u_time.value = delta * 0.0005;
