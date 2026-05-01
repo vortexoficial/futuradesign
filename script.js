@@ -22,6 +22,8 @@ const PT_TO_EN = {
     'Home': 'Home',
     'Equipe': 'Team',
     'Serviços': 'Services',
+    'Criativos': 'Creatives',
+    'Redes Sociais': 'Social Media',
     'Como Funciona': 'How It Works',
     'Como funciona': 'How it works',
     'Portfólio': 'Portfolio',
