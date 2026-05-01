@@ -61,8 +61,8 @@
 
     document.addEventListener('pointermove', function (e) {
       var ratio = window.innerHeight / window.innerWidth;
-      newmouse.x = (e.pageX - window.innerWidth / 2) / window.innerWidth / ratio;
-      newmouse.y = (e.pageY - window.innerHeight / 2) / window.innerHeight * -1;
+      newmouse.x = (e.clientX - window.innerWidth / 2) / window.innerWidth / ratio;
+      newmouse.y = (e.clientY - window.innerHeight / 2) / window.innerHeight * -1;
     });
   }
 
