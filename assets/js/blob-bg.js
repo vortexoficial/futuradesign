@@ -1,17 +1,8 @@
 (function () {
   'use strict';
 
-  // Desativa tudo em dispositivos touch/mobile
+  // Desativa em dispositivos touch/mobile
   if (window.matchMedia('(hover: none)').matches) return;
-
-  // Light mode: gradiente CSS que segue o mouse
-  var blobLight = document.getElementById('blob-light');
-  if (blobLight) {
-    document.addEventListener('pointermove', function (e) {
-      blobLight.style.setProperty('--blob-x', e.clientX + 'px');
-      blobLight.style.setProperty('--blob-y', e.clientY + 'px');
-    });
-  }
 
   if (typeof THREE === 'undefined') return;
 
@@ -64,7 +55,8 @@
 
     scene.add(new THREE.Mesh(geometry, material));
 
-    renderer = new THREE.WebGLRenderer({ antialias: false });
+    // alpha: true torna o fundo do canvas transparente
+    renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 
@@ -114,7 +106,9 @@
 
   function render(delta) {
     var isDark = document.documentElement.classList.contains('dark');
-    renderer.setClearColor(isDark ? 0x000000 : 0xffffff);
+    // Dark: fundo preto opaco (screen blend remove o preto)
+    // Light: fundo transparente (alpha do shader remove o preto)
+    renderer.setClearColor(0x000000, isDark ? 1 : 0);
 
     uniforms.u_mouse.value.x += (newmouse.x - uniforms.u_mouse.value.x) * divisor;
     uniforms.u_mouse.value.y += (newmouse.y - uniforms.u_mouse.value.y) * divisor;

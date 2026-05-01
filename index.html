@@ -93,7 +93,6 @@
 <body class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
 
     <div id="blob-bg"></div>
-    <div id="blob-light"></div>
 
     <div id="loader" class="fixed inset-0 bg-futura-light dark:bg-futura-dark flex flex-col items-center justify-center z-[9999]">
         <div class="flex flex-col items-center">
@@ -1369,6 +1368,13 @@
             }
 
             gl_FragColor = vec4(fragcolour, 1.0) + tex;
+
+            // No passo final: alpha baseado no brilho
+            // Pixels escuros/pretos ficam transparentes — fundo da página aparece
+            if (!u_renderpass) {
+                float brightness = max(gl_FragColor.r, max(gl_FragColor.g, gl_FragColor.b));
+                gl_FragColor.a = smoothstep(0.0, 0.2, brightness);
+            }
         }
     </script>
     <script src="assets/js/blob-bg.js"></script>
