@@ -505,25 +505,6 @@ html.dark :is(i, svg, span).text-futura-secondary {
     padding-bottom: var(--hero-bottom-space);
 }
 
-.hero-dark-video {
-    display: none;
-}
-
-.hero-dark-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    pointer-events: none;
-}
-
-@media (max-width: 1023.98px) {
-    html.dark .hero-section .hero-dark-video-mobile {
-        display: block;
-    }
-}
 
 .hero-content-wrap {
     min-height: calc(100vh - var(--hero-header-offset) - var(--hero-bottom-space));
@@ -533,10 +514,6 @@ html.dark :is(i, svg, span).text-futura-secondary {
 }
 
 @media (min-width: 1024px) {
-    html.dark .hero-section .hero-dark-video-desktop {
-        display: block;
-    }
-
     .social-hero {
         padding-top: var(--hero-header-offset);
     }
