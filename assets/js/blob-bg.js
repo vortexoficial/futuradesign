@@ -1,6 +1,19 @@
 (function () {
   'use strict';
 
+  // Desativa tudo em dispositivos touch/mobile
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  // Light mode: gradiente CSS que segue o mouse
+  var blobLight = document.getElementById('blob-light');
+  if (blobLight) {
+    document.addEventListener('pointermove', function (e) {
+      blobLight.style.setProperty('--blob-x', e.clientX + 'px');
+      blobLight.style.setProperty('--blob-y', e.clientY + 'px');
+    });
+  }
+
+  // Dark mode: WebGL blob
   if (typeof THREE === 'undefined') return;
 
   var container, camera, scene, renderer, uniforms;
@@ -44,9 +57,9 @@
     };
 
     var material = new THREE.ShaderMaterial({
-      uniforms:         uniforms,
-      vertexShader:     document.getElementById('blobVertexShader').textContent,
-      fragmentShader:   document.getElementById('blobFragmentShader').textContent
+      uniforms:       uniforms,
+      vertexShader:   document.getElementById('blobVertexShader').textContent,
+      fragmentShader: document.getElementById('blobFragmentShader').textContent
     });
     material.extensions.derivatives = true;
 
@@ -84,7 +97,7 @@
     uniforms.u_resolution.value.x = window.innerWidth * 0.2;
     uniforms.u_resolution.value.y = window.innerHeight * 0.2;
 
-    uniforms.u_buffer.value    = rtTexture2.texture;
+    uniforms.u_buffer.value     = rtTexture2.texture;
     uniforms.u_renderpass.value = true;
 
     renderer.setRenderTarget(rtTexture);

@@ -1,6 +1,6 @@
 /* style.css */
 
-/* Blob background */
+/* Blob background — dark mode (WebGL) */
 #blob-bg {
     position: fixed;
     inset: 0;
@@ -8,6 +8,30 @@
     pointer-events: none;
     mix-blend-mode: screen;
     opacity: 0.55;
+    display: none;
+}
+
+html.dark #blob-bg {
+    display: block;
+}
+
+/* Blob background — light mode (CSS gradient) */
+#blob-light {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    pointer-events: none;
+    display: none;
+    background: radial-gradient(
+        circle 580px at var(--blob-x, -600px) var(--blob-y, -600px),
+        rgba(211, 0, 197, 0.13),
+        rgba(36, 0, 144, 0.08) 45%,
+        transparent 70%
+    );
+}
+
+html:not(.dark) #blob-light {
+    display: block;
 }
 
 /* 1. Fontes */
