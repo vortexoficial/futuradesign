@@ -5,12 +5,16 @@
   --futura-audio-purple-deep: #4c008f;
   --futura-audio-surface: rgba(255, 255, 255, 0.9);
   --futura-audio-border: rgba(255, 255, 255, 0.94);
+  --futura-audio-toast-bg: #263a54;
+  --futura-audio-toast-border: rgba(255, 255, 255, 0.1);
   --futura-audio-shadow: 0 14px 28px rgba(76, 0, 143, 0.22), 0 0 24px rgba(141, 0, 215, 0.26);
 }
 
 html.dark {
   --futura-audio-surface: rgba(255, 255, 255, 0.9);
   --futura-audio-border: rgba(255, 255, 255, 0.94);
+  --futura-audio-toast-bg: #263a54;
+  --futura-audio-toast-border: rgba(255, 255, 255, 0.1);
   --futura-audio-shadow: 0 14px 28px rgba(76, 0, 143, 0.22), 0 0 24px rgba(141, 0, 215, 0.26);
 }
 
@@ -136,11 +140,9 @@ html.dark .futura-audio-button {
   max-width: min(272px, calc(100vw - 32px));
   padding: 11px 14px;
   color: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(0, 229, 255, 0.24);
+  border: 1px solid var(--futura-audio-toast-border);
   border-radius: 16px;
-  background:
-    linear-gradient(135deg, rgba(211, 0, 197, 0.2), rgba(0, 229, 255, 0.1)),
-    rgba(5, 5, 21, 0.82);
+  background: var(--futura-audio-toast-bg);
   box-shadow: 0 16px 42px rgba(0, 0, 0, 0.28);
   -webkit-backdrop-filter: blur(16px) saturate(130%);
   backdrop-filter: blur(16px) saturate(130%);
@@ -159,9 +161,8 @@ html.dark .futura-audio-button {
   bottom: -6px;
   width: 12px;
   height: 12px;
-  border-right: 1px solid rgba(0, 229, 255, 0.18);
-  border-bottom: 1px solid rgba(0, 229, 255, 0.18);
-  background: rgba(14, 11, 31, 0.92);
+  border: 0;
+  background: var(--futura-audio-toast-bg);
   transform: rotate(45deg);
 }
 

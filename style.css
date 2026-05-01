@@ -151,6 +151,63 @@ html.dark header.is-scrolled .container > div {
     transform: translateY(-1px);
 }
 
+/* Seção de tipos de criativo */
+.creative-type-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 20px 60px -50px rgba(0, 0, 0, 0.75);
+    transition:
+        transform var(--motion-240) var(--ease-out),
+        border-color var(--motion-240) var(--ease-out),
+        box-shadow var(--motion-240) var(--ease-out);
+}
+
+.creative-type-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--futura-secondary), var(--futura-primary), var(--futura-accent));
+    opacity: 0;
+    transition: opacity var(--motion-240) var(--ease-out);
+    pointer-events: none;
+}
+
+.creative-type-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(145deg, rgba(211, 0, 197, 0.045), transparent 48%, rgba(0, 229, 255, 0.04));
+    opacity: 0.9;
+}
+
+.creative-type-card:hover,
+.creative-type-card:focus-within {
+    transform: translateY(-6px);
+    border-color: rgba(211, 0, 197, 0.38);
+    box-shadow: 0 28px 70px -48px rgba(0, 0, 0, 0.82);
+}
+
+.creative-type-card:hover::before,
+.creative-type-card:focus-within::before {
+    opacity: 1;
+}
+
+.creative-type-card-accent:hover,
+.creative-type-card-accent:focus-within {
+    border-color: rgba(0, 229, 255, 0.56);
+}
+
+.creative-type-cta {
+    line-height: 1.2;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
 /* Sessão Planos (redes-sociais) */
 .plans-section .plans-grid {
     perspective: 1000px;

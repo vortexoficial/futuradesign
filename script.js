@@ -519,6 +519,9 @@ const PT_TO_EN = {
     'VER EXEMPLOS DE CRIATIVOS': 'VIEW CREATIVE EXAMPLES',
     'Calcular orçamento': 'Calculate budget',
     'Calcular meu orçamento': 'Calculate my budget',
+    'Ver pacotes': 'View packages',
+    'VER PACOTES': 'VIEW PACKAGES',
+    'Ver opções': 'View options',
 
     'Sua empresa não precisa de apenas posts bonitos.': 'Your business does not just need beautiful posts.',
     'Precisa de criativos que': 'It needs creatives that',
@@ -549,6 +552,36 @@ const PT_TO_EN = {
     'Criativos entregues nos formatos feed e story': 'Creatives delivered in feed and story formats',
     'Formato duplo incluso': 'Dual format included',
     'Entrega pronta para publicar': 'Delivery ready to publish',
+    'Formatos de criativo': 'Creative formats',
+    'Escolha o formato certo para': 'Choose the right format for',
+    'cada objetivo': 'each goal',
+    'Comece pelo que sua marca precisa comunicar: presença constante, explicação de oferta ou vídeo pronto para prender atenção.':
+        'Start with what your brand needs to communicate: consistent presence, offer explanation, or a video ready to capture attention.',
+    'Briefing incluso': 'Briefing included',
+    'Ajustes organizados': 'Organized revisions',
+    'Mais pedido': 'Most requested',
+    'R$ 115 a R$ 80 por criativo': 'R$ 115 to R$ 80 per creative',
+    'O valor reduz conforme a quantidade do pacote.': 'The price decreases based on package quantity.',
+    'Ideal para ofertas, avisos e campanhas rápidas': 'Ideal for offers, announcements and fast campaigns',
+    'Entrega em formato feed e story': 'Delivered in feed and story formats',
+    'Calcular pacote': 'Calculate package',
+    'Conteúdo sequencial': 'Sequential content',
+    'Até 5 páginas': 'Up to 5 slides',
+    'Formato ideal para educar, explicar uma oferta, responder dúvidas e transformar uma ideia em sequência clara.':
+        'Ideal format to educate, explain an offer, answer questions and turn an idea into a clear sequence.',
+    'R$ 230 por carrossel': 'R$ 230 per carousel',
+    'Perfeito para conteúdos que precisam de mais contexto.': 'Perfect for content that needs more context.',
+    'Bom para conteúdos educativos e comparativos': 'Good for educational and comparative content',
+    'Estrutura pensada para leitura e salvamento': 'Structure designed for reading and saving',
+    'Calcular carrossel': 'Calculate carousel',
+    'Orçamento por complexidade': 'Quoted by complexity',
+    'Reels, cortes, vídeos curtos, legendas e montagem para transformar material bruto em conteúdo mais dinâmico.':
+        'Reels, cuts, short videos, captions and editing to turn raw material into more dynamic content.',
+    'Valor sob consulta': 'Price upon request',
+    'Depende da duração, volume de materiais e nível de edição.': 'Depends on duration, amount of material and editing level.',
+    'Legendas, cortes e ritmo para redes sociais': 'Captions, cuts and pacing for social media',
+    'Análise do material antes do orçamento final': 'Material review before the final quote',
+    'Consultar no WhatsApp': 'Consult on WhatsApp',
 
     'Escolha o tipo de criativo que': 'Choose the type of creative that',
     'sua empresa precisa': 'your business needs',
@@ -595,6 +628,11 @@ const PT_TO_EN = {
     'Ver trabalhos no Instagram': 'See work on Instagram',
 
     'Pacotes sugeridos': 'Suggested packages',
+    'Comece por um pacote pronto para fechar mais rápido. Se sua demanda for diferente, a calculadora personalizada vem logo abaixo.':
+        'Start with a ready-made package to move faster. If your demand is different, the custom calculator comes right below.',
+    'Montar combinação personalizada': 'Build a custom combination',
+    'Use a calculadora se quiser misturar quantidades, carrosséis ou vídeo sob consulta.':
+        'Use the calculator if you want to mix quantities, carousels, or video quoted separately.',
     'Ou use a calculadora abaixo para montar exatamente o que você precisa.':
         'Or use the calculator below to build exactly what you need.',
     'Pacote Starter': 'Starter Package',
@@ -632,12 +670,17 @@ const PT_TO_EN = {
         'Hello, I came from Futura Design\'s website and I am interested in the Performance Package of creatives (15 pieces for R$ 900). Can you send me the details?',
 
     'Orçamento instantâneo': 'Instant estimate',
+    'Orçamento personalizado': 'Custom estimate',
     'Monte seu orçamento': 'Build your budget',
+    'Monte uma combinação': 'Build a combination',
+    'sob medida': 'custom made',
     'agora': 'now',
     'Escolha a quantidade de criativos que sua empresa precisa e veja uma estimativa automática. Depois, envie direto pelo WhatsApp.':
         'Choose how many creatives your business needs and get an automatic estimate. Then send it directly via WhatsApp.',
     'Escolha a quantidade de peças que precisa e veja uma estimativa automática do investimento. Para vídeos, o valor é sob consulta.':
         'Choose the number of pieces you need and get an automatic investment estimate. Videos are quoted separately.',
+    'Se os pacotes sugeridos não encaixarem perfeitamente, escolha as quantidades e veja uma estimativa automática. Para vídeos, o valor é sob consulta.':
+        'If the suggested packages do not fit perfectly, choose the quantities and get an automatic estimate. Videos are quoted separately.',
     'Selecione as quantidades': 'Select quantities',
     'Criativos estáticos': 'Static creatives',
     'Criativos Feed + Story': 'Feed + Story creatives',
@@ -674,18 +717,34 @@ const PT_TO_EN = {
     'Como funciona na prática': 'How it works in practice',
     'Processo simples, comunicação direta e entrega pronta para publicar.':
         'Simple process, direct communication and delivery ready to publish.',
+    'Depois que você escolhe um pacote ou monta uma combinação personalizada, seguimos um processo simples até a entrega final.':
+        'After you choose a package or build a custom combination, we follow a simple process through final delivery.',
     'Você escolhe': 'You choose',
+    'Você escolhe o caminho': 'You choose the path',
     'Escolha a quantidade de criativos que precisa na calculadora acima.':
         'Choose how many creatives you need using the calculator above.',
+    'Escolha um pacote sugerido ou monte uma combinação personalizada na calculadora.':
+        'Choose a suggested package or build a custom combination in the calculator.',
     'Estimativa automática': 'Automatic estimate',
     'A calculadora gera uma estimativa automática do valor.': 'The calculator generates an automatic value estimate.',
     'Envia pelo WhatsApp': 'Send via WhatsApp',
     'Você envia o pedido com um clique direto para o WhatsApp.': 'You send the request with one click directly to WhatsApp.',
+    'O botão já leva o pacote ou resumo do orçamento para nossa equipe.':
+        'The button sends the package or estimate summary to our team.',
     'Alinhamos os detalhes': 'We align the details',
+    'Alinhamos o briefing': 'We align the briefing',
     'Nossa equipe alinha briefing, detalhes e prazo com você.': 'Our team aligns briefing, details and deadline with you.',
+    'Ajustamos objetivo, referências, prazo, tom de comunicação e materiais necessários.':
+        'We align the goal, references, deadline, communication tone, and required materials.',
+    'Criamos e ajustamos': 'We create and revise',
+    'Desenvolvemos as peças e aplicamos as rodadas de ajuste previstas no pacote.':
+        'We develop the pieces and apply the revision rounds included in the package.',
     'Recebe os criativos': 'Receive the creatives',
+    'Recebe tudo pronto': 'Receive everything ready',
     'Você recebe os criativos prontos, organizados e prontos para publicar.':
         'You receive the creatives ready, organized and ready to publish.',
+    'Você recebe os arquivos organizados, revisados e prontos para publicar ou anunciar.':
+        'You receive the organized, reviewed files ready to publish or advertise.',
 
     'Informações importantes': 'Important information',
     'Cada criativo inclui 1 peça final em um formato.': 'Each creative includes 1 final piece in one format.',

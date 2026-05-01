@@ -118,8 +118,8 @@
                         <li><a href="../#faq" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Dúvidas</a></li>
                         <li><a href="../#contato" class="text-[10px] font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-300 hover:text-futura-primary transition-colors font-display">Contato</a></li>
                         <li>
-                            <a href="#calculadora" class="hidden lg:inline-flex btn-sheen text-white font-display text-[10px] font-bold py-3 px-6 rounded-none skew-x-[-10deg] shadow-neon items-center gap-2 tracking-wider border border-white/10 transition-all">
-                                <span class="skew-x-[10deg]">Calcular orçamento</span>
+                            <a href="#pacotes" class="hidden lg:inline-flex btn-sheen text-white font-display text-[10px] font-bold py-3 px-6 rounded-none skew-x-[-10deg] shadow-neon items-center gap-2 tracking-wider border border-white/10 transition-all">
+                                <span class="skew-x-[10deg]">Ver pacotes</span>
                             </a>
                         </li>
                     </ul>
@@ -145,8 +145,8 @@
             <a href="../#faq" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Dúvidas</a>
             <a href="../#contato" class="text-xl font-display font-bold hover:text-futura-primary uppercase">Contato</a>
         </nav>
-        <a href="#calculadora" class="btn-sheen w-full text-white py-5 rounded-none font-display font-bold text-center text-sm uppercase tracking-widest shadow-neon mt-auto">
-            Calcular orçamento
+        <a href="#pacotes" class="btn-sheen w-full text-white py-5 rounded-none font-display font-bold text-center text-sm uppercase tracking-widest shadow-neon mt-auto">
+            Ver pacotes
         </a>
     </div>
 
@@ -168,9 +168,9 @@
                         Posts, stories, carrosséis e peças para campanhas com visual estratégico, moderno e pensado para gerar mais <strong class="text-gray-900 dark:text-white font-medium">atenção, confiança e conversão</strong>.
                     </p>
                     <div class="fade-in-section flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
-                        <a href="#calculadora"
+                        <a href="#pacotes"
                             class="btn-sheen w-full sm:w-auto text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] shadow-neon flex items-center justify-center gap-3 tracking-widest border border-white/15">
-                            <span class="skew-x-[10deg]">CALCULAR MEU ORÇAMENTO</span> <i class="fas fa-calculator skew-x-[10deg]" aria-hidden="true"></i>
+                            <span class="skew-x-[10deg]">VER PACOTES</span> <i class="fas fa-box-open skew-x-[10deg]" aria-hidden="true"></i>
                         </a>
                         <a href="#portfolio"
                             class="w-full sm:w-auto bg-white/80 dark:bg-white/10 text-gray-900 dark:text-white font-display text-xs font-bold py-4 px-10 rounded-none skew-x-[-10deg] flex items-center justify-center gap-3 tracking-widest border border-gray-200 dark:border-white/15 hover:bg-white/90 dark:hover:bg-white/15 transition-colors">
@@ -298,49 +298,136 @@
         </section>
 
         <!-- ===================== CREATIVE TYPES ===================== -->
-        <section id="tipos" class="py-20 md:py-24 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative">
-            <div class="container mx-auto max-w-7xl px-4">
-                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
-                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
-                        Escolha o tipo de criativo que <span class="text-gradient-futura">sua empresa precisa</span>
-                    </h2>
-                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Criativos profissionais organizados em pacotes para diferentes níveis de estratégia, velocidade e suporte.</p>
-                    <p class="mt-3 font-display text-xs uppercase tracking-widest text-futura-primary">Pacotes a partir de R$ 575,00 com briefing, ajustes e entrega organizada.</p>
+        <section id="tipos" class="py-16 sm:py-20 md:py-24 bg-white dark:bg-black border-b border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="absolute inset-0 bg-pattern-dots opacity-[0.05] dark:opacity-20 pointer-events-none"></div>
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-10 md:mb-14">
+                    <div class="fade-in-section lg:col-span-7 text-center lg:text-left">
+                        <p class="font-display text-[10px] uppercase tracking-[0.34em] text-futura-primary mb-4">Formatos de criativo</p>
+                        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal leading-tight">
+                            Escolha o formato certo para <span class="text-gradient-futura">cada objetivo</span>
+                        </h2>
+                        <p class="mt-5 text-gray-600 dark:text-gray-300 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Comece pelo que sua marca precisa comunicar: presença constante, explicação de oferta ou vídeo pronto para prender atenção.
+                        </p>
+                    </div>
+
+                    <div class="fade-in-section lg:col-span-5" data-reveal="from-right">
+                        <div class="flex flex-wrap justify-center lg:justify-end gap-2 sm:gap-3">
+                            <span class="inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 px-4 py-2 text-[10px] font-display uppercase tracking-widest text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-clipboard-check text-futura-primary" aria-hidden="true"></i>
+                                Briefing incluso
+                            </span>
+                            <span class="inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 px-4 py-2 text-[10px] font-display uppercase tracking-widest text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-wand-magic-sparkles text-futura-accent" aria-hidden="true"></i>
+                                Ajustes organizados
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger-parent>
-                    <div class="fade-in-section group premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-futura-primary/50 transition-all duration-300 flex flex-col">
-                        <div class="flex items-start justify-between mb-5">
-                            <div class="w-12 h-12 rounded-xl bg-futura-primary/10 flex items-center justify-center">
-                                <i class="fas fa-image text-futura-primary text-xl" aria-hidden="true"></i>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-6 items-stretch" data-stagger-parent>
+                    <article class="fade-in-section creative-type-card group min-h-[360px] p-6 sm:p-7 lg:p-8 bg-white dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 flex flex-col">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-futura-primary/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-image text-futura-primary text-xl" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <span class="font-display text-[10px] uppercase tracking-widest text-futura-primary">Mais pedido</span>
+                                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Feed + Story</p>
+                                </div>
                             </div>
-                            <span class="font-display text-sm font-bold text-futura-primary">Feed + Story</span>
+                            <span class="font-display text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500">01</span>
                         </div>
-                        <h3 class="font-display text-base uppercase tracking-widest text-gray-900 dark:text-white mb-3">Criativo Feed + Story</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed flex-1">Arte profissional para feed, anúncio ou post único, com versão em story inclusa para publicar nos dois formatos.</p>
-                        <a href="#calculadora" class="mt-6 text-[10px] font-display font-bold uppercase tracking-widest text-futura-primary hover:underline inline-flex items-center gap-2">Calcular <i class="fas fa-arrow-right text-[8px]"></i></a>
-                    </div>
-                    <div class="fade-in-section group premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-futura-primary/50 transition-all duration-300 flex flex-col">
-                        <div class="flex items-start justify-between mb-5">
-                            <div class="w-12 h-12 rounded-xl bg-futura-primary/10 flex items-center justify-center">
-                                <i class="fas fa-layer-group text-futura-primary text-xl" aria-hidden="true"></i>
+
+                        <h3 class="font-display text-xl text-gray-900 dark:text-white mb-3 leading-tight">Criativo Feed + Story</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                            Uma peça principal para feed, anúncio ou post, com adaptação em story para manter a campanha consistente nos dois formatos.
+                        </p>
+
+                        <div class="mt-6 pt-5 border-t border-gray-200 dark:border-white/10">
+                            <p class="font-display text-sm text-gray-900 dark:text-white">R$ 115 a R$ 80 por criativo</p>
+                            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 font-light">O valor reduz conforme a quantidade do pacote.</p>
+                        </div>
+
+                        <ul class="mt-5 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Ideal para ofertas, avisos e campanhas rápidas</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Entrega em formato feed e story</span></li>
+                        </ul>
+
+                        <a href="#pacotes" class="creative-type-cta mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 border border-futura-primary/30 bg-futura-primary/10 px-5 py-3 text-futura-primary dark:text-white font-display text-[10px] font-bold uppercase tracking-widest transition-colors hover:bg-futura-primary hover:text-white">
+                            Ver pacotes <i class="fas fa-arrow-right text-[9px]" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="fade-in-section creative-type-card group min-h-[360px] p-6 sm:p-7 lg:p-8 bg-white dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 flex flex-col">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-futura-primary/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-layer-group text-futura-primary text-xl" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <span class="font-display text-[10px] uppercase tracking-widest text-futura-primary">Conteúdo sequencial</span>
+                                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Até 5 páginas</p>
+                                </div>
                             </div>
-                            <span class="font-display text-sm font-bold text-futura-primary">Conteúdo sequencial</span>
+                            <span class="font-display text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500">02</span>
                         </div>
-                        <h3 class="font-display text-base uppercase tracking-widest text-gray-900 dark:text-white mb-3">Carrossel</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed flex-1">Carrossel com até 5 páginas, ideal para conteúdos educativos, ofertas e explicações.</p>
-                        <a href="#calculadora" class="mt-6 text-[10px] font-display font-bold uppercase tracking-widest text-futura-primary hover:underline inline-flex items-center gap-2">Calcular <i class="fas fa-arrow-right text-[8px]"></i></a>
-                    </div>
-                    <div class="fade-in-section group premium-card p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-futura-accent/50 transition-all duration-300 flex flex-col">
-                        <div class="flex items-start justify-between mb-5">
-                            <div class="w-12 h-12 rounded-xl bg-futura-accent/10 flex items-center justify-center">
-                                <i class="fas fa-film text-futura-accent text-xl" aria-hidden="true"></i>
+
+                        <h3 class="font-display text-xl text-gray-900 dark:text-white mb-3 leading-tight">Carrossel</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                            Formato ideal para educar, explicar uma oferta, responder dúvidas e transformar uma ideia em sequência clara.
+                        </p>
+
+                        <div class="mt-6 pt-5 border-t border-gray-200 dark:border-white/10">
+                            <p class="font-display text-sm text-gray-900 dark:text-white">R$ 230 por carrossel</p>
+                            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 font-light">Perfeito para conteúdos que precisam de mais contexto.</p>
+                        </div>
+
+                        <ul class="mt-5 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Bom para conteúdos educativos e comparativos</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Estrutura pensada para leitura e salvamento</span></li>
+                        </ul>
+
+                        <a href="#pacotes" class="creative-type-cta mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 border border-futura-primary/30 bg-futura-primary/10 px-5 py-3 text-futura-primary dark:text-white font-display text-[10px] font-bold uppercase tracking-widest transition-colors hover:bg-futura-primary hover:text-white">
+                            Ver opções <i class="fas fa-arrow-right text-[9px]" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="fade-in-section creative-type-card creative-type-card-accent group min-h-[360px] p-6 sm:p-7 lg:p-8 bg-white dark:bg-white/[0.04] border border-futura-accent/40 md:col-span-2 xl:col-span-1 flex flex-col">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-futura-accent/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-film text-futura-accent text-xl" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <span class="font-display text-[10px] uppercase tracking-widest text-futura-accent">Sob consulta</span>
+                                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Orçamento por complexidade</p>
+                                </div>
                             </div>
-                            <span class="font-display text-sm font-bold text-gray-400 dark:text-gray-500">Sob consulta</span>
+                            <span class="font-display text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500">03</span>
                         </div>
-                        <h3 class="font-display text-base uppercase tracking-widest text-gray-900 dark:text-white mb-3">Edição de vídeo</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed flex-1">Edição de reels, cortes, vídeos curtos, legendas e montagem. O valor permanece sob consulta, pois depende da duração e complexidade.</p>
-                        <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20Futura!%20Vim%20pela%20p%C3%A1gina%20de%20criativos%20e%20quero%20um%20or%C3%A7amento%20para%20edi%C3%A7%C3%A3o%20de%20v%C3%ADdeo.%20Posso%20enviar%20dura%C3%A7%C3%A3o%2C%20refer%C3%AAncias%20e%20materiais%20para%20an%C3%A1lise%3F" target="_blank" rel="noopener" class="mt-6 text-[10px] font-display font-bold uppercase tracking-widest text-futura-accent hover:underline inline-flex items-center gap-2">Consultar via WhatsApp <i class="fab fa-whatsapp text-sm"></i></a>
-                    </div>
+
+                        <h3 class="font-display text-xl text-gray-900 dark:text-white mb-3 leading-tight">Edição de vídeo</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+                            Reels, cortes, vídeos curtos, legendas e montagem para transformar material bruto em conteúdo mais dinâmico.
+                        </p>
+
+                        <div class="mt-6 pt-5 border-t border-gray-200 dark:border-white/10">
+                            <p class="font-display text-sm text-gray-900 dark:text-white">Valor sob consulta</p>
+                            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 font-light">Depende da duração, volume de materiais e nível de edição.</p>
+                        </div>
+
+                        <ul class="mt-5 space-y-3 text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Legendas, cortes e ritmo para redes sociais</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-futura-accent mt-1" aria-hidden="true"></i><span>Análise do material antes do orçamento final</span></li>
+                        </ul>
+
+                        <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20Futura!%20Vim%20pela%20p%C3%A1gina%20de%20criativos%20e%20quero%20um%20or%C3%A7amento%20para%20edi%C3%A7%C3%A3o%20de%20v%C3%ADdeo.%20Posso%20enviar%20dura%C3%A7%C3%A3o%2C%20refer%C3%AAncias%20e%20materiais%20para%20an%C3%A1lise%3F" target="_blank" rel="noopener" class="creative-type-cta mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 border border-futura-accent/40 bg-futura-accent/10 px-5 py-3 text-futura-accent dark:text-white font-display text-[10px] font-bold uppercase tracking-widest transition-colors hover:bg-futura-accent hover:text-black">
+                            Consultar no WhatsApp <i class="fab fa-whatsapp text-sm" aria-hidden="true"></i>
+                        </a>
+                    </article>
                 </div>
             </div>
         </section>
@@ -458,6 +545,94 @@
             </div>
         </section>
 
+        <!-- ===================== PACKAGES ===================== -->
+        <section id="pacotes" class="py-20 md:py-24 bg-white dark:bg-black border-t border-gray-100 dark:border-white/5 relative">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-futura-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
+                        Pacotes <span class="text-gradient-futura">sugeridos</span>
+                    </h2>
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Comece por um pacote pronto para fechar mais rápido. Se sua demanda for diferente, a calculadora personalizada vem logo abaixo.</p>
+                </div>
+                <div class="plans-section">
+                    <div class="plans-grid grid grid-cols-1 md:grid-cols-3 gap-6" data-stagger-parent>
+                        <!-- Starter -->
+                        <div class="fade-in-section plan-card p-8 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col">
+                            <p class="font-display text-[10px] uppercase tracking-[0.4em] text-gray-500 dark:text-gray-400 mb-3">Pacote Starter</p>
+                            <p class="plan-price font-display font-bold text-gray-900 dark:text-white">R$ 575,00<span class="text-base font-light text-gray-500 dark:text-gray-400 font-sans">/pacote</span></p>
+                            <p class="text-[10px] uppercase tracking-widest text-futura-accent font-display mt-2">5 criativos · R$ 115 por criativo</p>
+                            <p class="inline-flex w-fit items-center gap-2 rounded-full border border-futura-accent/25 bg-futura-accent/10 px-3 py-1 text-[10px] uppercase tracking-widest text-futura-accent font-display mt-3">Briefing estratégico</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light mt-4 mb-6 leading-relaxed">Base profissional para começar com peças organizadas e uma leitura rápida do público antes da criação.</p>
+                            <ul class="plan-features text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>5 criativos em formato feed e story</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>01 rodada de ajustes por peça</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Entrega organizada e pronta</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Análise rápida do público-alvo antes da criação</span></li>
+                            </ul>
+                            <div class="plan-cta mt-6">
+                                <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20Futura!%20Vim%20pela%20p%C3%A1gina%20de%20criativos%20e%20tenho%20interesse%20no%20Pacote%20Starter%3A%205%20criativos%20feed%20%2B%20story%20por%20R%24%20575%2C00.%20Pode%20me%20passar%20detalhes%20de%20briefing%2C%20prazo%20e%20ajustes%3F" target="_blank" rel="noopener"
+                                    class="btn-sheen w-full text-white font-display text-xs font-bold py-3 px-6 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-2 tracking-widest border border-white/10">
+                                    <span class="skew-x-[8deg]">ESCOLHER STARTER</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Profissional (featured) -->
+                        <div class="fade-in-section plan-card plan-card-featured p-8 pt-[3.7rem] bg-white dark:bg-white/5 border border-futura-primary/40 dark:border-futura-primary/30 flex flex-col relative">
+                            <span class="absolute top-4 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap font-display text-[9px] uppercase tracking-widest bg-futura-primary text-white px-4 py-1.5 leading-none">Recomendado</span>
+                            <p class="font-display text-[10px] uppercase tracking-[0.4em] text-futura-primary mb-3">Pacote Profissional</p>
+                            <p class="plan-price font-display font-bold text-gray-900 dark:text-white">R$ 900,00<span class="text-base font-light text-gray-500 dark:text-gray-400 font-sans">/pacote</span></p>
+                            <p class="text-[10px] uppercase tracking-widest text-futura-accent font-display mt-2">10 criativos · R$ 90 por criativo</p>
+                            <p class="inline-flex w-fit items-center gap-2 rounded-full border border-futura-primary/25 bg-futura-primary/10 px-3 py-1 text-[10px] uppercase tracking-widest text-futura-primary font-display mt-3">IA Vision</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light mt-4 mb-6 leading-relaxed">Ideal para marcas que precisam de criativos com legenda estratégica e imagens mais exclusivas.</p>
+                            <ul class="plan-features text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>10 criativos em formato feed e story</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Copywriting de legendas</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>02 rodadas de ajustes</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Modelos avançados para imagens exclusivas e realistas</span></li>
+                            </ul>
+                            <div class="plan-cta mt-6">
+                                <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20Futura!%20Vim%20pela%20p%C3%A1gina%20de%20criativos%20e%20tenho%20interesse%20no%20Pacote%20Profissional%3A%2010%20criativos%20feed%20%2B%20story%20por%20R%24%20900%2C00.%20Pode%20me%20passar%20detalhes%20de%20briefing%2C%20prazo%20e%20ajustes%3F" target="_blank" rel="noopener"
+                                    class="btn-sheen w-full text-white font-display text-xs font-bold py-3 px-6 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-2 tracking-widest border border-white/10">
+                                    <span class="skew-x-[8deg]">ESCOLHER PROFISSIONAL</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Performance -->
+                        <div class="fade-in-section plan-card p-8 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col">
+                            <p class="font-display text-[10px] uppercase tracking-[0.4em] text-gray-500 dark:text-gray-400 mb-3">Pacote Performance</p>
+                            <p class="plan-price font-display font-bold text-gray-900 dark:text-white">R$ 1.200,00<span class="text-base font-light text-gray-500 dark:text-gray-400 font-sans">/pacote</span></p>
+                            <p class="text-[10px] uppercase tracking-widest text-futura-accent font-display mt-2">15 criativos · R$ 80 por criativo</p>
+                            <p class="inline-flex w-fit items-center gap-2 rounded-full border border-futura-accent/25 bg-futura-accent/10 px-3 py-1 text-[10px] uppercase tracking-widest text-futura-accent font-display mt-3">Conversão e prioridade</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light mt-4 mb-6 leading-relaxed">Para campanhas que precisam de velocidade, vídeo com IA e peças orientadas para clique e funil.</p>
+                            <ul class="plan-features text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>15 criativos em formato feed e story</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>01 criativo em vídeo com IA</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Copywriting</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Prioridade na entrega</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>03 rodadas de ajustes</span></li>
+                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Consultoria de conversão focada em CTR e funil de vendas</span></li>
+                            </ul>
+                            <div class="plan-cta mt-6">
+                                <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20Futura!%20Vim%20pela%20p%C3%A1gina%20de%20criativos%20e%20tenho%20interesse%20no%20Pacote%20Performance%3A%2015%20criativos%20feed%20%2B%20story%20por%20R%24%201.200%2C00.%20Pode%20me%20passar%20detalhes%20de%20briefing%2C%20prazo%20e%20ajustes%3F" target="_blank" rel="noopener"
+                                    class="btn-sheen w-full text-white font-display text-xs font-bold py-3 px-6 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-2 tracking-widest border border-white/10">
+                                    <span class="skew-x-[8deg]">ESCOLHER PERFORMANCE</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in-section mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#calculadora"
+                        class="inline-flex w-full sm:w-auto items-center justify-center gap-3 border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5 px-8 py-4 text-gray-900 dark:text-white font-display text-[10px] font-bold uppercase tracking-widest transition-colors hover:border-futura-primary hover:text-futura-primary">
+                        Montar combinação personalizada <i class="fas fa-calculator text-futura-primary" aria-hidden="true"></i>
+                    </a>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-light text-center sm:text-left max-w-sm">Use a calculadora se quiser misturar quantidades, carrosséis ou vídeo sob consulta.</p>
+                </div>
+            </div>
+        </section>
+
+
         <!-- ===================== CALCULATOR ===================== -->
         <section id="calculadora" class="py-20 md:py-28 bg-gray-50 dark:bg-futura-dark relative overflow-hidden border-y border-gray-100 dark:border-white/5">
             <div class="absolute inset-0 bg-pattern-dots opacity-10 dark:opacity-20 pointer-events-none"></div>
@@ -466,11 +641,11 @@
 
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
-                    <p class="font-display text-[10px] uppercase tracking-[0.5em] text-futura-primary mb-4">Orçamento instantâneo</p>
+                    <p class="font-display text-[10px] uppercase tracking-[0.5em] text-futura-primary mb-4">Orçamento personalizado</p>
                     <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
-                        Monte seu orçamento <span class="text-gradient-futura">agora</span>
+                        Monte uma combinação <span class="text-gradient-futura">sob medida</span>
                     </h2>
-                    <p class="mt-6 text-gray-600 dark:text-gray-400 font-light">Escolha a quantidade de peças que precisa e veja uma estimativa automática do investimento. Para vídeos, o valor é sob consulta.</p>
+                    <p class="mt-6 text-gray-600 dark:text-gray-400 font-light">Se os pacotes sugeridos não encaixarem perfeitamente, escolha as quantidades e veja uma estimativa automática. Para vídeos, o valor é sob consulta.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start w-full max-w-full">
@@ -589,86 +764,6 @@
             </div>
         </section>
 
-        <!-- ===================== PACKAGES ===================== -->
-        <section id="pacotes" class="py-20 md:py-24 bg-white dark:bg-black border-t border-gray-100 dark:border-white/5 relative">
-            <div class="absolute top-0 right-0 w-80 h-80 bg-futura-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
-            <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-14 fade-in-section">
-                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
-                        Pacotes <span class="text-gradient-futura">sugeridos</span>
-                    </h2>
-                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Pacotes sugeridos para quem quer fechar mais rápido. Se preferir, monte uma combinação personalizada na calculadora.</p>
-                </div>
-                <div class="plans-section">
-                    <div class="plans-grid grid grid-cols-1 md:grid-cols-3 gap-6" data-stagger-parent>
-                        <!-- Starter -->
-                        <div class="fade-in-section plan-card p-8 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col">
-                            <p class="font-display text-[10px] uppercase tracking-[0.4em] text-gray-500 dark:text-gray-400 mb-3">Pacote Starter</p>
-                            <p class="plan-price font-display font-bold text-gray-900 dark:text-white">R$ 575,00<span class="text-base font-light text-gray-500 dark:text-gray-400 font-sans">/pacote</span></p>
-                            <p class="text-[10px] uppercase tracking-widest text-futura-accent font-display mt-2">5 criativos · R$ 115 por criativo</p>
-                            <p class="inline-flex w-fit items-center gap-2 rounded-full border border-futura-accent/25 bg-futura-accent/10 px-3 py-1 text-[10px] uppercase tracking-widest text-futura-accent font-display mt-3">Briefing estratégico</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light mt-4 mb-6 leading-relaxed">Base profissional para começar com peças organizadas e uma leitura rápida do público antes da criação.</p>
-                            <ul class="plan-features text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>5 criativos em formato feed e story</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>01 rodada de ajustes por peça</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Entrega organizada e pronta</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Análise rápida do público-alvo antes da criação</span></li>
-                            </ul>
-                            <div class="plan-cta mt-6">
-                                <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20Futura!%20Vim%20pela%20p%C3%A1gina%20de%20criativos%20e%20tenho%20interesse%20no%20Pacote%20Starter%3A%205%20criativos%20feed%20%2B%20story%20por%20R%24%20575%2C00.%20Pode%20me%20passar%20detalhes%20de%20briefing%2C%20prazo%20e%20ajustes%3F" target="_blank" rel="noopener"
-                                    class="btn-sheen w-full text-white font-display text-xs font-bold py-3 px-6 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-2 tracking-widest border border-white/10">
-                                    <span class="skew-x-[8deg]">ESCOLHER STARTER</span>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Profissional (featured) -->
-                        <div class="fade-in-section plan-card plan-card-featured p-8 pt-[3.7rem] bg-white dark:bg-white/5 border border-futura-primary/40 dark:border-futura-primary/30 flex flex-col relative">
-                            <span class="absolute top-4 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap font-display text-[9px] uppercase tracking-widest bg-futura-primary text-white px-4 py-1.5 leading-none">Recomendado</span>
-                            <p class="font-display text-[10px] uppercase tracking-[0.4em] text-futura-primary mb-3">Pacote Profissional</p>
-                            <p class="plan-price font-display font-bold text-gray-900 dark:text-white">R$ 900,00<span class="text-base font-light text-gray-500 dark:text-gray-400 font-sans">/pacote</span></p>
-                            <p class="text-[10px] uppercase tracking-widest text-futura-accent font-display mt-2">10 criativos · R$ 90 por criativo</p>
-                            <p class="inline-flex w-fit items-center gap-2 rounded-full border border-futura-primary/25 bg-futura-primary/10 px-3 py-1 text-[10px] uppercase tracking-widest text-futura-primary font-display mt-3">IA Vision</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light mt-4 mb-6 leading-relaxed">Ideal para marcas que precisam de criativos com legenda estratégica e imagens mais exclusivas.</p>
-                            <ul class="plan-features text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>10 criativos em formato feed e story</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Copywriting de legendas</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>02 rodadas de ajustes</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Modelos avançados para imagens exclusivas e realistas</span></li>
-                            </ul>
-                            <div class="plan-cta mt-6">
-                                <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20Futura!%20Vim%20pela%20p%C3%A1gina%20de%20criativos%20e%20tenho%20interesse%20no%20Pacote%20Profissional%3A%2010%20criativos%20feed%20%2B%20story%20por%20R%24%20900%2C00.%20Pode%20me%20passar%20detalhes%20de%20briefing%2C%20prazo%20e%20ajustes%3F" target="_blank" rel="noopener"
-                                    class="btn-sheen w-full text-white font-display text-xs font-bold py-3 px-6 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-2 tracking-widest border border-white/10">
-                                    <span class="skew-x-[8deg]">ESCOLHER PROFISSIONAL</span>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Performance -->
-                        <div class="fade-in-section plan-card p-8 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex flex-col">
-                            <p class="font-display text-[10px] uppercase tracking-[0.4em] text-gray-500 dark:text-gray-400 mb-3">Pacote Performance</p>
-                            <p class="plan-price font-display font-bold text-gray-900 dark:text-white">R$ 1.200,00<span class="text-base font-light text-gray-500 dark:text-gray-400 font-sans">/pacote</span></p>
-                            <p class="text-[10px] uppercase tracking-widest text-futura-accent font-display mt-2">15 criativos · R$ 80 por criativo</p>
-                            <p class="inline-flex w-fit items-center gap-2 rounded-full border border-futura-accent/25 bg-futura-accent/10 px-3 py-1 text-[10px] uppercase tracking-widest text-futura-accent font-display mt-3">Conversão e prioridade</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light mt-4 mb-6 leading-relaxed">Para campanhas que precisam de velocidade, vídeo com IA e peças orientadas para clique e funil.</p>
-                            <ul class="plan-features text-sm text-gray-600 dark:text-gray-300 font-light flex-1">
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>15 criativos em formato feed e story</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>01 criativo em vídeo com IA</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Copywriting</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Prioridade na entrega</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>03 rodadas de ajustes</span></li>
-                                <li><i class="fas fa-check text-futura-accent" aria-hidden="true"></i><span>Consultoria de conversão focada em CTR e funil de vendas</span></li>
-                            </ul>
-                            <div class="plan-cta mt-6">
-                                <a href="https://wa.me/5511964956563?text=Ol%C3%A1%2C%20Futura!%20Vim%20pela%20p%C3%A1gina%20de%20criativos%20e%20tenho%20interesse%20no%20Pacote%20Performance%3A%2015%20criativos%20feed%20%2B%20story%20por%20R%24%201.200%2C00.%20Pode%20me%20passar%20detalhes%20de%20briefing%2C%20prazo%20e%20ajustes%3F" target="_blank" rel="noopener"
-                                    class="btn-sheen w-full text-white font-display text-xs font-bold py-3 px-6 rounded-none skew-x-[-8deg] shadow-neon flex items-center justify-center gap-2 tracking-widest border border-white/10">
-                                    <span class="skew-x-[8deg]">ESCOLHER PERFORMANCE</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- ===================== HOW IT WORKS ===================== -->
         <section id="como-funciona" class="py-20 md:py-24 bg-white dark:bg-black border-t border-gray-100 dark:border-white/5">
             <div class="container mx-auto max-w-7xl px-4">
@@ -676,47 +771,47 @@
                     <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-normal sm:tracking-wider leading-tight">
                         Como funciona <span class="text-gradient-futura">na prática</span>
                     </h2>
-                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Processo simples, comunicação direta e entrega pronta para publicar.</p>
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 font-light">Depois que você escolhe um pacote ou monta uma combinação personalizada, seguimos um processo simples até a entrega final.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6" data-stagger-parent>
                     <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
                         <span class="absolute bottom-4 right-4 font-display text-8xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">1</span>
                         <div class="relative z-10">
                             <div class="w-10 h-10 rounded-xl bg-futura-primary/10 flex items-center justify-center mb-4">
-                                <i class="fas fa-sliders text-futura-primary" aria-hidden="true"></i>
+                                <i class="fas fa-box-open text-futura-primary" aria-hidden="true"></i>
                             </div>
-                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Você escolhe</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Escolha a quantidade de criativos que precisa na calculadora.</p>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Você escolhe o caminho</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Escolha um pacote sugerido ou monte uma combinação personalizada na calculadora.</p>
                         </div>
                     </div>
                     <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
                         <span class="absolute bottom-4 right-4 font-display text-8xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">2</span>
                         <div class="relative z-10">
                             <div class="w-10 h-10 rounded-xl bg-futura-accent/10 flex items-center justify-center mb-4">
-                                <i class="fas fa-calculator text-futura-accent" aria-hidden="true"></i>
+                                <i class="fab fa-whatsapp text-futura-accent" aria-hidden="true"></i>
                             </div>
-                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Estimativa automática</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">A calculadora gera uma estimativa automática do valor.</p>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Envia pelo WhatsApp</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">O botão já leva o pacote ou resumo do orçamento para nossa equipe.</p>
                         </div>
                     </div>
                     <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
                         <span class="absolute bottom-4 right-4 font-display text-8xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">3</span>
                         <div class="relative z-10">
                             <div class="w-10 h-10 rounded-xl bg-futura-primary/10 flex items-center justify-center mb-4">
-                                <i class="fab fa-whatsapp text-futura-primary" aria-hidden="true"></i>
+                                <i class="fas fa-comments text-futura-primary" aria-hidden="true"></i>
                             </div>
-                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Envia pelo WhatsApp</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Você envia o pedido com um clique direto para o WhatsApp.</p>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Alinhamos o briefing</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Ajustamos objetivo, referências, prazo, tom de comunicação e materiais necessários.</p>
                         </div>
                     </div>
                     <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
                         <span class="absolute bottom-4 right-4 font-display text-8xl text-gray-200 dark:text-white/10 select-none pointer-events-none" aria-hidden="true">4</span>
                         <div class="relative z-10">
                             <div class="w-10 h-10 rounded-xl bg-futura-accent/10 flex items-center justify-center mb-4">
-                                <i class="fas fa-comments text-futura-accent" aria-hidden="true"></i>
+                                <i class="fas fa-pen-ruler text-futura-accent" aria-hidden="true"></i>
                             </div>
-                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Alinhamos os detalhes</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Nossa equipe alinha briefing, detalhes e prazo com você.</p>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Criamos e ajustamos</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Desenvolvemos as peças e aplicamos as rodadas de ajuste previstas no pacote.</p>
                         </div>
                     </div>
                     <div class="fade-in-section premium-card relative overflow-hidden p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5">
@@ -725,8 +820,8 @@
                             <div class="w-10 h-10 rounded-xl bg-futura-primary/10 flex items-center justify-center mb-4">
                                 <i class="fas fa-circle-check text-futura-primary" aria-hidden="true"></i>
                             </div>
-                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Recebe os criativos</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Você recebe as peças organizadas, revisadas e prontas para publicação.</p>
+                            <h3 class="font-display text-sm uppercase tracking-widest text-gray-900 dark:text-white mb-3">Recebe tudo pronto</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-light leading-relaxed">Você recebe os arquivos organizados, revisados e prontos para publicar ou anunciar.</p>
                         </div>
                     </div>
                 </div>

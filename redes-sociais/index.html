@@ -44,11 +44,11 @@
     <meta name="twitter:image" content="https://agenciafuturadesign.com/img/preview-futuradesign-square.jpg">
     <meta name="twitter:image:alt" content="FUTURA DESIGN: Gerenciamento de Redes Sociais">
 
-    <link rel="icon" type="image/png" href="/img/favicon.png">
-    <link rel="preload" as="image" href="/img/logop.webp" fetchpriority="high">
-    <link rel="preload" as="image" href="/img/logob.webp" fetchpriority="high">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="preload" as="image" href="../img/logop.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="../img/logob.webp" fetchpriority="high">
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../assets/css/futura-audio-player.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -92,11 +92,11 @@
     </script>
 </head>
 
-<body class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+<body data-asset-base="../" class="bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
 
     <div id="loader" class="fixed inset-0 bg-futura-light dark:bg-futura-dark flex flex-col items-center justify-center z-[9999]">
         <div class="flex flex-col items-center">
-            <img src="/img/logop.webp" alt="FUTURA Logo" fetchpriority="high" decoding="sync" class="theme-logo w-40 h-auto mb-8 object-contain" />
+            <img src="../img/logop.webp" alt="FUTURA Logo" fetchpriority="high" decoding="sync" class="theme-logo w-40 h-auto mb-8 object-contain" />
             <div class="w-48 h-1 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
                 <div class="h-full w-full animate-loader-bar origin-left"></div>
             </div>
@@ -106,8 +106,8 @@
     <header class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 pointer-events-none">
         <div class="container mx-auto max-w-7xl pt-4 lg:pt-6 px-4">
             <div class="flex h-20 items-center justify-between bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-black/10 dark:border-white/5 rounded-2xl px-8 shadow-sm pointer-events-auto">
-                <a href="/#hero" class="block hover:opacity-80 transition-opacity">
-                    <img src="/img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-6 w-auto object-contain">
+                <a href="../#hero" class="block hover:opacity-80 transition-opacity">
+                    <img src="../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-6 w-auto object-contain">
                 </a>
                 <nav class="hidden lg:block">
                     <ul class="flex items-center gap-5 xl:gap-7">
@@ -135,7 +135,7 @@
 
     <div class="mobile-menu-overlay fixed inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-md z-[999] flex flex-col p-6 transition-transform duration-300 ease-in-out lg:hidden translate-x-full" id="mobile-menu-overlay">
         <div class="flex justify-between items-center mb-12">
-            <img src="/img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-8 w-auto">
+            <img src="../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo h-8 w-auto">
             <button class="text-3xl text-futura-primary" id="close-menu" aria-label="Fechar menu"><i class="fas fa-times" aria-hidden="true"></i></button>
         </div>
         <nav class="flex-grow flex flex-col gap-6 text-center">
@@ -190,7 +190,7 @@
 
                     <div class="lg:col-span-5 fade-in-section" data-reveal="from-right">
                         <div class="px-0 sm:px-2">
-                            <img src="/img/socialmedia.webp" alt="Imagem de gerenciamento de redes sociais" loading="lazy" decoding="async" class="social-float w-[112%] max-w-none -ml-[6%] sm:w-full sm:max-w-full sm:ml-0 h-auto object-contain select-none" />
+                            <img src="../img/socialmedia.webp" alt="Imagem de gerenciamento de redes sociais" loading="lazy" decoding="async" class="social-float w-[112%] max-w-none -ml-[6%] sm:w-full sm:max-w-full sm:ml-0 h-auto object-contain select-none" />
                         </div>
                     </div>
                 </div>
@@ -416,49 +416,49 @@
 
                 <div class="fade-in-section">
                     <div id="social-proof-track-source" class="hidden">
-                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="/img/p1.webp" data-zoom-alt="Prova social 01">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="../img/p1.webp" data-zoom-alt="Prova social 01">
                             <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
-                                <img src="/img/p1.webp" alt="Prova social 01" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                                <img src="../img/p1.webp" alt="Prova social 01" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
                             </span>
                         </button>
-                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="/img/p2.webp" data-zoom-alt="Prova social 02">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="../img/p2.webp" data-zoom-alt="Prova social 02">
                             <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
-                                <img src="/img/p2.webp" alt="Prova social 02" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                                <img src="../img/p2.webp" alt="Prova social 02" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
                             </span>
                         </button>
-                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="/img/p3.webp" data-zoom-alt="Prova social 03">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="../img/p3.webp" data-zoom-alt="Prova social 03">
                             <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
-                                <img src="/img/p3.webp" alt="Prova social 03" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                                <img src="../img/p3.webp" alt="Prova social 03" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
                             </span>
                         </button>
-                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="/img/p4.webp" data-zoom-alt="Prova social 04">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="../img/p4.webp" data-zoom-alt="Prova social 04">
                             <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
-                                <img src="/img/p4.webp" alt="Prova social 04" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                                <img src="../img/p4.webp" alt="Prova social 04" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
                             </span>
                         </button>
-                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="/img/p5.webp" data-zoom-alt="Prova social 05">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="../img/p5.webp" data-zoom-alt="Prova social 05">
                             <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
-                                <img src="/img/p5.webp" alt="Prova social 05" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                                <img src="../img/p5.webp" alt="Prova social 05" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
                             </span>
                         </button>
-                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="/img/p6.webp" data-zoom-alt="Prova social 06">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="../img/p6.webp" data-zoom-alt="Prova social 06">
                             <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
-                                <img src="/img/p6.webp" alt="Prova social 06" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                                <img src="../img/p6.webp" alt="Prova social 06" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
                             </span>
                         </button>
-                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="/img/p7.webp" data-zoom-alt="Prova social 07">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="../img/p7.webp" data-zoom-alt="Prova social 07">
                             <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
-                                <img src="/img/p7.webp" alt="Prova social 07" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                                <img src="../img/p7.webp" alt="Prova social 07" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
                             </span>
                         </button>
-                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="/img/p8.webp" data-zoom-alt="Prova social 08">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="../img/p8.webp" data-zoom-alt="Prova social 08">
                             <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
-                                <img src="/img/p8.webp" alt="Prova social 08" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                                <img src="../img/p8.webp" alt="Prova social 08" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
                             </span>
                         </button>
-                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="/img/p9.webp" data-zoom-alt="Prova social 09">
+                        <button type="button" class="social-proof-card group w-[220px] sm:w-[250px] shrink-0" data-zoom-src="../img/p9.webp" data-zoom-alt="Prova social 09">
                             <span class="block aspect-[720/1472] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
-                                <img src="/img/p9.webp" alt="Prova social 09" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
+                                <img src="../img/p9.webp" alt="Prova social 09" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]">
                             </span>
                         </button>
                     </div>
@@ -624,7 +624,7 @@
         <div class="container mx-auto max-w-7xl px-4 relative z-10">
             <div class="footer-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-4">
                 <div class="footer-brand col-span-1 md:col-span-1">
-                    <img src="/img/logop.webp" alt="Futura Logo" class="theme-logo h-6 w-auto mb-6 opacity-90">
+                    <img src="../img/logop.webp" alt="Futura Logo" class="theme-logo h-6 w-auto mb-6 opacity-90">
                     <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed font-light max-w-[22ch]">
                         Branding, sites, lojas virtuais e criativos para anúncios, com <strong class="text-gray-900 dark:text-gray-200 font-semibold">clareza</strong> e execução premium.
                     </p>
@@ -633,19 +633,19 @@
                 <div class="footer-col">
                     <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Sitemap</h4>
                     <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
-                        <li><a href="/#hero" class="footer-link hover:text-futura-primary transition-colors">Home</a></li>
-                        <li><a href="/#quem-somos" class="footer-link hover:text-futura-primary transition-colors">Equipe</a></li>
-                        <li><a href="/#servicos" class="footer-link hover:text-futura-primary transition-colors">Serviços</a></li>
-                        <li><a href="/#contato" class="footer-link hover:text-futura-primary transition-colors">Contato</a></li>
+                        <li><a href="../#hero" class="footer-link hover:text-futura-primary transition-colors">Home</a></li>
+                        <li><a href="../#quem-somos" class="footer-link hover:text-futura-primary transition-colors">Equipe</a></li>
+                        <li><a href="../#servicos" class="footer-link hover:text-futura-primary transition-colors">Serviços</a></li>
+                        <li><a href="../#contato" class="footer-link hover:text-futura-primary transition-colors">Contato</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4 class="footer-heading font-display text-sm font-bold mb-6 text-gray-900 dark:text-gray-200 uppercase tracking-widest">Legal</h4>
                     <ul class="footer-links space-y-3 text-xs text-gray-600 dark:text-gray-400 font-light">
-                        <li><a href="/termos/" class="footer-link hover:text-futura-primary transition-colors">Termos de Uso</a></li>
-                        <li><a href="/privacidade/" class="footer-link hover:text-futura-primary transition-colors">Privacidade</a></li>
-                        <li><a href="/cookies/" class="footer-link hover:text-futura-primary transition-colors">Cookies</a></li>
+                        <li><a href="../termos/" class="footer-link hover:text-futura-primary transition-colors">Termos de Uso</a></li>
+                        <li><a href="../privacidade/" class="footer-link hover:text-futura-primary transition-colors">Privacidade</a></li>
+                        <li><a href="../cookies/" class="footer-link hover:text-futura-primary transition-colors">Cookies</a></li>
                     </ul>
                 </div>
 
@@ -691,7 +691,7 @@
         <i id="theme-toggle-moon" class="fas fa-moon hidden text-futura-accent"></i>
     </button>
 
-    <script src="/script.js"></script>
+    <script src="../script.js"></script>
     <script src="../assets/js/futura-audio-player.js"></script>
 
 </body>
