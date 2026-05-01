@@ -14,8 +14,7 @@ html.dark #blob-bg {
 }
 
 html:not(.dark) #blob-bg {
-    mix-blend-mode: multiply;
-    opacity: 0.45;
+    opacity: 0.35;
 }
 
 /* 1. Fontes */
