@@ -1296,14 +1296,19 @@
         const float threshold     = .5;
         const float scale         = 4.;
 
-        #define PI  3.141592653589793
-        #define TAU 6.283185307179586
+        // Brand colors: #D300C5 magenta, #240090 roxo, #00E5FF ciano
+        const vec3 BRAND_MAGENTA = vec3(0.827, 0.0,   0.773);
+        const vec3 BRAND_PURPLE  = vec3(0.141, 0.0,   0.565);
+        const vec3 BRAND_CYAN    = vec3(0.0,   0.898, 1.0);
 
-        vec3 hsb2rgb( in vec3 c ){
-            vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),6.0)-3.0)-1.0,0.0,1.0);
-            rgb = rgb*rgb*(3.0-2.0*rgb);
-            return c.z * mix( vec3(1.0), rgb, c.y);
+        vec3 brandColor(float t) {
+            float ct = mod(t * 0.35, 3.0);
+            if (ct < 1.0) return mix(BRAND_MAGENTA, BRAND_PURPLE, smoothstep(0.0, 1.0, ct));
+            if (ct < 2.0) return mix(BRAND_PURPLE,  BRAND_CYAN,   smoothstep(0.0, 1.0, ct - 1.0));
+            return              mix(BRAND_CYAN,    BRAND_MAGENTA, smoothstep(0.0, 1.0, ct - 2.0));
         }
+
+        #define PI  3.141592653589793
 
         #define pow2(x) (x * x)
         const int samples = 8;
@@ -1349,14 +1354,14 @@
             if (u_renderpass) {
                 tex = vec4(blur(u_buffer, s, ps * blurStrength) * blurMultiplier, 1.);
                 float df = length(mouse - uv);
-                vec3 col = hsb2rgb(vec3(atan(mouse.y, mouse.x) / TAU, 1., 1.));
+                vec3 col = brandColor(u_time);
                 fragcolour = col * smoothstep(circleSize, 0., df);
             } else {
                 tex = texture2D(u_buffer, s, 2.) * .98;
                 tex = vec4(
-                    smoothstep(0.0,   threshold - fwidth(tex.x),       tex.x),
-                    smoothstep(0.2,   threshold - fwidth(tex.y) + .2,  tex.y),
-                    smoothstep(-0.05, threshold - fwidth(tex.z) - .2,  tex.z),
+                    smoothstep(0.0,  threshold - fwidth(tex.x),       tex.x),
+                    smoothstep(0.0,  threshold - fwidth(tex.y),       tex.y),
+                    smoothstep(0.0,  threshold - fwidth(tex.z),       tex.z),
                     1.);
                 vec3 n = hash33(vec3(uv, u_time * .1));
                 tex.rgb += n * .2 - .1;
