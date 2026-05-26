@@ -1,0 +1,1140 @@
+{
+  "prompt_name": "Criar subpagina de briefing para landing pages - Futura Design",
+  "language": "pt-BR",
+  "role": {
+    "persona": "Atue como um desenvolvedor front-end sênior, especialista em UX/UI, interfaces responsivas, acessibilidade e formulários de alta conversão.",
+    "context": "O projeto atual da agência FUTURA DESIGN já está aberto no Visual Studio Code. O site existente possui identidade visual, componentes, fontes, paleta de cores, imagens, estrutura de navegação e padrões responsivos que devem ser preservados.",
+    "brand_positioning": [
+      "Design e estratégia para transformar visitas em clientes.",
+      "Clareza, processo direto, medição de resultados e execução profissional.",
+      "Comunicação objetiva, sem promessas irreais ou milagrosas.",
+      "Experiência premium, organizada e fácil de entender."
+    ]
+  },
+  "main_objective": {
+    "task": "Criar uma nova subpágina exclusiva para um formulário de briefing destinado a clientes que desejam desenvolver uma landing page com a FUTURA DESIGN.",
+    "page_purpose": "Coletar todas as informações necessárias para planejamento, design, copy, estrutura, conversão, publicação e medição de resultados de uma landing page.",
+    "preferred_route": "/briefing/landing-page",
+    "route_rule": "Antes de criar a rota, analise como o projeto atual organiza páginas e rotas. Caso exista outro padrão de nomenclatura ou roteamento, siga o padrão atual do projeto mantendo uma URL clara e independente.",
+    "page_experience": "O formulário deve funcionar no estilo Typeform: uma pergunta ou pequeno bloco lógico por tela, centralizado vertical e horizontalmente, com botões Próximo e Voltar, progresso visível e transições suaves."
+  },
+  "critical_rules": [
+    "Não recriar o site.",
+    "Não modificar o layout da homepage existente.",
+    "Não alterar páginas, seções, textos ou componentes atuais sem necessidade técnica indispensável.",
+    "Não remover nenhum arquivo existente.",
+    "Não substituir assets, logos, fontes ou imagens existentes.",
+    "Não mudar a identidade visual atual.",
+    "Não criar uma nova paleta de cores.",
+    "Não instalar bibliotecas adicionais sem necessidade real.",
+    "Não incluir o formulário na navegação principal ou em botões existentes, a menos que isso seja indispensável para testar a rota ou solicitado posteriormente.",
+    "Criar somente os arquivos e registros de rota necessários para a nova subpágina.",
+    "Reutilizar componentes, tokens, variáveis CSS, classes utilitárias, fontes e padrões de botão já presentes no projeto.",
+    "Caso algum detalhe visual não esteja claramente definido, basear-se nos estilos reais encontrados nos arquivos atuais, nunca inventar uma nova identidade."
+  ],
+  "mandatory_initial_analysis": {
+    "before_coding": [
+      "Identifique qual tecnologia o projeto utiliza: HTML/CSS/JavaScript, React, Vite, Next.js, Astro ou outra.",
+      "Analise a estrutura atual de pastas e determine onde novas páginas e componentes devem ser criados.",
+      "Identifique como o roteamento atual funciona.",
+      "Localize os arquivos de estilo global, variáveis CSS, Tailwind config, tema, tokens ou sistema de design existente.",
+      "Identifique as fontes usadas atualmente no projeto e reutilize exatamente as mesmas.",
+      "Identifique a paleta real já aplicada no projeto e reutilize as mesmas cores.",
+      "Localize o logo correto da FUTURA DESIGN e reutilize-o na nova página.",
+      "Analise componentes existentes como header, footer, botões, inputs, cards, containers e animações.",
+      "Analise os breakpoints e padrões responsivos existentes.",
+      "Antes de implementar, apresente um resumo curto dos arquivos que serão criados ou alterados e o motivo de cada alteração."
+    ],
+    "source_of_truth": "Os arquivos locais do projeto atual são a fonte oficial para fontes, paleta de cores, logos, componentes, espaçamentos e comportamento responsivo."
+  },
+  "visual_direction": {
+    "general_style": "A subpágina deve parecer parte nativa do site atual da FUTURA DESIGN, mantendo a mesma personalidade visual premium, organizada, moderna, objetiva e orientada à conversão.",
+    "layout": {
+      "desktop": [
+        "Tela com altura mínima de 100vh.",
+        "Logo ou identificação discreta da FUTURA DESIGN no topo.",
+        "Indicador de progresso no topo ou próximo ao cabeçalho.",
+        "Pergunta centralizada na área principal.",
+        "Campo de resposta amplo, confortável e visualmente elegante.",
+        "Botões Voltar e Próximo posicionados com equilíbrio visual.",
+        "Conteúdo com largura máxima confortável para leitura."
+      ],
+      "mobile": [
+        "Experiência totalmente responsiva em telas pequenas.",
+        "Perguntas e campos sem cortes ou overflow horizontal.",
+        "Botões grandes, fáceis de tocar e posicionados adequadamente.",
+        "Espaçamento seguro para teclado virtual.",
+        "Barra de progresso visível sem comprometer o espaço da pergunta.",
+        "Campo e botões adaptados para uso com uma mão."
+      ]
+    },
+    "design_requirements": [
+      "Reutilizar fundo, contraste, bordas, sombras, raios, estilos de botão e tipografia encontrados no projeto.",
+      "Manter uma interface limpa, com bastante respiro visual.",
+      "Usar textos claros e diretos.",
+      "Utilizar transições suaves entre as etapas, respeitando prefers-reduced-motion.",
+      "Exibir estados de foco elegantes e acessíveis.",
+      "Campos devem ter excelente contraste e legibilidade.",
+      "Não criar aparência genérica de Google Forms.",
+      "Não utilizar iframe ou plataforma externa de formulário."
+    ]
+  },
+  "page_structure": {
+    "header": {
+      "requirements": [
+        "Utilizar logo da FUTURA DESIGN já existente no projeto.",
+        "Manter cabeçalho minimalista para não distrair o preenchimento.",
+        "Adicionar opção discreta para retornar ao site, apenas se seguir o padrão visual atual.",
+        "Exibir progresso da jornada, por exemplo: Etapa 03 de 38 ou uma barra percentual."
+      ]
+    },
+    "intro_screen": {
+      "eyebrow": "BRIEFING DE LANDING PAGE",
+      "title": "Vamos construir uma landing page clara, estratégica e pronta para converter.",
+      "description": "Responda às perguntas a seguir para entendermos seu objetivo, sua oferta, seu público e tudo o que será necessário para desenvolver sua página.",
+      "support_text": "Separe logo, fotos, links, depoimentos e materiais da sua marca antes de começar.",
+      "estimated_time": "Tempo estimado: 8 a 12 minutos.",
+      "primary_button": "Iniciar briefing",
+      "secondary_information": "Suas informações serão utilizadas exclusivamente para análise e desenvolvimento do projeto solicitado."
+    },
+    "form_behavior": {
+      "interaction_model": "one_question_per_screen",
+      "requirements": [
+        "Cada pergunta deve aparecer centralizada na tela.",
+        "Cada etapa deve possuir título, texto auxiliar opcional e campo de resposta.",
+        "Incluir botões Próximo e Voltar.",
+        "Na primeira pergunta, ocultar ou desabilitar o botão Voltar.",
+        "Na última etapa, substituir Próximo por Enviar briefing.",
+        "Permitir avançar somente quando os campos obrigatórios da etapa estiverem válidos.",
+        "Exibir mensagens de validação claras e amigáveis.",
+        "Manter respostas ao voltar para etapas anteriores.",
+        "Atualizar barra ou indicador de progresso ao avançar e voltar.",
+        "Mover automaticamente o foco para o campo principal ao abrir cada etapa.",
+        "Permitir avançar com Enter em inputs simples.",
+        "Em campos textarea, Enter deve criar nova linha e não avançar automaticamente.",
+        "Permitir seleção por teclado em opções de múltipla escolha.",
+        "Evitar recarregamento da página durante o preenchimento.",
+        "Antes do envio, mostrar uma etapa de revisão resumida das principais respostas."
+      ]
+    }
+  },
+  "form_sections": [
+    {
+      "section_id": "identificacao",
+      "section_title": "Primeiro, vamos conhecer você e sua marca.",
+      "steps": [
+        {
+          "id": "client_name",
+          "step_number": 1,
+          "question": "Qual é o seu nome?",
+          "help_text": "Informe o nome da pessoa responsável pelo projeto.",
+          "type": "text",
+          "placeholder": "Digite seu nome completo",
+          "required": true,
+          "autocomplete": "name"
+        },
+        {
+          "id": "company_name",
+          "step_number": 2,
+          "question": "Qual é o nome da sua empresa ou marca?",
+          "help_text": "Use o nome que deverá aparecer na landing page.",
+          "type": "text",
+          "placeholder": "Nome da empresa ou marca",
+          "required": true
+        },
+        {
+          "id": "whatsapp",
+          "step_number": 3,
+          "question": "Qual é o seu WhatsApp para contato?",
+          "help_text": "Utilizaremos este número para tratar sobre o projeto.",
+          "type": "tel",
+          "placeholder": "(00) 00000-0000",
+          "required": true,
+          "validation": "telefone brasileiro com DDD"
+        },
+        {
+          "id": "email",
+          "step_number": 4,
+          "question": "Qual é o seu melhor e-mail?",
+          "help_text": "Este e-mail poderá ser utilizado para comunicações sobre o projeto.",
+          "type": "email",
+          "placeholder": "voce@empresa.com",
+          "required": true,
+          "autocomplete": "email"
+        },
+        {
+          "id": "current_channels",
+          "step_number": 5,
+          "question": "Sua empresa já possui site ou redes sociais?",
+          "help_text": "Envie links do Instagram, site, loja virtual ou outros canais atuais.",
+          "type": "textarea",
+          "placeholder": "Cole aqui os links disponíveis",
+          "required": false
+        },
+        {
+          "id": "service_region",
+          "step_number": 6,
+          "question": "Onde sua empresa atua ou atende?",
+          "help_text": "Pode ser uma cidade, região, estado ou atendimento em todo o Brasil.",
+          "type": "text",
+          "placeholder": "Ex.: Salvador e região / Todo o Brasil / Online",
+          "required": true
+        }
+      ]
+    },
+    {
+      "section_id": "objetivo",
+      "section_title": "Agora precisamos entender o objetivo da página.",
+      "steps": [
+        {
+          "id": "landing_goal",
+          "step_number": 7,
+          "question": "Qual é o principal objetivo da sua landing page?",
+          "type": "single_select",
+          "required": true,
+          "options": [
+            "Vender um produto",
+            "Divulgar um serviço",
+            "Captar contatos interessados",
+            "Receber mensagens no WhatsApp",
+            "Agendar atendimentos",
+            "Solicitar orçamentos",
+            "Divulgar um lançamento",
+            "Captar inscrições",
+            "Outro"
+          ],
+          "conditional_field": {
+            "show_when": "Outro",
+            "type": "text",
+            "placeholder": "Descreva o objetivo principal"
+          }
+        },
+        {
+          "id": "primary_action",
+          "step_number": 8,
+          "question": "Qual ação você deseja que o visitante realize na página?",
+          "type": "single_select",
+          "required": true,
+          "options": [
+            "Comprar agora",
+            "Chamar no WhatsApp",
+            "Preencher um formulário",
+            "Agendar atendimento",
+            "Solicitar orçamento",
+            "Baixar um material",
+            "Entrar em uma lista de espera",
+            "Outro"
+          ],
+          "conditional_field": {
+            "show_when": "Outro",
+            "type": "text",
+            "placeholder": "Qual ação o visitante deve realizar?"
+          }
+        },
+        {
+          "id": "traffic_source",
+          "step_number": 9,
+          "question": "Como as pessoas chegarão até essa página?",
+          "help_text": "Selecione todas as opções previstas.",
+          "type": "multi_select",
+          "required": true,
+          "options": [
+            "Anúncios no Instagram ou Facebook",
+            "Google Ads",
+            "Link na bio do Instagram",
+            "WhatsApp",
+            "Google ou buscas orgânicas",
+            "E-mail marketing",
+            "Influenciadores ou parceiros",
+            "Ainda não definido",
+            "Outro"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "oferta",
+      "section_title": "Vamos entender sua oferta.",
+      "steps": [
+        {
+          "id": "offer_name",
+          "step_number": 10,
+          "question": "Qual produto ou serviço será divulgado?",
+          "type": "text",
+          "placeholder": "Nome do produto, serviço, evento ou solução",
+          "required": true
+        },
+        {
+          "id": "offer_description",
+          "step_number": 11,
+          "question": "Descreva detalhadamente o que você está oferecendo.",
+          "help_text": "Explique como funciona, o que está incluído e o que a pessoa recebe.",
+          "type": "textarea",
+          "placeholder": "Conte todos os detalhes importantes da sua oferta",
+          "required": true,
+          "min_length": 30
+        },
+        {
+          "id": "problem_solved",
+          "step_number": 12,
+          "question": "Qual problema essa oferta resolve?",
+          "help_text": "Pense no principal motivo que levaria alguém a procurar sua solução.",
+          "type": "textarea",
+          "placeholder": "Ex.: ajuda empresas a conseguir mais pedidos pelo WhatsApp...",
+          "required": true
+        },
+        {
+          "id": "main_benefits",
+          "step_number": 13,
+          "question": "Quais são os principais benefícios da sua oferta?",
+          "help_text": "Liste os benefícios mais importantes para o cliente.",
+          "type": "textarea",
+          "placeholder": "Digite um benefício por linha",
+          "required": true
+        },
+        {
+          "id": "differentials",
+          "step_number": 14,
+          "question": "O que diferencia sua empresa ou oferta dos concorrentes?",
+          "type": "textarea",
+          "placeholder": "Ex.: atendimento personalizado, experiência, rapidez, garantia...",
+          "required": true
+        },
+        {
+          "id": "price_conditions",
+          "step_number": 15,
+          "question": "Existe preço, promoção ou condição comercial que deverá aparecer na página?",
+          "type": "textarea",
+          "placeholder": "Ex.: A partir de R$ 299, parcelamento, promoção por tempo limitado...",
+          "required": false
+        },
+        {
+          "id": "payment_methods",
+          "step_number": 16,
+          "question": "Quais formas de pagamento são aceitas?",
+          "type": "multi_select",
+          "required": false,
+          "options": [
+            "Pix",
+            "Cartão de crédito",
+            "Cartão de débito",
+            "Boleto",
+            "Transferência",
+            "Pagamento presencial",
+            "Link de pagamento",
+            "Ainda não definido",
+            "Outro"
+          ]
+        },
+        {
+          "id": "guarantee_refund",
+          "step_number": 17,
+          "question": "Existe garantia, troca, cancelamento ou política de reembolso?",
+          "type": "textarea",
+          "placeholder": "Descreva as regras ou informe que ainda não possui",
+          "required": false
+        }
+      ]
+    },
+    {
+      "section_id": "publico",
+      "section_title": "Quem você deseja alcançar?",
+      "steps": [
+        {
+          "id": "target_audience",
+          "step_number": 18,
+          "question": "Quem é o público ideal dessa landing page?",
+          "help_text": "Descreva quem são as pessoas que mais têm chance de contratar ou comprar.",
+          "type": "textarea",
+          "placeholder": "Ex.: mulheres de 25 a 45 anos, empresários locais, mães de primeira viagem...",
+          "required": true
+        },
+        {
+          "id": "audience_location",
+          "step_number": 19,
+          "question": "Onde esse público está localizado?",
+          "type": "text",
+          "placeholder": "Ex.: Salvador, Bahia / Brasil inteiro / Atendimento online",
+          "required": false
+        },
+        {
+          "id": "audience_pains",
+          "step_number": 20,
+          "question": "Quais são as principais dores ou necessidades desse público?",
+          "type": "textarea",
+          "placeholder": "Liste os problemas, preocupações ou desejos mais comuns",
+          "required": true
+        },
+        {
+          "id": "audience_objections",
+          "step_number": 21,
+          "question": "Quais dúvidas ou objeções costumam impedir a compra?",
+          "help_text": "Ex.: preço, confiança, prazo, medo de não funcionar ou dúvidas sobre entrega.",
+          "type": "textarea",
+          "placeholder": "Digite as principais objeções",
+          "required": false
+        }
+      ]
+    },
+    {
+      "section_id": "identidade_visual",
+      "section_title": "Vamos cuidar da apresentação visual.",
+      "steps": [
+        {
+          "id": "has_logo",
+          "step_number": 22,
+          "question": "Sua marca já possui logo?",
+          "type": "single_select",
+          "required": true,
+          "options": [
+            "Sim, possuo logo pronta",
+            "Ainda não possuo logo",
+            "Tenho uma logo, mas gostaria de avaliar melhorias"
+          ]
+        },
+        {
+          "id": "logo_upload",
+          "step_number": 23,
+          "question": "Envie sua logo ou informe onde podemos acessá-la.",
+          "help_text": "Aceitar arquivos ou links. A integração definitiva do upload será preparada posteriormente com Google Apps Script.",
+          "type": "file_or_link",
+          "placeholder": "Cole o link da pasta ou selecione o arquivo",
+          "accepted_file_types": [
+            ".png",
+            ".jpg",
+            ".jpeg",
+            ".svg",
+            ".webp",
+            ".pdf"
+          ],
+          "required": false,
+          "display_condition": "Exibir quando has_logo for diferente de 'Ainda não possuo logo'"
+        },
+        {
+          "id": "brand_colors",
+          "step_number": 24,
+          "question": "Sua marca possui cores definidas?",
+          "type": "textarea",
+          "placeholder": "Informe as cores, códigos hexadecimais ou descreva o estilo desejado",
+          "required": false
+        },
+        {
+          "id": "brand_manual",
+          "step_number": 25,
+          "question": "Você possui manual da marca, fontes ou materiais de identidade visual?",
+          "type": "file_or_link",
+          "placeholder": "Cole um link ou selecione arquivos",
+          "required": false
+        },
+        {
+          "id": "desired_visual_style",
+          "step_number": 26,
+          "question": "Como você gostaria que sua landing page parecesse?",
+          "help_text": "Selecione até 3 estilos.",
+          "type": "multi_select",
+          "max_selection": 3,
+          "required": true,
+          "options": [
+            "Moderna",
+            "Premium",
+            "Minimalista",
+            "Elegante",
+            "Sofisticada",
+            "Criativa",
+            "Jovem",
+            "Popular",
+            "Tecnológica",
+            "Delicada",
+            "Impactante",
+            "Ainda não sei"
+          ]
+        },
+        {
+          "id": "avoid_visual_style",
+          "step_number": 27,
+          "question": "Existe algum estilo visual que você não deseja utilizar?",
+          "type": "textarea",
+          "placeholder": "Ex.: não quero cores fortes, não quero algo infantil, evitar visual muito carregado...",
+          "required": false
+        }
+      ]
+    },
+    {
+      "section_id": "materiais_referencias",
+      "section_title": "Materiais ajudam a construir uma página mais convincente.",
+      "steps": [
+        {
+          "id": "product_images",
+          "step_number": 28,
+          "question": "Você possui fotos do produto, serviço, espaço ou equipe?",
+          "type": "file_or_link",
+          "help_text": "Envie links ou arquivos disponíveis. O armazenamento definitivo será integrado posteriormente ao Apps Script.",
+          "placeholder": "Cole o link da pasta ou selecione arquivos",
+          "required": false
+        },
+        {
+          "id": "videos_materials",
+          "step_number": 29,
+          "question": "Você possui vídeos, catálogos, apresentações ou materiais complementares?",
+          "type": "file_or_link",
+          "placeholder": "Cole links ou selecione arquivos disponíveis",
+          "required": false
+        },
+        {
+          "id": "visual_references",
+          "step_number": 30,
+          "question": "Existem sites ou landing pages que você gosta como referência?",
+          "type": "textarea",
+          "placeholder": "Cole um ou mais links de referência",
+          "required": false
+        },
+        {
+          "id": "reference_reason",
+          "step_number": 31,
+          "question": "O que você gostou nessas referências?",
+          "type": "textarea",
+          "placeholder": "Ex.: cores, organização, estilo, animações, textos, apresentação do produto...",
+          "required": false,
+          "display_condition": "Exibir somente quando visual_references tiver conteúdo"
+        }
+      ]
+    },
+    {
+      "section_id": "autoridade",
+      "section_title": "Confiança faz parte da decisão de compra.",
+      "steps": [
+        {
+          "id": "testimonials",
+          "step_number": 32,
+          "question": "Você possui depoimentos de clientes?",
+          "type": "file_or_text",
+          "help_text": "Você pode escrever os depoimentos ou enviar prints autorizados.",
+          "placeholder": "Cole os depoimentos ou envie arquivos",
+          "required": false
+        },
+        {
+          "id": "reviews",
+          "step_number": 33,
+          "question": "Você possui avaliações no Google, Instagram, WhatsApp ou outra plataforma?",
+          "type": "file_or_link",
+          "placeholder": "Cole links ou envie prints das avaliações",
+          "required": false
+        },
+        {
+          "id": "authority_numbers",
+          "step_number": 34,
+          "question": "Existem números ou resultados importantes que podemos destacar?",
+          "help_text": "Ex.: anos de experiência, clientes atendidos, projetos entregues ou quantidade de pedidos.",
+          "type": "textarea",
+          "placeholder": "Informe apenas dados reais e verificáveis",
+          "required": false
+        },
+        {
+          "id": "certificates_partners",
+          "step_number": 35,
+          "question": "Você possui certificados, prêmios, parceiros ou marcas atendidas?",
+          "type": "textarea",
+          "placeholder": "Informe os detalhes e, se possível, envie os materiais correspondentes",
+          "required": false
+        },
+        {
+          "id": "before_after",
+          "step_number": 36,
+          "question": "Possui imagens de antes e depois autorizadas para utilização?",
+          "type": "file_or_link",
+          "help_text": "Envie somente materiais que possam ser divulgados e que estejam adequados às regras do seu segmento.",
+          "placeholder": "Cole links ou selecione arquivos",
+          "required": false
+        }
+      ]
+    },
+    {
+      "section_id": "conversao",
+      "section_title": "Qual será o caminho do visitante até o contato ou compra?",
+      "steps": [
+        {
+          "id": "page_whatsapp",
+          "step_number": 37,
+          "question": "Qual WhatsApp deverá aparecer na landing page?",
+          "type": "tel",
+          "placeholder": "(00) 00000-0000",
+          "required": false,
+          "validation": "telefone brasileiro com DDD"
+        },
+        {
+          "id": "whatsapp_message",
+          "step_number": 38,
+          "question": "Qual mensagem automática deverá aparecer quando alguém clicar no WhatsApp?",
+          "type": "textarea",
+          "placeholder": "Ex.: Olá! Vim pela página e gostaria de saber mais sobre o serviço.",
+          "required": false
+        },
+        {
+          "id": "checkout_link",
+          "step_number": 39,
+          "question": "Existe link de pagamento, checkout ou página de compra?",
+          "type": "url",
+          "placeholder": "Cole o link, caso exista",
+          "required": false
+        },
+        {
+          "id": "scheduling_link",
+          "step_number": 40,
+          "question": "Existe link de agendamento ou reserva?",
+          "type": "url",
+          "placeholder": "Cole o link, caso exista",
+          "required": false
+        },
+        {
+          "id": "lead_form_required",
+          "step_number": 41,
+          "question": "A landing page deverá possuir formulário para captar contatos?",
+          "type": "single_select",
+          "required": true,
+          "options": [
+            "Sim",
+            "Não",
+            "Ainda não sei, preciso de orientação"
+          ]
+        },
+        {
+          "id": "lead_form_fields",
+          "step_number": 42,
+          "question": "Quais informações deverão ser solicitadas ao visitante?",
+          "type": "multi_select",
+          "required": false,
+          "display_condition": "Exibir quando lead_form_required for 'Sim'",
+          "options": [
+            "Nome",
+            "WhatsApp",
+            "E-mail",
+            "Cidade",
+            "Produto ou serviço de interesse",
+            "Mensagem",
+            "Outro"
+          ]
+        },
+        {
+          "id": "lead_destination",
+          "step_number": 43,
+          "question": "Para onde os contatos captados deverão ser enviados?",
+          "type": "multi_select",
+          "required": false,
+          "display_condition": "Exibir quando lead_form_required for 'Sim'",
+          "options": [
+            "WhatsApp",
+            "E-mail",
+            "Planilha Google",
+            "CRM",
+            "Ainda não definido",
+            "Outro"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "dominio_publicacao",
+      "section_title": "Publicação e estrutura técnica.",
+      "steps": [
+        {
+          "id": "has_domain",
+          "step_number": 44,
+          "question": "Você já possui domínio registrado?",
+          "type": "single_select",
+          "required": true,
+          "options": [
+            "Sim",
+            "Não",
+            "Não sei informar"
+          ]
+        },
+        {
+          "id": "domain_address",
+          "step_number": 45,
+          "question": "Qual é o endereço do domínio?",
+          "type": "text",
+          "placeholder": "Ex.: minhaempresa.com.br",
+          "required": false,
+          "display_condition": "Exibir quando has_domain for 'Sim'"
+        },
+        {
+          "id": "hosting_platform",
+          "step_number": 46,
+          "question": "Você já possui hospedagem, plataforma ou site onde a página será publicada?",
+          "type": "textarea",
+          "placeholder": "Ex.: WordPress, Hostinger, Shopify, Nuvemshop, site próprio ou ainda não possuo",
+          "required": false
+        },
+        {
+          "id": "existing_site_integration",
+          "step_number": 47,
+          "question": "A landing page deverá fazer parte de um site existente ou será uma página independente?",
+          "type": "single_select",
+          "required": true,
+          "options": [
+            "Será uma página independente",
+            "Será integrada ao meu site atual",
+            "Ainda não sei"
+          ]
+        },
+        {
+          "id": "launch_date",
+          "step_number": 48,
+          "question": "Existe uma data desejada para colocar a página no ar?",
+          "type": "date_or_text",
+          "placeholder": "Selecione uma data ou descreva o prazo desejado",
+          "required": false
+        }
+      ]
+    },
+    {
+      "section_id": "anuncios_medicao",
+      "section_title": "Medição permite melhorar com segurança.",
+      "steps": [
+        {
+          "id": "paid_traffic",
+          "step_number": 49,
+          "question": "A landing page será utilizada em campanhas de anúncios?",
+          "type": "single_select",
+          "required": true,
+          "options": [
+            "Sim",
+            "Não",
+            "Talvez futuramente",
+            "Ainda não sei"
+          ]
+        },
+        {
+          "id": "advertising_platforms",
+          "step_number": 50,
+          "question": "Quais plataformas de anúncio serão utilizadas?",
+          "type": "multi_select",
+          "required": false,
+          "display_condition": "Exibir quando paid_traffic for 'Sim'",
+          "options": [
+            "Meta Ads - Instagram e Facebook",
+            "Google Ads",
+            "TikTok Ads",
+            "Outra plataforma",
+            "Ainda não definido"
+          ]
+        },
+        {
+          "id": "tracking_tools",
+          "step_number": 51,
+          "question": "Você já possui ferramentas de medição configuradas?",
+          "type": "multi_select",
+          "required": false,
+          "options": [
+            "Meta Pixel",
+            "Google Analytics",
+            "Google Tag Manager",
+            "Google Ads",
+            "Nenhuma",
+            "Não sei informar",
+            "Outra"
+          ]
+        },
+        {
+          "id": "conversion_events",
+          "step_number": 52,
+          "question": "Quais ações deverão ser medidas na página?",
+          "type": "multi_select",
+          "required": false,
+          "options": [
+            "Cliques no WhatsApp",
+            "Envio de formulário",
+            "Compras",
+            "Cliques em botão de pagamento",
+            "Agendamentos",
+            "Visualizações da página",
+            "Ainda não definido",
+            "Outro"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "seo_compartilhamento",
+      "section_title": "Detalhes para pesquisa e compartilhamento.",
+      "steps": [
+        {
+          "id": "seo_title",
+          "step_number": 53,
+          "question": "Existe algum título desejado para a página no Google ou navegador?",
+          "type": "text",
+          "placeholder": "Ex.: Clínica Estética em Salvador | Nome da Marca",
+          "required": false
+        },
+        {
+          "id": "seo_keywords",
+          "step_number": 54,
+          "question": "Existem palavras-chave ou termos importantes relacionados ao seu negócio?",
+          "type": "textarea",
+          "placeholder": "Ex.: reforma residencial em Salvador, curso online de confeitaria...",
+          "required": false
+        },
+        {
+          "id": "sharing_image",
+          "step_number": 55,
+          "question": "Possui imagem específica para compartilhamento no WhatsApp e redes sociais?",
+          "type": "file_or_link",
+          "placeholder": "Cole um link ou selecione um arquivo",
+          "required": false
+        }
+      ]
+    },
+    {
+      "section_id": "legal_aprovacao",
+      "section_title": "Informações finais para uma entrega segura.",
+      "steps": [
+        {
+          "id": "privacy_terms",
+          "step_number": 56,
+          "question": "Sua empresa possui política de privacidade, termos, política de troca ou reembolso?",
+          "type": "file_or_link",
+          "placeholder": "Cole links, envie arquivos ou informe que ainda não possui",
+          "required": false
+        },
+        {
+          "id": "regulated_segment",
+          "step_number": 57,
+          "question": "Seu negócio pertence a algum segmento com regras específicas de comunicação?",
+          "help_text": "Ex.: saúde, estética, suplementos, finanças, advocacia, bebidas, cursos ou produtos regulados.",
+          "type": "textarea",
+          "placeholder": "Descreva o segmento e qualquer informação obrigatória",
+          "required": false
+        },
+        {
+          "id": "approval_contact",
+          "step_number": 58,
+          "question": "Quem será responsável por aprovar textos e visual da landing page?",
+          "type": "text",
+          "placeholder": "Nome da pessoa responsável",
+          "required": true
+        },
+        {
+          "id": "additional_information",
+          "step_number": 59,
+          "question": "Existe mais alguma informação importante sobre o projeto?",
+          "type": "textarea",
+          "placeholder": "Conte qualquer detalhe que ainda não foi mencionado",
+          "required": false
+        },
+        {
+          "id": "consent",
+          "step_number": 60,
+          "question": "Confirma o envio dessas informações para análise e desenvolvimento da sua landing page?",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            "Autorizo o uso das informações e arquivos enviados exclusivamente para análise, planejamento e desenvolvimento do projeto solicitado."
+          ]
+        }
+      ]
+    }
+  ],
+  "review_step": {
+    "title": "Revise suas informações antes de enviar.",
+    "description": "Confira os dados principais do seu briefing. Você poderá voltar e editar qualquer resposta antes do envio.",
+    "show_summary_of": [
+      "Nome e marca",
+      "Contato",
+      "Objetivo principal",
+      "Produto ou serviço",
+      "Público-alvo",
+      "Estilo visual desejado",
+      "Canais de conversão",
+      "Prazo desejado",
+      "Informações adicionais"
+    ],
+    "actions": [
+      "Voltar e editar",
+      "Enviar briefing"
+    ]
+  },
+  "success_screen": {
+    "display_rule": "Exibir somente após retorno positivo da função de envio. Enquanto a integração real não estiver configurada, não simular envio definitivo como se os dados tivessem sido recebidos.",
+    "eyebrow": "BRIEFING ENVIADO",
+    "title": "Recebemos as informações do seu projeto.",
+    "description": "Agora nossa equipe poderá analisar seu objetivo, sua oferta e os materiais enviados para definir os próximos passos da sua landing page.",
+    "support_text": "Entraremos em contato utilizando os dados informados.",
+    "button_label": "Voltar para o site",
+    "button_destination": "Página inicial existente da FUTURA DESIGN"
+  },
+  "apps_script_integration": {
+    "current_scope": "Preparar o front-end para futura integração com Google Apps Script, mas não configurar, publicar ou presumir qualquer endpoint real nesta etapa.",
+    "do_now": [
+      "Estruturar todas as respostas em um objeto JSON único e organizado.",
+      "Criar uma função central de submissão, por exemplo submitBriefing(payload), isolada do restante da interface.",
+      "Deixar uma constante ou configuração claramente identificada para futura URL do Web App do Google Apps Script.",
+      "Preparar estados visuais de carregamento, sucesso e erro.",
+      "Validar os campos no front-end antes de qualquer tentativa de envio.",
+      "Documentar no código onde a integração com Apps Script deverá ser conectada futuramente."
+    ],
+    "do_not_do_now": [
+      "Não criar código definitivo do Google Apps Script.",
+      "Não definir URL fictícia de produção.",
+      "Não enviar informações para serviços externos.",
+      "Não armazenar respostas reais em banco ou planilha.",
+      "Não prometer upload funcional para Google Drive antes da integração.",
+      "Não mostrar mensagem de envio concluído em produção sem resposta real do endpoint."
+    ],
+    "expected_payload_structure": {
+      "metadata": {
+        "submittedAt": "ISO date string gerada no momento do envio futuro",
+        "formType": "landing-page-briefing",
+        "source": "futura-design-website"
+      },
+      "client": {
+        "name": "client_name",
+        "companyName": "company_name",
+        "whatsapp": "whatsapp",
+        "email": "email",
+        "channels": "current_channels",
+        "serviceRegion": "service_region"
+      },
+      "project": {
+        "goal": "landing_goal",
+        "primaryAction": "primary_action",
+        "trafficSource": "traffic_source"
+      },
+      "offer": {
+        "name": "offer_name",
+        "description": "offer_description",
+        "problemSolved": "problem_solved",
+        "benefits": "main_benefits",
+        "differentials": "differentials",
+        "priceConditions": "price_conditions",
+        "paymentMethods": "payment_methods",
+        "guaranteeRefund": "guarantee_refund"
+      },
+      "audience": {
+        "profile": "target_audience",
+        "location": "audience_location",
+        "pains": "audience_pains",
+        "objections": "audience_objections"
+      },
+      "branding": {
+        "hasLogo": "has_logo",
+        "logo": "logo_upload",
+        "colors": "brand_colors",
+        "manual": "brand_manual",
+        "desiredStyle": "desired_visual_style",
+        "avoidStyle": "avoid_visual_style"
+      },
+      "materials": {
+        "images": "product_images",
+        "videos": "videos_materials",
+        "references": "visual_references",
+        "referenceReason": "reference_reason"
+      },
+      "authority": {
+        "testimonials": "testimonials",
+        "reviews": "reviews",
+        "numbers": "authority_numbers",
+        "certificatesPartners": "certificates_partners",
+        "beforeAfter": "before_after"
+      },
+      "conversion": {
+        "whatsapp": "page_whatsapp",
+        "whatsappMessage": "whatsapp_message",
+        "checkoutLink": "checkout_link",
+        "schedulingLink": "scheduling_link",
+        "leadFormRequired": "lead_form_required",
+        "leadFormFields": "lead_form_fields",
+        "leadDestination": "lead_destination"
+      },
+      "publication": {
+        "hasDomain": "has_domain",
+        "domain": "domain_address",
+        "hostingPlatform": "hosting_platform",
+        "integrationType": "existing_site_integration",
+        "launchDate": "launch_date"
+      },
+      "measurement": {
+        "paidTraffic": "paid_traffic",
+        "advertisingPlatforms": "advertising_platforms",
+        "trackingTools": "tracking_tools",
+        "conversionEvents": "conversion_events"
+      },
+      "seo": {
+        "title": "seo_title",
+        "keywords": "seo_keywords",
+        "sharingImage": "sharing_image"
+      },
+      "legalApproval": {
+        "privacyTerms": "privacy_terms",
+        "regulatedSegment": "regulated_segment",
+        "approvalContact": "approval_contact",
+        "additionalInformation": "additional_information",
+        "consent": "consent"
+      }
+    }
+  },
+  "technical_requirements": {
+    "architecture": [
+      "Seguir a arquitetura já usada no projeto.",
+      "Criar componentes reutilizáveis apenas quando fizer sentido dentro da estrutura atual.",
+      "Manter os dados das perguntas organizados em uma estrutura separada, preferencialmente um array ou arquivo de configuração, evitando repetir manualmente cada tela no JSX ou HTML.",
+      "Separar lógica de navegação, validação, submissão e apresentação visual.",
+      "Usar tipagem caso o projeto já utilize TypeScript.",
+      "Caso o projeto não utilize TypeScript, não converter arquivos existentes apenas por causa desta página."
+    ],
+    "components_suggested": [
+      "BriefingLandingPage",
+      "BriefingIntro",
+      "ProgressIndicator",
+      "FormStep",
+      "TextInputStep",
+      "TextareaStep",
+      "SingleSelectStep",
+      "MultiSelectStep",
+      "FileOrLinkStep",
+      "ReviewStep",
+      "SuccessStep",
+      "NavigationButtons"
+    ],
+    "component_rule": "Utilize esses nomes somente se forem compatíveis com o padrão do projeto atual. Caso o projeto siga outra convenção, adapte os nomes e estrutura.",
+    "state_management": [
+      "Manter estado completo das respostas durante a navegação.",
+      "Preservar respostas ao voltar etapas.",
+      "Controlar etapa atual.",
+      "Controlar campos condicionais.",
+      "Controlar erros de validação.",
+      "Controlar estado de envio: idle, loading, success e error.",
+      "Evitar dependências externas apenas para gerenciar o formulário, salvo se o projeto já utilizar alguma biblioteca apropriada."
+    ],
+    "file_upload_behavior": [
+      "Criar interface visual para seleção de arquivos ou inserção de links.",
+      "Mostrar nome dos arquivos selecionados e opção de remover antes do envio.",
+      "Informar no código que o upload real dependerá da integração futura com Apps Script e Google Drive.",
+      "Não converter arquivos grandes para base64 ou realizar upload externo nesta etapa, a menos que já exista infraestrutura pronta no projeto."
+    ]
+  },
+  "validation_requirements": {
+    "general": [
+      "Campos obrigatórios devem impedir avanço quando vazios.",
+      "Validar formato de e-mail.",
+      "Validar telefone com DDD de forma amigável.",
+      "Validar URLs quando informadas.",
+      "Validar limite máximo de escolhas em campos com seleção limitada.",
+      "Exibir erro próximo ao campo, com texto claro.",
+      "Remover o erro assim que o usuário corrigir a informação."
+    ],
+    "error_copy_examples": {
+      "required": "Preencha esta informação para continuar.",
+      "invalid_email": "Informe um e-mail válido.",
+      "invalid_phone": "Informe um WhatsApp válido com DDD.",
+      "invalid_url": "Informe um link válido.",
+      "max_selection": "Selecione no máximo 3 opções."
+    }
+  },
+  "accessibility_requirements": [
+    "Usar HTML semântico.",
+    "Todos os campos devem possuir label associado.",
+    "Botões devem funcionar via teclado.",
+    "Indicador de progresso deve possuir informação acessível para leitores de tela.",
+    "Mensagens de erro devem ser anunciáveis e vinculadas aos campos.",
+    "Garantir contraste adequado seguindo os padrões já usados no site.",
+    "Estados de foco precisam ser visíveis.",
+    "Respeitar prefers-reduced-motion nas animações.",
+    "Não depender apenas de cor para indicar seleção ou erro."
+  ],
+  "responsive_requirements": {
+    "must_support": [
+      "Celulares pequenos a partir de aproximadamente 320px.",
+      "Celulares modernos.",
+      "Tablets.",
+      "Notebooks.",
+      "Monitores desktop amplos."
+    ],
+    "quality_checks": [
+      "Nenhum texto deve ultrapassar a tela.",
+      "Nenhum botão deve ficar inacessível em celular.",
+      "A página deve continuar utilizável com teclado virtual aberto.",
+      "Inputs devem possuir tamanho confortável para toque.",
+      "O progresso deve permanecer legível em todos os dispositivos.",
+      "A tipografia deve adaptar tamanho e espaçamento sem perder identidade visual.",
+      "Testar etapas com textos longos e múltiplas opções."
+    ]
+  },
+  "copywriting_direction": {
+    "voice": [
+      "Profissional",
+      "Clara",
+      "Direta",
+      "Acolhedora",
+      "Estratégica",
+      "Sem exageros ou promessas impossíveis"
+    ],
+    "preferred_words": [
+      "clareza",
+      "objetivo",
+      "estratégia",
+      "próximo passo",
+      "resultado",
+      "estrutura",
+      "planejamento",
+      "conversão"
+    ],
+    "avoid": [
+      "promessas de vendas garantidas",
+      "linguagem milagrosa",
+      "urgência agressiva",
+      "textos confusos",
+      "jargões técnicos desnecessários"
+    ]
+  },
+  "development_flow": {
+    "execution_steps": [
+      "Analise o projeto existente e identifique framework, rotas, estilos, fontes e componentes reutilizáveis.",
+      "Informe quais arquivos novos serão criados e quais arquivos existentes precisarão receber alteração mínima para registrar a nova rota.",
+      "Crie a nova subpágina sem interferir nas páginas atuais.",
+      "Implemente a tela inicial do briefing.",
+      "Implemente o motor de etapas baseado nos dados de perguntas.",
+      "Implemente todos os 60 campos e suas condições de exibição.",
+      "Implemente barra de progresso e navegação Voltar/Próximo.",
+      "Implemente validações.",
+      "Implemente tela de revisão.",
+      "Prepare função isolada para futura submissão via Apps Script.",
+      "Implemente estados de carregamento, erro e sucesso sem simular integração inexistente.",
+      "Garanta responsividade completa.",
+      "Garanta acessibilidade básica.",
+      "Execute build ou testes disponíveis para verificar que nenhuma parte existente foi quebrada.",
+      "Ao finalizar, apresente os arquivos criados/alterados, a rota para visualizar a página e o ponto exato onde conectar futuramente o Apps Script."
+    ]
+  },
+  "acceptance_criteria": [
+    "Uma nova subpágina de briefing para landing pages foi criada.",
+    "A subpágina é acessível por rota própria e não interfere no conteúdo atual do site.",
+    "A identidade visual é coerente com o projeto existente.",
+    "A fonte, cores, componentes e padrões de espaçamento reaproveitam o design system atual.",
+    "O formulário apresenta uma pergunta ou pequeno bloco lógico por tela.",
+    "Existem botões Próximo e Voltar funcionando corretamente.",
+    "Existe indicador de progresso.",
+    "Todas as perguntas definidas neste briefing foram implementadas.",
+    "Campos condicionais aparecem apenas quando necessários.",
+    "Respostas permanecem salvas durante a navegação entre etapas.",
+    "Existe tela de revisão antes do envio.",
+    "Existe estrutura pronta para futura integração com Google Apps Script.",
+    "Nenhum endpoint real foi inventado ou configurado.",
+    "A página é completamente responsiva.",
+    "A página funciona por teclado e possui foco e validações adequados.",
+    "O projeto continua compilando e executando sem erros após a implementação."
+  ],
+  "final_response_expected_from_coding_ai": {
+    "must_report": [
+      "Tecnologia e estrutura identificadas no projeto.",
+      "Paleta, fontes e componentes existentes que foram reutilizados.",
+      "Lista dos arquivos criados.",
+      "Lista dos arquivos alterados e justificativa de cada alteração.",
+      "Rota final da nova subpágina.",
+      "Como executar e visualizar localmente.",
+      "Onde conectar futuramente a URL do Google Apps Script.",
+      "Quais partes relacionadas a upload e envio real ficaram aguardando integração.",
+      "Confirmação de que nenhuma página existente foi redesenhada ou alterada indevidamente."
+    ]
+  },
+  "final_instruction": "Execute a implementação completa agora, seguindo rigorosamente a identidade visual e a arquitetura existentes no projeto. Antes de editar arquivos, analise o código atual e descreva de forma breve o plano de alterações. Não modifique o que já existe além do mínimo necessário para disponibilizar a nova rota."
+}

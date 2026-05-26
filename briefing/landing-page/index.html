@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
+    <script>
+        (function () {
+            try {
+                const theme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>Briefing de Landing Page | FUTURA DESIGN</title>
+    <meta name="description" content="Briefing para planejar landing pages com clareza, estrategia, conversao e medicao de resultados com a FUTURA DESIGN.">
+    <link rel="canonical" href="https://agenciafuturadesign.com/briefing/landing-page/">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Briefing de Landing Page | FUTURA DESIGN">
+    <meta property="og:description" content="Responda ao briefing para planejar uma landing page clara, estrategica e pronta para o proximo passo.">
+    <meta property="og:url" content="https://agenciafuturadesign.com/briefing/landing-page/">
+    <meta property="og:site_name" content="FUTURA DESIGN">
+    <meta property="og:image" content="https://agenciafuturadesign.com/img/preview-futuradesign-square.jpg">
+    <meta property="og:image:secure_url" content="https://agenciafuturadesign.com/img/preview-futuradesign-square.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:alt" content="FUTURA DESIGN - Briefing de Landing Page">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Briefing de Landing Page | FUTURA DESIGN">
+    <meta name="twitter:description" content="Briefing para planejar landing pages com clareza, estrategia e conversao.">
+    <meta name="twitter:image" content="https://agenciafuturadesign.com/img/preview-futuradesign-square.jpg">
+    <meta name="twitter:image:alt" content="FUTURA DESIGN - Briefing de Landing Page">
+
+    <link rel="icon" type="image/png" href="../../img/favicon.png">
+    <link rel="preload" as="image" href="../../img/logop.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="../../img/logob.webp" fetchpriority="high">
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./landing-page.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Michroma&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Michroma', 'sans-serif'],
+                    },
+                    colors: {
+                        futura: {
+                            primary: '#D300C5',
+                            secondary: '#240090',
+                            accent: '#00E5FF',
+                            dark: '#050515',
+                            card: '#0F0F25',
+                            light: '#F8F9FA',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 5px 20px -5px rgba(0, 0, 0, 0.3)',
+                        'glow': '0 0 40px rgba(211, 0, 197, 0.2), 0 0 15px rgba(36, 0, 144, 0.1)',
+                        'neon': '0 0 15px rgba(211, 0, 197, 0.4), 0 0 30px rgba(211, 0, 197, 0.1)',
+                    },
+                    backgroundImage: {
+                        'universe-dark': "linear-gradient(to bottom, rgba(2, 2, 8, 0.85), rgba(2, 2, 8, 0.98))",
+                        'clean-light': "linear-gradient(to bottom, #F8F9FA, #FFFFFF)",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="briefing-page bg-futura-light text-gray-900 dark:bg-futura-dark dark:text-gray-100 font-sans antialiased overflow-x-hidden">
+    <a class="skip-link" href="#briefing-app">Pular para o briefing</a>
+
+    <div class="briefing-bg" aria-hidden="true"></div>
+
+    <header class="briefing-header" aria-label="Cabecalho do briefing">
+        <a href="../../" class="briefing-logo-link" aria-label="Voltar para a pagina inicial da FUTURA DESIGN">
+            <img src="../../img/logop.webp" alt="FUTURA DESIGN Logo" class="theme-logo briefing-logo" width="154" height="24" fetchpriority="high" decoding="sync">
+        </a>
+
+        <div class="briefing-progress" aria-label="Progresso do briefing">
+            <span id="progress-text" class="briefing-progress-text">Introducao</span>
+            <div class="briefing-progress-track" aria-hidden="true">
+                <span id="progress-bar" class="briefing-progress-bar" style="width: 0%;"></span>
+            </div>
+        </div>
+
+        <a href="../../" class="briefing-return-link">
+            <span>Voltar ao site</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+    </header>
+
+    <main id="briefing-app" class="briefing-main">
+        <section id="intro-screen" class="briefing-screen briefing-screen-active" aria-labelledby="intro-title">
+            <div class="briefing-shell">
+                <p class="briefing-eyebrow">BRIEFING DE LANDING PAGE</p>
+                <h1 id="intro-title" class="briefing-title">Vamos construir uma landing page clara, estratégica e pronta para converter.</h1>
+                <p class="briefing-description">Responda às perguntas a seguir para entendermos seu objetivo, sua oferta, seu público e tudo o que será necessário para desenvolver sua página.</p>
+                <div class="briefing-intro-notes" aria-label="Informacoes antes de comecar">
+                    <p><i class="fas fa-folder-open" aria-hidden="true"></i> Separe logo, fotos, links, depoimentos e materiais da sua marca antes de começar.</p>
+                    <p><i class="fas fa-clock" aria-hidden="true"></i> Tempo estimado: 8 a 12 minutos.</p>
+                    <p><i class="fas fa-lock" aria-hidden="true"></i> Suas informações serão utilizadas exclusivamente para análise e desenvolvimento do projeto solicitado.</p>
+                </div>
+                <button id="start-btn" type="button" class="briefing-primary-btn btn-sheen">
+                    <span>Iniciar briefing</span>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="form-screen" class="briefing-screen" aria-labelledby="step-question" hidden>
+            <form id="briefing-form" class="briefing-form" novalidate>
+                <div class="briefing-step-meta">
+                    <p id="section-title" class="briefing-section-title">Identificação</p>
+                    <p id="step-counter" class="briefing-step-counter">Etapa 01 de 60</p>
+                </div>
+
+                <div id="step-panel" class="briefing-step-panel" aria-live="polite">
+                    <h2 id="step-question" class="briefing-question">Pergunta</h2>
+                    <p id="step-help" class="briefing-help"></p>
+                    <div id="field-container" class="briefing-field-container"></div>
+                    <p id="field-error" class="briefing-error" role="alert" aria-live="assertive"></p>
+                </div>
+
+                <div class="briefing-nav">
+                    <button id="back-btn" type="button" class="briefing-secondary-btn">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        <span>Voltar</span>
+                    </button>
+                    <button id="next-btn" type="submit" class="briefing-primary-btn btn-sheen">
+                        <span>Próximo</span>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="review-screen" class="briefing-screen" aria-labelledby="review-title" hidden>
+            <div class="briefing-shell briefing-review-shell">
+                <p class="briefing-eyebrow">REVISAO DO BRIEFING</p>
+                <h2 id="review-title" class="briefing-title">Revise suas informações antes de enviar.</h2>
+                <p class="briefing-description">Confira os dados principais do seu briefing. Você poderá voltar e editar qualquer resposta antes do envio.</p>
+                <div id="review-summary" class="briefing-review-list" aria-live="polite"></div>
+                <p id="submit-status" class="briefing-submit-status" role="status" aria-live="polite"></p>
+                <div class="briefing-nav briefing-review-nav">
+                    <button id="review-back-btn" type="button" class="briefing-secondary-btn">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        <span>Voltar e editar</span>
+                    </button>
+                    <button id="submit-btn" type="button" class="briefing-primary-btn btn-sheen">
+                        <span>Enviar briefing</span>
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="success-screen" class="briefing-screen" aria-labelledby="success-title" hidden>
+            <div class="briefing-shell">
+                <p class="briefing-eyebrow">BRIEFING ENVIADO</p>
+                <h2 id="success-title" class="briefing-title">Recebemos as informações do seu projeto.</h2>
+                <p class="briefing-description">Agora nossa equipe poderá analisar seu objetivo, sua oferta e os materiais enviados para definir os próximos passos da sua landing page.</p>
+                <p class="briefing-description briefing-description-small">Entraremos em contato utilizando os dados informados.</p>
+                <a href="../../" class="briefing-primary-btn btn-sheen briefing-link-btn">
+                    <span>Voltar para o site</span>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="./landing-page.js" defer></script>
+</body>
+</html>
